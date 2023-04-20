@@ -1,0 +1,97 @@
+name: main
+on:
+  push:
+    tags:
+      - v*
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_PASSWORD: secret
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+        - 5432:5432
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install poetry
+        run: curl -o install-poetry.py https://install.python-poetry.org && python install-poetry.py --preview
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'poetry'
+      - run: poetry env use $(which python3.10)
+      - run: poetry install
+      - run: echo ${GOOGLE_CREDENTIALS} > .creds.json
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+      - run: poetry run python -m pytest
+        env:
+          DATABASE_URL: postgresql://postgres:secret@localhost/test
+          AUTH_COOKIE: ${{ secrets.AUTH_COOKIE }}
+          BOT_AUTH_COOKIE: ${{ secrets.AUTH_COOKIE }}
+          GOOGLE_APPLICATION_CREDENTIALS: .creds.json
+
+  build:
+    name: Container Build
+    runs-on: ubuntu-latest
+    needs:
+    - test
+    if: github.event_name != 'pull_request'
+    permissions:
+      packages: write
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Docker Prep
+      id: prep
+      run: |
+        DOCKER_IMAGE="$(echo ghcr.io/${{ github.repository }} | tr '[:upper:]' '[:lower:]')"
+        VERSION=edge
+        if [[ $GITHUB_REF == refs/tags/* ]]; then
+          VERSION=${GITHUB_REF#refs/tags/}
+        elif [[ $GITHUB_REF == refs/heads/* ]]; then
+          VERSION=$(echo ${GITHUB_REF#refs/heads/} | sed -r 's#/+#-#g')
+        elif [[ $GITHUB_REF == refs/pull/* ]]; then
+          VERSION=pr-${{ github.event.number }}
+        fi
+        TAGS="${DOCKER_IMAGE}:${VERSION}"
+        if [ "${{ github.event_name }}" = "push" ]; then
+          TAGS="$TAGS,${DOCKER_IMAGE}:sha-${GITHUB_SHA::8}"
+        fi
+        echo ::set-output name=version::${VERSION}
+        echo ::set-output name=tags::${TAGS}
+        echo ::set-output name=created::$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
+    - name: Login to Github Container Registry
+      uses: docker/login-action@v1
+      with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+    - name: Build and push
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        file: ./Dockerfile
+        push: true
+        tags: ${{ steps.prep.outputs.tags }}
+        labels: |
+          org.opencontainers.image.source=${{ github.event.repository.html_url }}
+          org.opencontainers.image.created=${{ steps.prep.outputs.created }}
+          org.opencontainers.image.revision=${{ github.sha }}
