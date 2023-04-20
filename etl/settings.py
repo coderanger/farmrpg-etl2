@@ -28,7 +28,9 @@ SECRET_KEY = "django-insecure-)o%4o5cz%0p*16en*zdfecf_k!m@#df6)^98#k@g&1++b=-p7y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "api.buddy.farm",
+]
 
 
 # Application definition
@@ -149,6 +151,7 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
-DISABLE_TASKS = {
-    s.strip() for s in os.environ.get("DISABLE_TASKS", "").split(",")
-}
+DISABLE_TASKS = {s.strip() for s in os.environ.get("DISABLE_TASKS", "").split(",")}
+
+WEB_API_KEY = os.environ.get("WEB_API_KEY")
+WEB_API_REFERER = os.environ.get("WEB_API_REFERER")
