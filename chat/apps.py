@@ -11,5 +11,5 @@ class ChatConfig(AppConfig):
         from .tasks import scrape_all_chat, scrape_all_flags
 
         # TODO handle creating room docs like the old code.
-        create_periodic_task(scrape_all_chat, 1)
-        create_periodic_task(scrape_all_flags, 30)
+        create_periodic_task(scrape_all_chat, 1, name="chat-scraper")
+        create_periodic_task(scrape_all_flags, 30, name="chat-flags-scraper")

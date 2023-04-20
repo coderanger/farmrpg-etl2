@@ -10,4 +10,4 @@ class QuestsConfig(AppConfig):
     def ready(self) -> None:
         from .tasks import scrape_all_from_api
 
-        # create_periodic_task(scrape_all_from_api, 600)
+        create_periodic_task(scrape_all_from_api, 600, name="quest-scraper")

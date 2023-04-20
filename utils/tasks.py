@@ -4,6 +4,7 @@ from typing import Any, Callable, Coroutine
 
 import attrs
 import structlog
+from django.conf import settings
 
 log = structlog.stdlib.get_logger(mod="tasks")
 
@@ -27,6 +28,10 @@ def create_periodic_task(
     try:
         asyncio.get_running_loop()
     except RuntimeError:
+        return
+
+    if name is not None and name in settings.DISABLE_TASKS:
+        log.info("Not creating task due to settings", name=name)
         return
 
     is_stopping = [False]

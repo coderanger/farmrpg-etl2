@@ -148,3 +148,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
+
+DISABLE_TASKS = {
+    s.strip() for s in os.environ.get("DISABLE_TASKS", "").split(",")
+}
