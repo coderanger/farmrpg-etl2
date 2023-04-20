@@ -32,7 +32,7 @@ jobs:
         run: curl -o install-poetry.py https://install.python-poetry.org && python install-poetry.py --preview
       - uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.11'
           cache: 'poetry'
       - run: poetry env use $(which python3.10)
       - run: poetry install
