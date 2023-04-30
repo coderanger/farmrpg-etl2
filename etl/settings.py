@@ -23,14 +23,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-)o%4o5cz%0p*16en*zdfecf_k!m@#df6)^98#k@g&1++b=-p7y"
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DJANGO_DEBUG") == "true"
 
 ALLOWED_HOSTS = [
     "api.buddy.farm",
 ]
+
+if DEBUG:
+    ALLOWED_HOSTS.append("127.0.0.1")
 
 
 # Application definition
@@ -151,7 +154,7 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
-DISABLE_TASKS = {s.strip() for s in os.environ.get("DISABLE_TASKS", "").split(",")}
+DISABLE_TASKS = [s.strip() for s in os.environ.get("DISABLE_TASKS", "").split(",")]
 
 WEB_API_KEY = os.environ.get("WEB_API_KEY")
 WEB_API_REFERER = os.environ.get("WEB_API_REFERER")

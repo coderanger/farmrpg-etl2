@@ -35,6 +35,9 @@ class Quest(models.Model):
     reward_silver = models.BigIntegerField()
     reward_gold = models.IntegerField()
 
+    def __str__(self) -> str:
+        return self.title
+
 
 @pghistory.track(pghistory.Snapshot())
 class QuestItemRequired(models.Model):

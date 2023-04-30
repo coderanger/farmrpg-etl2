@@ -19,3 +19,6 @@ class Item(models.Model):
     crafting_level = models.IntegerField()
     base_yield_minutes = models.IntegerField()
     min_mailable_level = models.IntegerField()
+
+    def __str__(self) -> str:
+        return self.name
