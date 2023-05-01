@@ -39,6 +39,7 @@ if DEBUG:
 # Application definition
 
 INSTALLED_APPS = [
+    "pghistory.admin",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -54,6 +55,7 @@ INSTALLED_APPS = [
     "quests",
     "users",
     "chat",
+    "pets",
 ]
 
 MIDDLEWARE = [

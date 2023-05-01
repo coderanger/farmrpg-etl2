@@ -1,0 +1,2532 @@
+[
+    {
+        "model": "pets.pet",
+        "pk": 20,
+        "fields": {
+            "game_id": 20,
+            "name": "Banded Armadillo",
+            "image": "/img/pets/arma.png",
+            "cost": 125000000,
+            "required_farming_level": 0,
+            "required_fishing_level": 0,
+            "required_crafting_level": 75,
+            "required_exploring_level": 0
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 16,
+        "fields": {
+            "game_id": 16,
+            "name": "Blue Dragon",
+            "image": "/img/pets/pet_dragon5.png",
+            "cost": 3000000000,
+            "required_farming_level": 99,
+            "required_fishing_level": 99,
+            "required_crafting_level": 99,
+            "required_exploring_level": 99
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 15,
+        "fields": {
+            "game_id": 15,
+            "name": "Brown Bear",
+            "image": "/img/pets/pet_bear.png",
+            "cost": 2000000000,
+            "required_farming_level": 99,
+            "required_fishing_level": 99,
+            "required_crafting_level": 99,
+            "required_exploring_level": 99
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 9,
+        "fields": {
+            "game_id": 9,
+            "name": "Cobalt Tarantula",
+            "image": "/img/pets/pet_spider1.png",
+            "cost": 125000000,
+            "required_farming_level": 75,
+            "required_fishing_level": 0,
+            "required_crafting_level": 0,
+            "required_exploring_level": 75
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 11,
+        "fields": {
+            "game_id": 11,
+            "name": "Emperor Penguin",
+            "image": "/img/pets/pet_penguin.png",
+            "cost": 250000000,
+            "required_farming_level": 0,
+            "required_fishing_level": 85,
+            "required_crafting_level": 85,
+            "required_exploring_level": 0
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 21,
+        "fields": {
+            "game_id": 21,
+            "name": "Frigate Macaw",
+            "image": "/img/pets/pet_a_parrot.png",
+            "cost": 400000000,
+            "required_farming_level": 0,
+            "required_fishing_level": 80,
+            "required_crafting_level": 70,
+            "required_exploring_level": 0
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 8,
+        "fields": {
+            "game_id": 8,
+            "name": "Gray Hedgehog",
+            "image": "/img/pets/pet_hedgehog.png",
+            "cost": 100000000,
+            "required_farming_level": 0,
+            "required_fishing_level": 75,
+            "required_crafting_level": 75,
+            "required_exploring_level": 0
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 18,
+        "fields": {
+            "game_id": 18,
+            "name": "Greater Capybara",
+            "image": "/img/pets/capybara.png",
+            "cost": 5000000000,
+            "required_farming_level": 99,
+            "required_fishing_level": 99,
+            "required_crafting_level": 99,
+            "required_exploring_level": 99
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 12,
+        "fields": {
+            "game_id": 12,
+            "name": "Green Dragon",
+            "image": "/img/pets/pet_dragon1.png",
+            "cost": 1000000000,
+            "required_farming_level": 85,
+            "required_fishing_level": 0,
+            "required_crafting_level": 0,
+            "required_exploring_level": 85
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 6,
+        "fields": {
+            "game_id": 6,
+            "name": "Green Python",
+            "image": "/img/pets/pet_snake.png",
+            "cost": 10000000,
+            "required_farming_level": 0,
+            "required_fishing_level": 0,
+            "required_crafting_level": 40,
+            "required_exploring_level": 50
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 1,
+        "fields": {
+            "game_id": 1,
+            "name": "Magpie Cat",
+            "image": "/img/pets/pet_cat1.png",
+            "cost": 10000,
+            "required_farming_level": 10,
+            "required_fishing_level": 0,
+            "required_crafting_level": 0,
+            "required_exploring_level": 0
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 7,
+        "fields": {
+            "game_id": 7,
+            "name": "Mandrill Baboon",
+            "image": "/img/pets/pet_Baboon.png",
+            "cost": 50000000,
+            "required_farming_level": 40,
+            "required_fishing_level": 0,
+            "required_crafting_level": 0,
+            "required_exploring_level": 65
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 17,
+        "fields": {
+            "game_id": 17,
+            "name": "Pet Rock",
+            "image": "/img/pets/petrock.png",
+            "cost": 250000000,
+            "required_farming_level": 75,
+            "required_fishing_level": 75,
+            "required_crafting_level": 75,
+            "required_exploring_level": 75
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 13,
+        "fields": {
+            "game_id": 13,
+            "name": "Red Dragon",
+            "image": "/img/pets/pet_dragon4.png",
+            "cost": 1000000000,
+            "required_farming_level": 85,
+            "required_fishing_level": 85,
+            "required_crafting_level": 85,
+            "required_exploring_level": 85
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 22,
+        "fields": {
+            "game_id": 22,
+            "name": "Red Fox",
+            "image": "/img/pets/pet_fox.png",
+            "cost": 400000000,
+            "required_farming_level": 99,
+            "required_fishing_level": 99,
+            "required_crafting_level": 99,
+            "required_exploring_level": 99
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 3,
+        "fields": {
+            "game_id": 3,
+            "name": "Red Squirrel",
+            "image": "/img/pets/pet_squirrel.png",
+            "cost": 500000,
+            "required_farming_level": 0,
+            "required_fishing_level": 0,
+            "required_crafting_level": 30,
+            "required_exploring_level": 30
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 14,
+        "fields": {
+            "game_id": 14,
+            "name": "Ring-tailed Lemur",
+            "image": "/img/pets/lemur.png",
+            "cost": 35000000,
+            "required_farming_level": 50,
+            "required_fishing_level": 0,
+            "required_crafting_level": 0,
+            "required_exploring_level": 40
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 2,
+        "fields": {
+            "game_id": 2,
+            "name": "Siberian Husky",
+            "image": "/img/pets/pet_dog1.png",
+            "cost": 100000,
+            "required_farming_level": 20,
+            "required_fishing_level": 0,
+            "required_crafting_level": 0,
+            "required_exploring_level": 20
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 23,
+        "fields": {
+            "game_id": 23,
+            "name": "Spotted Seal",
+            "image": "/img/pets/pet_seal.png",
+            "cost": 4000000000,
+            "required_farming_level": 99,
+            "required_fishing_level": 99,
+            "required_crafting_level": 99,
+            "required_exploring_level": 99
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 19,
+        "fields": {
+            "game_id": 19,
+            "name": "Strange Onion",
+            "image": "/img/pets/pet_onion_sm.png",
+            "cost": 10000000000,
+            "required_farming_level": 99,
+            "required_fishing_level": 99,
+            "required_crafting_level": 99,
+            "required_exploring_level": 99
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 4,
+        "fields": {
+            "game_id": 4,
+            "name": "Tawny Owl",
+            "image": "/img/pets/pet_owl.png",
+            "cost": 1000000,
+            "required_farming_level": 0,
+            "required_fishing_level": 40,
+            "required_crafting_level": 40,
+            "required_exploring_level": 0
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 10,
+        "fields": {
+            "game_id": 10,
+            "name": "Tree Frog",
+            "image": "/img/pets/pet_frog.png",
+            "cost": 75000000,
+            "required_farming_level": 0,
+            "required_fishing_level": 65,
+            "required_crafting_level": 65,
+            "required_exploring_level": 0
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 5,
+        "fields": {
+            "game_id": 5,
+            "name": "Wild Boar",
+            "image": "/img/pets/pet_boar.png",
+            "cost": 5000000,
+            "required_farming_level": 30,
+            "required_fishing_level": 0,
+            "required_crafting_level": 0,
+            "required_exploring_level": 40
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 20,
+            "item": 21,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 20,
+            "item": 42,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 20,
+            "item": 95,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 20,
+            "item": 130,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 20,
+            "item": 75,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 20,
+            "item": 110,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 20,
+            "item": 145,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 20,
+            "item": 338,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 20,
+            "item": 251,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 20,
+            "item": 339,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 20,
+            "item": 342,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 20,
+            "item": 392,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 16,
+            "item": 147,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 16,
+            "item": 148,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 16,
+            "item": 150,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 16,
+            "item": 152,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 16,
+            "item": 154,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 16,
+            "item": 155,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 16,
+            "item": 223,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 16,
+            "item": 224,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 16,
+            "item": 220,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 16,
+            "item": 226,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 16,
+            "item": 228,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 16,
+            "item": 229,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 15,
+            "item": 39,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 15,
+            "item": 63,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 15,
+            "item": 250,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 15,
+            "item": 331,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 15,
+            "item": 335,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 15,
+            "item": 337,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 15,
+            "item": 373,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 15,
+            "item": 397,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 15,
+            "item": 169,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 15,
+            "item": 346,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 15,
+            "item": 347,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 15,
+            "item": 398,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 9,
+            "item": 13,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 9,
+            "item": 54,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 9,
+            "item": 178,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 9,
+            "item": 287,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 9,
+            "item": 96,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 9,
+            "item": 146,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 9,
+            "item": 195,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 9,
+            "item": 249,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 9,
+            "item": 151,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 9,
+            "item": 156,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 9,
+            "item": 225,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 9,
+            "item": 230,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 11,
+            "item": 114,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 11,
+            "item": 139,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 11,
+            "item": 206,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 11,
+            "item": 207,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 11,
+            "item": 140,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 11,
+            "item": 200,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 11,
+            "item": 201,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 11,
+            "item": 307,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 11,
+            "item": 306,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 11,
+            "item": 308,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 11,
+            "item": 311,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 11,
+            "item": 312,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 21,
+            "item": 99,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 21,
+            "item": 194,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 21,
+            "item": 245,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 21,
+            "item": 309,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 21,
+            "item": 246,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 21,
+            "item": 258,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 21,
+            "item": 363,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 21,
+            "item": 535,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 21,
+            "item": 366,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 21,
+            "item": 475,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 21,
+            "item": 500,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 21,
+            "item": 569,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 8,
+            "item": 67,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 8,
+            "item": 106,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 8,
+            "item": 128,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 8,
+            "item": 186,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 8,
+            "item": 84,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 8,
+            "item": 163,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 8,
+            "item": 189,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 8,
+            "item": 256,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 8,
+            "item": 153,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 8,
+            "item": 161,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 8,
+            "item": 204,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 8,
+            "item": 231,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 18,
+            "item": 67,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 18,
+            "item": 161,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 18,
+            "item": 256,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 18,
+            "item": 450,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 18,
+            "item": 84,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 18,
+            "item": 86,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 18,
+            "item": 378,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 18,
+            "item": 379,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 18,
+            "item": 349,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 18,
+            "item": 397,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 18,
+            "item": 398,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 18,
+            "item": 491,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 12,
+            "item": 147,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 12,
+            "item": 148,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 12,
+            "item": 149,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 12,
+            "item": 150,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 12,
+            "item": 151,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 12,
+            "item": 152,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 12,
+            "item": 153,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 12,
+            "item": 154,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 12,
+            "item": 155,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 12,
+            "item": 156,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 12,
+            "item": 221,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 12,
+            "item": 222,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 6,
+            "item": 22,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 6,
+            "item": 46,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 6,
+            "item": 78,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 6,
+            "item": 217,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 6,
+            "item": 23,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 6,
+            "item": 102,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 6,
+            "item": 145,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 6,
+            "item": 240,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 6,
+            "item": 121,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 6,
+            "item": 159,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 6,
+            "item": 225,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 6,
+            "item": 266,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 1,
+            "item": 17,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 1,
+            "item": 39,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 1,
+            "item": 42,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 1,
+            "item": 132,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 1,
+            "item": 89,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 1,
+            "item": 90,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 1,
+            "item": 131,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 1,
+            "item": 171,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 1,
+            "item": 100,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 1,
+            "item": 172,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 1,
+            "item": 199,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 1,
+            "item": 268,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 7,
+            "item": 65,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 7,
+            "item": 117,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 7,
+            "item": 167,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 7,
+            "item": 248,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 7,
+            "item": 86,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 7,
+            "item": 87,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 7,
+            "item": 254,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 7,
+            "item": 262,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 7,
+            "item": 112,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 7,
+            "item": 149,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 7,
+            "item": 157,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 7,
+            "item": 233,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 17,
+            "item": 93,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 17,
+            "item": 142,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 17,
+            "item": 263,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 17,
+            "item": 318,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 17,
+            "item": 54,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 17,
+            "item": 80,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 17,
+            "item": 248,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 17,
+            "item": 264,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 17,
+            "item": 77,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 17,
+            "item": 78,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 17,
+            "item": 144,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 17,
+            "item": 175,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 13,
+            "item": 223,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 13,
+            "item": 302,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 13,
+            "item": 318,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 13,
+            "item": 322,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 13,
+            "item": 224,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 13,
+            "item": 226,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 13,
+            "item": 350,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 13,
+            "item": 368,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 13,
+            "item": 227,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 13,
+            "item": 228,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 13,
+            "item": 305,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 13,
+            "item": 349,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 22,
+            "item": 80,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 22,
+            "item": 110,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 22,
+            "item": 254,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 22,
+            "item": 350,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 22,
+            "item": 222,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 22,
+            "item": 409,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 22,
+            "item": 586,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 22,
+            "item": 615,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 22,
+            "item": 175,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 22,
+            "item": 227,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 22,
+            "item": 347,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 22,
+            "item": 366,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 3,
+            "item": 43,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 3,
+            "item": 52,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 3,
+            "item": 53,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 3,
+            "item": 91,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 3,
+            "item": 108,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 3,
+            "item": 110,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 3,
+            "item": 122,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 3,
+            "item": 123,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 3,
+            "item": 188,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 3,
+            "item": 212,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 3,
+            "item": 230,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 3,
+            "item": 270,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 14,
+            "item": 284,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 14,
+            "item": 285,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 14,
+            "item": 286,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 14,
+            "item": 287,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 14,
+            "item": 282,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 14,
+            "item": 283,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 14,
+            "item": 362,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 14,
+            "item": 376,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 14,
+            "item": 244,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 14,
+            "item": 382,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 14,
+            "item": 383,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 14,
+            "item": 384,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 2,
+            "item": 35,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 2,
+            "item": 40,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 2,
+            "item": 45,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 2,
+            "item": 113,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 2,
+            "item": 76,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 2,
+            "item": 164,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 2,
+            "item": 170,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 2,
+            "item": 193,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 2,
+            "item": 54,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 2,
+            "item": 215,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 2,
+            "item": 251,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 2,
+            "item": 269,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 23,
+            "item": 152,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 23,
+            "item": 177,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 23,
+            "item": 412,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 23,
+            "item": 540,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 23,
+            "item": 185,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 23,
+            "item": 390,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 23,
+            "item": 421,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 23,
+            "item": 630,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 23,
+            "item": 314,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 23,
+            "item": 695,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 23,
+            "item": 697,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 23,
+            "item": 710,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 19,
+            "item": 15,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 19,
+            "item": 33,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 19,
+            "item": 46,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 19,
+            "item": 48,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 19,
+            "item": 50,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 19,
+            "item": 59,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 19,
+            "item": 65,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 19,
+            "item": 67,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 19,
+            "item": 69,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 19,
+            "item": 256,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 19,
+            "item": 588,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 19,
+            "item": 589,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 4,
+            "item": 44,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 4,
+            "item": 61,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 4,
+            "item": 62,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 4,
+            "item": 109,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 4,
+            "item": 26,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 4,
+            "item": 111,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 4,
+            "item": 120,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 4,
+            "item": 250,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 4,
+            "item": 179,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 4,
+            "item": 189,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 4,
+            "item": 221,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 4,
+            "item": 271,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 10,
+            "item": 27,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 10,
+            "item": 29,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 10,
+            "item": 46,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 10,
+            "item": 67,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 10,
+            "item": 56,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 10,
+            "item": 115,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 10,
+            "item": 138,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 10,
+            "item": 139,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 10,
+            "item": 151,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 10,
+            "item": 172,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 10,
+            "item": 229,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 10,
+            "item": 281,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 5,
+            "item": 103,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 5,
+            "item": 144,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 5,
+            "item": 187,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 5,
+            "item": 203,
+            "level": 1
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 5,
+            "item": 236,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 5,
+            "item": 237,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 5,
+            "item": 238,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 5,
+            "item": 260,
+            "level": 3
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 5,
+            "item": 137,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 5,
+            "item": 145,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 5,
+            "item": 177,
+            "level": 6
+        }
+    },
+    {
+        "model": "pets.petitem",
+        "fields": {
+            "pet": 5,
+            "item": 264,
+            "level": 6
+        }
+    }
+]
