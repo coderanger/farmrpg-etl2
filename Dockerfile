@@ -11,7 +11,8 @@ RUN curl -o /install-poetry.py https://install.python-poetry.org && \
     python -m venv .venv
 
 COPY . /src/
-RUN /root/.local/bin/poetry install --without=dev
+RUN /root/.local/bin/poetry install --without=dev && \
+    .venv/bin/python manage.py collectstatic
 
 FROM python:3.11
 # COPY doesn't bring over the xattrs for this so it can't be in the build image.

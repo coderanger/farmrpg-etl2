@@ -14,5 +14,9 @@ def _client(cookie: str) -> httpx.AsyncClient:
     )
 
 
-client = _client(os.environ["AUTH_COOKIE"])
-bot_client = _client(os.environ["BOT_AUTH_COOKIE"])
+client = _client(os.environ["AUTH_COOKIE"]) if os.environ.get("AUTH_COOKIE") else None
+bot_client = (
+    _client(os.environ["BOT_AUTH_COOKIE"])
+    if os.environ.get("BOT_AUTH_COOKIE")
+    else None
+)

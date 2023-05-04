@@ -7,6 +7,7 @@ from zoneinfo import ZoneInfo
 import structlog
 from asgiref.sync import sync_to_async
 from async_lru import alru_cache
+from google.auth.exceptions import DefaultCredentialsError
 from google.cloud import firestore
 
 from users.models import User
@@ -31,8 +32,11 @@ UTC = ZoneInfo("UTC")
 
 MENTION_RE = re.compile(r"@([^:\s]+(?:[^:]{0,29}?[^:\s](?=:))?)")
 
-db = firestore.AsyncClient(project="farmrpg-mod")
-rooms_col = db.collection("rooms")
+try:
+    db = firestore.AsyncClient(project="farmrpg-mod")
+    rooms_col = db.collection("rooms")
+except DefaultCredentialsError:
+    db = rooms_col = None
 
 
 @alru_cache(maxsize=100)
