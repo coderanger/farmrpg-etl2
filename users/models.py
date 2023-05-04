@@ -9,3 +9,6 @@ class User(models.Model):
     firebase_uid = models.CharField(
         max_length=255, null=True, blank=True, db_index=True, unique=True
     )
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    modified_at = models.DateTimeField(auto_now=True)

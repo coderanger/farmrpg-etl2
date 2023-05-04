@@ -36,6 +36,8 @@ class ItemFactory(factory.django.DjangoModelFactory):
     crafting_level = 0
     base_yield_minutes = 0
     min_mailable_level = 0
+    reg_weight = 1
+    runecube_weight = 1
 
 
 @pytest.fixture

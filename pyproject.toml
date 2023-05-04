@@ -31,6 +31,7 @@ google-cloud-firestore = "^2.10.0"
 firebase-admin = "^6.1.0"
 google-cloud-iam = "^2.12.0"
 async-lru = "^2.0.2"
+numpy = "^1.24.3"
 
 [tool.poetry.group.dev.dependencies]
 respx = "^0.20.1"
@@ -38,6 +39,7 @@ pytest = "^7.2.2"
 pytest-asyncio = "^0.21.0"
 pytest-django = "^4.5.2"
 factory-boy = "^3.2.1"
+ipython = "^8.13.1"
 
 [build-system]
 requires = ["poetry-core"]

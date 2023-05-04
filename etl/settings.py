@@ -34,6 +34,7 @@ ALLOWED_HOSTS = [
 
 if DEBUG:
     ALLOWED_HOSTS.append("127.0.0.1")
+    ALLOWED_HOSTS.append("localhost")
 
 
 # Application definition
@@ -56,6 +57,7 @@ INSTALLED_APPS = [
     "users",
     "chat",
     "pets",
+    "locations",
 ]
 
 MIDDLEWARE = [
@@ -156,7 +158,7 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
-DISABLE_TASKS = [s.strip() for s in os.environ.get("DISABLE_TASKS", "").split(",")]
+ENABLE_TASKS = [s.strip() for s in os.environ.get("ENABLE_TASKS", "*").split(",")]
 
 WEB_API_KEY = os.environ.get("WEB_API_KEY")
 WEB_API_REFERER = os.environ.get("WEB_API_REFERER")

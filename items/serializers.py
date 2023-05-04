@@ -29,4 +29,6 @@ class ItemAPISerializer(serializers.ModelSerializer):
             "crafting_level",
             "base_yield_minutes",
             "min_mailable_level",
+            "reg_weight",
+            "runecube_weight",
         ]

@@ -4,7 +4,7 @@ from django.db import models
 from items.models import Item
 
 
-@pghistory.track(pghistory.Snapshot())
+@pghistory.track(pghistory.Snapshot(), exclude=["modified_at"])
 class Quest(models.Model):
     npc = models.CharField(max_length=255, db_index=True)
     title = models.CharField(max_length=255, db_index=True)
@@ -34,6 +34,9 @@ class Quest(models.Model):
 
     reward_silver = models.BigIntegerField()
     reward_gold = models.IntegerField()
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    modified_at = models.DateTimeField(auto_now=True)
 
     def __str__(self) -> str:
         return self.title

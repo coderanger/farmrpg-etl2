@@ -31,8 +31,8 @@ def create_periodic_task(
     except RuntimeError:
         return
 
-    if name is not None and any(
-        fnmatch.fnmatch(name, t) for t in settings.DISABLE_TASKS
+    if name is not None and not any(
+        fnmatch.fnmatch(name, t) for t in settings.ENABLE_TASKS
     ):
         log.info("Not creating task due to settings", name=name)
         return

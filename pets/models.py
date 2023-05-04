@@ -4,7 +4,7 @@ from django.db import models
 from items.models import Item
 
 
-@pghistory.track(pghistory.Snapshot())
+@pghistory.track(pghistory.Snapshot(), exclude=["modified_at"])
 class Pet(models.Model):
     game_id = models.IntegerField(unique=True)
     name = models.CharField(max_length=255, unique=True)
@@ -15,6 +15,9 @@ class Pet(models.Model):
     required_fishing_level = models.IntegerField(default=0)
     required_crafting_level = models.IntegerField(default=0)
     required_exploring_level = models.IntegerField(default=0)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    modified_at = models.DateTimeField(auto_now=True)
 
     def __str__(self) -> str:
         return self.name
