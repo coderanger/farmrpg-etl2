@@ -8,7 +8,7 @@ from .models import Item
 
 @admin.register(Item)
 class ItemAdmin(ReadOnlyAdmin):
-    list_display = ["id", "name", "admin_image"]
+    list_display = ["id", "name", "admin_image", "created_at"]
     search_fields = ["id", "name"]
 
     class Media:

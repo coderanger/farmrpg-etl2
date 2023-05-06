@@ -49,6 +49,7 @@ class QuestAPISerializer(serializers.ModelSerializer):
             "required_npc_level",
             "reward_silver",
             "reward_gold",
+            "completed_count",
         ]
 
     def to_internal_value(self, data):

@@ -20,6 +20,7 @@ class QuestAdmin(ReadOnlyAdmin):
     list_display = [
         "id",
         "title",
+        "created_at",
         "required_farming_level",
         "required_fishing_level",
         "required_crafting_level",
