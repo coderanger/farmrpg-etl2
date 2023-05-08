@@ -116,7 +116,6 @@ async def update_drop_rates_for(drops_for: Location | Item, force: bool = False)
     if isinstance(drops_for, Item):
         location = None
         seed = drops_for
-        log.debug("!!!", seed=seed.name)
         seed_items = [await Item.objects.aget(name=name) for name in SEEDS[seed.name]]
         variants = [
             # Normal.
@@ -244,6 +243,9 @@ async def update_drop_rates_for(drops_for: Location | Item, force: bool = False)
         await DropRates.objects.filter(pk=rates.pk).aupdate(
             hash=new_hash, compute_time=sim_tim
         )
+        await DropRatesItem.objects.filter(drop_rates=rates).exclude(
+            item_id__in=variant_items
+        ).adelete()
 
 
 async def update_crop_drop_rates():

@@ -6,7 +6,7 @@ from strawberry_django_plus.gql import auto
 from . import models
 
 if TYPE_CHECKING:
-    from locations.graphql import LocationItem
+    from locations.graphql import DropRates, DropRatesItem, LocationItem
     from pets.graphql import PetItem
     from quests.graphql import QuestItemRequired, QuestItemReward
 
@@ -41,3 +41,5 @@ class Item:
     reward_for_quests: list[Annotated["QuestItemReward", gql.lazy("quests.graphql")]]
     pet_items: list[Annotated["PetItem", gql.lazy("pets.graphql")]]
     location_items: list[Annotated["LocationItem", gql.lazy("locations.graphql")]]
+    drop_rates: list[Annotated["DropRates", gql.lazy("locations.graphql")]]
+    drop_rates_items: list[Annotated["DropRatesItem", gql.lazy("locations.graphql")]]
