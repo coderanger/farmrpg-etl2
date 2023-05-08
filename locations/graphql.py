@@ -40,7 +40,7 @@ class DropRates:
     manual_fishing: auto
     runecube: auto
 
-    drop_rates_items: list["DropRatesItem"]
+    items: list["DropRatesItem"]
 
 
 @gql.django.type(models.DropRatesItem)
