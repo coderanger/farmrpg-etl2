@@ -31,6 +31,7 @@ class QuestAPISerializer(serializers.ModelSerializer):
         fields = [
             "id",
             "npc",
+            "npc_img",
             "title",
             "author",
             "pred",

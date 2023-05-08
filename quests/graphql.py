@@ -17,6 +17,7 @@ class QuestFilter:
 class Quest:
     id: int
     npc: auto
+    npc_img: auto
     title: auto
     author: auto
     pred: Optional["Quest"]
@@ -40,6 +41,8 @@ class Quest:
     reward_silver: auto
     reward_gold: auto
     reward_items: list["QuestItemReward"]
+
+    completed_count: auto
 
 
 @gql.django.type(models.QuestItemRequired)

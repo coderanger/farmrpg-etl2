@@ -7,6 +7,7 @@ from items.models import Item
 @pghistory.track(pghistory.Snapshot(), exclude=["modified_at", "completed_count"])
 class Quest(models.Model):
     npc = models.CharField(max_length=255, db_index=True)
+    npc_img = models.CharField(max_length=255, null=True, blank=True)
     title = models.CharField(max_length=255, db_index=True)
     author = models.CharField(max_length=255, null=True, blank=True)
     pred = models.ForeignKey(

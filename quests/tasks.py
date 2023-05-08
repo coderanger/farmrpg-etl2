@@ -45,7 +45,7 @@ async def scrape_all_from_api():
 
     import_count = 0
     for quest_id in toposort_flatten(topo_input, sort=False):
-        log.debug("Scraping quest from API", id=quest_id)
+        log.debug("Updating quest from API", id=quest_id)
         row = by_id[quest_id]
         try:
             required_items = row.pop("required_items")
