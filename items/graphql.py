@@ -9,6 +9,7 @@ if TYPE_CHECKING:
     from locations.graphql import DropRates, DropRatesItem, LocationItem
     from pets.graphql import PetItem
     from quests.graphql import QuestItemRequired, QuestItemReward
+    from quizzes.graphql import QuizReward
 
 
 @gql.django.filters.filter(models.Item)
@@ -43,3 +44,4 @@ class Item:
     location_items: list[Annotated["LocationItem", gql.lazy("locations.graphql")]]
     drop_rates: list[Annotated["DropRates", gql.lazy("locations.graphql")]]
     drop_rates_items: list[Annotated["DropRatesItem", gql.lazy("locations.graphql")]]
+    quiz_rewards: list[Annotated["QuizReward", gql.lazy("quizzes.graphql")]]

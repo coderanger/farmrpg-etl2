@@ -74,6 +74,7 @@ INSTALLED_APPS = [
     "chat",
     "pets",
     "locations",
+    "quizzes",
 ]
 
 MIDDLEWARE = [
