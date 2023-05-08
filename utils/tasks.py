@@ -4,6 +4,7 @@ from asyncio import Task
 from typing import Any, Callable, Coroutine
 
 import attrs
+import sentry_sdk
 import structlog
 from django.conf import settings
 
@@ -45,8 +46,9 @@ def create_periodic_task(
         while not is_stopping[0]:
             try:
                 await coro()
-            except Exception:
+            except Exception as exc:
                 log.error("Error in periodic task", exc_info=True, task_name=name)
+                sentry_sdk.capture_exception(exc)
             await asyncio.sleep(interval)
 
     task = asyncio.create_task(wrapper(), name=name)
