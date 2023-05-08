@@ -3,8 +3,8 @@ import numpy as np
 
 def simulate_drops(
     items: dict[int, int],
-    batch_size: int = 10_000_000,
-    batch_count: int = 10,
+    batch_size: int = 1_000_000,
+    batch_count: int = 100,
     seed: int | None = None,
 ) -> dict[int, int]:
     item_ids = list(items.keys())
@@ -26,4 +26,4 @@ def simulate_drops(
         for index, count in zip(unique, counts):
             drops[item_ids[index]] += count
 
-    return drops, batch_size*batch_count
+    return drops, batch_size * batch_count
