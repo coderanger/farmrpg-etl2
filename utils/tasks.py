@@ -1,12 +1,18 @@
 import asyncio
 import fnmatch
 from asyncio import Task
+from datetime import datetime, time
 from typing import Any, Callable, Coroutine
+from zoneinfo import ZoneInfo
 
 import attrs
 import sentry_sdk
 import structlog
 from django.conf import settings
+
+SERVER_TIME = ZoneInfo("America/Chicago")
+MAINTENANCE_START = time(23, 29)
+MAINTENANCE_END = time(23, 36)
 
 log = structlog.stdlib.get_logger(mod="tasks")
 
@@ -44,6 +50,12 @@ def create_periodic_task(
 
     async def wrapper():
         while not is_stopping[0]:
+            # Don't run any background tasks during maintenance, most will just fail.
+            now = datetime.now(SERVER_TIME).time()
+            if MAINTENANCE_START <= now <= MAINTENANCE_END:
+                await asyncio.sleep(60)
+                continue
+
             try:
                 await coro()
             except Exception as exc:
