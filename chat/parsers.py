@@ -5,7 +5,9 @@ from zoneinfo import ZoneInfo
 
 from bs4 import BeautifulSoup, Tag
 
-from utils.parsers import ParseError
+from utils.parsers import CSSSelector, ParseError, parse_page_fragment
+
+from .models import Emblem
 
 UTC = ZoneInfo("UTC")
 SERVER_TIME = ZoneInfo("America/Chicago")
@@ -17,6 +19,13 @@ TENFOO_RE = re.compile(r"<strong>\w+foo</strong>")
 AT_LINK_RE = re.compile(
     r'<a class="close-panel" href="profile.php\?user_name=[^">]+"'
     r' style="color:teal">(@[^">]+)</a>'
+)
+EMBLEM_SEL = CSSSelector("html|a.setemblembtn > html|img.vendoritemimg")
+EMBLEM_NAME_RE = re.compile(r"(96)?(test)?$")
+EMBLEM_NAME_RE2 = re.compile(r"[_.-]+")
+EMBLEM_NAME_RE3 = re.compile(r"([a-z])([A-Z0-9])")
+EMBLEM_UUID_RE = re.compile(
+    r"^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$"
 )
 
 
@@ -104,4 +113,39 @@ def parse_flags(content: bytes) -> Iterable[dict[str, Any]]:
             "content": parts[2][2:],
             "deleted": elm["data-deleted"] == "1",
             "flags": int(flags_match[1]) if flags_match else 0,
+        }
+
+
+def parse_emblems(page: bytes) -> Iterable[dict[str, Any]]:
+    root = parse_page_fragment(page)
+    for elm in EMBLEM_SEL(root):
+        image = elm.attrib["src"]
+        style = elm.attrib.get("style", "")
+        link_elm = elm.getparent()
+        id = link_elm.attrib["data-id"]
+        words = link_elm.attrib.get("data-words", "")
+
+        # Extract a name-ish thing.
+        name = image.rsplit("/", 1)[-1].rsplit(".", 1)[0]
+        if EMBLEM_UUID_RE.match(name) and words:
+            name = words.split(",", 1)[0].strip()
+        else:
+            name = EMBLEM_NAME_RE.sub("", name)
+            name = EMBLEM_NAME_RE2.sub(" ", name)
+            name = EMBLEM_NAME_RE3.sub(r"\1 \2", name)
+        name = name.title()
+
+        # Figure out the emblem type.
+        type = None
+        if "red" in style:
+            type = Emblem.TYPE_STAFF
+        elif "orange" in style:
+            type = Emblem.TYPE_PATREON
+
+        yield {
+            "id": int(id),
+            "name": name,
+            "image": image,
+            "type": type,
+            "keywords": words,
         }

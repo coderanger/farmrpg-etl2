@@ -1,0 +1,3690 @@
+<div class="navbar">
+    <div class="navbar-inner">
+    <div class="left"><a href="x" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+    <div class="center sliding">Settings</div>
+    <div class="right"><a href="x" data-panel="left" class="link open-panel icon-only"><i class="icon icon-bars"></i></a></div>
+    </div>
+    </div>
+    <div class="pages">
+    <div data-page="settings" class="page">
+    <div class="page-content">
+    <div class="content-block">
+    <div class="card">
+    <div class="card-content">
+    <div class="list-block media-list">
+    <ul>
+    <li class="item-content">
+    <div class="item-media">
+    <img src="/img/items/farm.png" style="width:44px" alt="Farm House">
+    </div>
+    <div class="item-inner">
+    <div class="item-title-row" style="vertical-align: -webkit-baseline-middle; display: inline-block">
+    <div class="item-description" style="font-size: 13px">Change your Settings or update your Password. Leave the New Password field blank unless you are changing your password.</div>
+    </div>
+    </div>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    <form id="settingsform">
+    <div class="content-block-title">Information</div>
+    <div class="list-block" style="margin-bottom:0px">
+    <ul>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title label">Username</div>
+    <div class="item-input">
+    <input type="text" name="newusername" placeholder="Change your username" value="coderanger">
+    <span style='font-size:11px'>You can change every 30 days</span>
+    </div>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title label">New Password</div>
+    <div class="item-input">
+    <input type="password" name="newpassword" placeholder="Change your password" value="">
+    </div>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title label">Email</div>
+    <div class="item-input">
+    <input type="text" name="email" placeholder="Change your email" value="coderanger@example.com">
+    </div>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner" style="height:200px;align-items:normal;">
+    <div class="item-title label">Bio</div>
+    <div class="item-input">
+    <textarea name="bio" style="height:100%" placeholder="Public Bio">I am the Black Mage! I casts the spells that makes the peoples fall down! I maintain buddy.farm, FarmRPG-Extension for Firefox, and other technical things around here.</textarea>
+    </div>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner" style="height:200px;align-items:normal;">
+    <div class="item-title label">Looking For</div>
+    <div class="item-input">
+    <textarea name="user_bio_mb" style="height:100%" placeholder="Text that displays above your mailbox">I probably have too much of everything but if you want to donate towards my game data research, thank you.</textarea>
+    </div>
+     </div>
+    </div>
+    </li>
+    </ul>
+    </div>
+    <div class="content-block">
+    <input type="button" class="button btngreen settings_sub1" id="settings_sub" value="Save Information">
+    </div>
+    <div class="content-block-title">Options</div>
+    <div class="list-block accordion-list" style="margin-bottom:0px">
+    <ul>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title label" style="width:60%">Show Mailbox Banner?<br/><span style='font-size: 11px'>Banner alerts you of items in mailbox</span></div>
+    <label class="label-switch">
+    <input type="checkbox" name="mbbanner" value="1" checked>
+    <div class="checkbox"></div>
+    </label>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title label" style="width:60%">Show Comm Center Banner?<br/><span style='font-size: 11px'>Banner alerts you of Community Center progress</span></div>
+    <label class="label-switch">
+    <input type="checkbox" name="ccbanner" value="1" checked>
+    <div class="checkbox"></div>
+    </label>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title label" style="width:60%">Auto-Refresh Mailboxes?<br/><span style='font-size: 11px'>Refreshes when items change in Mailboxes</span></div>
+    <label class="label-switch">
+    <input type="checkbox" name="mbrefresh" value="1" checked>
+    <div class="checkbox"></div>
+    </label>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title label" style="width:60%">Show Loading Spinner?<br/><span style='font-size: 11px'>Show loading indicator when you change menus</span></div>
+    <label class="label-switch">
+    <input type="checkbox" name="spinner" value="1" checked>
+    <div class="checkbox"></div>
+    </label>
+    </div>
+    </div>
+    </li>
+    <li >
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title label" style="width:60%">Show Chat?<br/><span style='font-size: 11px'>Show the right-side Chat Panel</span></div>
+    <label class="label-switch">
+    <input type="checkbox" id="show_chat" data-prev="1" name="chat" value="1" checked>
+    <div class="checkbox"></div>
+    </label>
+    </div>
+    </div>
+    </li>
+
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title label" style="width:60%">Show Online Status?<br/><span style='font-size: 11px'>Other players can tell if you are Online</span></div>
+    <label class="label-switch">
+    <input type="checkbox" name="online_show" value="1" checked>
+    <div class="checkbox"></div>
+    </label>
+    </div>
+    </div>
+    </li>
+
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title label" style="width:60%">Auto-close Alerts?<br/><span style='font-size: 11px'>Alerts close after a few seconds</span></div>
+    <label class="label-switch">
+    <input type="checkbox" name="hide_alerts" value="1" checked>
+    <div class="checkbox"></div>
+    </label>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title label" style="width:60%">Harvest Ready Notifications?<br/><span style='font-size: 11px'>Notification when crops are ready to harvest<br/>Currently iOS Only (IN BETA)</span></div>
+    <label class="label-switch">
+    <input type="checkbox" name="notifs_harvest" value="1" >
+    <div class="checkbox"></div>
+    </label>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title label" style="width:60%">Hide Help Requests?<br/><span style='font-size: 11px'>Enables option to hide requests</span></div>
+    <label class="label-switch">
+    <input type="checkbox" name="hide_quests" value="1" >
+    <div class="checkbox"></div>
+    </label>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title label" style="width:60%">Dark Mode UI?<br/><span style='font-size: 11px'>Dark theme for the Game</span></div>
+    <label class="label-switch">
+    <input type="checkbox" name="dark_mode" data-prev="0" value="1" >
+    <div class="checkbox"></div>
+    </label>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title label" style="width:60%">Show Profile Stats?<br/><span style='font-size: 11px'>Show Item Totals and more on your Profile</span></div>
+    <label class="label-switch">
+    <input type="checkbox" name="profile_stats" value="1" checked>
+    <div class="checkbox"></div>
+    </label>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title label" style="width:60%">Lock Tracked Items?<br/><span style='font-size: 11px'>Locks items when tracking a help request</span></div>
+    <label class="label-switch">
+    <input type="checkbox" name="track_lock" value="1" >
+    <div class="checkbox"></div>
+    </label>
+    </div>
+    </div>
+    </li>
+
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title">Background Music
+    <br/><span style='font-size: 11px'>Currently only works on iOS app</span>
+    </div>
+    <div class="item-after">
+    <select name="music" class="inlineinputlg">
+    <option value='none' checked>None</option>
+    <option value='1' >Option 1</option>
+    <option value='2' >Option 2</option>
+    <option value='3' >Option 3 (Winter)</option>
+    </select>
+    </div>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title">Text Size
+    <br/><span style='font-size: 11px'>Adjust the size of fonts larger/smaller</span>
+    </div>
+    <div class="item-after">
+    <select name="text_size" class="inlineinputlg">
+    <option value='normal' selected>Normal</option>
+    <option value='larger' >Larger</option>
+    <option value='smaller' >Smaller</option>
+    </select>
+    </div>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title label">Pet Whistle Minimum
+    <br/><span style='font-size: 11px'>Number of items ready before banner appears</span>
+    </div>
+    <div class="item-after">
+    <input type="text" name="pw_amt" value="1000000" style='width:60px'>
+    </div>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title label">Launcher Amount
+    <br/><span style='font-size: 11px'>Number of Large Nets to launch per use<br/>Set between 10 and 50 and watch your Inventory Cap</span>
+    </div>
+    <div class="item-after">
+    <input type="text" name="lnl_amt" value="50" class="inlineinputsm" style='width:60px'>
+    </div>
+    </div>
+    </div>
+    </li>
+    <li class="accordion-item"><a href="#" class="item-content item-link">
+    <div class="item-inner">
+    <div class="item-title">Safe Mode<br/><span style='font-size: 11px'>Disables community features and gold buying</span></div>
+    </div></a>
+    <div class="accordion-item-content">
+    <div class="content-block" style="padding-left:15px;padding-right:15px;padding-bottom:15px">
+    <p>With Safe Mode ON, your account will not be able to buy Gold, send/receive Messages or view the in-game Chat panel.</p>
+    <label class="label-switch" style="width:100%">
+    Safe Mode is <strong>OFF</strong> <input type="checkbox" id="safe_mode" name="safe_mode" value="1" >
+    <div class="checkbox"></div>
+    </label>
+    <br/><br/>
+    </div>
+    </div>
+    </li>
+    </ul>
+    </div>
+    </form>
+    <div class="content-block">
+    <input type="button" class="button btngreen settings_sub2" id="settings_sub" value="Save Options">
+    </div>
+    <p>&nbsp;</p>
+
+    <div class="content-block-title">Select an Emblem</div>
+    <div class="content-block" style="text-align:center">
+    <div class="card">
+    <div class="card-content">
+    <div class="card-content-inner">
+    &nbsp;<br/><img src="img/emblems/Octopus96.png" style='width:100px;padding-bottom:5px'><br/> <input type="text" style="width:80%" id="emblemsearch" placeholder="Find by keywords"><br/><br/>
+    <a
+  href="x"
+  data-words="4 leaf clover,green, plant"
+  data-id="3"
+  class="setemblembtn"
+  ><img src="img/emblems/emblem_clover01.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="A Dragon,dragon, green"
+  data-id="110"
+  class="setemblembtn"
+  ><img src="img/emblems/ADragon96.png" class="vendoritemimg" /></a
+><a href="x" data-words="A Stone,stone, rock" data-id="70" class="setemblembtn"
+  ><img src="img/emblems/StonePlain96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Acorn,acorn, brown" data-id="185" class="setemblembtn"
+  ><img src="img/emblems/Acorn96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Acoustic,acoustic, guitar"
+  data-id="33"
+  class="setemblembtn"
+  ><img src="img/emblems/Acoustic96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="ADragon Yellow,Dragon, yellow"
+  data-id="441"
+  class="setemblembtn"
+  ><img src="img/emblems/YellowDragon96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Alert Solid,red, alert"
+  data-id="127"
+  class="setemblembtn"
+  ><img src="img/emblems/Alert96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Amethyst ,purple" data-id="432" class="setemblembtn"
+  ><img src="img/emblems/Amethyst96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Another Duck In The Wall,Duck"
+  data-id="620"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/2DB9B8C9-5D9F-4947-9BBE-428A8016B6EC.png"
+    class="vendoritemimg" /></a
+><a href="x" data-words="Aquamarine ,blue" data-id="433" class="setemblembtn"
+  ><img src="img/emblems/Aquamarine96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Arnold Palmer,drink, yellow"
+  data-id="591"
+  class="setemblembtn"
+  ><img src="img/emblems/ArnoldPalmer96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Astronaut Helmet,helmet, yellow"
+  data-id="431"
+  class="setemblembtn"
+  ><img src="img/emblems/AstroHelmet96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Awesome O. Possum,possum"
+  data-id="530"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/DA721543-F2C9-4499-B44E-2E4A210CCC1A.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Backpack Red,backpack, red"
+  data-id="470"
+  class="setemblembtn"
+  ><img src="img/emblems/BackpackRed96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Bacon,bacon" data-id="420" class="setemblembtn"
+  ><img src="img/emblems/Bacon96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Barracuda ,fish" data-id="323" class="setemblembtn"
+  ><img src="img/emblems/Barracuda96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Bat BB,Bat, animal " data-id="647" class="setemblembtn"
+  ><img
+    src="img/emblems/A7E52C3A-F381-41B3-8355-D38E1831ACA6.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Bat Named Bruce,bat, dark"
+  data-id="378"
+  class="setemblembtn"
+  ><img src="img/emblems/BattyBruce96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Batbat ,bat, batman" data-id="46" class="setemblembtn"
+  ><img src="img/emblems/BatBat96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Bear,Animal, bear" data-id="644" class="setemblembtn"
+  ><img
+    src="img/emblems/39393643-84C6-41C3-9149-A38361EB5389.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Bear in a tank,Bear, tank"
+  data-id="659"
+  class="setemblembtn"
+  ><img src="img/emblems/Bearintank.png" class="vendoritemimg" /></a
+><a href="x" data-words="Bee Design,bee" data-id="17" class="setemblembtn"
+  ><img src="img/emblems/BeeScheme96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Beet,purple, beet" data-id="342" class="setemblembtn"
+  ><img src="img/emblems/Beet96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Bell,bell" data-id="213" class="setemblembtn"
+  ><img src="img/emblems/Bell96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Birdhouse Basic,birdhouse, dark"
+  data-id="26"
+  class="setemblembtn"
+  ><img src="img/emblems/Birdhouse96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Boaty,boat" data-id="16" class="setemblembtn"
+  ><img src="img/emblems/BoatyMcBoatface96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Bone Broth Bath Time,bone, broth"
+  data-id="523"
+  class="setemblembtn"
+  ><img src="img/emblems/BoneBrothDuckie96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Boo Ghost,ghost, halloween"
+  data-id="534"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/5789CAA2-5C1B-42DD-BC05-1CB7F7CA5074.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Boo Ghost Green Sunglasses ,ghost, halloween, green, sunglasses"
+  data-id="537"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/C8550301-ED93-478E-9354-07CDE3F41772.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Boo Ghost Purple Glasses,ghost, halloween, purple, sunglasses"
+  data-id="535"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/8A716747-C600-43D2-8BEB-5614E4577AFC.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Boo Ghost Purple Hat,ghost, halloween, green, hat"
+  data-id="536"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/D0FBA5DF-A938-4F29-9D84-549B7D5F721F.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Boo Ghost Tiara,ghost, halloween, tiara"
+  data-id="562"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/945FFAFE-26CC-4048-ACDA-54F4E9415352.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Boo Ghost Witch,ghost, halloween, witch"
+  data-id="544"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/7F0987DA-C6CB-4F86-A3E9-3E6E7B3A38DB.png"
+    class="vendoritemimg" /></a
+><a href="x" data-words="Book of Clues,book" data-id="409" class="setemblembtn"
+  ><img src="img/emblems/BookClues96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Book of Fish,book" data-id="406" class="setemblembtn"
+  ><img src="img/emblems/BookFish96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Book of Flora,book" data-id="410" class="setemblembtn"
+  ><img src="img/emblems/BookFlora96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Book of Insects,book"
+  data-id="408"
+  class="setemblembtn"
+  ><img src="img/emblems/BookInsects96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Book of Knots,book" data-id="412" class="setemblembtn"
+  ><img src="img/emblems/BookKnots96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Book of Maps,book" data-id="407" class="setemblembtn"
+  ><img src="img/emblems/BookMaps96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Book of Schemas,book"
+  data-id="413"
+  class="setemblembtn"
+  ><img src="img/emblems/BookSchemas96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Book of Skill,book" data-id="411" class="setemblembtn"
+  ><img src="img/emblems/BookSkill96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Book of Time,book" data-id="414" class="setemblembtn"
+  ><img src="img/emblems/BookTime96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Branching,tree, branch"
+  data-id="193"
+  class="setemblembtn"
+  ><img src="img/emblems/Branching96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Broccoli,crop" data-id="343" class="setemblembtn"
+  ><img src="img/emblems/Broccoli96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Buddy Explorer,buddy"
+  data-id="539"
+  class="setemblembtn"
+  ><img src="img/emblems/BuddyExplorer96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Bunny Ears,bunny, rabbit"
+  data-id="483"
+  class="setemblembtn"
+  ><img src="img/emblems/BunnyEars96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Bunny Slime,Slime, bunny, Easter "
+  data-id="678"
+  class="setemblembtn"
+  ><img src="img/emblems/BunnySlime.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Butterfly Blue Morpho,blue"
+  data-id="290"
+  class="setemblembtn"
+  ><img src="img/emblems/BlueMorpho96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Butterfly Monarch,orange"
+  data-id="272"
+  class="setemblembtn"
+  ><img src="img/emblems/ButterflyMonarch96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Calculator ,math" data-id="472" class="setemblembtn"
+  ><img src="img/emblems/CalculatorSimple96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Campfire,fire" data-id="22" class="setemblembtn"
+  ><img src="img/emblems/Campfire96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Candy Cane,candy, christmas"
+  data-id="157"
+  class="setemblembtn"
+  ><img src="img/emblems/FarmCandyCane96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Captain Kat,cat, white, pink"
+  data-id="191"
+  class="setemblembtn"
+  ><img src="img/emblems/CaptKat96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Captain Log,book" data-id="363" class="setemblembtn"
+  ><img src="img/emblems/CaptainsLog96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Capture Egg,egg, pokemon"
+  data-id="131"
+  class="setemblembtn"
+  ><img src="img/emblems/CaptureEgg96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Capybara Blue," data-id="223" class="setemblembtn"
+  ><img src="img/emblems/BlueCapy96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Capybara Blue Crowned,"
+  data-id="273"
+  class="setemblembtn"
+  ><img src="img/emblems/CapyCrown96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Capybara Emo," data-id="245" class="setemblembtn"
+  ><img src="img/emblems/EmoCapy96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Capybara Emo Lighter Hair,"
+  data-id="599"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/CapybaraEmoLighterHair96.png"
+    class="vendoritemimg" /></a
+><a href="x" data-words="Capybara Green," data-id="225" class="setemblembtn"
+  ><img src="img/emblems/GreenCapy96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Capybara Green On Egg,"
+  data-id="334"
+  class="setemblembtn"
+  ><img src="img/emblems/CapyEggGreen96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Capybara Guitar," data-id="286" class="setemblembtn"
+  ><img src="img/emblems/CapyGuitar96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Capybara Moon," data-id="269" class="setemblembtn"
+  ><img src="img/emblems/CapyMoon96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Capybara Mustache," data-id="239" class="setemblembtn"
+  ><img src="img/emblems/CapyStache96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Capybara Orange ," data-id="230" class="setemblembtn"
+  ><img src="img/emblems/OrangeCapy96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Capybara Pink," data-id="224" class="setemblembtn"
+  ><img src="img/emblems/PinkCapy96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Capybara Pink Rose," data-id="261" class="setemblembtn"
+  ><img src="img/emblems/PinkCapyRose96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Capybara Purple," data-id="231" class="setemblembtn"
+  ><img src="img/emblems/PurpleCapy96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Capybara Santa," data-id="587" class="setemblembtn"
+  ><img src="img/emblems/CapybaraSanta96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Capybara White Toadstool ,"
+  data-id="263"
+  class="setemblembtn"
+  ><img src="img/emblems/WhiteCapyToadstool96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Carbon Sphere," data-id="365" class="setemblembtn"
+  ><img src="img/emblems/CarbonSphere96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Cards Clubs," data-id="485" class="setemblembtn"
+  ><img src="img/emblems/SuitClubs99.png" class="vendoritemimg" /></a
+><a href="x" data-words="Cards Diamonds,red" data-id="487" class="setemblembtn"
+  ><img src="img/emblems/SuitDiamonds96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Cards Hearts,red" data-id="486" class="setemblembtn"
+  ><img src="img/emblems/SuitHearts96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Cards Spades," data-id="488" class="setemblembtn"
+  ><img src="img/emblems/SuitSpades96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Carnevale,mask" data-id="228" class="setemblembtn"
+  ><img src="img/emblems/Carnevale96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Carrot,orange" data-id="344" class="setemblembtn"
+  ><img src="img/emblems/Carrot96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Cat black,Black Cat sleep"
+  data-id="674"
+  class="setemblembtn"
+  ><img src="img/emblems/Black Cat.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Cat orange,Animal, cat, orange"
+  data-id="643"
+  class="setemblembtn"
+  ><img src="img/emblems/CatOrange96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Cat Paw," data-id="50" class="setemblembtn"
+  ><img src="img/emblems/ CatPaw96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Cat Paw Rainbow,rainbow"
+  data-id="351"
+  class="setemblembtn"
+  ><img src="img/emblems/CatPawRbow96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Cat Paw Teal," data-id="350" class="setemblembtn"
+  ><img src="img/emblems/CatPawTeal96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Cat Stripey,Cat Stripey sleepy"
+  data-id="675"
+  class="setemblembtn"
+  ><img src="img/emblems/Stripey Cat.png" class="vendoritemimg" /></a
+><a href="x" data-words="Cheese Wedge,yellow" data-id="392" class="setemblembtn"
+  ><img src="img/emblems/CheeseWedge96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Chicken,orange, chicken"
+  data-id="5"
+  class="setemblembtn"
+  ><img src="img/emblems/emblem_chicken01.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Chicken Christmas,Christmas, chicken"
+  data-id="594"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/EDD5B89B-008F-46CD-B0C5-592D5EC3EF5E.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Chicken Paddy,Chicken, st Patrick’s day"
+  data-id="673"
+  class="setemblembtn"
+  ><img src="img/emblems/Chicken Paddy.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Chicken Valentine,Valentines, chicken"
+  data-id="640"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/8D03F821-11B4-4912-92EC-5A71780E0163.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Christmas Doge,Christmas, doge"
+  data-id="598"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/ABF7486D-EEB3-4289-939A-325498D90E6D.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Christmas Tree ,Christmas"
+  data-id="156"
+  class="setemblembtn"
+  ><img src="img/emblems/FarmChristmasTree96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Cinnamon Sticks," data-id="146" class="setemblembtn"
+  ><img src="img/emblems/CinnamonSticks96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Cockatiel,Cockatiel, bird, parrot"
+  data-id="554"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/567D27E4-AD8A-43CE-A286-77D239EBBA54.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Cocker Spaniel ,Dog, cocker spaniel, puppy"
+  data-id="676"
+  class="setemblembtn"
+  ><img src="img/emblems/Spaniel.png" class="vendoritemimg" /></a
+><a href="x" data-words="Cog,machine" data-id="87" class="setemblembtn"
+  ><img src="img/emblems/Cog96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Conversation Heart Buddy,Valentines "
+  data-id="630"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/CEB58A3A-8F53-4DE6-BAFD-D69FF23DBF80.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Conversation Heart Corn,Valentines"
+  data-id="631"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/4A24193D-5A7F-46CA-92C1-74FA971A1DB2.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Conversation Heart Ric,Valentines "
+  data-id="634"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/BC6CEB9C-4297-4531-9DDE-27AF62C2E33E.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Conversation Heart Tru,Valentines "
+  data-id="632"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/53D7D0FF-B602-4C2F-A8E3-F827E4E98595.png"
+    class="vendoritemimg" /></a
+><a href="x" data-words="Corgi,Dog" data-id="616" class="setemblembtn"
+  ><img
+    src="img/emblems/7222D957-14FC-4B8D-8C3D-8F0154870B22.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Corn Christmas,Christmas"
+  data-id="602"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/049098D5-C232-480F-8F60-27158909ADD8.png"
+    class="vendoritemimg" /></a
+><a href="x" data-words="Corn Jail," data-id="118" class="setemblembtn"
+  ><img src="img/emblems/YellowCornJail96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Corn Jill," data-id="145" class="setemblembtn"
+  ><img src="img/emblems/CornJill96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Cow,milk" data-id="4" class="setemblembtn"
+  ><img src="img/emblems/emblem_cow01.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Cow Christmas ,Christmas"
+  data-id="596"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/8DDAC2D5-0BBC-46D0-A9F4-2C3C3B3627CF.png"
+    class="vendoritemimg" /></a
+><a href="x" data-words="Cowboy Hat," data-id="23" class="setemblembtn"
+  ><img src="img/emblems/CowboyHat96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Crab Blue," data-id="219" class="setemblembtn"
+  ><img src="img/emblems/BlueCrab96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Crab Claw,orange" data-id="216" class="setemblembtn"
+  ><img src="img/emblems/CrabClaw96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Crab Red," data-id="473" class="setemblembtn"
+  ><img src="img/emblems/CrabRed96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Crest Langstaff ," data-id="476" class="setemblembtn"
+  ><img src="img/emblems/Langstaff96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Crest Meerif," data-id="477" class="setemblembtn"
+  ><img src="img/emblems/Meerif96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Cyclops Spider Christmas,Christmas "
+  data-id="600"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/3E8584CF-E6C7-48F6-BE6D-A105B306AEDA.png"
+    class="vendoritemimg" /></a
+><a href="x" data-words="Deal With A Puffer," data-id="170" class="setemblembtn"
+  ><img src="img/emblems/PufferUltimate96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Deal With Capy,capybara"
+  data-id="197"
+  class="setemblembtn"
+  ><img src="img/emblems/DealWithCapy96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Deal With Egg," data-id="175" class="setemblembtn"
+  ><img src="img/emblems/BadEgg96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Deal With Egg Too," data-id="176" class="setemblembtn"
+  ><img src="img/emblems/AnotherBadEgg96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Deal With Frigate Mac,"
+  data-id="469"
+  class="setemblembtn"
+  ><img src="img/emblems/FrigateMacawDeal96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Deal With Goose,Deal, goose, Canada , sunglasses, animation"
+  data-id="209"
+  class="setemblembtn"
+  ><img src="img/emblems/DealWithGoose.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Deal With It,Deal, duck, sunglasses, animation"
+  data-id="121"
+  class="setemblembtn"
+  ><img src="img/emblems/DealWithIt.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Deal With It Granny Smith,Deal, apple, green, sunglasses, granny, smith"
+  data-id="168"
+  class="setemblembtn"
+  ><img src="img/emblems/DealWithItGranny96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Deal With It Jello LBlue,Deal, jello, blue, sunglasses"
+  data-id="424"
+  class="setemblembtn"
+  ><img src="img/emblems/JelloDealLBlue96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Deal With It Jello LPink,Deal, jello, pink, sunglasses"
+  data-id="423"
+  class="setemblembtn"
+  ><img src="img/emblems/JelloDealPink96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Deal With Otter,Otter, deal, sunglasses, animal"
+  data-id="451"
+  class="setemblembtn"
+  ><img src="img/emblems/DealOtter96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Deal With Strawberry,Strawberry, deal, sunglasses"
+  data-id="443"
+  class="setemblembtn"
+  ><img src="img/emblems/DealStrawberry96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Dice,item, dice" data-id="394" class="setemblembtn"
+  ><img src="img/emblems/Dice96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Dig It,Shovel, dig" data-id="11" class="setemblembtn"
+  ><img src="img/emblems/DigIt96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Divine,Divine, bird, animal"
+  data-id="569"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/2E5ABFC7-287D-4202-AB07-D73D1E5E2E4B.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Doge McDoge,Doge, Irish, st particks "
+  data-id="661"
+  class="setemblembtn"
+  ><img src="img/emblems/Lucky O Doge.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Doge valentine ,Valentine, doge, dog, animal "
+  data-id="642"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/850B7230-E3DB-47C9-B6A6-804CC67454C5.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Doggo Stout 12/10,Dog, animal"
+  data-id="555"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/A0C5016A-A45F-4BF8-AD88-8D21A03CA5D9.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Dragon Christmas,Christmas, dragon"
+  data-id="597"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/F7DD3848-6AB1-45A8-A81F-A9884C3EEDEE.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Dragon Eastern ,Dragon "
+  data-id="646"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/51D6C689-A4A2-4D5F-BCD5-89F59BF79A6E.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Dragonfly,Insect, bug, dragonfly"
+  data-id="214"
+  class="setemblembtn"
+  ><img src="img/emblems/Dragonfly96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Duck Duck,Duck, animal"
+  data-id="25"
+  class="setemblembtn"
+  ><img src="img/emblems/DuckDuck96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Duckie Cute Yellow,Duck, yellow, cute, animal"
+  data-id="617"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/48701B98-1B6A-42BE-90C7-60998BFDE7B9.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Emerald ,item, emerald"
+  data-id="434"
+  class="setemblembtn"
+  ><img src="img/emblems/Emerald96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Enchanted Stone,Stone, magic, enchant"
+  data-id="24"
+  class="setemblembtn"
+  ><img src="img/emblems/MagicStone96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Energite,Retro, energite"
+  data-id="533"
+  class="setemblembtn"
+  ><img src="img/emblems/Energite96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="F Is For Farming,F, farm"
+  data-id="12"
+  class="setemblembtn"
+  ><img src="img/emblems/FForFarming96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Farm Logo Pep,Logo, Pepsi, farm"
+  data-id="390"
+  class="setemblembtn"
+  ><img src="img/emblems/FarmRPGPep96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Farm Moon,Farm, moon"
+  data-id="229"
+  class="setemblembtn"
+  ><img src="img/emblems/FarmMoon96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Farm Mug,Mug, logo, farm"
+  data-id="181"
+  class="setemblembtn"
+  ><img src="img/emblems/FarmMug96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Farm Mug Best,Logo, farm, best, mug"
+  data-id="182"
+  class="setemblembtn"
+  ><img src="img/emblems/FarmMugBest96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Farm RPG DP,Logos, farm, dr, pepper"
+  data-id="444"
+  class="setemblembtn"
+  ><img src="img/emblems/FarmRPGDP96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Farm RPG Grow Them All,Logos, farm, Pokémon"
+  data-id="556"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/A311A189-0384-4D7F-8FA1-14FF3E956F46.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Farm RPG Insured,Logos, state, farm, insurance"
+  data-id="584"
+  class="setemblembtn"
+  ><img src="img/emblems/StateFarmRPG96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Farm RPG Logo Cola,Logos, cola, coke, farm"
+  data-id="389"
+  class="setemblembtn"
+  ><img src="img/emblems/FarmRPGCola96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Farm RPG Soup,Logos, soup, farm"
+  data-id="626"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/E01833E4-D05E-44EA-8B84-914B9238AF9E.png"
+    class="vendoritemimg" /></a
+><a href="x" data-words="Feed,item, feed" data-id="322" class="setemblembtn"
+  ><img src="img/emblems/Feed96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Fence,Fence" data-id="7" class="setemblembtn"
+  ><img src="img/emblems/emblem_fence01.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Fireworks,item, firework"
+  data-id="161"
+  class="setemblembtn"
+  ><img src="img/emblems/Fireworks96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="First Frost,Frost, leaf"
+  data-id="32"
+  class="setemblembtn"
+  ><img src="img/emblems/FirstFrost96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Fish boy,Fish" data-id="660" class="setemblembtn"
+  ><img src="img/emblems/Fish boy .png" class="vendoritemimg" /></a
+><a href="x" data-words="Fishhook ,Fish, hook" data-id="28" class="setemblembtn"
+  ><img src="img/emblems/Fishhook96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Fishing Net,item, fish, net"
+  data-id="162"
+  class="setemblembtn"
+  ><img src="img/emblems/FishingNet96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Flame Orb,item, flame, orb"
+  data-id="362"
+  class="setemblembtn"
+  ><img src="img/emblems/FlameOrb96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Flannel Blue Black,Flannel, blue"
+  data-id="19"
+  class="setemblembtn"
+  ><img src="img/emblems/FlannelBB96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Flannel Green Black,Flannel, green"
+  data-id="20"
+  class="setemblembtn"
+  ><img src="img/emblems/FlannelGB96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Flannel Red Black,Flannel, red"
+  data-id="18"
+  class="setemblembtn"
+  ><img src="img/emblems/FlannelRB96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Flannel Yellow Black,Flannel, yellow"
+  data-id="21"
+  class="setemblembtn"
+  ><img src="img/emblems/FlannelYB96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Flower Purple ,Item, purple"
+  data-id="551"
+  class="setemblembtn"
+  ><img src="img/emblems/PurpleFlower96.png" class="vendoritemimg" /></a
+><a href="x" data-words="For The Trees,Tree" data-id="10" class="setemblembtn"
+  ><img src="img/emblems/ForTheTrees96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Fox BB,Fox" data-id="613" class="setemblembtn"
+  ><img
+    src="img/emblems/DC03D55B-2DF6-4808-AEAE-FBAD708EAAB6.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Fox BB Black,Fox, black"
+  data-id="615"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/69938277-96E7-4015-BE45-8C67D9D7E59B.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Fox BB White,Fox, white"
+  data-id="614"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/7E6B140A-570E-4D7F-8FF0-8C75B53DE45C.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Fox Top hat,Fox, hat"
+  data-id="627"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/6F0E9C79-FA94-4416-857A-5714DB2BBC9D.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="frank,Townsfolk, frank"
+  data-id="173"
+  class="setemblembtn"
+  ><img src="img/emblems/frankAll96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="frank Frightening ,Frank, spooky"
+  data-id="227"
+  class="setemblembtn"
+  ><img src="img/emblems/franklyFrightening96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="frankncorn,Corn, frank, spooky"
+  data-id="425"
+  class="setemblembtn"
+  ><img src="img/emblems/frankncorn96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Frigate Macaw,pet, macaw, frigate, animal"
+  data-id="453"
+  class="setemblembtn"
+  ><img src="img/emblems/FrigateMac96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Frog,item, animal, frog"
+  data-id="198"
+  class="setemblembtn"
+  ><img src="img/emblems/Frog96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Frog Rib-bot,Frog, robot"
+  data-id="628"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/8BF947AE-E6D6-408E-919C-480B4EEEDF7D.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="FRPG Stein,Stein, mug, logo"
+  data-id="88"
+  class="setemblembtn"
+  ><img src="img/emblems/FRPGStein96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Galactic,Galactic" data-id="31" class="setemblembtn"
+  ><img src="img/emblems/Galactic96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Garnet ,item, garnet"
+  data-id="435"
+  class="setemblembtn"
+  ><img src="img/emblems/Garnet96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Gas mask,Gas, mask" data-id="90" class="setemblembtn"
+  ><img src="img/emblems/Gasmask96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Giant Lizard Protector,Monster, lizard"
+  data-id="75"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/GiantLizardProtector96test.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Giant Squid,item, squid"
+  data-id="212"
+  class="setemblembtn"
+  ><img src="img/emblems/GiantSquid96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Gingerbread Man ,Item, gingerbread, man, Christmas"
+  data-id="158"
+  class="setemblembtn"
+  ><img src="img/emblems/FarmGingerbreadMan96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Globber,Item, Globber, animal"
+  data-id="474"
+  class="setemblembtn"
+  ><img src="img/emblems/Globber96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Gnome Gnorman,Gnome" data-id="43" class="setemblembtn"
+  ><img src="img/emblems/Gnorman96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Goat Brown,Goat, brown, animal"
+  data-id="338"
+  class="setemblembtn"
+  ><img src="img/emblems/GoatBrown96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Goat White,Goat, animal, white"
+  data-id="339"
+  class="setemblembtn"
+  ><img src="img/emblems/GoatWhite96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Gold Eggplant,Item, gold, eggplant"
+  data-id="345"
+  class="setemblembtn"
+  ><img src="img/emblems/GoldEggplant96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Gold Peas,Item, gold, pea"
+  data-id="346"
+  class="setemblembtn"
+  ><img src="img/emblems/GoldPeas96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Golden retriever ,Dog"
+  data-id="672"
+  class="setemblembtn"
+  ><img src="img/emblems/Golden retriever .png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Good Game Spin Farmer,animation, gg"
+  data-id="152"
+  class="setemblembtn"
+  ><img src="img/emblems/GG Spin.gif" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Goodship Sarafina,Boat, ship, Sarafina"
+  data-id="466"
+  class="setemblembtn"
+  ><img src="img/emblems/GoodShipSarafina96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Goose of Canada,Goose, Canada"
+  data-id="208"
+  class="setemblembtn"
+  ><img src="img/emblems/CanadaGoose96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Got Mail,Mail, box" data-id="13" class="setemblembtn"
+  ><img src="img/emblems/GotMail96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Granny Smith,Apple, green, granny, smith"
+  data-id="77"
+  class="setemblembtn"
+  ><img src="img/emblems/GrannySmith96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Grapeful Dead,Grape, bear"
+  data-id="545"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/34A141E0-15BB-4D7F-A14D-F7E382684DAB.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Green Tractor,Tractor, green"
+  data-id="1"
+  class="setemblembtn"
+  ><img src="img/emblems/emblem_tractor01.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Guessing Game,Question, guess"
+  data-id="112"
+  class="setemblembtn"
+  ><img src="img/emblems/GuessingGame96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Guy Mask,Mask, guy" data-id="552" class="setemblembtn"
+  ><img
+    src="img/emblems/1CF3FC2E-3E1B-4546-BFCE-A20CF606FAB2.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Halo Kat,Katt, cat, halo"
+  data-id="260"
+  class="setemblembtn"
+  ><img src="img/emblems/HaloKat96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Hammer ,item, hammer"
+  data-id="364"
+  class="setemblembtn"
+  ><img src="img/emblems/Hammer96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Happy Christmas Tree,Christmas, tree, happy"
+  data-id="593"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/CFD060A3-12F2-45BA-90DD-33E955963096.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Heart Ukraine,Ukraine, heart"
+  data-id="371"
+  class="setemblembtn"
+  ><img src="img/emblems/HeartUkraine96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Holiday Teddy Bear,Christmas, bear, teddy, Santa"
+  data-id="154"
+  class="setemblembtn"
+  ><img src="img/emblems/SantaTeddy96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Honey Jail,animation, honey, jail"
+  data-id="128"
+  class="setemblembtn"
+  ><img src="img/emblems/honey jail.gif" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Honk The Goose,Animal, goose"
+  data-id="637"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/5B16056A-68D8-4617-A1ED-8E3529D28601.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Hot Hot Sauce,Hot, sauce"
+  data-id="67"
+  class="setemblembtn"
+  ><img src="img/emblems/HotSauce96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Hourglass,Hourglass" data-id="73" class="setemblembtn"
+  ><img src="img/emblems/Hourglass296.png" class="vendoritemimg" /></a
+><a href="x" data-words="Hyena,Animal, hyena" data-id="573" class="setemblembtn"
+  ><img
+    src="img/emblems/97FDB186-8119-41C8-ADA7-EB5508ED9689.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Iconic Patriotic,Star, patriotic, independence"
+  data-id="51"
+  class="setemblembtn"
+  ><img src="img/emblems/RedWhiteBlue96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Into The Web,Web, spider"
+  data-id="98"
+  class="setemblembtn"
+  ><img src="img/emblems/IntoTheWeb96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Iron,item, iron" data-id="320" class="setemblembtn"
+  ><img src="img/emblems/Iron96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Jack O Lantern ,animation, halloween, pumpkin, jack"
+  data-id="95"
+  class="setemblembtn"
+  ><img src="img/emblems/JackO256.png.png" class="vendoritemimg" /></a
+><a href="x" data-words="Jade,item, jade" data-id="436" class="setemblembtn"
+  ><img src="img/emblems/Jade96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Jello Mold Blue,Jello, blue"
+  data-id="356"
+  class="setemblembtn"
+  ><img src="img/emblems/JelloBlue96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Jello Mold Green,Jello, green"
+  data-id="355"
+  class="setemblembtn"
+  ><img src="img/emblems/JelloGreen96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Jello Mold Orange,Jello, orange"
+  data-id="354"
+  class="setemblembtn"
+  ><img src="img/emblems/JelloOrange96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Jello Mold Pink,Jello, pink"
+  data-id="359"
+  class="setemblembtn"
+  ><img src="img/emblems/JelloPink96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Jello Mold Rainbow,Jello, rainbow"
+  data-id="358"
+  class="setemblembtn"
+  ><img src="img/emblems/JelloRbow96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Jello Mold Red,Jello, red"
+  data-id="357"
+  class="setemblembtn"
+  ><img src="img/emblems/JelloRed96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Jellyfish ,Jellyfish, animal"
+  data-id="47"
+  class="setemblembtn"
+  ><img src="img/emblems/Jellyfish96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Join the duck side,Jedi, Star Wars, Sith, light saber, duck"
+  data-id="684"
+  class="setemblembtn"
+  ><img src="img/emblems/Jointheduckside.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Jolly Pirate,Pirate, flag, skull"
+  data-id="454"
+  class="setemblembtn"
+  ><img src="img/emblems/BlackFlag96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Just An Egg,Egg" data-id="123" class="setemblembtn"
+  ><img src="img/emblems/JustAnEgg96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Kangaroo ,Animal, kangaroo"
+  data-id="49"
+  class="setemblembtn"
+  ><img src="img/emblems/Kangaroo96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Keep Smiling,Mask, smile"
+  data-id="585"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/27EFC1A0-02BC-49BF-9420-5A7CAE58A005.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Laced Shoes,shoe, blue"
+  data-id="113"
+  class="setemblembtn"
+  ><img src="img/emblems/LacedShoes96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Lantern,Lantern, item"
+  data-id="199"
+  class="setemblembtn"
+  ><img src="img/emblems/Lantern96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Lemon,item, lemon, fruit"
+  data-id="419"
+  class="setemblembtn"
+  ><img src="img/emblems/Lemon96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Lemon Quartz,item, quartz, lemon"
+  data-id="437"
+  class="setemblembtn"
+  ><img src="img/emblems/LemonQuartz96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Letter D,D" data-id="482" class="setemblembtn"
+  ><img src="img/emblems/FantasticLetterD96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Light Elemental,Retro, light, elemental"
+  data-id="546"
+  class="setemblembtn"
+  ><img src="img/emblems/LightElemental96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Lightning Bug,Lightning, bug"
+  data-id="136"
+  class="setemblembtn"
+  ><img src="img/emblems/FarmLightningBug96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Lima Bean,item, Lima, bean"
+  data-id="78"
+  class="setemblembtn"
+  ><img src="img/emblems/LimaBean96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Little Ghost,Little, ghost, white"
+  data-id="100"
+  class="setemblembtn"
+  ><img src="img/emblems/LittleGhost96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Little Ghost Blue,Little, ghost, blue"
+  data-id="258"
+  class="setemblembtn"
+  ><img src="img/emblems/LittleGhostBlue96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Little Ghost Egg,Little, ghost, egg"
+  data-id="336"
+  class="setemblembtn"
+  ><img src="img/emblems/EggLittleGhost96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Little Ghost Green,Little, ghost, green"
+  data-id="259"
+  class="setemblembtn"
+  ><img src="img/emblems/LittleGhostGreen96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Little Ghost Orange,Little, ghost, orange"
+  data-id="234"
+  class="setemblembtn"
+  ><img src="img/emblems/LittleGhostOrange96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Little Ghost Pink,Little, ghost, pink"
+  data-id="256"
+  class="setemblembtn"
+  ><img src="img/emblems/LittleGhostPink96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Little Ghost Purple,Little, ghost, purple"
+  data-id="233"
+  class="setemblembtn"
+  ><img src="img/emblems/LittleGhostPurple96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Looking 4 Lunch,Bird, blue, eagle"
+  data-id="15"
+  class="setemblembtn"
+  ><img src="img/emblems/Looking4Lunch96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Love The Mets,Mets, logos, love, meme"
+  data-id="117"
+  class="setemblembtn"
+  ><img src="img/emblems/LoveTheMets96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Macaroni,Gold, coral, macaroni"
+  data-id="179"
+  class="setemblembtn"
+  ><img src="img/emblems/Macaroni96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Magic Lamp,Magic, lamp"
+  data-id="608"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/88417D95-5B8F-4FC0-9A5B-1655496BBCA4.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Magicite,Magic, item"
+  data-id="438"
+  class="setemblembtn"
+  ><img src="img/emblems/Magicite96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Maple Eh,Maple, leaf, Green"
+  data-id="80"
+  class="setemblembtn"
+  ><img src="img/emblems/MapleLeafy96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Maple Leaf Blue,Maple, leaf, Blue"
+  data-id="160"
+  class="setemblembtn"
+  ><img src="img/emblems/MapleLeafyBlue96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Maple Leaf Fuchsia,Maple, leaf, Fuchsia"
+  data-id="447"
+  class="setemblembtn"
+  ><img src="img/emblems/MapleLeafyFuschia96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Maple Leaf Yellow,Maple, leaf, Yellow"
+  data-id="448"
+  class="setemblembtn"
+  ><img src="img/emblems/MapleLeafyYellow96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Maple Leafy Orange,Maple, leaf, orange"
+  data-id="96"
+  class="setemblembtn"
+  ><img src="img/emblems/MapleLeafyOrange96.png" class="vendoritemimg" /></a
+><a href="x" data-words="March 10th,Mar, box" data-id="243" class="setemblembtn"
+  ><img src="img/emblems/MysteryMar1096.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Masked Katt,Mask, cat, katt"
+  data-id="521"
+  class="setemblembtn"
+  ><img src="img/emblems/MaskedKattAll96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Meteor,Meteor, tower"
+  data-id="450"
+  class="setemblembtn"
+  ><img src="img/emblems/Meteor96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Moon Shine,Moon, shine, star"
+  data-id="418"
+  class="setemblembtn"
+  ><img src="img/emblems/MoonShine96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Moon Waxing Crescent,Moon, crescent"
+  data-id="164"
+  class="setemblembtn"
+  ><img src="img/emblems/WaxingCrescent96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Much Cheems,Cheems, doge"
+  data-id="531"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/8E7C00D4-F276-4DE3-941E-7715B7E9E261.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Mugged,Mug, beer, item"
+  data-id="270"
+  class="setemblembtn"
+  ><img src="img/emblems/Mugged96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Mustache and Class Egg,Egg, mustache"
+  data-id="340"
+  class="setemblembtn"
+  ><img src="img/emblems/EggMustachePatch96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Ninja D,Ninja, purple"
+  data-id="428"
+  class="setemblembtn"
+  ><img src="img/emblems/NinjaD96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Ninja L,Ninja, blue" data-id="430" class="setemblembtn"
+  ><img src="img/emblems/NinjaL96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Ninja M,Ninja, orange"
+  data-id="429"
+  class="setemblembtn"
+  ><img src="img/emblems/NinjaM96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Ninja R,Ninja, red" data-id="427" class="setemblembtn"
+  ><img src="img/emblems/NinjaR96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Noodles,Noodles" data-id="607" class="setemblembtn"
+  ><img
+    src="img/emblems/52F7344D-8BDB-4218-B864-F49D0952C67B.png"
+    class="vendoritemimg" /></a
+><a href="x" data-words="Oak,item, oak" data-id="367" class="setemblembtn"
+  ><img src="img/emblems/Oak96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Obi Wan Quackobi,Jedi, duck, Star Wars "
+  data-id="685"
+  class="setemblembtn"
+  ><img src="img/emblems/Obiwanquackobi.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Octopus,item, Octopus, animal"
+  data-id="119"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/Octopus96.png"
+    class="vendoritemimg"
+    style="border: 4px solid teal" /></a
+><a
+  href="x"
+  data-words="Octopus Blue,Octopus, blue, animal"
+  data-id="265"
+  class="setemblembtn"
+  ><img src="img/emblems/OctopusBlue96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Octopus Cute Pink,Octopus, animal, cute, pink"
+  data-id="611"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/52CFE2FE-E543-4100-BC3E-AF25D1766710.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Octopus Cute Pink Cat,Octopus, animal, cat, pink"
+  data-id="612"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/A4ED2884-0FA8-4436-9294-13B37F4A914B.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Octopus Egg,Octopus, animal, egg"
+  data-id="335"
+  class="setemblembtn"
+  ><img src="img/emblems/OctopusEgg96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Octopus Ghastly ,Octopus, ghast, animal"
+  data-id="267"
+  class="setemblembtn"
+  ><img src="img/emblems/GhastlyOctopus96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Octopus Green,Octopus, green, animal"
+  data-id="264"
+  class="setemblembtn"
+  ><img src="img/emblems/OctopusGreen96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Octopus In Corn,Octopus, corn, animal"
+  data-id="468"
+  class="setemblembtn"
+  ><img src="img/emblems/OctopusInCorn96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Octopus Orange Sunflower,Octopus, orange, animal, sunflower"
+  data-id="271"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/OctopusOrangeSunflower96.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Octopus Red,Octopus, red, animal"
+  data-id="266"
+  class="setemblembtn"
+  ><img src="img/emblems/OctopusRed96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Octopus Smile,Octopus, smile, animal"
+  data-id="284"
+  class="setemblembtn"
+  ><img src="img/emblems/OctopusSmile96 2.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Octopuzzle,Puzzle, octopus"
+  data-id="287"
+  class="setemblembtn"
+  ><img src="img/emblems/Octopuzzle96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Old Boot,item, old, boot"
+  data-id="421"
+  class="setemblembtn"
+  ><img src="img/emblems/OldBoot96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Old Picture,item, old, picture"
+  data-id="215"
+  class="setemblembtn"
+  ><img src="img/emblems/OldPic96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Orange Gecko,Item, orange, gecko, animal"
+  data-id="361"
+  class="setemblembtn"
+  ><img src="img/emblems/OrangeGecko96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Orange Juice ,Item, orange, juice"
+  data-id="268"
+  class="setemblembtn"
+  ><img src="img/emblems/OJ96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Orangutan,Ape, monkey"
+  data-id="688"
+  class="setemblembtn"
+  ><img src="img/emblems/Orangutang.png" class="vendoritemimg" /></a
+><a href="x" data-words="Otter,Otter, animal" data-id="204" class="setemblembtn"
+  ><img src="img/emblems/YouOtterKnow96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Otter Adorable ,Otter, animal"
+  data-id="282"
+  class="setemblembtn"
+  ><img src="img/emblems/OtterBeAdorable96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Otter BB <3,Otter, animal, heart"
+  data-id="624"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/0F390623-E535-4518-8B52-4EBA4765F920.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Otter Christmas,Christmas, otter, santa"
+  data-id="578"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/36833A0D-C199-46F3-89B4-A8ECDCFE91D8.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Otter Cuter,Otter, cute, animal"
+  data-id="283"
+  class="setemblembtn"
+  ><img src="img/emblems/OtterBeCuter96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Pancakes Stack,Pancakes"
+  data-id="576"
+  class="setemblembtn"
+  ><img src="img/emblems/Pancakes96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Panda Hi,Panda, animal"
+  data-id="83"
+  class="setemblembtn"
+  ><img src="img/emblems/PandaHi96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Panda, Red Panda,Panda, red, animal"
+  data-id="558"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/5EB38BAE-4C96-4018-BF1B-6C1E53D64E28.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="PandaHi94,Panda, animal"
+  data-id="217"
+  class="setemblembtn"
+  ><img src="img/emblems/PandaHi94.png" class="vendoritemimg" /></a
+><a href="x" data-words="Pangolin,Pangolin" data-id="669" class="setemblembtn"
+  ><img src="img/emblems/Pangolin.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Paper Standard Rule,Paper, lined"
+  data-id="560"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/0E40AD13-DDA9-4923-A619-DBA034ECFE1D.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Peace in Ukraine,Peace, Ukraine, sunflower"
+  data-id="220"
+  class="setemblembtn"
+  ><img src="img/emblems/UkrainePeace96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Peachy,Peach" data-id="65" class="setemblembtn"
+  ><img src="img/emblems/Peachy96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Pear,Pear" data-id="163" class="setemblembtn"
+  ><img src="img/emblems/Pear96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Pencil,Pencil" data-id="471" class="setemblembtn"
+  ><img src="img/emblems/PencilSuperior96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Penguin Power Slide,Penguin, slide"
+  data-id="91"
+  class="setemblembtn"
+  ><img src="img/emblems/PenguinPowerSlide96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Penguin Purple,Animal, penguin, purple"
+  data-id="601"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/50A96A94-895F-4C4D-9DA5-40CC1553E09F.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Peppers,Item, pepper"
+  data-id="275"
+  class="setemblembtn"
+  ><img src="img/emblems/Peppers96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Pickle Basic,Pickle, dill"
+  data-id="490"
+  class="setemblembtn"
+  ><img src="img/emblems/PickleBasic96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Pickle Dill With It,Pickle, dill, deal, sunglasses, cool"
+  data-id="491"
+  class="setemblembtn"
+  ><img src="img/emblems/PickleDill96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Pie,Pie, baked goods"
+  data-id="670"
+  class="setemblembtn"
+  ><img src="img/emblems/Pie.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Piece Of Heart,item, piece, heart, poh"
+  data-id="249"
+  class="setemblembtn"
+  ><img src="img/emblems/PieceOfHeart96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Pig,Pig" data-id="6" class="setemblembtn"
+  ><img src="img/emblems/emblem_pig01.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Pink butterfly,Butterfly"
+  data-id="665"
+  class="setemblembtn"
+  ><img src="img/emblems/Butterflypinky.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Pink Ribbon,Ribbon, pink, item"
+  data-id="250"
+  class="setemblembtn"
+  ><img src="img/emblems/PinkRibbon96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Pizza Slice Pepperoni ,Pizza"
+  data-id="376"
+  class="setemblembtn"
+  ><img src="img/emblems/PizzaPepperoni96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Pocket Watch,Clock, watch, pocket"
+  data-id="422"
+  class="setemblembtn"
+  ><img src="img/emblems/PocketWatch96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Polar Bear Santa,Polar, bear, animal, Santa, Christmas"
+  data-id="580"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/1327EF79-DC6D-4E7C-A75E-535C050899BB.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Popcorn ,item, popcorn"
+  data-id="129"
+  class="setemblembtn"
+  ><img src="img/emblems/Popcorn96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Potato,item, potato" data-id="347" class="setemblembtn"
+  ><img src="img/emblems/Potato96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Potato Hot,item, potato, fire, hot"
+  data-id="379"
+  class="setemblembtn"
+  ><img src="img/emblems/HotPotato96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Potty,Toilet" data-id="167" class="setemblembtn"
+  ><img src="img/emblems/Potty96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Precious,Item, ring, precious"
+  data-id="84"
+  class="setemblembtn"
+  ><img src="img/emblems/OneRing96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Present,Present, red"
+  data-id="151"
+  class="setemblembtn"
+  ><img src="img/emblems/PresentRedGreenGold96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Prosperous New Year,New, year, coin"
+  data-id="192"
+  class="setemblembtn"
+  ><img src="img/emblems/NewYearCoin96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Protogen,Furry, Protogen"
+  data-id="682"
+  class="setemblembtn"
+  ><img src="img/emblems/Protogen.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Puff Lobster Unholy Alliance,Puffer, lobster, mutant"
+  data-id="89"
+  class="setemblembtn"
+  ><img src="img/emblems/PuffLob96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Puffer Santa,Puffer, Christmas, Santa"
+  data-id="586"
+  class="setemblembtn"
+  ><img src="img/emblems/PufferSanta96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Puffstache ,Puffer, mustache"
+  data-id="171"
+  class="setemblembtn"
+  ><img src="img/emblems/PuffStache96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Puffy,item, puffer" data-id="71" class="setemblembtn"
+  ><img src="img/emblems/Puffy96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Pug,Pug, dog" data-id="671" class="setemblembtn"
+  ><img src="img/emblems/Pug.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Puzzle Piece 1,Puzzle, piece"
+  data-id="242"
+  class="setemblembtn"
+  ><img src="img/emblems/PuzzlePieceF96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Raccoon Burglar,Raccoon, burglar, trash, panda"
+  data-id="572"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/F544559A-5493-49DD-A282-D635FAC4758A.png"
+    class="vendoritemimg" /></a
+><a href="x" data-words="Rainbow,Rainbow" data-id="395" class="setemblembtn"
+  ><img src="img/emblems/Rainbow96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Rainbow Unicorn,Unicorn, rainbow"
+  data-id="92"
+  class="setemblembtn"
+  ><img src="img/emblems/RainbowUnicorn96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Raptor Blue,Raptor, blue"
+  data-id="140"
+  class="setemblembtn"
+  ><img src="img/emblems/RaptorBlue96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Raptor Claw,Item, raptor, claw"
+  data-id="211"
+  class="setemblembtn"
+  ><img src="img/emblems/RaptorClaw96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Raptor Green,Raptor, green"
+  data-id="137"
+  class="setemblembtn"
+  ><img src="img/emblems/RaptorGreen96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Raptor Purple ,Raptor, purple"
+  data-id="139"
+  class="setemblembtn"
+  ><img src="img/emblems/RaptorPurple96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Raptor Red,Raptor, red"
+  data-id="138"
+  class="setemblembtn"
+  ><img src="img/emblems/RaptorRed96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Raptor Soap,Raptor, soap"
+  data-id="467"
+  class="setemblembtn"
+  ><img src="img/emblems/RaptorSoap96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Raptor TL,Raptor, red"
+  data-id="542"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/B5FEC96B-0322-42C1-8EE5-77F5C3FC90CE.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Raptor Yellow ,Raptor, yellow"
+  data-id="141"
+  class="setemblembtn"
+  ><img src="img/emblems/RaptorYellow96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Rat Candy Heart,Valentines, rat, heart, candy"
+  data-id="633"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/3981878D-671A-448A-BFE8-016993856555.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Rat Tea,Rat, tea, rodent"
+  data-id="529"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/0C12A741-EA5F-476A-9D64-C22FF3AF7717.png"
+    class="vendoritemimg" /></a
+><a href="x" data-words="Red Apple,Apple, red" data-id="76" class="setemblembtn"
+  ><img src="img/emblems/RedApple96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Red Barn,Barn, red" data-id="2" class="setemblembtn"
+  ><img src="img/emblems/emblem_barn01.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Red raptor new,Raptor"
+  data-id="663"
+  class="setemblembtn"
+  ><img src="img/emblems/New raptor emblem.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Red Tractor,Tractor, red"
+  data-id="8"
+  class="setemblembtn"
+  ><img src="img/emblems/emblem_tractor02.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Reindeer Nose So Bright,Reindeer, Christmas, Rudolph"
+  data-id="579"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/619DC6B7-37CE-4D39-AB9C-31FDD6F5358C.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Reindeer Regular,Reindeer, Christmas"
+  data-id="605"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/D1BC01A7-8729-41E9-BD1B-0CE369969B8F.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Retro Chocolate Chip Cookie ,Cookie, retro"
+  data-id="668"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/RetroChocolateChipCookie96.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Retro Ghost,Retro, ghost, White"
+  data-id="500"
+  class="setemblembtn"
+  ><img src="img/emblems/RetroGhost96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Retro Ghost Blue,Retro, ghost, Blue"
+  data-id="501"
+  class="setemblembtn"
+  ><img src="img/emblems/RetroGhostBlue96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Retro Ghost Green ,Retro, ghost, Green"
+  data-id="504"
+  class="setemblembtn"
+  ><img src="img/emblems/RetroGhostGreen96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Retro Ghost Orange ,Retro, ghost, Orange"
+  data-id="506"
+  class="setemblembtn"
+  ><img src="img/emblems/RetroGhostOrange96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Retro Ghost Purple ,Retro, ghost, Purple"
+  data-id="502"
+  class="setemblembtn"
+  ><img src="img/emblems/RetroGhostPurple96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Retro Ghost Red,Retro, ghost, Red"
+  data-id="503"
+  class="setemblembtn"
+  ><img src="img/emblems/RetroGhostRed96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Retro Ghost Yellow ,Retro, ghost, yellow"
+  data-id="505"
+  class="setemblembtn"
+  ><img src="img/emblems/RetroGhostYellow96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Retro Heart Blue,Retro, heart, Blue"
+  data-id="495"
+  class="setemblembtn"
+  ><img src="img/emblems/RetroHeartBlue96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Retro Heart Green ,Retro, heart, Green"
+  data-id="499"
+  class="setemblembtn"
+  ><img src="img/emblems/RetroHeartGreen96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Retro Heart Orange,Retro, heart, Orange"
+  data-id="496"
+  class="setemblembtn"
+  ><img src="img/emblems/RetroHeartOrange96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Retro Heart Piece,Retro, heart, Piece"
+  data-id="509"
+  class="setemblembtn"
+  ><img src="img/emblems/RetroHeartPiece96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Retro Heart Purple ,Retro, heart, Purple"
+  data-id="494"
+  class="setemblembtn"
+  ><img src="img/emblems/RetroHeartPurple96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Retro Heart Red,Retro, heart, Red"
+  data-id="493"
+  class="setemblembtn"
+  ><img src="img/emblems/RetroHeartRed96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Retro Heart Yellow ,Retro, heart, yellow"
+  data-id="497"
+  class="setemblembtn"
+  ><img src="img/emblems/RetroHeartYellow96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Retro Jack O Lantern ,Pumpkin, Jack, retro, Halloween"
+  data-id="508"
+  class="setemblembtn"
+  ><img src="img/emblems/RetroJackOLantern96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Retro Skeleton,Skeleton, retro"
+  data-id="518"
+  class="setemblembtn"
+  ><img src="img/emblems/DontKnowSkeletonAll256.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Retro Skull,Skull, retro"
+  data-id="519"
+  class="setemblembtn"
+  ><img src="img/emblems/RetroSkull96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Ribbit,Frog, ribbit" data-id="111" class="setemblembtn"
+  ><img src="img/emblems/FrogPop96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Ringed Planet,Planet, ring"
+  data-id="99"
+  class="setemblembtn"
+  ><img src="img/emblems/RingedPlanet96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Roll Tide,Elephant, roll, tide"
+  data-id="541"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/05BA43FD-1706-4B42-99F9-B0E57073BEBD.png"
+    class="vendoritemimg" /></a
+><a href="x" data-words="ROUS,Rodent, rat" data-id="366" class="setemblembtn"
+  ><img src="img/emblems/ROUS96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Ruby,Item, ruby" data-id="439" class="setemblembtn"
+  ><img src="img/emblems/Ruby96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Rule The Sea,Poseidon, sea"
+  data-id="30"
+  class="setemblembtn"
+  ><img src="img/emblems/KingOfTheSea96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Runestone 1,item, Runestone, 1"
+  data-id="403"
+  class="setemblembtn"
+  ><img src="img/emblems/Runestone196.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Runestone 11,item, Runestone, 11"
+  data-id="400"
+  class="setemblembtn"
+  ><img src="img/emblems/Runestone1196.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Runestone 19,item, Runestone, 19"
+  data-id="401"
+  class="setemblembtn"
+  ><img src="img/emblems/Runestone1996.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Runestone 20,item, Runestone, 20"
+  data-id="402"
+  class="setemblembtn"
+  ><img src="img/emblems/Runestone2096.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Runestone 4,item, Runestone, 4"
+  data-id="399"
+  class="setemblembtn"
+  ><img src="img/emblems/Runestone496.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Runestone 6,item, Runestone, 6"
+  data-id="404"
+  class="setemblembtn"
+  ><img src="img/emblems/Runestone696.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Saguaro ,Cactus, saguaro"
+  data-id="148"
+  class="setemblembtn"
+  ><img src="img/emblems/Saguaro96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Sarafina,Sarafina" data-id="465" class="setemblembtn"
+  ><img src="img/emblems/Sarafina96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Sea Catfish,item, sea, catfish"
+  data-id="337"
+  class="setemblembtn"
+  ><img src="img/emblems/SeaCatfish96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Shaggy Beard Egg,Egg, beard"
+  data-id="341"
+  class="setemblembtn"
+  ><img src="img/emblems/EggBeardShaggy96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Shark Tooth,item, shark, tooth"
+  data-id="405"
+  class="setemblembtn"
+  ><img src="img/emblems/SharkTooth96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Shark Week,Shark, water"
+  data-id="54"
+  class="setemblembtn"
+  ><img src="img/emblems/SharkFin96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Shimmer Topaz,Item, shimmer, topaz"
+  data-id="440"
+  class="setemblembtn"
+  ><img src="img/emblems/ShimmerTopaz96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Silverback Gorilla ,Gorilla, silverback"
+  data-id="184"
+  class="setemblembtn"
+  ><img src="img/emblems/SilverbackG96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Simple Tree,Tree" data-id="38" class="setemblembtn"
+  ><img src="img/emblems/SimpleTree96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Skullish,Skull" data-id="69" class="setemblembtn"
+  ><img src="img/emblems/Skullish96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Slime Christmas ,Christmas, slime, Santa"
+  data-id="610"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/169891A6-05BF-4DBE-BC24-B511B7C511A9.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Slime valentine ,Valentine, slime"
+  data-id="641"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/FC629F96-AA6A-4F78-87E1-82A7855AA2BA.png"
+    class="vendoritemimg" /></a
+><a href="x" data-words="Sloth,Animal, sloth" data-id="619" class="setemblembtn"
+  ><img
+    src="img/emblems/3007E06B-2C5A-47F1-AA7A-1F47E663AA96.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Snail,item, snail insect, bug"
+  data-id="557"
+  class="setemblembtn"
+  ><img src="img/emblems/Snail96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Snowball,item, snowball, snow"
+  data-id="511"
+  class="setemblembtn"
+  ><img src="img/emblems/Snowball96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Snowflake,Snowflake, snow"
+  data-id="150"
+  class="setemblembtn"
+  ><img src="img/emblems/SnowflakeOutline96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Snowman ,Snowman, item, snow"
+  data-id="155"
+  class="setemblembtn"
+  ><img src="img/emblems/FarmSnowman96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Spider Cyclops,item, cyclops, spider"
+  data-id="393"
+  class="setemblembtn"
+  ><img src="img/emblems/CyclopsSpider96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Spooky Cookies,item, spooky, cookie, pumpkin, ghost"
+  data-id="520"
+  class="setemblembtn"
+  ><img src="img/emblems/SpookyCookies96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Spooooon!,Spoon" data-id="210" class="setemblembtn"
+  ><img src="img/emblems/FarmSpoon96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Squirrelly,Squirrel" data-id="570" class="setemblembtn"
+  ><img
+    src="img/emblems/B4EBCF21-3E45-4778-8239-28512DA06DAC.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Starry Egg,Egg, star"
+  data-id="333"
+  class="setemblembtn"
+  ><img src="img/emblems/EggStars96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Steel,item, steel" data-id="321" class="setemblembtn"
+  ><img src="img/emblems/Steel96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Stick,Stick, branch, leaf"
+  data-id="571"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/F0E0B079-081F-409F-96F4-184B33C4CB59.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Stingray,item, stingray"
+  data-id="380"
+  class="setemblembtn"
+  ><img src="img/emblems/Stingray96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Strange Onion,pet, onion, strange"
+  data-id="276"
+  class="setemblembtn"
+  ><img src="img/emblems/StrangeOnion96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Strawberry,Strawberry"
+  data-id="360"
+  class="setemblembtn"
+  ><img src="img/emblems/Strawberry96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Stressed,Stress, green"
+  data-id="561"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/36E92E4C-7FCB-4741-B372-2D888AF315DB.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Stressed Blue Raspberry,Stress, blue"
+  data-id="604"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/F885B91C-5ABC-4343-AE0F-E993A32BCC3F.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Stressed Grape,Stress, purple"
+  data-id="603"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/8AA8C38A-0EF8-458D-B3AA-0C3E184998D5.png"
+    class="vendoritemimg" /></a
+><a href="x" data-words="Stumped,Stump, axe" data-id="512" class="setemblembtn"
+  ><img src="img/emblems/Stumped96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Sturdy Sword,item, sturdy, sword"
+  data-id="319"
+  class="setemblembtn"
+  ><img src="img/emblems/SturdySword96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Sun Set,Sunset, sun" data-id="14" class="setemblembtn"
+  ><img src="img/emblems/SunSet96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Sunflower,item, sunflower"
+  data-id="186"
+  class="setemblembtn"
+  ><img src="img/emblems/Sunflower96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Taco,Item, taco" data-id="382" class="setemblembtn"
+  ><img src="img/emblems/Taco96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Take Heart,Heart, take"
+  data-id="194"
+  class="setemblembtn"
+  ><img src="img/emblems/TakeHeart96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Tea Leaves,item, tea, leaf"
+  data-id="236"
+  class="setemblembtn"
+  ><img src="img/emblems/TeaLeaves96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Team Gold Trout,item, gold, trout"
+  data-id="82"
+  class="setemblembtn"
+  ><img src="img/emblems/Gold Trout.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Team Podcast,Podcast, microphone"
+  data-id="426"
+  class="setemblembtn"
+  ><img src="img/emblems/team podcast emblem.png" class="vendoritemimg" /></a
+><a href="x" data-words="Teapot ,Teapot" data-id="45" class="setemblembtn"
+  ><img src="img/emblems/IrohTeahPot96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Tent,Tent" data-id="53" class="setemblembtn"
+  ><img src="img/emblems/InTents96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Thanks Turkey,Turkey, thanksgiving"
+  data-id="133"
+  class="setemblembtn"
+  ><img src="img/emblems/TurkeyThanks96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="The Lucky,Lucky, clover"
+  data-id="257"
+  class="setemblembtn"
+  ><img src="img/emblems/TheLucky96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Thumbed Judgment ,Thumbs, up,down"
+  data-id="484"
+  class="setemblembtn"
+  ><img src="img/emblems/ThumbsJudgment96.png" class="vendoritemimg" /></a
+><a href="x" data-words="TNT,Explosive " data-id="653" class="setemblembtn"
+  ><img src="img/emblems/TNT96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Toadstool,Mushroom, toadstool, red"
+  data-id="147"
+  class="setemblembtn"
+  ><img src="img/emblems/Toadstool96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Toadstool Pink,Mushroom, toadstool, pink"
+  data-id="352"
+  class="setemblembtn"
+  ><img src="img/emblems/ToadstoolPink96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Toadstool Purple,Mushroom, toadstool, purple"
+  data-id="332"
+  class="setemblembtn"
+  ><img src="img/emblems/ToadstoolPurple96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Toadstool Rainbow ,Mushroom, toadstool, rainbow"
+  data-id="353"
+  class="setemblembtn"
+  ><img src="img/emblems/ToadstoolRbow96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Toast,Toast, butter" data-id="195" class="setemblembtn"
+  ><img src="img/emblems/Toast96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Tomato,item, tomato" data-id="348" class="setemblembtn"
+  ><img src="img/emblems/Tomato96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Top Hat T. Panda,Raccoon, trash, panda, hat"
+  data-id="280"
+  class="setemblembtn"
+  ><img src="img/emblems/TopHatTPanda96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Townsfolk Beatrix ,Townsfolk, Beatrix"
+  data-id="457"
+  class="setemblembtn"
+  ><img src="img/emblems/Beatrix96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Townsfolk Beatrix Santa,Townsfolk, Beatrix, Santa, Christmas, deal, cool, sunglasses"
+  data-id="582"
+  class="setemblembtn"
+  ><img src="img/emblems/ChristmasBeatrix96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Townsfolk Buddy,Townsfolk, Buddy"
+  data-id="513"
+  class="setemblembtn"
+  ><img src="img/emblems/TownsfolkBuddy96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Townsfolk Buddy Cool,Townsfolk, Buddy, cool, deal, sunglasses"
+  data-id="514"
+  class="setemblembtn"
+  ><img src="img/emblems/TownsfolkBuddyCool96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Townsfolk Charles III,Townsfolk, Charles, Chuck, horse, iii, neigh"
+  data-id="456"
+  class="setemblembtn"
+  ><img src="img/emblems/ChuckIII96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Townsfolk Cool Jill ,Townsfolk, Jill, cool, deal, sunglasses"
+  data-id="461"
+  class="setemblembtn"
+  ><img src="img/emblems/CoolJill96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Townsfolk Geist,Townsfolk, Geist, dragon"
+  data-id="575"
+  class="setemblembtn"
+  ><img src="img/emblems/Geist96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Townsfolk Geist Christmas,Christmas, Geist, Christmas, Santa, dragon"
+  data-id="581"
+  class="setemblembtn"
+  ><img src="img/emblems/ChristmasGeist96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Townsfolk Holger,Townsfolk, Holger"
+  data-id="446"
+  class="setemblembtn"
+  ><img src="img/emblems/Holger96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Townsfolk Jill,Townsfolk, Jill"
+  data-id="458"
+  class="setemblembtn"
+  ><img src="img/emblems/Jill96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Townsfolk Ric,Townsfolk, Ric"
+  data-id="459"
+  class="setemblembtn"
+  ><img src="img/emblems/Ric96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Townsfolk Vincent ,Townsfolk, Vincent"
+  data-id="455"
+  class="setemblembtn"
+  ><img src="img/emblems/Vincent96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Trash Panda,Raccoon, trash, panda"
+  data-id="278"
+  class="setemblembtn"
+  ><img src="img/emblems/Trashpanda96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Tree Happy Little,Tree, happy, little"
+  data-id="559"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/3C9161FA-47FD-4485-8671-1826C5938C3B.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Tribal Mask,Tribal, mask"
+  data-id="86"
+  class="setemblembtn"
+  ><img src="img/emblems/TribalMask96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Trick or Treat,Halloween, pumpkin, trick, treat"
+  data-id="97"
+  class="setemblembtn"
+  ><img src="img/emblems/TrickOrTreat96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Tropical fish,Fish, tropical"
+  data-id="650"
+  class="setemblembtn"
+  ><img src="img/emblems/Tropical fish .png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Turtle ,Animal, turtle"
+  data-id="638"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/994303E0-1B75-4F19-B9ED-438FDAA616FB.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Uni-Corn,Unicorn, corn"
+  data-id="442"
+  class="setemblembtn"
+  ><img src="img/emblems/UniCORN96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Unicorn Rainbow BB,Animal, unicorn, rainbow "
+  data-id="645"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/6C6FF406-91E2-4F9F-9492-6BF27945B20A.png"
+    class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Water Nav,Water, purple, navigation, wheel"
+  data-id="29"
+  class="setemblembtn"
+  ><img src="img/emblems/WaterNav96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Watermelon,Watermelon, item"
+  data-id="349"
+  class="setemblembtn"
+  ><img src="img/emblems/Watermelon96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Wave Element,Wave, elements, blue"
+  data-id="27"
+  class="setemblembtn"
+  ><img src="img/emblems/WaveElement96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Werewolf,Wolf, werewolf"
+  data-id="651"
+  class="setemblembtn"
+  ><img src="img/emblems/Werewolf.png" class="vendoritemimg" /></a
+><a href="x" data-words="Wheat,item, wheat" data-id="9" class="setemblembtn"
+  ><img src="img/emblems/emblem_wheat01.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="White flower,White flower"
+  data-id="667"
+  class="setemblembtn"
+  ><img src="img/emblems/White flower.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="White whale,Fishing, whale, Moby "
+  data-id="652"
+  class="setemblembtn"
+  ><img src="img/emblems/White whale .png" class="vendoritemimg" /></a
+><a href="x" data-words="Wine,item, wine" data-id="577" class="setemblembtn"
+  ><img src="img/emblems/Wine96.png" class="vendoritemimg" /></a
+><a href="x" data-words="Wolf,Wolf, gray" data-id="478" class="setemblembtn"
+  ><img src="img/emblems/Wolf96.png" class="vendoritemimg" /></a
+><a href="x" data-words="X,X" data-id="445" class="setemblembtn"
+  ><img src="img/emblems/FileX96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Yellow Corn,corn, yellow, item"
+  data-id="40"
+  class="setemblembtn"
+  ><img src="img/emblems/YellowCorn96.png" class="vendoritemimg" /></a
+><a
+  href="x"
+  data-words="Yuck,Logos, yuck, corn"
+  data-id="116"
+  class="setemblembtn"
+  ><img src="img/emblems/Yuck96.png" class="vendoritemimg" /></a
+><a href="x" data-words="3K Gold,gold" data-id="85" class="setemblembtn"
+  ><img
+    src="img/emblems/Gold3K96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Bat White Honduras,Bat, animal"
+  data-id="648"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/C54116D6-02B2-480A-9150-1F775B48E5A3.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Best Buddies ,buddy" data-id="526" class="setemblembtn"
+  ><img
+    src="img/emblems/BuddyBuddyBuddy96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Blue Corn,corn, blue" data-id="41" class="setemblembtn"
+  ><img
+    src="img/emblems/BlueCorn96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Boo Ghost Cornfriend,ghost, halloween, corn"
+  data-id="538"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/46F76A0B-48F5-458D-87C9-DCD4CF56215E.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Buddy Close,buddy" data-id="44" class="setemblembtn"
+  ><img
+    src="img/emblems/BuddyClose96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Buddy De Los Muertos,buddy"
+  data-id="94"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/BuddyDeLosMuertos96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Buddy Less Happy,buddy"
+  data-id="68"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/BuddyLessHappy96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Buddy Stardust ,buddy"
+  data-id="93"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/BuddyStardust96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Butterfly Rainbow ,rainbow"
+  data-id="377"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/ButterflyRbow96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Cage Free Egg,egg" data-id="124" class="setemblembtn"
+  ><img
+    src="img/emblems/CageFreeEgg96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Captain Fox,fox, brown, captain"
+  data-id="206"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/CaptFox96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Captain Otter,captain"
+  data-id="205"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/CptYouOtterKnow96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Captain T. Panda,panda, racoon"
+  data-id="279"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/CaptainTPanda96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Captain Toast,toast" data-id="207" class="setemblembtn"
+  ><img
+    src="img/emblems/CaptToast96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Capybara Black Cheese,"
+  data-id="253"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/BlackCapyCheese96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Capybara Black Green Top Hat,"
+  data-id="254"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/BlackCapyGTopHat96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Capybara Black Lucky,"
+  data-id="252"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/BlackCapyLucky96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Capybara Black Onyun,"
+  data-id="288"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/CapyBlackOnyun96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Capybara Black Pie," data-id="255" class="setemblembtn"
+  ><img
+    src="img/emblems/BlackCapyPie96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Capybara Black Whale Rainbow,"
+  data-id="277"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/CapyWhaleRainbowBlack96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Capybara Black Wizard,"
+  data-id="251"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/BlackCapyWizHat96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Capybara Deal Blue," data-id="384" class="setemblembtn"
+  ><img
+    src="img/emblems/CapybaraDealBlue96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Capybara Deal Green ,"
+  data-id="385"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/CapybaraDealGreen96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Capybara Deal Orange,"
+  data-id="387"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/CapybaraDealOrange96-p.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Capybara Deal Red," data-id="388" class="setemblembtn"
+  ><img
+    src="img/emblems/CapybaraDealRed96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Capybara Gold," data-id="222" class="setemblembtn"
+  ><img
+    src="img/emblems/GoldCapy96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Capybara Halo," data-id="244" class="setemblembtn"
+  ><img
+    src="img/emblems/HaloCapy96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Capybara Inverse," data-id="238" class="setemblembtn"
+  ><img
+    src="img/emblems/CapyInverse96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Capybara Moon Wizard,"
+  data-id="281"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/CapyMoonWizard96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Capybara White Stripes,"
+  data-id="232"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/WhiteStripesCapy96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Capybara Wobniar," data-id="237" class="setemblembtn"
+  ><img
+    src="img/emblems/CapyVibGYor96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Christmas Tree Queen,Christmas"
+  data-id="595"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/E11D86D0-979B-423E-BE81-17E08CD1C0F1.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Crayon Purple," data-id="368" class="setemblembtn"
+  ><img
+    src="img/emblems/CrayonPurple96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Crayons Rainbow ," data-id="369" class="setemblembtn"
+  ><img
+    src="img/emblems/CrayonRbow96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Crayons Ukraine," data-id="370" class="setemblembtn"
+  ><img
+    src="img/emblems/CrayonUkraine96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Crop Fighter," data-id="39" class="setemblembtn"
+  ><img
+    src="img/emblems/CropDusterRev96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Cupcake,food" data-id="202" class="setemblembtn"
+  ><img
+    src="img/emblems/Cupcake.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Deal With Rubber Duck,yellow, duck, deal, sunglasses"
+  data-id="177"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/RubberDuckDeal96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Drink Blue,Drink, blue, lime"
+  data-id="391"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/BlueDrink96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Egg Dino,Egg, dino" data-id="241" class="setemblembtn"
+  ><img
+    src="img/emblems/EggDino96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Farm Beta,Farm, beta" data-id="34" class="setemblembtn"
+  ><img
+    src="img/emblems/FarmBeta96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Flamingo ,Animal, flamingo"
+  data-id="66"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/Flamingo96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Golden Whale,Whale, gold"
+  data-id="666"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/GoldenWhale.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Jackalope,Jackalope, animal"
+  data-id="74"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/Jackalope96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Jello Eyes Pink,Jello, pink, eyes"
+  data-id="417"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/JelloEyesDustyPink96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Jello Purple Party,Jello, purple, party"
+  data-id="416"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/PartyJelloPurple96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Jelly Fish,Fish, jelly, jar"
+  data-id="48"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/FishJelly96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Kabob Market,Kabobs, kebab, market, animation"
+  data-id="79"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/bob market sm.gif"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Little Ghost OPO,Little, ghost, orange, purple"
+  data-id="246"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/GhostOPO96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Little Ghost POP,Little, ghost, purple, orange"
+  data-id="247"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/GhostPOP96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Mallard,Mallard, duck"
+  data-id="35"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/Mallard96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Maple Eh Red,Maple, leaf, Red"
+  data-id="81"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/MapleLeafyCanadian96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Maple Leaf Rainbow ,Maple, leaf, Rainbow"
+  data-id="449"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/MapleLeafyRbow96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Mustachepple,Mustache, apple"
+  data-id="169"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/Mustachepple96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Ninja Vanish,animation, ninja"
+  data-id="52"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/NinjaVanishAnim.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Off My Lawn,animation, lawn"
+  data-id="72"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/off my lawn.gif"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Onyun Rings,Onion, strange, rings"
+  data-id="289"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/OnyunRings96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Otter BB Crowned,Animal, otter"
+  data-id="625"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/74DEDE22-DFBB-42E6-B32D-6F5BF585295B.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Otter Duckie,Otter, duck, animal"
+  data-id="285"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/OtterDuckie96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Raptor Checkered Green,Raptor, checker, green"
+  data-id="142"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/RaptorCheckerGreen96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Raptor Christmas Sweater,Christmas, raptor, sweater"
+  data-id="159"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/RaptorSweater96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Raptor Swirl Cyan,Raptor, cyan, swirl"
+  data-id="143"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/RaptorSwirlCyan96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Red Corn,Corn, red" data-id="42" class="setemblembtn"
+  ><img
+    src="img/emblems/RedCorn96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Retro Ghost Rainbow,Retro, ghost, Rainbow"
+  data-id="507"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/RetroGhostRbow96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Retro Heart Rainbow ,Retro, heart, Rainbow"
+  data-id="498"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/RetroHeartRbow96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Rubber Duckie,item, rubber, duck"
+  data-id="122"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/RubberDuckie96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Santa Raptor ,pet, raptor, Santa, Christmas"
+  data-id="153"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/SantaRaptor96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="SheepMaybe,Sheep" data-id="218" class="setemblembtn"
+  ><img
+    src="img/emblems/SheepMaybe.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Silver Silverback,Gorilla, silverback, Silver"
+  data-id="187"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/SilverSilverback96 .png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Silverback Blue,Gorilla, silverback, Blue"
+  data-id="190"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/BlueSilverback96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Silverback Green,Gorilla, silverback, green"
+  data-id="189"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/GreenSilverback96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Sparkle Crown,animation, crown"
+  data-id="203"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/Sparkle Crown.gif"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Spellbinding ,Magic, spell, book"
+  data-id="415"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/Spellbinding96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Stingray Gold,item, gold, stingray"
+  data-id="381"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/StingrayGold96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Sunset Egg,Egg, sunset"
+  data-id="130"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/SunsetEgg96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Townsfolk Buddy The Elf,Townsfolk, Buddy, elf, Christmas"
+  data-id="589"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/C1FC1BD4-3CE8-460A-B03C-41F90138351E.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Townsfolk Cool Bea,Townsfolk, Beatrix, cool, deal, sunglasses"
+  data-id="462"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/CoolBea96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Townsfolk Cool Chuck III,Townsfolk, Charles, Chuck, cool, deal, sunglasses, iii"
+  data-id="460"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/CoolChuckIII96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Townsfolk Cool Holger ,Townsfolk, Holger, cool, deal, sunglasses"
+  data-id="452"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/DealHolger96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Townsfolk Cool Ric,Townsfolk, Ric, cool, deal, sunglasses"
+  data-id="464"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/CoolRic96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Townsfolk Cool Vince,Townsfolk, Vincent, cool, deal, sunglasses"
+  data-id="463"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/CoolVince96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="Whale,Whale" data-id="120" class="setemblembtn"
+  ><img
+    src="img/emblems/Whale96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Whale Deal With Roy,Whale, rainbow, deal, sunglasses"
+  data-id="240"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/DealWithWhaleRoyG96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Whale Rainbow Santa,Whale, rainbow, Santa, deal, Christmas, sunglasses"
+  data-id="574"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/WhaleRainbowSanta96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Whale With It,Whale, deal, sunglasses"
+  data-id="178"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/WhaleWithIt96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Wolf Frost,Wolf, blue, frost, ice"
+  data-id="479"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/WolfFrost96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a
+  href="x"
+  data-words="Wolf Magma,Wolf, orange, magma, fire"
+  data-id="480"
+  class="setemblembtn"
+  ><img
+    src="img/emblems/WolfMagma96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed orange" /></a
+><a href="x" data-words="A Path,orange" data-id="126" class="setemblembtn"
+  ><img
+    src="img/emblems/APath96.png"
+    class="vendoritemimg"
+    style="border: 2px dashed red" /></a
+><br /><br /><strong>Tower Emblems</strong>:<br /><a
+  href="x"
+  data-id="331"
+  class="setemblembtn"
+  ><img src="img/emblems/TowerLevel1TK.png" class="vendoritemimg" /></a
+><a href="x" data-id="305" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel1W.png" class="vendoritemimg" /></a
+><a href="x" data-id="306" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel2W.png" class="vendoritemimg" /></a
+><a href="x" data-id="307" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel3W.png" class="vendoritemimg" /></a
+><a href="x" data-id="308" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel4W.png" class="vendoritemimg" /></a
+><a href="x" data-id="309" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel5W.png" class="vendoritemimg" /></a
+><a href="x" data-id="310" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel6W.png" class="vendoritemimg" /></a
+><a href="x" data-id="311" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel7W.png" class="vendoritemimg" /></a
+><a href="x" data-id="312" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel8W.png" class="vendoritemimg" /></a
+><a href="x" data-id="313" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel9W.png" class="vendoritemimg" /></a
+><a href="x" data-id="314" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel10W.png" class="vendoritemimg" /></a
+><a href="x" data-id="326" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel10Diary.png" class="vendoritemimg" /></a
+><a href="x" data-id="327" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel20BS.png" class="vendoritemimg" /></a
+><a href="x" data-id="315" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel20W.png" class="vendoritemimg" /></a
+><a href="x" data-id="316" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel30W.png" class="vendoritemimg" /></a
+><a href="x" data-id="550" class="setemblembtn"
+  ><img
+    src="img/emblems/TowerLevel30OCharm-v3-96.png"
+    class="vendoritemimg" /></a
+><a href="x" data-id="317" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel40W.png" class="vendoritemimg" /></a
+><a href="x" data-id="328" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel40SoG.png" class="vendoritemimg" /></a
+><a href="x" data-id="329" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel50Rc.png" class="vendoritemimg" /></a
+><a href="x" data-id="318" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel50W.png" class="vendoritemimg" /></a
+><a href="x" data-id="324" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel60W.png" class="vendoritemimg" /></a
+><a href="x" data-id="330" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel60GM.png" class="vendoritemimg" /></a
+><a href="x" data-id="325" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel70W.png" class="vendoritemimg" /></a
+><a href="x" data-id="372" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel70TK96.png" class="vendoritemimg" /></a
+><a href="x" data-id="373" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel80FB96.png" class="vendoritemimg" /></a
+><a href="x" data-id="374" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel90HoL96.png" class="vendoritemimg" /></a
+><a href="x" data-id="375" class="setemblembtn"
+  ><img src="img/emblems/TowerLevel100SG96.png" class="vendoritemimg" /></a
+><a href="x" data-id="547" class="setemblembtn"
+  ><img src="img/emblems/AshesPentagorn96.png" class="vendoritemimg" /></a
+><a href="x" data-id="548" class="setemblembtn"
+  ><img src="img/emblems/DragonHeart96.png" class="vendoritemimg" /></a
+><a href="x" data-id="549" class="setemblembtn"
+  ><img src="img/emblems/MagicMirror96.png" class="vendoritemimg" /></a
+><a href="x" data-id="654" class="setemblembtn"
+  ><img src="img/emblems/MaduinCup96-2.png" class="vendoritemimg" /></a
+><a href="x" data-id="655" class="setemblembtn"
+  ><img src="img/emblems/SerpentOfTrym96.png" class="vendoritemimg" /></a
+><a href="x" data-id="656" class="setemblembtn"
+  ><img src="img/emblems/SpringBangle96.png" class="vendoritemimg" /></a
+><a href="x" data-id="657" class="setemblembtn"
+  ><img src="img/emblems/InfernoRing96.png" class="vendoritemimg" /></a
+><a href="x" data-id="658" class="setemblembtn"
+  ><img src="img/emblems/LavaRing96.png" class="vendoritemimg"
+/></a>
+<br /><br /><a href="x" class="clearemblembtn">Clear Emblem</a><br /><br />
+Emblems with dashes around them are special Alpha/Beta Emblems.
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="content-block-title">Username Colors</div>
+    <div class="card">
+    <div class="card-content">
+    <div class="card-content-inner">
+    You can use Gold to unlock the option to set a different color for your username. This color will appear in chat and the online list. You can get Gold from the <a href="bank.php">Bank</a>.
+    </div>
+    </div>
+    </div>
+    <div class="card">
+    <div class="card-content">
+    <div class="list-block">
+    <ul>
+    <li>
+    <a href="#" data-view=".view-main" data-id="" class="item-link close-panel unlockcolorsbtn">
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title">Unlock Colors</div>
+    <div class="item-after">10 Gold</div>
+    </div>
+    </div>
+    </a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    <div class="content-block-title">Special Username Colors</div>
+    <div class="card">
+    <div class="card-content">
+    <div class="card-content-inner">
+    <div class="list-block">
+    <ul>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title">Special Color #1
+    <br/><span style='font-size: 11px'>Level 50 Farming, Fishing, Crafting, Exploring</span>
+    </div>
+    <div class="item-after">
+    <a href="x" data-colorid="1005" class="setcolorbtn"><i class="f7-icons cc1005">circle_fill</i></a>
+    </div>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title">Special Color #2
+    <br/><span style='font-size: 11px'>Level 75 Farming, Fishing, Crafting, Exploring</span>
+    </div>
+    <div class="item-after">
+    <a href="x" data-colorid="1006" class="setcolorbtn"><i class="f7-icons cc1006">circle_fill</i></a>
+    </div>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title">Special Color #3
+    <br/><span style='font-size: 11px'>Level 90 Crafting, Exploring</span>
+    </div>
+    <div class="item-after">
+    <a href="x" data-colorid="1007" class="setcolorbtn"><i class="f7-icons cc1007noshadow">circle_fill</i></a>
+    </div>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title">Special Color #4
+    <br/><span style='font-size: 11px'>Level 90 Farming, Fishing</span>
+    </div>
+    <div class="item-after">
+    <a href="x" data-colorid="1008" class="setcolorbtn"><i class="f7-icons cc1008noshadow">circle_fill</i></a>
+    </div>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title">Special Color #5
+    <br/><span style='font-size: 11px'>Level 90 Farming, Fishing, Crafting, Exploring</span>
+    </div>
+    <div class="item-after">
+    <a href="x" data-colorid="1009" class="setcolorbtn"><i class="f7-icons cc1009noshadow">circle_fill</i></a>
+    </div>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title">Special Color #6
+    <br/><span style='font-size: 11px'>Level 99 Farming, Fishing, Crafting, Exploring</span>
+    </div>
+    <div class="item-after">
+    <a href="x" data-colorid="1010" class="setcolorbtn"><i class="f7-icons cc1010noshadow">circle_fill</i></a>
+    </div>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title">Special Color #7
+    <br/><span style='font-size: 11px'>Tower Unlocked</span>
+    </div>
+    <div class="item-after">
+    <a href="x" data-colorid="1011" class="setcolorbtn"><i class="f7-icons cc1011noshadow">circle_fill</i></a>
+    </div>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title">Special Color #8
+    <br/><span style='font-size: 11px'>Tower Level 50</span>
+    </div>
+    <div class="item-after">
+    <a href="x" data-colorid="1012" class="setcolorbtn"><i class="f7-icons cc1012noshadow">circle_fill</i></a>
+     </div>
+    </div>
+    </div>
+    </li>
+    <li>
+    <div class="item-content">
+    <div class="item-inner">
+    <div class="item-title">Special Color #9
+    <br/><span style='font-size: 11px'>Tower Level 100</span>
+    </div>
+    <div class="item-after">
+    <a href="x" data-colorid="1013" class="setcolorbtn"><i class="f7-icons cc1013noshadow">circle_fill</i></a>
+    </div>
+    </div>
+    </div>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="content-block-title">Select your Country</div>
+    <div class="card">
+    <div class="card-content">
+    <div class="card-content-inner">
+    You can set your country and a country flag icon will display on your profile.
+    </div>
+    </div>
+    </div>
+    <div class="content-block">
+    <div class="card">
+    <div class="card-content">
+    <div class="card-content-inner">
+    <select name="country" id="country">
+    <option value=''>-select-</option><option value='162-abkhazia.png' >Abkhazia</option><option value='140-afghanistan.png' >Afghanistan</option><option value='157-aland islands.png' >Aland Islands</option><option value='145-albania.png' >Albania</option><option value='136-Algeria.png' >Algeria</option><option value='177-american samoa.png' >American Samoa</option><option value='160-andorra.png' >Andorra</option><option value='138-angola.png' >Angola</option><option value='175-anguilla.png' >Anguilla</option><option value='158-antigua and barbuda.png' >Antigua And Barbuda</option><option value='199-argentina.png' >Argentina</option><option value='141-armenia.png' >Armenia</option><option value='163-aruba.png' >Aruba</option><option value='143-australia.png' >Australia</option><option value='072-austria.png' >Austria</option><option value='137-azerbaijan.png' >Azerbaijan</option><option value='065-azores islands.png' >Azores Islands</option><option value='067-bahamas.png' >Bahamas</option><option value='146-bahrain.png' >Bahrain</option><option value='161-balearic islands.png' >Balearic Islands</option><option value='134-bangladesh.png' >Bangladesh</option><option value='151-barbados.png' >Barbados</option><option value='142-basque country.png' >Basque Country</option><option value='152-belarus.png' >Belarus</option><option value='209-belgium.png' >Belgium</option><option value='147-belize.png' >Belize</option><option value='164-benin.png' >Benin</option><option value='148-bermuda.png' >Bermuda</option><option value='062-bhutan.png' >Bhutan</option><option value='129-bolivia.png' >Bolivia</option><option value='153-bonaire.png' >Bonaire</option><option value='149-bosnia and herzegovina.png' >Bosnia And Herzegovina</option><option value='135-botswana.png' >Botswana</option><option value='022-brazil.png' >Brazil</option><option value='169-british indian ocean territory.png' >British Indian Ocean Territory</option><option value='150-british virgin islands.png' >British Virgin Islands</option><option value='155-brunei.png' >Brunei</option><option value='127-bulgaria.png' >Bulgaria</option><option value='144-burkina faso.png' >Burkina Faso</option><option value='159-burundi.png' >Burundi</option><option value='130-cambodia.png' >Cambodia</option><option value='156-cameroon.png' >Cameroon</option><option value='066-canada.png' >Canada</option><option value='173-canary islands.png' >Canary Islands</option><option value='166-cape verde.png' >Cape Verde</option><option value='170-cayman islands.png' >Cayman Islands</option><option value='171-central african republic.png' >Central African Republic</option><option value='178-ceuta.png' >Ceuta</option><option value='167-chad.png' >Chad</option><option value='212-chile.png' >Chile</option><option value='011-china.png' >China</option><option value='179-christmas island.png' >Christmas Island</option><option value='180-cocos island.png' >Cocos Island</option><option value='201-colombia.png' >Colombia</option><option value='172-comoros.png' >Comoros</option><option value='181-cook islands.png' >Cook Islands</option><option value='174-corsica.png' >Corsica</option><option value='131-costa rica.png' >Costa Rica</option><option value='128-croatia.png' >Croatia</option><option value='133-cuba.png' >Cuba</option><option value='049-curacao.png' >Curacao</option><option value='233-cyprus.png' >Cyprus</option><option value='202-czech republic.png' >Czech Republic</option><option value='003-democratic republic of congo.png' >Democratic Republic Of Congo</option><option value='191-denmark.png' >Denmark</option><option value='050-djibouti.png' >Djibouti</option><option value='115-dominica.png' >Dominica</option><option value='245-dominican republic.png' >Dominican Republic</option><option value='035-East Timor.png' >East Timor</option><option value='214-ecuador.png' >Ecuador</option><option value='184-egypt.png' >Egypt</option><option value='248-el salvador.png' >El Salvador</option><option value='121-england.png' >England</option><option value='020-equatorial guinea.png' >Equatorial Guinea</option><option value='051-eritrea.png' >Eritrea</option><option value='004-estonia.png' >Estonia</option><option value='262-ethiopia.png' >Ethiopia</option><option value='252-european union.png' >European Union</option><option value='074-falkland islands.png' >Falkland Islands</option><option value='116-faroe islands.png' >Faroe Islands</option><option value='117-fiji.png' >Fiji</option><option value='211-finland.png' >Finland</option><option value='197-france.png' >France</option><option value='027-french polynesia.png' >French Polynesia</option><option value='075-gabon.png' >Gabon</option><option value='126-galapagos islands.png' >Galapagos Islands</option><option value='103-gambia.png' >Gambia</option><option value='005-georgia.png' >Georgia</option><option value='208-germany.png' >Germany</option><option value='006-ghana.png' >Ghana</option><option value='076-gibraltar.png' >Gibraltar</option><option value='192-greece.png' >Greece</option><option value='078-greenland.png' >Greenland</option><option value='079-grenada.png' >Grenada</option><option value='080-guam.png' >Guam</option><option value='223-guatemala.png' >Guatemala</option><option value='081-guernsey.png' >Guernsey</option><option value='108-guinea.png' >Guinea</option><option value='052-guinea bissau.png' >Guinea Bissau</option><option value='082-guyana.png' >Guyana</option><option value='014-haiti.png' >Haiti</option><option value='239-hawaii.png' >Hawaii</option><option value='236-honduras.png' >Honduras</option><option value='196-hong kong.png' >Hong Kong</option><option value='210-hungary.png' >Hungary</option><option value='222-iceland.png' >Iceland</option><option value='055-india.png' >India</option><option value='185-indonesia.png' >Indonesia</option><option value='200-iran.png' >Iran</option><option value='256-iraq.png' >Iraq</option><option value='193-ireland.png' >Ireland</option><option value='015-isle of man.png' >Isle Of Man</option><option value='203-israel.png' >Israel</option><option value='263-italy.png' >Italy</option><option value='016-ivory coast.png' >Ivory Coast</option><option value='237-jamaica.png' >Jamaica</option><option value='241-japan.png' >Japan</option><option value='007-jersey.png' >Jersey</option><option value='221-jordan.png' >Jordan</option><option value='229-kazakhstan.png' >Kazakhstan</option><option value='234-kenya.png' >Kenya</option><option value='083-kiribati.png' >Kiribati</option><option value='111-kosovo.png' >Kosovo</option><option value='084-kuwait.png' >Kuwait</option><option value='053-kyrgyzstan.png' >Kyrgyzstan</option><option value='194-laos.png' >Laos</option><option value='231-latvia.png' >Latvia</option><option value='255-lebanon.png' >Lebanon</option><option value='017-lesotho.png' >Lesotho</option><option value='043-liberia.png' >Liberia</option><option value='036-libya.png' >Libya</option><option value='045-liechtenstein.png' >Liechtenstein</option><option value='238-lithuania.png' >Lithuania</option><option value='240-luxembourg.png' >Luxembourg</option><option value='118-macao.png' >Macao</option><option value='008-madagascar.png' >Madagascar</option><option value='028-madeira.png' >Madeira</option><option value='009-malawi.png' >Malawi</option><option value='207-malaysia.png' >Malaysia</option><option value='029-maldives.png' >Maldives</option><option value='054-mali.png' >Mali</option><option value='251-malta.png' >Malta</option><option value='056-marshall island.png' >Marshall Island</option><option value='125-martinique.png' >Martinique</option><option value='085-mauritania.png' >Mauritania</option><option value='242-mauritius.png' >Mauritius</option><option value='086-melilla.png' >Melilla</option><option value='033-mexico.png' >Mexico</option><option value='057-micronesia.png' >Micronesia</option><option value='030-moldova.png' >Moldova</option><option value='220-monaco.png' >Monaco</option><option value='010-mongolia.png' >Mongolia</option><option value='031-montenegro.png' >Montenegro</option><option value='087-montserrat.png' >Montserrat</option><option value='182-morocco.png' >Morocco</option><option value='257-mozambique.png' >Mozambique</option><option value='235-myanmar.png' >Myanmar</option><option value='243-namibia.png' >Namibia</option><option value='037-nato.png' >Nato</option><option value='089-nauru.png' >Nauru</option><option value='012-nepal.png' >Nepal</option><option value='077-netherlands.png' >Netherlands</option><option value='215-new zealand.png' >New Zealand</option><option value='249-nicaragua.png' >Nicaragua</option><option value='058-niger.png' >Niger</option><option value='253-nigeria.png' >Nigeria</option><option value='119-niue.png' >Niue</option><option value='059-norfolk island.png' >Norfolk Island</option><option value='226-north korea.png' >North Korea</option><option value='046-northern cyprus.png' >Northern Cyprus</option><option value='090-northern marianas islands.png' >Northern Marianas Islands</option><option value='205-norway.png' >Norway</option><option value='261-oman.png' >Oman</option><option value='107-orkney islands.png' >Orkney Islands</option><option value='091-ossetia.png' >Ossetia</option><option value='232-pakistan.png' >Pakistan</option><option value='120-palau.png' >Palau</option><option value='092-palestine.png' >Palestine</option><option value='216-panama.png' >Panama</option><option value='032-papua new guinea.png' >Papua New Guinea</option><option value='001-paraguay.png' >Paraguay</option><option value='189-peru.png' >Peru</option><option value='187-philippines.png' >Philippines</option><option value='093-pitcairn islands.png' >Pitcairn Islands</option><option value='165-poland.png' >Poland</option><option value='098-portugal.png' >Portugal</option><option value='258-puerto rico.png' >Puerto Rico</option><option value='244-qatar.png' >Qatar</option><option value='122-Rapa Nui.png' >Rapa Nui</option><option value='038-republic of macedonia.png' >Republic Of Macedonia</option><option value='021-republic of the congo.png' >Republic Of The Congo</option><option value='213-romania.png' >Romania</option><option value='044-russia.png' >Russia</option><option value='018-rwanda.png' >Rwanda</option><option value='094-saba island.png' >Saba Island</option><option value='039-sahrawi arab democratic republic.png' >Sahrawi Arab Democratic Republic</option><option value='095-saint kitts and nevis.png' >Saint Kitts And Nevis</option><option value='013-samoa.png' >Samoa</option><option value='047-san marino.png' >San Marino</option><option value='060-sao tome and prince.png' >Sao Tome And Prince</option><option value='061-sardinia.png' >Sardinia</option><option value='204-saudi arabia.png' >Saudi Arabia</option><option value='227-scotland.png' >Scotland</option><option value='002-senegal.png' >Senegal</option><option value='228-serbia.png' >Serbia</option><option value='112-seychelles.png' >Seychelles</option><option value='113-sierra leone.png' >Sierra Leone</option><option value='132-singapore.png' >Singapore</option><option value='096-sint eustatius.png' >Sint Eustatius</option><option value='097-sint maarten.png' >Sint Maarten</option><option value='218-slovakia.png' >Slovakia</option><option value='259-slovenia.png' >Slovenia</option><option value='099-solomon islands.png' >Solomon Islands</option><option value='063-somalia.png' >Somalia</option><option value='100-somaliland.png' >Somaliland</option><option value='188-south africa.png' >South Africa</option><option value='219-south korea.png' >South Korea</option><option value='101-south sudan.png' >South Sudan</option><option value='230-spain.png' >Spain</option><option value='023-sri lanka.png' >Sri Lanka</option><option value='048-st barts.png' >St Barts</option><option value='123-st lucia.png' >St Lucia</option><option value='102-st vincent and the grenadines.png' >St Vincent And The Grenadines</option><option value='040-sudan.png' >Sudan</option><option value='064-suriname.png' >Suriname</option><option value='024-swaziland.png' >Swaziland</option><option value='190-sweden.png' >Sweden</option><option value='176-switzerland.png' >Switzerland</option><option value='224-syria.png' >Syria</option><option value='183-taiwan.png' >Taiwan</option><option value='025-tajikistan.png' >Tajikistan</option><option value='260-tanzania.png' >Tanzania</option><option value='088-thailand.png' >Thailand</option><option value='034-tibet.png' >Tibet</option><option value='068-togo.png' >Togo</option><option value='104-tokelau.png' >Tokelau</option><option value='124-tonga.png' >Tonga</option><option value='105-transnistria.png' >Transnistria</option><option value='026-trinidad and tobago.png' >Trinidad And Tobago</option><option value='250-tunisia.png' >Tunisia</option><option value='154-turkey.png' >Turkey</option><option value='069-turkmenistan.png' >Turkmenistan</option><option value='106-turks and caicos.png' >Turks And Caicos</option><option value='070-tuvalu.png' >Tuvalu</option><option value='254-uganda.png' >Uganda</option><option value='198-ukraine.png' >Ukraine</option><option value='195-united arab emirates.png' >United Arab Emirates</option><option value='110-united kingdom.png' >United Kingdom</option><option value='217-united nations.png' >United Nations</option><option value='186-united states.png' selected>United States</option><option value='225-uruguay.png' >Uruguay</option><option value='041-uzbekistÃ¡n.png' >UzbekistÃ¡n</option><option value='114-vanuatu.png' >Vanuatu</option><option value='071-vatican city.png' >Vatican City</option><option value='206-venezuela.png' >Venezuela</option><option value='109-vietnam.png' >Vietnam</option><option value='073-virgin islands.png' >Virgin Islands</option><option value='246-wales.png' >Wales</option><option value='042-yemen.png' >Yemen</option><option value='247-zambia.png' >Zambia</option><option value='019-zimbabwe.png' >Zimbabwe</option> </select>
+    <br/><br/><a href="x" class="clearcountrybtn">Clear Country</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="content-block-title">Referral Code</div>
+    <div class="card">
+    <div class="card-content">
+    <div class="card-content-inner">
+    Your Referral Code is <strong>B0433</strong><br/><br/>
+    So far, <a href='members.php?type=referred&id=86069'><strong>1</strong> players</a> have signed up with your code.
+    <strong>1</strong> players have reached Farming Level 30 and you have earned <strong>1</strong> Gift Baskets.<br/><br/>Learn more about the <a href='wiki.php?page=Referral%20System'>Referral System</a>.
+    </div>
+    </div>
+    </div>
+    <div class="content-block-title">Sad Stats</div>
+    <div class="card">
+    <div class="card-content">
+    <div class="card-content-inner">
+    Farm RPG tries to focus on the positive, so certain stats are not shown on profiles or publicly, but are <a href="sadstats.php">here</a> if you really want to know.
+    </div>
+    </div>
+    </div>
+    <div class="content-block-title">Delete Account</div>
+    <div class="card">
+    <div class="card-content">
+    <div class="card-content-inner">
+    If you would like to delete your account, you can do so by going to the <a href="delaccount.php">Delete Account</a> section.
+    </div>
+    </div>
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    </div>
+    </div>
+    </div>

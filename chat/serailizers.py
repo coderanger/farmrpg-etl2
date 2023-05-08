@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Message
+from .models import Emblem, Message
 
 
 class MessageSerializer(serializers.ModelSerializer):
@@ -19,4 +19,18 @@ class MessageSerializer(serializers.ModelSerializer):
             "flags",
             "deleted",
             "deleted_ts",
+        ]
+
+
+class EmblemSerializer(serializers.ModelSerializer):
+    id = serializers.IntegerField()
+
+    class Meta:
+        model = Emblem
+        fields = [
+            "id",
+            "name",
+            "image",
+            "type",
+            "keywords",
         ]

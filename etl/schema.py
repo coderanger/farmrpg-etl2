@@ -1,6 +1,7 @@
 from strawberry_django_plus import gql
 from strawberry_django_plus.optimizer import DjangoOptimizerExtension
 
+from chat.graphql import Emblem
 from items.graphql import Item
 from locations.graphql import Location
 from pets.graphql import Pet
@@ -15,6 +16,7 @@ class Query:
     pets: list[Pet] = gql.django.field()
     locations: list[Location] = gql.django.field()
     quizzes: list[Quiz] = gql.django.field()
+    emblems: list[Emblem] = gql.django.field()
 
 
 schema = gql.Schema(
