@@ -112,6 +112,7 @@ def test_quest_scrape_no_update(respx_mock, item1, item2):
                 {
                     "id": 2768520,
                     "npc": "Borgen",
+                    "npc_img": "",
                     "title": "Blooming Thaw Already IV",
                     "author": "",
                     "pred_id": 0,
@@ -162,6 +163,7 @@ def test_quest_scrape_update(respx_mock, item1, item2):
                 {
                     "id": 2768520,
                     "npc": "Borgen",
+                    "npc_img": "",
                     "title": "Blooming Thaw Already IV",
                     "author": "",
                     "pred_id": 0,
@@ -201,6 +203,7 @@ def test_quest_scrape_update(respx_mock, item1, item2):
                 {
                     "id": 2768520,
                     "npc": "Borgen",
+                    "npc_img": "",
                     "title": "Blooming Thaw Already IV Updated",
                     "author": "",
                     "pred_id": 0,
@@ -244,6 +247,7 @@ def test_quest_scrape_no_dated(respx_mock, item1, item2):
                 {
                     "id": 2768520,
                     "npc": "Borgen",
+                    "npc_img": "",
                     "title": "Blooming Thaw Already IV",
                     "author": "",
                     "pred_id": 0,
@@ -284,6 +288,7 @@ def test_quest_scrape_pred(respx_mock, item1, item2):
                 {
                     "id": 533,
                     "npc": "George",
+                    "npc_img": "",
                     "title": "99 Bottles XLVIII",
                     "author": "",
                     "pred_id": 0,
@@ -309,6 +314,7 @@ def test_quest_scrape_pred(respx_mock, item1, item2):
                 {
                     "id": 522,
                     "npc": "George",
+                    "npc_img": "",
                     "title": "99 Bottles XXXVII",
                     "author": "",
                     "pred_id": 533,
@@ -351,6 +357,7 @@ def test_quest_scrape_pred_backwards(respx_mock, item1, item2):
                 {
                     "id": 522,
                     "npc": "George",
+                    "npc_img": "",
                     "title": "99 Bottles XXXVII",
                     "author": "",
                     "pred_id": 533,
@@ -376,6 +383,7 @@ def test_quest_scrape_pred_backwards(respx_mock, item1, item2):
                 {
                     "id": 533,
                     "npc": "George",
+                    "npc_img": "",
                     "title": "99 Bottles XLVIII",
                     "author": "",
                     "pred_id": 0,
