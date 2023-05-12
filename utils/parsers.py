@@ -22,7 +22,7 @@ class ParseError(Exception):
 
 
 def parse_page_fragment(page: bytes) -> _Element:
-    return html5parser.fragment_fromstring(page, create_parent=True)
+    return html5parser.fragment_fromstring(page.decode(), create_parent=True)
 
 
 def sel_first(elms: list[_Element]) -> _Element | None:

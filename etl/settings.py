@@ -75,6 +75,7 @@ INSTALLED_APPS = [
     "pets",
     "locations",
     "quizzes",
+    "npcs",
 ]
 
 MIDDLEWARE = [

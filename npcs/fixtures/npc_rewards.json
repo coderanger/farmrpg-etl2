@@ -1,0 +1,1900 @@
+[
+    {
+        "model": "npcs.npcreward",
+        "pk": 0,
+        "fields": {
+            "npc": 22438,
+            "item": "637",
+            "level": 10,
+            "order": 0,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 1,
+        "fields": {
+            "npc": 22438,
+            "item": "117",
+            "level": 10,
+            "order": 1,
+            "quantity": 50,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 2,
+        "fields": {
+            "npc": 22438,
+            "item": "44",
+            "level": 20,
+            "order": 0,
+            "quantity": 50,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 3,
+        "fields": {
+            "npc": 22438,
+            "item": "61",
+            "level": 20,
+            "order": 1,
+            "quantity": 50,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 4,
+        "fields": {
+            "npc": 22438,
+            "item": "84",
+            "level": 30,
+            "order": 0,
+            "quantity": 50,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 5,
+        "fields": {
+            "npc": 22438,
+            "item": "653",
+            "level": 30,
+            "order": 1,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 6,
+        "fields": {
+            "npc": 22438,
+            "item": "724",
+            "level": 40,
+            "order": 0,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 7,
+        "fields": {
+            "npc": 22438,
+            "item": "319",
+            "level": 40,
+            "order": 1,
+            "quantity": 100,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 8,
+        "fields": {
+            "npc": 22438,
+            "item": "727",
+            "level": 50,
+            "order": 0,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 9,
+        "fields": {
+            "npc": 22438,
+            "item": "120",
+            "level": 50,
+            "order": 1,
+            "quantity": 50,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 10,
+        "fields": {
+            "npc": 22439,
+            "item": "27",
+            "level": 10,
+            "order": 0,
+            "quantity": 100,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 11,
+        "fields": {
+            "npc": 22439,
+            "item": "43",
+            "level": 10,
+            "order": 1,
+            "quantity": 100,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 12,
+        "fields": {
+            "npc": 22439,
+            "item": "137",
+            "level": 20,
+            "order": 0,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 13,
+        "fields": {
+            "npc": 22439,
+            "item": "197",
+            "level": 20,
+            "order": 1,
+            "quantity": 25,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 14,
+        "fields": {
+            "npc": 22439,
+            "item": "282",
+            "level": 30,
+            "order": 0,
+            "quantity": 25,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 15,
+        "fields": {
+            "npc": 22439,
+            "item": "389",
+            "level": 30,
+            "order": 1,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 16,
+        "fields": {
+            "npc": 22439,
+            "item": "638",
+            "level": 40,
+            "order": 0,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 17,
+        "fields": {
+            "npc": 22439,
+            "item": "43",
+            "level": 40,
+            "order": 1,
+            "quantity": 500,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 18,
+        "fields": {
+            "npc": 22440,
+            "item": "178",
+            "level": 10,
+            "order": 0,
+            "quantity": 25,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 19,
+        "fields": {
+            "npc": 22440,
+            "item": "177",
+            "level": 10,
+            "order": 1,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 20,
+        "fields": {
+            "npc": 22440,
+            "item": "167",
+            "level": 20,
+            "order": 0,
+            "quantity": 50,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 21,
+        "fields": {
+            "npc": 22440,
+            "item": "300",
+            "level": 20,
+            "order": 1,
+            "quantity": 25,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 22,
+        "fields": {
+            "npc": 22440,
+            "item": "105",
+            "level": 30,
+            "order": 0,
+            "quantity": 30,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 23,
+        "fields": {
+            "npc": 22440,
+            "item": "452",
+            "level": 30,
+            "order": 1,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 24,
+        "fields": {
+            "npc": 22441,
+            "item": "277",
+            "level": 10,
+            "order": 0,
+            "quantity": 25,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 25,
+        "fields": {
+            "npc": 22441,
+            "item": "89",
+            "level": 10,
+            "order": 1,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 26,
+        "fields": {
+            "npc": 22441,
+            "item": "498",
+            "level": 20,
+            "order": 0,
+            "quantity": 50,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 27,
+        "fields": {
+            "npc": 22441,
+            "item": "199",
+            "level": 20,
+            "order": 1,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 28,
+        "fields": {
+            "npc": 22441,
+            "item": "648",
+            "level": 30,
+            "order": 0,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 29,
+        "fields": {
+            "npc": 22441,
+            "item": "492",
+            "level": 30,
+            "order": 1,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 30,
+        "fields": {
+            "npc": 22442,
+            "item": "141",
+            "level": 10,
+            "order": 0,
+            "quantity": 50,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 31,
+        "fields": {
+            "npc": 22442,
+            "item": "58",
+            "level": 10,
+            "order": 1,
+            "quantity": 100,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 32,
+        "fields": {
+            "npc": 22442,
+            "item": "120",
+            "level": 20,
+            "order": 0,
+            "quantity": 50,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 33,
+        "fields": {
+            "npc": 22442,
+            "item": "121",
+            "level": 20,
+            "order": 1,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 34,
+        "fields": {
+            "npc": 22442,
+            "item": "605",
+            "level": 30,
+            "order": 0,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 35,
+        "fields": {
+            "npc": 22442,
+            "item": "301",
+            "level": 30,
+            "order": 1,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 36,
+        "fields": {
+            "npc": 22442,
+            "item": "595",
+            "level": 40,
+            "order": 0,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 37,
+        "fields": {
+            "npc": 22442,
+            "item": "333",
+            "level": 40,
+            "order": 1,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 38,
+        "fields": {
+            "npc": 22442,
+            "item": "366",
+            "level": 50,
+            "order": 0,
+            "quantity": 3,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 39,
+        "fields": {
+            "npc": 22442,
+            "item": "347",
+            "level": 50,
+            "order": 1,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 40,
+        "fields": {
+            "npc": 22442,
+            "item": "651",
+            "level": 60,
+            "order": 0,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 41,
+        "fields": {
+            "npc": 22442,
+            "item": "141",
+            "level": 60,
+            "order": 1,
+            "quantity": 500,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 42,
+        "fields": {
+            "npc": 22443,
+            "item": "639",
+            "level": 10,
+            "order": 0,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 43,
+        "fields": {
+            "npc": 22443,
+            "item": "33",
+            "level": 10,
+            "order": 1,
+            "quantity": 100,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 44,
+        "fields": {
+            "npc": 22443,
+            "item": "505",
+            "level": 20,
+            "order": 0,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 45,
+        "fields": {
+            "npc": 22443,
+            "item": "540",
+            "level": 20,
+            "order": 1,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 46,
+        "fields": {
+            "npc": 22443,
+            "item": "204",
+            "level": 30,
+            "order": 0,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 47,
+        "fields": {
+            "npc": 22443,
+            "item": "538",
+            "level": 30,
+            "order": 1,
+            "quantity": 2,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 48,
+        "fields": {
+            "npc": 22444,
+            "item": "375",
+            "level": 10,
+            "order": 0,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 49,
+        "fields": {
+            "npc": 22444,
+            "item": "64",
+            "level": 10,
+            "order": 1,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 50,
+        "fields": {
+            "npc": 22444,
+            "item": "330",
+            "level": 20,
+            "order": 0,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 51,
+        "fields": {
+            "npc": 22444,
+            "item": "351",
+            "level": 20,
+            "order": 1,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 52,
+        "fields": {
+            "npc": 22444,
+            "item": "334",
+            "level": 30,
+            "order": 0,
+            "quantity": 25,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 53,
+        "fields": {
+            "npc": 22444,
+            "item": "335",
+            "level": 30,
+            "order": 1,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 54,
+        "fields": {
+            "npc": 22444,
+            "item": "629",
+            "level": 40,
+            "order": 0,
+            "quantity": 25,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 55,
+        "fields": {
+            "npc": 22444,
+            "item": "602",
+            "level": 40,
+            "order": 1,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 56,
+        "fields": {
+            "npc": 22444,
+            "item": "649",
+            "level": 50,
+            "order": 0,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 57,
+        "fields": {
+            "npc": 22444,
+            "item": "65",
+            "level": 50,
+            "order": 1,
+            "quantity": 100,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 58,
+        "fields": {
+            "npc": 22445,
+            "item": "299",
+            "level": 10,
+            "order": 0,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 59,
+        "fields": {
+            "npc": 22445,
+            "item": "72",
+            "level": 10,
+            "order": 1,
+            "quantity": 25,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 60,
+        "fields": {
+            "npc": 22445,
+            "item": "242",
+            "level": 20,
+            "order": 0,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 61,
+        "fields": {
+            "npc": 22445,
+            "item": "479",
+            "level": 20,
+            "order": 1,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 62,
+        "fields": {
+            "npc": 22445,
+            "item": "507",
+            "level": 30,
+            "order": 0,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 63,
+        "fields": {
+            "npc": 22445,
+            "item": "351",
+            "level": 30,
+            "order": 1,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 64,
+        "fields": {
+            "npc": 22445,
+            "item": "491",
+            "level": 40,
+            "order": 0,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 65,
+        "fields": {
+            "npc": 22445,
+            "item": "583",
+            "level": 40,
+            "order": 1,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 66,
+        "fields": {
+            "npc": 22445,
+            "item": "650",
+            "level": 50,
+            "order": 0,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 67,
+        "fields": {
+            "npc": 22445,
+            "item": "500",
+            "level": 50,
+            "order": 1,
+            "quantity": 25,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 68,
+        "fields": {
+            "npc": 22446,
+            "item": "511",
+            "level": 10,
+            "order": 0,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 69,
+        "fields": {
+            "npc": 22446,
+            "item": "130",
+            "level": 10,
+            "order": 1,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 70,
+        "fields": {
+            "npc": 22446,
+            "item": "581",
+            "level": 20,
+            "order": 0,
+            "quantity": 3,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 71,
+        "fields": {
+            "npc": 22446,
+            "item": "475",
+            "level": 20,
+            "order": 1,
+            "quantity": 3,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 72,
+        "fields": {
+            "npc": 22446,
+            "item": "478",
+            "level": 30,
+            "order": 0,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 73,
+        "fields": {
+            "npc": 22446,
+            "item": "172",
+            "level": 30,
+            "order": 1,
+            "quantity": 25,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 74,
+        "fields": {
+            "npc": 22446,
+            "item": "662",
+            "level": 40,
+            "order": 0,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 75,
+        "fields": {
+            "npc": 22446,
+            "item": "660",
+            "level": 40,
+            "order": 1,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 76,
+        "fields": {
+            "npc": 22446,
+            "item": "742",
+            "level": 50,
+            "order": 0,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 77,
+        "fields": {
+            "npc": 22446,
+            "item": "746",
+            "level": 50,
+            "order": 1,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 78,
+        "fields": {
+            "npc": 22447,
+            "item": "123",
+            "level": 10,
+            "order": 0,
+            "quantity": 100,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 79,
+        "fields": {
+            "npc": 22447,
+            "item": "258",
+            "level": 10,
+            "order": 1,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 80,
+        "fields": {
+            "npc": 22447,
+            "item": "43",
+            "level": 20,
+            "order": 0,
+            "quantity": 100,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 81,
+        "fields": {
+            "npc": 22447,
+            "item": "246",
+            "level": 20,
+            "order": 1,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 82,
+        "fields": {
+            "npc": 22447,
+            "item": "508",
+            "level": 30,
+            "order": 0,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 83,
+        "fields": {
+            "npc": 22447,
+            "item": "500",
+            "level": 30,
+            "order": 1,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 84,
+        "fields": {
+            "npc": 22447,
+            "item": "84",
+            "level": 40,
+            "order": 0,
+            "quantity": 50,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 85,
+        "fields": {
+            "npc": 22447,
+            "item": "747",
+            "level": 40,
+            "order": 1,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 86,
+        "fields": {
+            "npc": 53900,
+            "item": "462",
+            "level": 10,
+            "order": 0,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 87,
+        "fields": {
+            "npc": 53900,
+            "item": "458",
+            "level": 10,
+            "order": 1,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 88,
+        "fields": {
+            "npc": 53900,
+            "item": "159",
+            "level": 20,
+            "order": 0,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 89,
+        "fields": {
+            "npc": 53900,
+            "item": "189",
+            "level": 20,
+            "order": 1,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 90,
+        "fields": {
+            "npc": 53900,
+            "item": "459",
+            "level": 30,
+            "order": 0,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 91,
+        "fields": {
+            "npc": 53900,
+            "item": "465",
+            "level": 30,
+            "order": 1,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 92,
+        "fields": {
+            "npc": 53900,
+            "item": "761",
+            "level": 40,
+            "order": 0,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 93,
+        "fields": {
+            "npc": 53900,
+            "item": "695",
+            "level": 40,
+            "order": 1,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 94,
+        "fields": {
+            "npc": 59421,
+            "item": "104",
+            "level": 10,
+            "order": 0,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 95,
+        "fields": {
+            "npc": 59421,
+            "item": "106",
+            "level": 10,
+            "order": 1,
+            "quantity": 15,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 96,
+        "fields": {
+            "npc": 59421,
+            "item": "263",
+            "level": 20,
+            "order": 0,
+            "quantity": 25,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 97,
+        "fields": {
+            "npc": 59421,
+            "item": "250",
+            "level": 20,
+            "order": 1,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 98,
+        "fields": {
+            "npc": 59421,
+            "item": "474",
+            "level": 30,
+            "order": 0,
+            "quantity": 3,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 99,
+        "fields": {
+            "npc": 59421,
+            "item": "393",
+            "level": 30,
+            "order": 1,
+            "quantity": 3,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 100,
+        "fields": {
+            "npc": 70604,
+            "item": "616",
+            "level": 10,
+            "order": 0,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 101,
+        "fields": {
+            "npc": 70604,
+            "item": "360",
+            "level": 10,
+            "order": 1,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 102,
+        "fields": {
+            "npc": 70604,
+            "item": "361",
+            "level": 20,
+            "order": 0,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 103,
+        "fields": {
+            "npc": 70604,
+            "item": "426",
+            "level": 20,
+            "order": 1,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 104,
+        "fields": {
+            "npc": 70604,
+            "item": "364",
+            "level": 30,
+            "order": 0,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 105,
+        "fields": {
+            "npc": 70604,
+            "item": "372",
+            "level": 30,
+            "order": 1,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 106,
+        "fields": {
+            "npc": 46158,
+            "item": "42",
+            "level": 10,
+            "order": 0,
+            "quantity": 100,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 107,
+        "fields": {
+            "npc": 46158,
+            "item": "172",
+            "level": 10,
+            "order": 1,
+            "quantity": 3,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 108,
+        "fields": {
+            "npc": 46158,
+            "item": "171",
+            "level": 20,
+            "order": 0,
+            "quantity": 25,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 109,
+        "fields": {
+            "npc": 46158,
+            "item": "75",
+            "level": 20,
+            "order": 1,
+            "quantity": 100,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 110,
+        "fields": {
+            "npc": 46158,
+            "item": "145",
+            "level": 30,
+            "order": 0,
+            "quantity": 25,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 111,
+        "fields": {
+            "npc": 46158,
+            "item": "392",
+            "level": 30,
+            "order": 1,
+            "quantity": 25,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 112,
+        "fields": {
+            "npc": 71760,
+            "item": "19",
+            "level": 10,
+            "order": 0,
+            "quantity": 50,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 113,
+        "fields": {
+            "npc": 71760,
+            "item": "44",
+            "level": 10,
+            "order": 1,
+            "quantity": 25,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 114,
+        "fields": {
+            "npc": 71760,
+            "item": "159",
+            "level": 20,
+            "order": 0,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 115,
+        "fields": {
+            "npc": 71760,
+            "item": "89",
+            "level": 20,
+            "order": 1,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 116,
+        "fields": {
+            "npc": 71760,
+            "item": "256",
+            "level": 30,
+            "order": 0,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 117,
+        "fields": {
+            "npc": 71760,
+            "item": "565",
+            "level": 30,
+            "order": 1,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 118,
+        "fields": {
+            "npc": 71760,
+            "item": "655",
+            "level": 40,
+            "order": 0,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 119,
+        "fields": {
+            "npc": 71760,
+            "item": "379",
+            "level": 40,
+            "order": 1,
+            "quantity": 50,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 120,
+        "fields": {
+            "npc": 71761,
+            "item": "342",
+            "level": 10,
+            "order": 0,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 121,
+        "fields": {
+            "npc": 71761,
+            "item": "339",
+            "level": 10,
+            "order": 1,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 122,
+        "fields": {
+            "npc": 71761,
+            "item": "652",
+            "level": 20,
+            "order": 0,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 123,
+        "fields": {
+            "npc": 71761,
+            "item": "349",
+            "level": 20,
+            "order": 1,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 124,
+        "fields": {
+            "npc": 71761,
+            "item": "595",
+            "level": 30,
+            "order": 0,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 125,
+        "fields": {
+            "npc": 71761,
+            "item": "305",
+            "level": 30,
+            "order": 1,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 126,
+        "fields": {
+            "npc": 71805,
+            "item": "63",
+            "level": 10,
+            "order": 0,
+            "quantity": 50,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 127,
+        "fields": {
+            "npc": 71805,
+            "item": "457",
+            "level": 10,
+            "order": 1,
+            "quantity": 3,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 128,
+        "fields": {
+            "npc": 71805,
+            "item": "194",
+            "level": 20,
+            "order": 0,
+            "quantity": 50,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 129,
+        "fields": {
+            "npc": 71805,
+            "item": "277",
+            "level": 20,
+            "order": 1,
+            "quantity": 50,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 130,
+        "fields": {
+            "npc": 71805,
+            "item": "185",
+            "level": 30,
+            "order": 0,
+            "quantity": 50,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 131,
+        "fields": {
+            "npc": 71805,
+            "item": "500",
+            "level": 30,
+            "order": 1,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 132,
+        "fields": {
+            "npc": 84518,
+            "item": "67",
+            "level": 10,
+            "order": 0,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 133,
+        "fields": {
+            "npc": 84518,
+            "item": "256",
+            "level": 10,
+            "order": 1,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 134,
+        "fields": {
+            "npc": 84518,
+            "item": "46",
+            "level": 20,
+            "order": 0,
+            "quantity": 50,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 135,
+        "fields": {
+            "npc": 84518,
+            "item": "48",
+            "level": 20,
+            "order": 1,
+            "quantity": 50,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 136,
+        "fields": {
+            "npc": 84518,
+            "item": "363",
+            "level": 30,
+            "order": 0,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 137,
+        "fields": {
+            "npc": 84518,
+            "item": "491",
+            "level": 30,
+            "order": 1,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 138,
+        "fields": {
+            "npc": 178572,
+            "item": "48",
+            "level": 10,
+            "order": 0,
+            "quantity": 25,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 139,
+        "fields": {
+            "npc": 178572,
+            "item": "508",
+            "level": 10,
+            "order": 1,
+            "quantity": 5,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 140,
+        "fields": {
+            "npc": 178572,
+            "item": "637",
+            "level": 20,
+            "order": 0,
+            "quantity": 25,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 141,
+        "fields": {
+            "npc": 178572,
+            "item": "587",
+            "level": 20,
+            "order": 1,
+            "quantity": 10,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 142,
+        "fields": {
+            "npc": 178572,
+            "item": "276",
+            "level": 30,
+            "order": 0,
+            "quantity": 100,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 143,
+        "fields": {
+            "npc": 178572,
+            "item": "614",
+            "level": 30,
+            "order": 1,
+            "quantity": 100,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 144,
+        "fields": {
+            "npc": 178572,
+            "item": "757",
+            "level": 40,
+            "order": 0,
+            "quantity": 1,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    },
+    {
+        "model": "npcs.npcreward",
+        "pk": 145,
+        "fields": {
+            "npc": 178572,
+            "item": "111",
+            "level": 40,
+            "order": 1,
+            "quantity": 100,
+            "created_at": "2023-05-12T07:19:15.085390+00:00",
+            "modified_at": "2023-05-12T07:19:15.085390+00:00"
+        }
+    }
+]
