@@ -77,6 +77,7 @@ INSTALLED_APPS = [
     "quizzes",
     "npcs",
     "updates",
+    "passwords",
 ]
 
 MIDDLEWARE = [
