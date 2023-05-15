@@ -1,8 +1,8 @@
 import re
 from typing import Callable, Iterable
 
-from lxml import cssselect
-from lxml.etree import _Element
+from lxml import cssselect, etree
+from lxml.etree import QName, _Comment, _Element, _ProcessingInstruction
 from lxml.html import html5parser
 
 Selector = Callable[[_Element], list[_Element]]
@@ -23,6 +23,18 @@ class ParseError(Exception):
 
 def parse_page_fragment(page: bytes) -> _Element:
     return html5parser.fragment_fromstring(page.decode(), create_parent=True)
+
+
+def de_namespace(root: _Element) -> _Element:
+    """LXML really cares about XML namespaces and I really don't."""
+    for elem in root.getiterator():
+        # Skip comments and processing instructions,
+        # because they do not have names
+        if not (isinstance(elem, _Comment) or isinstance(elem, _ProcessingInstruction)):
+            # Remove a namespace URI in the element's name
+            elem.tag = QName(elem).localname
+    etree.cleanup_namespaces(root)
+    return root
 
 
 def sel_first(elms: list[_Element]) -> _Element | None:

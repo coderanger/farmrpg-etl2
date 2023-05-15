@@ -8,6 +8,7 @@ from npcs.graphql import NPC
 from pets.graphql import Pet
 from quests.graphql import Quest
 from quizzes.graphql import Quiz
+from updates.graphql import Update
 
 
 @gql.type
@@ -19,6 +20,7 @@ class Query:
     quizzes: list[Quiz] = gql.django.field()
     emblems: list[Emblem] = gql.django.field()
     npcs: list[NPC] = gql.django.field()
+    updates: list[Update] = gql.django.field()
 
 
 schema = gql.Schema(

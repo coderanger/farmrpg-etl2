@@ -33,6 +33,7 @@ google-cloud-iam = "^2.12.0"
 async-lru = "^2.0.2"
 numpy = "^1.24.3"
 sentry-sdk = "^1.21.1"
+python-dateutil = "^2.8.2"
 
 [tool.poetry.group.dev.dependencies]
 respx = "^0.20.1"

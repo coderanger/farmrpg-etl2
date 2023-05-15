@@ -8,6 +8,7 @@ from . import models
 if TYPE_CHECKING:
     from locations.graphql import DropRates, DropRatesItem, LocationItem
     from npcs.graphql import NPCItem, NPCReward
+    from passwords.graphql import PasswordItem
     from pets.graphql import PetItem
     from quests.graphql import QuestItemRequired, QuestItemReward
     from quizzes.graphql import QuizReward
@@ -48,3 +49,4 @@ class Item:
     quiz_rewards: list[Annotated["QuizReward", gql.lazy("quizzes.graphql")]]
     npc_items: list[Annotated["NPCItem", gql.lazy("npcs.graphql")]]
     npc_rewards: list[Annotated["NPCReward", gql.lazy("npcs.graphql")]]
+    password_items: list[Annotated["PasswordItem", gql.lazy("passwords.graphql")]]
