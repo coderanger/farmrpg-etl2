@@ -34,3 +34,6 @@ class UpdatesFeed(Feed):
             datetime.time(hour=17),
             tzinfo=SERVER_TIME,
         )
+
+    def item_guid(self, update: Update) -> str:
+        return f"{update.pk}-{hash(update.content)}"
