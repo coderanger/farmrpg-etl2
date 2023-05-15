@@ -30,7 +30,7 @@ def parse_updates(page: bytes) -> Iterable[dict[str, Any]]:
 
         date = dateutil.parser.parse("".join(date_elm.itertext())).date()
         inner_content = "".join(tostring(e, encoding="unicode") for e in content_elm)
-        content = f"{content_elm.text}{inner_content}{content_elm.tail}"
+        content = f"{content_elm.text}{inner_content}"
 
         # Generate a version of the content that has no relative links.
         for elm in content_elm.iterdescendants("a"):
@@ -45,12 +45,24 @@ def parse_updates(page: bytes) -> Iterable[dict[str, Any]]:
         inner_clean_content = "".join(
             tostring(e, encoding="unicode") for e in content_elm
         )
-        clean_content = f"{content_elm.text}{inner_clean_content}{content_elm.tail}"
+        clean_content = f"{content_elm.text}{inner_clean_content}"
 
         # Generate just the text content.
         for elm in content_elm.iterdescendants("br"):
             if not elm.tail or not elm.tail.startswith("\n"):
                 elm.tail = f"\n{elm.tail or ''}"
+        for elm in content_elm.iterdescendants("img"):
+            parent = elm.getparent()
+            sib = parent.getnext()
+            if (
+                parent.tag == "a"
+                and sib.tag == "span"
+                and sib.get("style") == "display:none"
+                and sib.text.strip() == elm.get("alt").strip()
+            ):
+                continue
+            if not elm.text and elm.get("alt"):
+                elm.text = elm.get("alt")
         text_content = NEWLINES_RE.sub("\n\n", "".join(content_elm.itertext())).strip()
 
         yield {

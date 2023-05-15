@@ -26,7 +26,7 @@ def test_parse_updates(about: bytes):
         """undeniable. To all those who have been with us since the beginning, we extend """
         """our heartfelt gratitude, and to all those who join us daily and make our """
         """community a warm and welcoming place, we thank you as well. Let\'s all enjoy """
-        """the festivities together! \n"""
+        """the festivities together! """
     )
     assert (
         updates[0]["clean_content"]
@@ -37,7 +37,7 @@ def test_parse_updates(about: bytes):
         """undeniable. To all those who have been with us since the beginning, we extend """
         """our heartfelt gratitude, and to all those who join us daily and make our """
         """community a warm and welcoming place, we thank you as well. Let\'s all enjoy """
-        """the festivities together! \n"""
+        """the festivities together! """
     )
     assert (
         updates[0]["text_content"]
@@ -77,14 +77,14 @@ SMALL UPDATES:
         """month 4/30<br>\n- Eggs will continue to drop all month long, including more """
         """ways to acquire each Egg<br>\n- The Hickory Omelette is a permanent meal, but """
         """the Crunchy Omelette is only cookable until 4/30<br>\n- So, you still have """
-        """plenty of time to get more Eggs, don't panic! \n"""
+        """plenty of time to get more Eggs, don't panic! """
     )
 
     assert updates[20]["date"] == datetime.date(2023, 3, 24)
     assert (
         updates[20]["content"]
         == """\nSMALL UPDATES:<br>\n- New craftable item: <a href="item.php?id=743" """
-        """class="close-panel"><img src="/img/items/211.png" class="itemimgsm"></a>"""
+        """class="close-panel"><img src="/img/items/211.png" alt="Step Ladder" class="itemimgsm"></a>"""
         """<span style="display:none">Step Ladder</span><br>\n- Reduced some height """
         """in My Kitchen to reduce scrolling<br>\n- The option to hide some alert """
         """notices at the top of Home have been added<br>\n- When fish are BITING, """
@@ -97,5 +97,5 @@ SMALL UPDATES:
         """You\' or \'Congrats\' with a greeting card that can be placed in a mailbox. """
         """The cards aren\'t worth anything, but are just a nice token.<br>\n- More """
         """cards will appear in future updates as there\'s a lot of farming puns we """
-        """need to use for special greeting cards. \n"""
+        """need to use for special greeting cards. """
     )
