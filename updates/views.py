@@ -37,3 +37,5 @@ class UpdatesFeed(Feed):
 
     def item_guid(self, update: Update) -> str:
         return f"{update.pk}-{hash(update.content)}"
+
+    item_guid_is_permalink = False
