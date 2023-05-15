@@ -42,6 +42,11 @@ def parse_updates(page: bytes) -> Iterable[dict[str, Any]]:
             elm.attrib["src"] = urllib.parse.urljoin(
                 "https://farmrpg.com/", elm.get("src")
             )
+            if "itemimgsm" in elm.get("class", ""):
+                elm.attrib["style"] = f"{elm.get('style', '')};width:25px;height25px"
+        for elm in content_elm.iterdescendants():
+            if "class" in elm.attrib:
+                del elm.attrib["class"]
         inner_clean_content = "".join(
             tostring(e, encoding="unicode") for e in content_elm
         )

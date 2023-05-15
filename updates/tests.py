@@ -99,3 +99,20 @@ SMALL UPDATES:
         """cards will appear in future updates as there\'s a lot of farming puns we """
         """need to use for special greeting cards. """
     )
+    assert (
+        updates[20]["clean_content"]
+        == """\nSMALL UPDATES:<br>\n- New craftable item: <a href="https://farmrpg.com/item.php?id=743">"""
+        """<img src="https://farmrpg.com/img/items/211.png" alt="Step Ladder" style=";width:25px;height25px">"""
+        """</a><span style="display:none">Step Ladder</span><br>\n- Reduced some height in """
+        """My Kitchen to reduce scrolling<br>\n- The option to hide some alert notices at """
+        """the top of Home have been added<br>\n- When fish are BITING, the color has been """
+        """changed from green to gray<br>\n<br>\nNEW GREETING CARDS<br>\n- There are new """
+        """items, called \'Greeting Cards\', that you can buy at the """
+        """<a href="https://farmrpg.com/index.php#!/flea.php" """
+        """style="color: crimson;font-weight:bold;text-decoration:underline">Flea Market</a>, """
+        """but they can also be obtained from other players or from Help Requests or Friendship """
+        """Rewards.<br>\n- This is an optional way to simply say \'Thank You\' or \'Congrats\' """
+        """with a greeting card that can be placed in a mailbox. The cards aren\'t worth """
+        """anything, but are just a nice token.<br>\n- More cards will appear in future """
+        """updates as there\'s a lot of farming puns we need to use for special greeting cards. """
+    )
