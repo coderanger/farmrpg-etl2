@@ -116,3 +116,25 @@ SMALL UPDATES:
         """anything, but are just a nice token.<br>\n- More cards will appear in future """
         """updates as there\'s a lot of farming puns we need to use for special greeting cards. """
     )
+
+    assert (
+        updates[22]["text_content"]
+        == """NEW CRAFTABLE ITEMS:
+- Added on 3/17, the Green Top Hat is craftable until 3/31 --> Green Top Hat
+- Added today, there are 3 other new items you can craft
+- Wooden Table, Fancy Chair and Fancy Pan Flute
+
+LARGE NET LAUNCHER SETTING IN BETA
+- IN BETA: If you have the Large Net Launcher Farm Supply perk, you can go to Settings and set it to use between 10 and 50 large nets per click now
+- IN BETA: This setting reduces clicks even more, but you have to be careful of your inventory cap to make full use of the setting
+
+SMALL UPDATES:
+- There is a chance now every 10 minutes that fish start biting more in a Fishing Location
+- This means when you fish there, you'll get 2-3 more fish per bait (similar to the event bonus)
+- The chance of this happening is 1 out of 10 every 10 minutes and the bonus will last 10 minutes
+- On the Craftable Items list, Crafting XP has been added for quick reference
+
+HIDE HELP REQUESTS IN ALPHA
+- IN ALPHA: You can hide Help Requests now, just go into one you want to hide and scroll to the bottom to hide it
+- IN ALPHA: It will then show in a 'Requests Hidden' view that is at the bottom of the Help Needed section"""  # noqa: E501
+    )

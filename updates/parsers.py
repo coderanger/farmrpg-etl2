@@ -31,6 +31,7 @@ def parse_updates(page: bytes) -> Iterable[dict[str, Any]]:
         date = dateutil.parser.parse("".join(date_elm.itertext())).date()
         inner_content = "".join(tostring(e, encoding="unicode") for e in content_elm)
         content = f"{content_elm.text}{inner_content}"
+        item_names = set()
 
         # Generate a version of the content that has no relative links.
         for elm in content_elm.iterdescendants("a"):
@@ -43,6 +44,8 @@ def parse_updates(page: bytes) -> Iterable[dict[str, Any]]:
                 "https://farmrpg.com/", elm.get("src")
             )
             if "itemimgsm" in elm.get("class", ""):
+                if elm.get("alt"):
+                    item_names.add(elm.get("alt"))
                 elm.attrib["style"] = f"{elm.get('style', '')};width:25px;height25px"
         for elm in content_elm.iterdescendants():
             if "class" in elm.attrib:
@@ -69,6 +72,13 @@ def parse_updates(page: bytes) -> Iterable[dict[str, Any]]:
             if not elm.text and elm.get("alt"):
                 elm.text = elm.get("alt")
         text_content = NEWLINES_RE.sub("\n\n", "".join(content_elm.itertext())).strip()
+        for item_name in item_names:
+            escaped_name = re.escape(item_name)
+            text_content = re.sub(
+                f"({escaped_name}|\({escaped_name}\)) ({escaped_name}|\({escaped_name}\))",
+                item_name,
+                text_content,
+            )
 
         yield {
             "date": date,
