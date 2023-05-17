@@ -46,7 +46,9 @@ def parse_updates(page: bytes) -> Iterable[dict[str, Any]]:
             if "itemimgsm" in elm.get("class", ""):
                 if elm.get("alt"):
                     item_names.add(elm.get("alt"))
-                elm.attrib["style"] = f"{elm.get('style', '')};width:25px;height25px"
+                elm.attrib["style"] = f"{elm.get('style', '')};width:25px;height:25px"
+                elm.attrib["width"] = "25"
+                elm.attrib["height"] = "25"
         for elm in content_elm.iterdescendants():
             if "class" in elm.attrib:
                 del elm.attrib["class"]
