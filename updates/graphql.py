@@ -13,3 +13,5 @@ class UpdateFilter:
 class Update:
     date: auto
     content: auto
+    clean_content: auto
+    text_content: auto
