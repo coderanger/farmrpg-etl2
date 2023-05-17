@@ -15,7 +15,7 @@ from utils.parsers import (
 UPDATES_SEL = CSSSelector("div.recentUpdates")
 DATE_SEL = CSSSelector("div.card-header")
 CONTENT_SEL = CSSSelector("div.card-content-inner")
-GAME_PAGE_RE = re.compile(r"^[a-zA-Z0-9_-]+\.php$")
+GAME_PAGE_RE = re.compile(r"^[a-zA-Z0-9_-]+\.php(\?.*)?(#.*)?$")
 NEWLINES_RE = re.compile("\n{2,}")
 
 

@@ -101,7 +101,7 @@ SMALL UPDATES:
     )
     assert (
         updates[20]["clean_content"]
-        == """\nSMALL UPDATES:<br>\n- New craftable item: <a href="https://farmrpg.com/item.php?id=743">"""
+        == """\nSMALL UPDATES:<br>\n- New craftable item: <a href="https://farmrpg.com/index.php#!/item.php?id=743">"""
         """<img src="https://farmrpg.com/img/items/211.png" alt="Step Ladder" style=";width:25px;height:25px" width="25" height="25">"""  # noqa: E501
         """</a><span style="display:none">Step Ladder</span><br>\n- Reduced some height in """
         """My Kitchen to reduce scrolling<br>\n- The option to hide some alert notices at """
