@@ -14,12 +14,12 @@ class UserAdmin(ReadOnlyAdmin):
 
     @admin.display(description="Past Usernames")
     def past_usernames(self, user: User) -> str:
-        usernames = (
-            UserEvent.objects.filter(user_id=user.id)
+        usernames = list(
+            UserEvent.objects.filter(id=user.id)
+            .exclude(username=user.username)
             .values_list("username", flat=True)
             .distinct()
         )
-        usernames.delete(user.username)
         if not usernames:
             return "-"
         return ", ".join(sorted(usernames))

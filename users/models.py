@@ -12,3 +12,6 @@ class User(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self) -> str:
+        return f"User {self.id} ({self.username})"
