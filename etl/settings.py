@@ -15,6 +15,7 @@ from pathlib import Path
 
 import dj_database_url
 import sentry_sdk
+from django.core.exceptions import DisallowedHost
 from sentry_sdk.integrations.django import DjangoIntegration
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -33,6 +34,7 @@ if "SENTRY_DSN" in os.environ:
         # If you wish to associate users to errors (assuming you are using
         # django.contrib.auth) you may enable sending PII data.
         send_default_pii=True,
+        ignore_errors=[DisallowedHost],
     )
 
 # Quick-start development settings - unsuitable for production
