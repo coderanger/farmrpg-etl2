@@ -10,7 +10,7 @@ class Message(models.Model):
     emblem = models.CharField(max_length=255)
     username = models.CharField(max_length=255, db_index=True)
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
-    content = models.TextField()
+    content = models.TextField(blank=True)
     flags = models.IntegerField(default=0)
     deleted = models.BooleanField(default=False)
     deleted_ts = models.DateTimeField(null=True, blank=True)
