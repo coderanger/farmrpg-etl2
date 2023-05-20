@@ -8,12 +8,9 @@ from .models import Item
 
 @admin.register(Item)
 class ItemAdmin(ReadOnlyAdmin):
-    list_display = ["id", "name", "admin_image", "created_at"]
+    list_display = ["id", "name", "admin_inline_image", "created_at"]
     search_fields = ["id", "name"]
 
-    class Media:
-        css = {"all": ("item_admin.css",)}
-
     @admin.display(description="image")
-    def admin_image(self, item: Item):
+    def admin_inline_image(self, item: Item):
         return format_html('<img src="https://farmrpg.com{}" />', item.image)

@@ -1,0 +1,15 @@
+.inline-group .tabular td.original p {
+    display: none !important;
+}
+
+.inline-group .tabular tr.has_original td {
+    padding-top: 8px !important;
+}
+
+td[class^=field-][class*=inline_image] {
+    padding: 0;
+}
+
+td[class^=field-][class*=inline_image] img {
+    height: 32px;
+}
