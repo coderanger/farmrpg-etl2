@@ -26,8 +26,16 @@ class Item(models.Model):
     locksmith_gold = models.IntegerField(null=True, blank=True)
     locksmith_key = models.ForeignKey(
         "Item",
-        on_delete=models.CASCADE,
+        on_delete=models.SET_NULL,
         related_name="locksmith_key_items",
+        null=True,
+        blank=True,
+    )
+
+    cooking_recipe_item = models.OneToOneField(
+        "Item",
+        on_delete=models.SET_NULL,
+        related_name="cooking_recipe_cookable",
         null=True,
         blank=True,
     )

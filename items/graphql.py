@@ -60,6 +60,8 @@ class Item:
     locksmith_output_items: list["LocksmithItem"]
     locksmith_key: Optional["Item"]
     locksmith_key_items: list["Item"]
+    cooking_recipe_item: Optional["Item"]
+    cooking_recipe_cookable: Optional["Item"]
 
 
 @gql.django.type(models.RecipeItem)

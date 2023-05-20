@@ -63,7 +63,12 @@ def _parse_item_section(elm: _Element | None) -> Iterable[ParsedIngredient]:
 
 def parse_item(content: bytes) -> ParsedItem:
     root = de_namespace(parse_page_fragment(content))
+    crafting_recipe = list(_parse_item_section(parse_section(root, "Crafting Recipe")))
+    cooking_recipe = list(_parse_item_section(parse_section(root, "Cooking Recipe")))
+    assert not (
+        crafting_recipe and cooking_recipe
+    ), "Both crafting and cooking recipes set"
     return ParsedItem(
-        recipe=list(_parse_item_section(parse_section(root, "Crafting Recipe"))),
+        recipe=crafting_recipe or cooking_recipe,
         locksmith=list(_parse_item_section(parse_section(root, "Item Contents"))),
     )

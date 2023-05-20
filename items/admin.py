@@ -90,6 +90,7 @@ class ItemAdmin(admin.ModelAdmin):
         "locksmith_grab_bag",
         "locksmith_key",
         "locksmith_gold",
+        "cooking_recipe_item",
     ]
     readonly_fields = [
         "name",
@@ -110,6 +111,10 @@ class ItemAdmin(admin.ModelAdmin):
         "reg_weight",
         "runecube_weight",
         "locksmith_gold",
+    ]
+    raw_id_fields = [
+        "locksmith_key",
+        "cooking_recipe_item",
     ]
     inlines = [LocksmithItemInline, RecipeItemInline, WishingWellItemInline]
 
