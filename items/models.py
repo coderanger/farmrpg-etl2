@@ -22,11 +22,64 @@ class Item(models.Model):
     reg_weight = models.IntegerField()
     runecube_weight = models.IntegerField()
 
+    locksmith_grab_bag = models.BooleanField(null=True, default=False)
+    locksmith_gold = models.IntegerField(null=True, blank=True)
+    locksmith_key = models.ForeignKey(
+        "Item",
+        on_delete=models.CASCADE,
+        related_name="locksmith_key_items",
+        null=True,
+        blank=True,
+    )
+
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
 
     def __str__(self) -> str:
         return self.name
+
+
+@pghistory.track(pghistory.Snapshot(), exclude=["modified_at"])
+class RecipeItem(models.Model):
+    item = models.ForeignKey(
+        Item, on_delete=models.CASCADE, related_name="recipe_items"
+    )
+    ingredient_item = models.ForeignKey(
+        Item, on_delete=models.CASCADE, related_name="recipe_ingredient_items"
+    )
+    quantity = models.IntegerField()
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    modified_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["item", "ingredient_item"], name="item_ingredient_item"
+            )
+        ]
+
+
+@pghistory.track(pghistory.Snapshot(), exclude=["modified_at"])
+class LocksmithItem(models.Model):
+    item = models.ForeignKey(
+        Item, on_delete=models.CASCADE, related_name="locksmith_items"
+    )
+    output_item = models.ForeignKey(
+        Item, on_delete=models.CASCADE, related_name="locksmith_output_items"
+    )
+    quantity_min = models.IntegerField(null=True, blank=True)
+    quantity_max = models.IntegerField(null=True, blank=True)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    modified_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["item", "output_item"], name="item_output_item"
+            )
+        ]
 
 
 @pghistory.track(pghistory.Snapshot(), exclude=["modified_at"])

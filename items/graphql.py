@@ -1,4 +1,4 @@
-from typing import TYPE_CHECKING, Annotated
+from typing import TYPE_CHECKING, Annotated, Optional
 
 from strawberry_django_plus import gql
 from strawberry_django_plus.gql import auto
@@ -38,6 +38,8 @@ class Item:
     crafting_level: auto
     base_yield_minutes: auto
     min_mailable_level: auto
+    locksmith_grab_bag: bool
+    locksmith_gold: auto
     required_for_quests: list[
         Annotated["QuestItemRequired", gql.lazy("quests.graphql")]
     ]
@@ -52,6 +54,27 @@ class Item:
     password_items: list[Annotated["PasswordItem", gql.lazy("passwords.graphql")]]
     wishing_well_input_items: list["WishingWellItem"]
     wishing_well_output_items: list["WishingWellItem"]
+    recipe_items: list["RecipeItem"]
+    recipe_ingredient_tiems: list["RecipeItem"]
+    locksmith_items: list["LocksmithItem"]
+    locksmith_output_items: list["LocksmithItem"]
+    locksmith_key: Optional["Item"]
+    locksmith_key_items: list["Item"]
+
+
+@gql.django.type(models.RecipeItem)
+class RecipeItem:
+    item: Item
+    ingredient_item: Item
+    quantity: auto
+
+
+@gql.django.type(models.LocksmithItem)
+class LocksmithItem:
+    item: Item
+    output_item: Item
+    quantity_min: auto
+    quantity_max: auto
 
 
 @gql.django.type(models.WishingWellItem)

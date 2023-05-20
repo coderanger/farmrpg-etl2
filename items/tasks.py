@@ -6,8 +6,9 @@ from asgiref.sync import sync_to_async
 
 from utils.http import client
 
-from .models import Item, WishingWellItem
+from .models import Item, WishingWellItem, RecipeItem, LocksmithItem
 from .serializers import ItemAPISerializer
+from .parsers import parse_item
 
 log = structlog.stdlib.get_logger(mod="items.tasks")
 
@@ -40,6 +41,45 @@ async def scrape_from_api(item_id: int):
     await sync_to_async(ser.save)()
 
 
+async def scrape_from_html(item_id: int):
+    log.debug("Scraping item from HTML", id=item_id)
+    resp = await client.get("/item.php", params={"id": item_id})
+    resp.raise_for_status()
+    parsed = parse_item(resp.content)
+
+    seen_recipe_ids = []
+    for parsed_recipe in parsed.recipe:
+        recipe, _ = await RecipeItem.objects.aupdate_or_create(
+            item_id=item_id,
+            ingredient_item_id=parsed_recipe.id,
+            defaults={"quantity": parsed_recipe.quantity},
+        )
+        seen_recipe_ids.append(recipe.id)
+    await RecipeItem.objects.filter(item_id=item_id).exclude(
+        id__in=seen_recipe_ids
+    ).adelete()
+
+    seen_locksmith_id = []
+    for parsed_locksmith in parsed.locksmith:
+        if parsed_locksmith.gold:
+            await Item.objects.filter(id=item_id).aupdate(
+                locksmith_gold=parsed_locksmith.quantity
+            )
+        else:
+            locksmith, _ = await LocksmithItem.objects.aupdate_or_create(
+                item_id=item_id,
+                output_item_id=parsed_locksmith.id,
+                defaults={
+                    "quantity_min": parsed_locksmith.quantity,
+                    "quantity_max": parsed_locksmith.quantity,
+                },
+            )
+            seen_locksmith_id.append(locksmith.id)
+    await LocksmithItem.objects.filter(item_id=item_id).exclude(
+        id__in=seen_locksmith_id
+    ).adelete()
+
+
 async def scrape_all_from_api():
     cur_id = 10  # Start at 10 because 1-9 are unused.
     missing = 0
@@ -51,6 +91,7 @@ async def scrape_all_from_api():
             missing += 1
             if missing >= MAX_ITEM_ID_GAP:
                 break
+        await scrape_from_html(cur_id)
         cur_id += 1
 
 
