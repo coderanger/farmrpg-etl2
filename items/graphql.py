@@ -50,3 +50,12 @@ class Item:
     npc_items: list[Annotated["NPCItem", gql.lazy("npcs.graphql")]]
     npc_rewards: list[Annotated["NPCReward", gql.lazy("npcs.graphql")]]
     password_items: list[Annotated["PasswordItem", gql.lazy("passwords.graphql")]]
+    wishing_well_input_items: list["WishingWellItem"]
+    wishing_well_output_items: list["WishingWellItem"]
+
+
+@gql.django.type(models.WishingWellItem)
+class WishingWellItem:
+    input_item: Item
+    chance: auto
+    output_item: Item

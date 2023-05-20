@@ -27,3 +27,24 @@ class Item(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
+
+@pghistory.track(pghistory.Snapshot(), exclude=["modified_at"])
+class WishingWellItem(models.Model):
+    input_item = models.ForeignKey(
+        Item, on_delete=models.CASCADE, related_name="wishing_well_input_items"
+    )
+    chance = models.FloatField()
+    output_item = models.ForeignKey(
+        Item, on_delete=models.CASCADE, related_name="wishing_well_output_items"
+    )
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    modified_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["input_item", "output_item"], name="input_output"
+            )
+        ]
