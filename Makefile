@@ -12,3 +12,9 @@ ftest:
 
 psql:
 	python manage.py dbshell
+
+watchci:
+	gh run watch "$$(gh run list --json databaseId --jq ".[0].databaseId")"
+
+deploy:
+	kubectl delete pod --context farmrpg-etl --namespace etl --all
