@@ -3,7 +3,7 @@ from django.http.request import HttpRequest
 from django.utils.html import format_html
 
 
-from .models import Item, LocksmithItem, RecipeItem, WishingWellItem
+from .models import Item, LocksmithItem, ManualProduction, RecipeItem, WishingWellItem
 
 
 class LocksmithItemInline(admin.TabularInline):
@@ -34,7 +34,7 @@ class LocksmithItemInline(admin.TabularInline):
 class RecipeItemInline(admin.TabularInline):
     model = RecipeItem
     readonly_fields = ["ingredient_item", "quantity"]
-    extras = 0
+    extra = 0
     fk_name = "item"
 
     def has_add_permission(
@@ -51,7 +51,7 @@ class RecipeItemInline(admin.TabularInline):
 class WishingWellItemInline(admin.TabularInline):
     model = WishingWellItem
     readonly_fields = ["output_item", "chance"]
-    extras = 0
+    extra = 0
     fk_name = "input_item"
 
     def has_add_permission(
@@ -63,6 +63,11 @@ class WishingWellItemInline(admin.TabularInline):
         self, request: HttpRequest, obj: WishingWellItem | None = None
     ) -> bool:
         return False
+
+
+class ManualProductionInline(admin.TabularInline):
+    model = ManualProduction
+    extra = 1
 
 
 @admin.register(Item)
@@ -116,7 +121,12 @@ class ItemAdmin(admin.ModelAdmin):
         "locksmith_key",
         "cooking_recipe_item",
     ]
-    inlines = [LocksmithItemInline, RecipeItemInline, WishingWellItemInline]
+    inlines = [
+        LocksmithItemInline,
+        RecipeItemInline,
+        WishingWellItemInline,
+        ManualProductionInline,
+    ]
 
     @admin.display(description="image")
     def admin_inline_image(self, item: Item):

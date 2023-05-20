@@ -62,6 +62,7 @@ class Item:
     locksmith_key_items: list["Item"]
     cooking_recipe_item: Optional["Item"]
     cooking_recipe_cookable: Optional["Item"]
+    manual_productions: list["ManualProduction"]
 
 
 @gql.django.type(models.RecipeItem)
@@ -84,3 +85,13 @@ class WishingWellItem:
     input_item: Item
     chance: auto
     output_item: Item
+
+
+@gql.django.type(models.ManualProduction)
+class ManualProduction:
+    item: Item
+    line_one: auto
+    line_two: auto
+    image: auto
+    value: auto
+    sort: auto

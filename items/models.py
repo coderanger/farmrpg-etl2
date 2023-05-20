@@ -109,3 +109,18 @@ class WishingWellItem(models.Model):
                 fields=["input_item", "output_item"], name="input_output"
             )
         ]
+
+
+@pghistory.track(pghistory.Snapshot(), exclude=["modified_at"])
+class ManualProduction(models.Model):
+    item = models.ForeignKey(
+        Item, on_delete=models.CASCADE, related_name="manual_productions"
+    )
+    line_one = models.CharField(max_length=255)
+    line_two = models.CharField(max_length=255)
+    image = models.CharField(max_length=255)
+    value = models.CharField(max_length=255)
+    sort = models.IntegerField(default=1)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    modified_at = models.DateTimeField(auto_now=True)
