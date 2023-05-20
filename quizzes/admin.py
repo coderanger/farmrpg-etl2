@@ -8,13 +8,11 @@ from .models import Quiz, QuizAnswer, QuizReward
 class QuizAnswerInline(admin.TabularInline):
     model = QuizAnswer
     extra = 0
-    template = "admin_tabular_inline_no_origin.html"
 
 
 class QuizRewardInline(admin.TabularInline):
     model = QuizReward
     extra = 0
-    template = "admin_tabular_inline_no_origin.html"
 
 
 @admin.register(Quiz)

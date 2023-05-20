@@ -12,7 +12,6 @@ class LocationItemInline(admin.TabularInline):
     model = LocationItem
     extra = 0
     can_delete = False
-    template = "admin_tabular_inline_no_origin.html"
     readonly_fields = [
         "location",
         "item",
@@ -27,7 +26,6 @@ class DropRatesInline(admin.TabularInline):
     model = DropRates
     extra = 0
     can_delete = False
-    template = "admin_tabular_inline_no_origin.html"
     fields = readonly_fields = [
         "link",
         "iron_depot",
@@ -80,7 +78,6 @@ class DropRatesItemInline(admin.TabularInline):
     model = DropRatesItem
     extra = 0
     can_delete = False
-    template = "admin_tabular_inline_no_origin.html"
     fields = [
         "item",
         "rate",

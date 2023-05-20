@@ -8,13 +8,11 @@ from .models import Quest, QuestItemRequired, QuestItemReward
 class QuestItemRequiredInline(admin.TabularInline):
     model = QuestItemRequired
     extra = 0
-    template = "admin_tabular_inline_no_origin.html"
 
 
 class QuestItemRewardInline(admin.TabularInline):
     model = QuestItemReward
     extra = 0
-    template = "admin_tabular_inline_no_origin.html"
 
 
 @admin.register(Quest)
