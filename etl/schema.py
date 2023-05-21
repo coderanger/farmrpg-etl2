@@ -9,6 +9,7 @@ from pets.graphql import Pet
 from quests.graphql import Quest
 from quizzes.graphql import Quiz
 from updates.graphql import Update
+from exchange_center.graphql import Trade
 
 
 @gql.type
@@ -21,6 +22,7 @@ class Query:
     emblems: list[Emblem] = gql.django.field()
     npcs: list[NPC] = gql.django.field()
     updates: list[Update] = gql.django.field()
+    trades: list[Trade] = gql.django.field()
 
 
 schema = gql.Schema(

@@ -80,6 +80,7 @@ INSTALLED_APPS = [
     "npcs",
     "updates",
     "passwords",
+    "exchange_center",
 ]
 
 MIDDLEWARE = [

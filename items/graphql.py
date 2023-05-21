@@ -12,6 +12,7 @@ if TYPE_CHECKING:
     from pets.graphql import PetItem
     from quests.graphql import QuestItemRequired, QuestItemReward
     from quizzes.graphql import QuizReward
+    from exchange_center.graphql import Trade
 
 
 @gql.django.filters.filter(models.Item)
@@ -63,6 +64,12 @@ class Item:
     cooking_recipe_item: Optional["Item"]
     cooking_recipe_cookable: Optional["Item"]
     manual_productions: list["ManualProduction"]
+    exchange_center_inputs: list[
+        Annotated["Trade", gql.lazy("exchange_center.graphql")]
+    ]
+    exchange_center_outputs: list[
+        Annotated["Trade", gql.lazy("exchange_center.graphql")]
+    ]
 
 
 @gql.django.type(models.RecipeItem)
