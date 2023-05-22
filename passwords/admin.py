@@ -16,11 +16,20 @@ class PasswordGroupAdmin(admin.ModelAdmin):
 
 class PasswordItemInline(admin.TabularInline):
     model = PasswordItem
-    extra = 1
-    raw_id_fields = ["item"]
+    extra = 0
+    readonly_fields = ["item", "quantity"]
 
 
 @admin.register(Password)
 class PasswordAdmin(admin.ModelAdmin):
-    list_display = ["password"]
+    list_display = ["password", "has_all_clues"]
+    readonly_fields = [
+        "password",
+        "reward_silver",
+        "reward_gold",
+    ]
     inlines = [PasswordItemInline]
+
+    @admin.display(description="Has All Clues", boolean=True)
+    def has_all_clues(self, password: Password) -> bool:
+        return password.clue1 and password.clue2 and password.clue3
