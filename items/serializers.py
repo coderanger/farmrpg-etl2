@@ -27,6 +27,7 @@ class ItemAPISerializer(serializers.ModelSerializer):
             "buy_price",
             "sell_price",
             "crafting_level",
+            "cooking_level",
             "base_yield_minutes",
             "min_mailable_level",
             "reg_weight",

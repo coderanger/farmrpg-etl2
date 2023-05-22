@@ -37,6 +37,7 @@ class Item:
     buy_price: auto
     sell_price: auto
     crafting_level: auto
+    cooking_level: auto
     base_yield_minutes: auto
     min_mailable_level: auto
     locksmith_grab_bag: bool

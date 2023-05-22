@@ -17,6 +17,7 @@ class Item(models.Model):
     buy_price = models.IntegerField()
     sell_price = models.IntegerField()
     crafting_level = models.IntegerField()
+    cooking_level = models.IntegerField(null=True, blank=True)
     base_yield_minutes = models.IntegerField()
     min_mailable_level = models.IntegerField()
     reg_weight = models.IntegerField()
