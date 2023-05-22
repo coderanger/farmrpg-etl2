@@ -14,7 +14,7 @@ SERVER_TIME = ZoneInfo("America/Chicago")
 MAINTENANCE_START = time(23, 29)
 MAINTENANCE_END = time(23, 36)
 
-log = structlog.stdlib.get_logger(mod="tasks")
+log = structlog.stdlib.get_logger(mod=__name__)
 
 
 @attrs.define
@@ -56,11 +56,14 @@ def create_periodic_task(
                 await asyncio.sleep(60)
                 continue
 
+            log.debug("Starting periodic task", task_name=name)
             try:
-                await coro()
+                value = await coro()
             except Exception as exc:
                 log.error("Error in periodic task", exc_info=True, task_name=name)
                 sentry_sdk.capture_exception(exc)
+            else:
+                log.debug("Finished periodic task", task_name=name, value=value)
             await asyncio.sleep(interval)
 
     task = asyncio.create_task(wrapper(), name=name)

@@ -22,7 +22,8 @@ class ParseError(Exception):
 
 
 def parse_page_fragment(page: bytes) -> _Element:
-    return html5parser.fragment_fromstring(page.decode(), create_parent=True)
+    root = html5parser.fragment_fromstring(page.decode(), create_parent=True)
+    return de_namespace(root)
 
 
 def de_namespace(root: _Element) -> _Element:

@@ -7,7 +7,7 @@ from utils.http import client
 
 from .models import Quiz, QuizAnswer, QuizReward
 
-log = structlog.stdlib.get_logger(mod="quizzes.tasks")
+log = structlog.stdlib.get_logger(mod=__name__)
 
 
 async def update_quiz_reward(quiz_id: int, score: int, item_name: str, quantity: int):
@@ -20,7 +20,6 @@ async def update_quiz_reward(quiz_id: int, score: int, item_name: str, quantity:
 
 
 async def scrape_quizzes_from_api():
-    log.debug("Scraping quizzes from API")
     resp = await client.get("/api/quizzes/")
     resp.raise_for_status()
     data = resp.json()
@@ -35,11 +34,9 @@ async def scrape_quizzes_from_api():
         await update_quiz_reward(
             row["id"], 100, row["score100reward"], row["score100amt"]
         )
-    log.debug("Finished scraping quizzes from API")
 
 
 async def scrape_answers_from_api():
-    log.debug("Scraping quiz answers from API")
     resp = await client.get("/api/answers/")
     resp.raise_for_status()
     data = resp.json()
@@ -65,7 +62,6 @@ async def scrape_answers_from_api():
         await QuizAnswer.objects.filter(quiz_id=quiz_id).exclude(
             display_order__in=seen
         ).adelete()
-    log.debug("Finished scraping quiz answers from API")
 
 
 async def scrape_all_from_api():

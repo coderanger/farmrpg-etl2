@@ -7,7 +7,6 @@ from lxml.html import tostring
 
 from utils.parsers import (
     CSSSelector,
-    de_namespace,
     parse_page_fragment,
     sel_first_or_die,
 )
@@ -21,7 +20,6 @@ NEWLINES_RE = re.compile("\n{2,}")
 
 def parse_updates(page: bytes) -> Iterable[dict[str, Any]]:
     root = parse_page_fragment(page)
-    root = de_namespace(root)
     for elm in UPDATES_SEL(root):
         date_elm = sel_first_or_die(DATE_SEL(elm), "Unable to parse date from update")
         content_elm = sel_first_or_die(

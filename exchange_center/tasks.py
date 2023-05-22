@@ -10,11 +10,10 @@ from .parsers import parse_exchange_center
 SERVER_TIME = ZoneInfo("America/Chicago")
 
 
-log = structlog.stdlib.get_logger(mod="exchange_center.tasks")
+log = structlog.stdlib.get_logger(mod=__name__)
 
 
 async def scrape_all_from_html():
-    log.debug("Scraping exchange center from HTML")
     resp = await client.get("/exchange.php")
     resp.raise_for_status()
     # Compute the time for EC purposes.
@@ -34,4 +33,3 @@ async def scrape_all_from_html():
         if trade.last_seen != now:
             await Trade.objects.filter(id=trade.id).aupdate(last_seen=now)
         await TradeHistory.objects.aget_or_create(trade=trade, seen_at=now)
-    log.debug("Finished scraping exchange center from HTML")

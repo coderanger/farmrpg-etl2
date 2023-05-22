@@ -8,7 +8,7 @@ from .models import User
 from .parsers import parse_online, parse_profile
 from .serializers import UserSerializer
 
-log = structlog.stdlib.get_logger(mod="users.tasks")
+log = structlog.stdlib.get_logger(mod=__name__)
 
 
 CONCURRENT_SCRAPES = 25
@@ -60,10 +60,8 @@ async def scrape_from_userlist(url: str, params: dict[str, str] = {}):
 
 
 async def scrape_all_from_online():
-    log.info("Scraping all users from online list")
     await scrape_from_userlist("online.php")
 
 
 async def scrape_all_from_stafflist():
-    log.info("Scraping all users from staff list")
     await scrape_from_userlist("members.php", params={"type": "staff"})

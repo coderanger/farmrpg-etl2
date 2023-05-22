@@ -7,7 +7,7 @@ from utils.http import client
 from .models import Quest, QuestItemRequired, QuestItemReward
 from .serializers import QuestAPISerializer
 
-log = structlog.stdlib.get_logger(mod="quests.tasks")
+log = structlog.stdlib.get_logger(mod=__name__)
 
 
 async def update_items(quest_id: int, model: type, items: str):
@@ -31,7 +31,6 @@ async def update_items(quest_id: int, model: type, items: str):
 
 
 async def scrape_all_from_api():
-    log.debug("Scraping quests from API")
     resp = await client.get("/api/quests/")
     resp.raise_for_status()
     data = resp.json()
@@ -60,4 +59,4 @@ async def scrape_all_from_api():
         except Exception:
             # Keep trying to rest in case this is just an eventual consistency glitch.
             log.exception("Error loading quest", id=row["id"])
-    log.info("Finished scraping quests from API", count=import_count)
+    return import_count

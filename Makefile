@@ -13,6 +13,9 @@ ftest:
 psql:
 	python manage.py dbshell
 
+migrate:
+	python manage.py migrate
+
 watchci:
 	gh run watch "$$(gh run list --json databaseId --jq ".[0].databaseId")"
 

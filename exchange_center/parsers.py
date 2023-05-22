@@ -4,7 +4,7 @@ from typing import Iterable
 import attrs
 from lxml.etree import _Element
 
-from utils.parsers import CSSSelector, parse_page_fragment, de_namespace
+from utils.parsers import CSSSelector, parse_page_fragment
 
 ROW_SEL = CSSSelector("div.row")
 LINK_SEL = CSSSelector("div.col-50 a")
@@ -34,7 +34,7 @@ def _parse_link(link_elm: _Element) -> tuple[int, int]:
 
 
 def parse_exchange_center(page: bytes) -> Iterable[ParsedTrade]:
-    root = de_namespace(parse_page_fragment(page))
+    root = parse_page_fragment(page)
     for row in ROW_SEL(root):
         input_link, output_link = list(LINK_SEL(row))
         input_item, input_quantity = _parse_link(input_link)

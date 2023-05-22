@@ -29,7 +29,6 @@ class ItemNotFound(Exception):
 
 
 async def scrape_from_api(item_id: int):
-    log.debug("Scraping item from API", id=item_id)
     resp = await client.get(f"/api/item/{item_id}")
     resp.raise_for_status()
     data = resp.json()
@@ -42,7 +41,6 @@ async def scrape_from_api(item_id: int):
 
 
 async def scrape_from_html(item_id: int):
-    log.debug("Scraping item from HTML", id=item_id)
     resp = await client.get("/item.php", params={"id": item_id})
     resp.raise_for_status()
     parsed = parse_item(resp.content)
@@ -80,10 +78,11 @@ async def scrape_from_html(item_id: int):
     ).adelete()
 
 
-async def scrape_all_from_api():
+async def scrape_all():
     cur_id = 10  # Start at 10 because 1-9 are unused.
     missing = 0
     while True:
+        log.debug("Scraping item", id=cur_id)
         try:
             await scrape_from_api(cur_id)
             missing = 0  # It worked so reset the count.
@@ -96,7 +95,6 @@ async def scrape_all_from_api():
 
 
 async def scrape_wishing_well_from_sheets():
-    log.debug("Scraping wishing well from Sheet")
     # Download and format the Wishing Well data from the spreadsheet.
     resp = await WISHING_WELL_CLIENT.get(
         f"https://sheets.googleapis.com/v4/spreadsheets/{WISHING_WELL_SPREADSHEET_ID}/values/B5:C",
@@ -131,4 +129,3 @@ async def scrape_wishing_well_from_sheets():
             )
             seen_ids.append(ww.id)
     await WishingWellItem.objects.exclude(id__in=seen_ids).adelete()
-    log.debug("Finished scraping wishing well from Sheet")

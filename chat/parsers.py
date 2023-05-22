@@ -20,7 +20,7 @@ AT_LINK_RE = re.compile(
     r'<a class="close-panel" href="profile.php\?user_name=[^">]+"'
     r' style="color:teal">(@[^">]+)</a>'
 )
-EMBLEM_SEL = CSSSelector("html|a.setemblembtn > html|img.vendoritemimg")
+EMBLEM_SEL = CSSSelector("a.setemblembtn > img.vendoritemimg")
 EMBLEM_NAME_RE = re.compile(r"(96)?(test)?$")
 EMBLEM_NAME_RE2 = re.compile(r"[_.-]+")
 EMBLEM_NAME_RE3 = re.compile(r"([a-z])([A-Z0-9])")

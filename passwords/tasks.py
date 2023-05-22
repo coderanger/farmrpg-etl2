@@ -5,11 +5,10 @@ from utils.http import client
 from .models import Password, PasswordItem
 from .parsers import parse_password_log
 
-log = structlog.stdlib.get_logger(mod="passwords.tasks")
+log = structlog.stdlib.get_logger(mod=__name__)
 
 
 async def scrape_all_from_html():
-    log.debug("Scraping passwords from HTML")
     resp = await client.get("/TODO")
     resp.raise_for_status()
 
@@ -31,4 +30,3 @@ async def scrape_all_from_html():
         await PasswordItem.objects.filter(password=password).exclude(
             item_id__in=[item["item"] for item in data["reward_items"]]
         ).adelete()
-    log.debug("Finished scraping passwords from HTML")

@@ -12,7 +12,7 @@ from .models import DropRates, DropRatesItem, Location, LocationItem
 from .parser import parse_location, parse_locations
 from .serializers import LocationHTMLSerializer
 
-log = structlog.stdlib.get_logger(mod="locations.tasks")
+log = structlog.stdlib.get_logger(mod=__name__)
 
 
 SEEDS = {
@@ -87,13 +87,11 @@ async def scrape_from_html(loc_type: str, loc_id: int):
 
 
 async def scrape_all_from_html():
-    log.debug("Scraping locations from HTML")
     resp = await client.get("/locations.php")
     resp.raise_for_status()
     for loc_type, loc_id in parse_locations(resp.content):
         await scrape_from_html(loc_type, loc_id)
         await update_drop_rates_for_location(loc_type, loc_id)
-    log.info("Finished scraping locations from HTML")
 
 
 async def update_drop_rates_for_location(

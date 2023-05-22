@@ -5,11 +5,10 @@ from utils.http import client
 from .models import Update
 from .parsers import parse_updates
 
-log = structlog.stdlib.get_logger(mod="updates.tasks")
+log = structlog.stdlib.get_logger(mod=__name__)
 
 
 async def scrape_all_from_html():
-    log.debug("Scraping updates from HTML")
     resp = await client.get("/about.php")
     resp.raise_for_status()
 
@@ -22,4 +21,3 @@ async def scrape_all_from_html():
                 "text_content": data["text_content"],
             },
         )
-    log.debug("Finished scraping updated from HTML")

@@ -6,9 +6,9 @@ from utils.parsers import CSSSelector, parse_page_fragment, sel_first_or_die
 
 NAME_SEL = CSSSelector(".center.sliding")
 IMAGE_SEL = CSSSelector(".exploreimg")
-ITEM_SEL = CSSSelector("html|a > html|img.itemimg")
+ITEM_SEL = CSSSelector("a > img.itemimg")
 ITEM_ID_RE = re.compile(r"^item\.php\?id=(\d+)$")
-LOCATION_SEL = CSSSelector("html|a.item-link")
+LOCATION_SEL = CSSSelector("a.item-link")
 
 
 def parse_location(page: bytes) -> dict[str, Any]:

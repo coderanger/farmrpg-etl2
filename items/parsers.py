@@ -5,7 +5,6 @@ import attrs
 from lxml.etree import _Element
 
 from utils.parsers import (
-    de_namespace,
     parse_page_fragment,
     parse_section,
     CSSSelector,
@@ -62,7 +61,7 @@ def _parse_item_section(elm: _Element | None) -> Iterable[ParsedIngredient]:
 
 
 def parse_item(content: bytes) -> ParsedItem:
-    root = de_namespace(parse_page_fragment(content))
+    root = parse_page_fragment(content)
     crafting_recipe = list(_parse_item_section(parse_section(root, "Crafting Recipe")))
     cooking_recipe = list(_parse_item_section(parse_section(root, "Cooking Recipe")))
     assert not (
