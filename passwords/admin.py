@@ -32,4 +32,4 @@ class PasswordAdmin(admin.ModelAdmin):
 
     @admin.display(description="Has All Clues", boolean=True)
     def has_all_clues(self, password: Password) -> bool:
-        return password.clue1 and password.clue2 and password.clue3
+        return bool(password.clue1 and password.clue2 and password.clue3)

@@ -21,7 +21,7 @@ def parse_password_log(page: bytes) -> Iterable[ParsedPassword]:
     root = parse_page_fragment(page)
     for row in ROW_SEL(root):
         title = sel_first_or_die(TITLE_SEL(row), "Unable to find title")
-        parsed = ParsedPassword(password=title.text.strip())
+        parsed = ParsedPassword(password=title.text.strip().lower())
         for img in IMG_SEL(row):
             md = REWARD_RE.search(img.tail)
             if md is None:

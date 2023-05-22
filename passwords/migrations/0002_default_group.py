@@ -15,4 +15,6 @@ class Migration(migrations.Migration):
         ("passwords", "0001_initial"),
     ]
 
-    operations = [migrations.RunPython(add_default_password_group)]
+    operations = [
+        migrations.RunPython(add_default_password_group, migrations.RunPython.noop),
+    ]
