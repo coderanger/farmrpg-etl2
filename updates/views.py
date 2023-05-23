@@ -11,7 +11,7 @@ SERVER_TIME = ZoneInfo("America/Chicago")
 
 class UpdatesFeed(Feed):
     title = "Farm RPG game updates"
-    link = item_link = "https://farmrpg.com/index.php#!/about.php"
+    link = "https://farmrpg.com/index.php#!/about.php"
     description = "Patch notes and other game updates for Farm RPG."
 
     def items(self) -> Iterable[Update]:
@@ -35,7 +35,5 @@ class UpdatesFeed(Feed):
             tzinfo=SERVER_TIME,
         )
 
-    def item_guid(self, update: Update) -> str:
-        return f"update-{update.pk}"
-
-    item_guid_is_permalink = False
+    def item_link(self, update: Update) -> str:
+        return f"https://farmrpg.com/index.php#!/about.php?id={update.id}"

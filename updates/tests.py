@@ -15,10 +15,11 @@ def about() -> bytes:
 
 def test_parse_updates(about: bytes):
     updates = list(parse_updates(about))
-    assert len(updates) == 25
-    assert updates[0]["date"] == datetime.date(2023, 5, 12)
+    assert len(updates) == 437
+    assert updates[2].id == 446
+    assert updates[2].date == datetime.date(2023, 5, 12)
     assert (
-        updates[0]["content"]
+        updates[2].content
         == """\n<img src="https://farmrpg.com/img/items/2nd_birthday.png" alt=""><br>\n"""
         """<br>\nIT IS OUR 2ND BIRTHDAY.<br>\nWhat a journey it has been! It\'s hard to """
         """fathom that today marks the second anniversary of Farm RPG\'s release. The """
@@ -29,7 +30,7 @@ def test_parse_updates(about: bytes):
         """the festivities together! """
     )
     assert (
-        updates[0]["clean_content"]
+        updates[2].clean_content
         == """\n<img src="https://farmrpg.com/img/items/2nd_birthday.png" alt=""><br>\n"""
         """<br>\nIT IS OUR 2ND BIRTHDAY.<br>\nWhat a journey it has been! It\'s hard to """
         """fathom that today marks the second anniversary of Farm RPG\'s release. The """
@@ -40,7 +41,7 @@ def test_parse_updates(about: bytes):
         """the festivities together! """
     )
     assert (
-        updates[0]["text_content"]
+        updates[2].text_content
         == """IT IS OUR 2ND BIRTHDAY.\nWhat a journey it has been! It's hard to fathom """
         """that today marks the second anniversary of Farm RPG's release. The game has """
         """come a long way from its initial version, and the improvements are undeniable. """
@@ -50,7 +51,7 @@ def test_parse_updates(about: bytes):
     )
 
     assert (
-        updates[7]["text_content"]
+        updates[9].text_content
         == """INTRODUCING BORGEN BUCKS
 - Borgen has a deal for ya... every 10,000 AC you spend on the Wheel, at his Camp or cracking the Vault will earn you a Borgen Buck
 - To help you track your progress, a progress bar has been added to the bottom of the Wheel, the Vault and Borgen's Camp
@@ -68,9 +69,9 @@ SMALL UPDATES:
 - Some stats have been added to the bottom of your Bank History Log"""  # noqa: E501
     )
 
-    assert updates[10]["date"] == datetime.date(2023, 4, 15)
+    assert updates[12].date == datetime.date(2023, 4, 15)
     assert (
-        updates[10]["content"]
+        updates[12].content
         == """\nSOME CLARIFICATIONS:<br>\n- First, we hope you are enjoying the event!<br>"""
         """\n- Next, the bonuses that are active now are on until Sunday Evening 4/16<br>"""
         """\n- Special Help Requests that ask for Eggs are active until the end of the """
@@ -80,9 +81,9 @@ SMALL UPDATES:
         """plenty of time to get more Eggs, don't panic! """
     )
 
-    assert updates[20]["date"] == datetime.date(2023, 3, 24)
+    assert updates[22].date == datetime.date(2023, 3, 24)
     assert (
-        updates[20]["content"]
+        updates[22].content
         == """\nSMALL UPDATES:<br>\n- New craftable item: <a href="item.php?id=743" """
         """class="close-panel"><img src="/img/items/211.png" alt="Step Ladder" class="itemimgsm"></a>"""
         """<span style="display:none">Step Ladder</span><br>\n- Reduced some height """
@@ -100,7 +101,7 @@ SMALL UPDATES:
         """need to use for special greeting cards. """
     )
     assert (
-        updates[20]["clean_content"]
+        updates[22].clean_content
         == """\nSMALL UPDATES:<br>\n- New craftable item: <a href="https://farmrpg.com/index.php#!/item.php?id=743">"""
         """<img src="https://farmrpg.com/img/items/211.png" alt="Step Ladder" style=";width:25px;height:25px" width="25" height="25">"""  # noqa: E501
         """</a><span style="display:none">Step Ladder</span><br>\n- Reduced some height in """
@@ -118,7 +119,7 @@ SMALL UPDATES:
     )
 
     assert (
-        updates[22]["text_content"]
+        updates[24].text_content
         == """NEW CRAFTABLE ITEMS:
 - Added on 3/17, the Green Top Hat is craftable until 3/31 --> Green Top Hat
 - Added today, there are 3 other new items you can craft

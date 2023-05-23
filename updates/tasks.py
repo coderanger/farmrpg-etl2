@@ -9,15 +9,16 @@ log = structlog.stdlib.get_logger(mod=__name__)
 
 
 async def scrape_all_from_html():
-    resp = await client.get("/about.php")
+    resp = await client.get("/about.php?all=1")
     resp.raise_for_status()
 
-    for data in parse_updates(resp.content):
+    for parsed in parse_updates(resp.content):
         await Update.objects.aupdate_or_create(
-            date=data["date"],
+            id=parsed.id,
             defaults={
-                "content": data["content"],
-                "clean_content": data["clean_content"],
-                "text_content": data["text_content"],
+                "date": parsed.date,
+                "content": parsed.content,
+                "clean_content": parsed.clean_content,
+                "text_content": parsed.text_content,
             },
         )

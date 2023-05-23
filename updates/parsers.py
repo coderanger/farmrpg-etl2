@@ -1,7 +1,9 @@
+import datetime
 import re
 import urllib.parse
 from typing import Any, Iterable
 
+import attrs
 import dateutil.parser
 from lxml.html import tostring
 
@@ -12,10 +14,20 @@ from utils.parsers import (
 )
 
 UPDATES_SEL = CSSSelector("div.recentUpdates")
-DATE_SEL = CSSSelector("div.card-header")
+DATE_SEL = CSSSelector("div.card-header a")
 CONTENT_SEL = CSSSelector("div.card-content-inner")
+ID_RE = re.compile(r"\?id=(\d+)")
 GAME_PAGE_RE = re.compile(r"^[a-zA-Z0-9_-]+\.php(\?.*)?(#.*)?$")
 NEWLINES_RE = re.compile("\n{2,}")
+
+
+@attrs.define
+class ParsedUpdate:
+    id: int
+    date: datetime.date
+    content: str
+    clean_content: str
+    text_content: str
 
 
 def parse_updates(page: bytes) -> Iterable[dict[str, Any]]:
@@ -26,6 +38,10 @@ def parse_updates(page: bytes) -> Iterable[dict[str, Any]]:
             CONTENT_SEL(elm), "Unable to parse content from update"
         )
 
+        id_md = ID_RE.search(date_elm.get("href"))
+        if id_md is None:
+            raise ValueError("Unable to parse ID")
+        update_id = int(id_md[1])
         date = dateutil.parser.parse("".join(date_elm.itertext())).date()
         inner_content = "".join(tostring(e, encoding="unicode") for e in content_elm)
         content = f"{content_elm.text}{inner_content}"
@@ -80,9 +96,10 @@ def parse_updates(page: bytes) -> Iterable[dict[str, Any]]:
                 text_content,
             )
 
-        yield {
-            "date": date,
-            "content": content,
-            "clean_content": clean_content,
-            "text_content": text_content,
-        }
+        yield ParsedUpdate(
+            id=update_id,
+            date=date,
+            content=content,
+            clean_content=clean_content,
+            text_content=text_content,
+        )

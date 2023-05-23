@@ -4,7 +4,7 @@ from django.db import models
 
 @pghistory.track(pghistory.Snapshot(), exclude=["modified_at"])
 class Update(models.Model):
-    date = models.DateField(unique=True)
+    date = models.DateField(db_index=True)
     content = models.TextField()
     clean_content = models.TextField()
     text_content = models.TextField()
