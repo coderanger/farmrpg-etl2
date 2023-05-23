@@ -32,4 +32,11 @@ class ItemAPISerializer(serializers.ModelSerializer):
             "min_mailable_level",
             "reg_weight",
             "runecube_weight",
+            "cooking_recipe_item",
         ]
+
+    def to_internal_value(self, data):
+        data["cooking_recipe_item"] = (
+            None if data["cooking_recipe_id"] == 0 else data["cooking_recipe_id"]
+        )
+        return super().to_internal_value(data)

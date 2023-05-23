@@ -1,11 +1,10 @@
 from datetime import datetime, timezone
 
-import factory
 import httpx
 import pytest
 from asgiref.sync import async_to_sync
 
-from items.models import Item
+from items.factories import ItemFactory
 
 from .models import (
     Quest,
@@ -16,28 +15,6 @@ from .models import (
     QuestItemRewardEvent,
 )
 from .tasks import scrape_all_from_api
-
-
-class ItemFactory(factory.django.DjangoModelFactory):
-    class Meta:
-        model = Item
-
-    name = factory.LazyAttribute(lambda obj: f"Item {obj.id}")
-    image = ""
-    type = ""
-    xp = 0
-    can_buy = False
-    can_sell = False
-    can_mail = False
-    can_craft = False
-    can_master = False
-    buy_price = 0
-    sell_price = 0
-    crafting_level = 0
-    base_yield_minutes = 0
-    min_mailable_level = 0
-    reg_weight = 1
-    runecube_weight = 1
 
 
 @pytest.fixture

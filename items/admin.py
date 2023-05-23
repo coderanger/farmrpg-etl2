@@ -118,10 +118,10 @@ class ItemAdmin(admin.ModelAdmin):
         "reg_weight",
         "runecube_weight",
         "locksmith_gold",
+        "cooking_recipe_item",
     ]
     raw_id_fields = [
         "locksmith_key",
-        "cooking_recipe_item",
     ]
     inlines = [
         LocksmithItemInline,

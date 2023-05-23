@@ -1,8 +1,13 @@
 from pathlib import Path
 
 import pytest
+import httpx
+from asgiref.sync import async_to_sync
 
 from .parsers import parse_item, ParsedIngredient
+from .models import Item
+from .tasks import scrape_from_api
+from .factories import ItemFactory
 
 FIXTURES_ROOT = Path(__file__).joinpath("../fixtures").resolve()
 
@@ -50,3 +55,39 @@ def test_parse_locksmith_gold(cornucopia: bytes):
     item = parse_item(cornucopia)
     assert item.recipe == []
     assert item.locksmith[0] == ParsedIngredient(id=0, gold=True, quantity=25)
+
+
+@pytest.mark.django_db
+def test_scrape_from_api_grape_pie(respx_mock):
+    api_data = [
+        {
+            "id": 726,
+            "xp": 6500,
+            "img": "/img/items/grapepie.png",
+            "name": "Concord Grape Pie",
+            "type": "item",
+            "can_buy": 0,
+            "can_sell": 1,
+            "cookable": 1,
+            "mailable": 0,
+            "buy_price": 0,
+            "craftable": 0,
+            "masterable": 1,
+            "reg_weight": 3000,
+            "sell_price": 25000000,
+            "description": "A super yummy pie full of grapes",
+            "cooking_level": 40,
+            "crafting_level": 1,
+            "runecube_weight": 3000,
+            "cooking_recipe_id": 727,
+            "base_yield_minutes": 720,
+            "min_mailable_level": 0,
+        }
+    ]
+    respx_mock.get("https://farmrpg.com/api/item/726").mock(
+        return_value=httpx.Response(200, json=api_data)
+    )
+    ItemFactory(id=727, name="Pie Recipe")
+    async_to_sync(scrape_from_api)(726)
+    item = Item.objects.get(id=726)
+    assert item.cooking_recipe_item.name == "Pie Recipe"
