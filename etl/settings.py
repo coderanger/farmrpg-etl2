@@ -81,6 +81,7 @@ INSTALLED_APPS = [
     "updates",
     "passwords",
     "exchange_center",
+    "borgen",
 ]
 
 MIDDLEWARE = [

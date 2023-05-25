@@ -10,6 +10,7 @@ from quests.graphql import Quest
 from quizzes.graphql import Quiz
 from updates.graphql import Update
 from exchange_center.graphql import Trade
+from borgen.graphql import BorgenItem
 
 
 @gql.type
@@ -23,6 +24,7 @@ class Query:
     npcs: list[NPC] = gql.django.field()
     updates: list[Update] = gql.django.field()
     trades: list[Trade] = gql.django.field()
+    borgen_items: list[BorgenItem] = gql.django.field()
 
 
 schema = gql.Schema(
