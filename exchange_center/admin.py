@@ -21,4 +21,3 @@ class TradeAdmin(ReadOnlyAdmin):
         "last_seen",
     ]
     inlines = [TradeHistoryInline]
-
