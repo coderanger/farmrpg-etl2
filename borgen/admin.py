@@ -6,7 +6,7 @@ from .models import BorgenItem
 
 
 @admin.register(BorgenItem)
-class TradeAdmin(ReadOnlyAdmin):
+class BorgenItemAdmin(ReadOnlyAdmin):
     list_display = [
         "date",
         "item",
