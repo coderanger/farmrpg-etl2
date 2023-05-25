@@ -2,7 +2,7 @@ import pghistory
 from django.db import models
 
 
-@pghistory.track(pghistory.Snapshot())
+@pghistory.track(pghistory.Snapshot(), exclude=["modified_at"])
 class User(models.Model):
     username = models.CharField(max_length=255, db_index=True)
     role = models.CharField(max_length=64, null=True, blank=True)
