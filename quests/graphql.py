@@ -11,6 +11,7 @@ from . import models
 @gql.django.filters.filter(models.Quest)
 class QuestFilter:
     id: auto
+    title: auto
 
 
 @gql.django.type(models.Quest, filters=QuestFilter)
@@ -42,6 +43,8 @@ class Quest:
     reward_gold: auto
     reward_items: list["QuestItemReward"]
 
+    questlines: list["QuestlineStep"]
+
     completed_count: auto
 
 
@@ -59,3 +62,24 @@ class QuestItemReward:
     quest: Quest
     item: Item
     quantity: int
+
+
+@gql.django.filters.filter(models.Questline)
+class QuestlineFilter:
+    title: auto
+
+
+@gql.django.type(models.Questline, filters=QuestlineFilter)
+class Questline:
+    id: int
+    title: auto
+    image: auto
+    automatic: auto
+    steps: list["QuestlineStep"]
+
+
+@gql.django.type(models.QuestlineStep)
+class QuestlineStep:
+    questline: Questline
+    order: auto
+    quest: Quest

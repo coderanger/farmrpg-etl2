@@ -65,3 +65,30 @@ class QuestItemReward(models.Model):
         Item, on_delete=models.CASCADE, related_name="reward_for_quests"
     )
     quantity = models.IntegerField()
+
+
+class Questline(models.Model):
+    title = models.CharField(max_length=255, unique=True)
+    image = models.CharField(max_length=255)
+    automatic = models.BooleanField(default=False)
+
+    def __str__(self) -> str:
+        return self.title
+
+
+class QuestlineStep(models.Model):
+    questline = models.ForeignKey(
+        Questline, on_delete=models.CASCADE, related_name="steps"
+    )
+    order = models.IntegerField()
+    quest = models.ForeignKey(
+        Quest, on_delete=models.CASCADE, related_name="questlines"
+    )
+
+    class Meta:
+        ordering = ["questline", "order"]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["questline", "quest"], name="questline_quest"
+            )
+        ]

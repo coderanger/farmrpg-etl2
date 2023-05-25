@@ -6,7 +6,7 @@ from items.graphql import Item
 from locations.graphql import Location
 from npcs.graphql import NPC
 from pets.graphql import Pet
-from quests.graphql import Quest
+from quests.graphql import Quest, Questline
 from quizzes.graphql import Quiz
 from updates.graphql import Update
 from exchange_center.graphql import Trade
@@ -19,6 +19,7 @@ from pbgs.graphql import ProfileBackground
 class Query:
     items: list[Item] = gql.django.field()
     quests: list[Quest] = gql.django.field()
+    questlines: list[Questline] = gql.django.field()
     pets: list[Pet] = gql.django.field()
     locations: list[Location] = gql.django.field()
     quizzes: list[Quiz] = gql.django.field()
