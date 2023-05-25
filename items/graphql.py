@@ -14,6 +14,7 @@ if TYPE_CHECKING:
     from quizzes.graphql import QuizReward
     from exchange_center.graphql import Trade
     from borgen.graphql import BorgenItem
+    from community_center.graphql import CommunityCenter
 
 
 @gql.django.filters.filter(models.Item)
@@ -73,6 +74,12 @@ class Item:
         Annotated["Trade", gql.lazy("exchange_center.graphql")]
     ]
     borgen_items: list[Annotated["BorgenItem", gql.lazy("borgen.graphql")]]
+    community_center_inputs: list[
+        Annotated["CommunityCenter", gql.lazy("community_center.graphql")]
+    ]
+    community_center_outputs: list[
+        Annotated["CommunityCenter", gql.lazy("community_center.graphql")]
+    ]
 
 
 @gql.django.type(models.RecipeItem)

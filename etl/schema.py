@@ -11,6 +11,7 @@ from quizzes.graphql import Quiz
 from updates.graphql import Update
 from exchange_center.graphql import Trade
 from borgen.graphql import BorgenItem
+from community_center.graphql import CommunityCenter
 
 
 @gql.type
@@ -25,6 +26,7 @@ class Query:
     updates: list[Update] = gql.django.field()
     trades: list[Trade] = gql.django.field()
     borgen_items: list[BorgenItem] = gql.django.field()
+    community_centers: list[CommunityCenter] = gql.django.field()
 
 
 schema = gql.Schema(
