@@ -83,6 +83,7 @@ INSTALLED_APPS = [
     "exchange_center",
     "borgen",
     "community_center",
+    "pbgs",
 ]
 
 MIDDLEWARE = [

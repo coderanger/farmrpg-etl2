@@ -12,6 +12,7 @@ from updates.graphql import Update
 from exchange_center.graphql import Trade
 from borgen.graphql import BorgenItem
 from community_center.graphql import CommunityCenter
+from pbgs.graphql import ProfileBackground
 
 
 @gql.type
@@ -27,6 +28,7 @@ class Query:
     trades: list[Trade] = gql.django.field()
     borgen_items: list[BorgenItem] = gql.django.field()
     community_centers: list[CommunityCenter] = gql.django.field()
+    profile_backgrounds: list[ProfileBackground] = gql.django.field()
 
 
 schema = gql.Schema(

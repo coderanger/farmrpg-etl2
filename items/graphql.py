@@ -15,6 +15,7 @@ if TYPE_CHECKING:
     from exchange_center.graphql import Trade
     from borgen.graphql import BorgenItem
     from community_center.graphql import CommunityCenter
+    from pbgs.graphql import ProfileBackground
 
 
 @gql.django.filters.filter(models.Item)
@@ -79,6 +80,9 @@ class Item:
     ]
     community_center_outputs: list[
         Annotated["CommunityCenter", gql.lazy("community_center.graphql")]
+    ]
+    profile_background_cost_items: list[
+        Annotated["ProfileBackground", gql.lazy("pbgs.graphql")]
     ]
 
 
