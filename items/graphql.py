@@ -16,6 +16,7 @@ if TYPE_CHECKING:
     from borgen.graphql import BorgenItem
     from community_center.graphql import CommunityCenter
     from pbgs.graphql import ProfileBackground
+    from tower.graphql import TowerReward
 
 
 @gql.django.filters.filter(models.Item)
@@ -84,6 +85,7 @@ class Item:
     profile_background_cost_items: list[
         Annotated["ProfileBackground", gql.lazy("pbgs.graphql")]
     ]
+    tower_rewards: list[Annotated["TowerReward", gql.lazy("tower.graphql")]]
 
 
 @gql.django.type(models.RecipeItem)

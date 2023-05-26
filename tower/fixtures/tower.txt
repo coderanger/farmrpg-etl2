@@ -1,0 +1,1390 @@
+Level
+199
+You got:
+Ancient Coin (x1900)
+Arnold Palmer (x1900)
+Piece of Heart (x1)
+
+Level
+198
+You got:
+Large Net (x1900)
+Square Key (x1900)
+Large Chest 03 (x1900)
+
+Level
+197
+You got:
+Broccoli (x1900)
+Hourglass (x1900)
+Sturdy Bow (x1900)
+
+Level
+196
+You got:
+Carbon Sphere (x1900)
+Inferno Sphere (x1900)
+Lava Sphere (x1900)
+
+Level
+195
+You got:
+Barracuda (x1900)
+Ruby Coral (x1900)
+Swordfish (x1900)
+
+Level
+194
+You got:
+Gold Eggplant (x1900)
+Gold Cucumber (x1900)
+Gold Sea Crest (x1900)
+
+Level
+193
+You got:
+Runestone 08 (x1900)
+Runestone 09 (x1900)
+Runestone 10 (x1900)
+
+Level
+192
+You got:
+Small Screw (x1900)
+Small Gear (x1900)
+Control Box (x1900)
+
+Level
+191
+You got:
+Grapes (x1900)
+Orange (x1900)
+Lemon (x1900)
+
+Level
+190
+You got:
+Lava Ring (x1)
+Arnold Palmer (x1800)
+Silver (x900,000,000)
+
+Level
+189
+You got:
+Grab Bag 07 (x1800)
+Grab Bag 06 (x1800)
+Grab Bag 05 (x1800)
+
+Level
+188
+You got:
+Caterpillar (x1800)
+Feed (x1800)
+Flour (x1800)
+
+Level
+187
+You got:
+Candy Cane (x1800)
+Candy Corn (x1800)
+Candy Roll (x1800)
+
+Level
+186
+You got:
+Ancient Coin (x1800)
+Bird Egg (x1800)
+Blue Gel (x1800)
+
+Level
+185
+You got:
+Chum (x1800)
+Giant Squid (x1800)
+Octopus (x1800)
+
+Level
+184
+You got:
+Beet (x1800)
+Cotton (x1800)
+Broccoli (x1800)
+
+Level
+183
+You got:
+Runestone 05 (x1800)
+Runestone 06 (x1800)
+Runestone 07 (x1800)
+
+Level
+182
+You got:
+Energy Coil (x1800)
+Pearl Necklace (x1800)
+Mystic Ring (x1800)
+
+Level
+181
+You got:
+Grape Juice (x1800)
+Iced Tea (x1800)
+Apple Cider (x1800)
+
+Level
+180
+You got:
+Inferno Ring (x1)
+Orange Juice (x1700)
+Silver (x800,000,000)
+
+Level
+179
+You got:
+Gold Feather (x1700)
+Pair of Boots (x1700)
+Grab Bag 01 (x1700)
+
+Level
+178
+You got:
+Giant Centipede (x1700)
+Horned Beetle (x1700)
+Dragonfly (x1700)
+
+Level
+177
+You got:
+Mystical Chest 01 (x1700)
+Large Chest 01 (x1700)
+Gift Basket 01 (x1700)
+
+Level
+176
+You got:
+Magicite (x1700)
+Magna Quartz (x1700)
+Moonstone (x1700)
+
+Level
+175
+You got:
+Frosteye (x1700)
+Serpent Eel (x1700)
+Catfish (x1700)
+
+Level
+174
+You got:
+Frozen Peas (x100)
+Frozen Cabbage (x25)
+Frozen Pine (x25)
+
+Level
+173
+You got:
+Runestone 02 (x1700)
+Runestone 03 (x1700)
+Runestone 04 (x1700)
+
+Level
+172
+You got:
+Mushroom Paste (x1700)
+Rope (x1700)
+Polished Boot (x1700)
+
+Level
+171
+You got:
+Orange Juice (x1700)
+Large Net (x1700)
+Apple Cider (x1700)
+
+Level
+170
+You got:
+Spring Bangle (x1)
+Iced Tea (x1600)
+Silver (x700,000,000)
+
+Level
+169
+You got:
+Large Clam Shell (x1600)
+Red Starfish (x1600)
+Spiral Shell (x1600)
+
+Level
+168
+You got:
+Fishing Net (x1600)
+Treasure Key (x1600)
+Bottle Rocket (x1600)
+
+Level
+167
+You got:
+Spool of Copper (x1600)
+Fancy Pipe (x1600)
+Fancy Guitar (x1600)
+
+Level
+166
+You got:
+Emerald Ring (x1600)
+Machine Press (x1600)
+Jade Charm (x1600)
+
+Level
+165
+You got:
+Gold Coral (x1600)
+Gold Drum (x1600)
+Gold Sea Bass (x1600)
+
+Level
+164
+You got:
+Pine Tree (x1600)
+Corn (x1600)
+Cabbage (x1600)
+
+Level
+163
+You got:
+Runestone 19 (x1600)
+Runestone 20 (x1600)
+Runestone 01 (x1600)
+
+Level
+162
+You got:
+Steel Wire (x1600)
+Steel (x1600)
+Glass Orb (x1600)
+
+Level
+161
+You got:
+Apple (x1600)
+Orange Juice (x1600)
+Lemonade (x1600)
+
+Level
+160
+You got:
+Serpent of Trym (x1)
+Beet (x1500)
+Silver (x600,000,000)
+
+Level
+159
+You got:
+Large Net (x1500)
+Apple Cider (x1500)
+Arnold Palmer (x1500)
+
+Level
+158
+You got:
+Grab Bag 07 (x1500)
+Green Shield (x1500)
+Herbs (x1500)
+
+Level
+157
+You got:
+Fancy Guitar (x1500)
+Feed (x1500)
+Corn Oil (x1500)
+
+Level
+156
+You got:
+Ruby (x1500)
+Emerald (x1500)
+Jade (x1500)
+
+Level
+155
+You got:
+Barracuda (x1500)
+Plumbfish (x1500)
+Octopus (x1500)
+
+Level
+154
+You got:
+Gold Leaf (x1500)
+Gold Feather (x1500)
+Gold Peas (x1500)
+
+Level
+153
+You got:
+Runestone 16 (x1500)
+Runestone 17 (x1500)
+Runestone 18 (x1500)
+
+Level
+152
+You got:
+Fancy Drum (x1500)
+Oak (x1500)
+Unpolished Jade (x1500)
+
+Level
+151
+You got:
+Ancient Coin (x1500)
+Orange Juice (x1500)
+Raptor Claw (x150)
+
+Level
+150
+You got:
+Maduin's Cup (x1)
+Arnold Palmer (x1400)
+Silver (x500,000,000)
+
+Level
+149
+You got:
+Goldfish (x1400)
+Spiked Shell (x1400)
+Skull Coin (x1400)
+
+Level
+148
+You got:
+Lava Sphere (x1400)
+Inferno Sphere (x1400)
+Large Clam Shell (x1400)
+
+Level
+147
+You got:
+Goldray (x1400)
+Goldgill (x1400)
+Gold Crab (x1400)
+
+Level
+146
+You got:
+Diamond (x1400)
+Green Cloak (x1400)
+Broccoli (x1400)
+
+Level
+145
+You got:
+Small Chest 02 (x1400)
+Medium Chest 02 (x1400)
+Large Chest 02 (x1400)
+
+Level
+144
+You got:
+Grab Bag 04 (x1400)
+Grab Bag 05 (x1400)
+Grab Bag 06 (x1400)
+
+Level
+143
+You got:
+Runestone 13 (x1400)
+Runestone 14 (x1400)
+Runestone 15 (x1400)
+
+Level
+142
+You got:
+Slimestone (x1400)
+Sea Dragon (x1400)
+Ruby Scorpion (x1400)
+
+Level
+141
+You got:
+Apple (x1400)
+Orange (x1400)
+Lemon (x1400)
+
+Level
+140
+You got:
+Magic Mirror (x1)
+Iced Tea (x1000)
+Silver (x400,000,000)
+
+Level
+139
+You got:
+Cheese (x1300)
+Gouda (x1300)
+Grapes (x1300)
+
+Level
+138
+You got:
+Steel (x1300)
+Steel Wire (x1300)
+Glass Bottle (x1300)
+
+Level
+137
+You got:
+Corn (x1300)
+Potato (x1300)
+Wheat (x1300)
+
+Level
+136
+You got:
+Pearl Necklace (x1300)
+Shimmer Ring (x1300)
+Lemon Quartz Ring (x1300)
+
+Level
+135
+You got:
+Flarefin (x1300)
+Redgill (x1300)
+Flamejack (x1300)
+
+Level
+134
+You got:
+Gold Carrot (x1300)
+Gold Cucumber (x1300)
+Gold Eggplant (x1300)
+
+Level
+133
+You got:
+Runestone 10 (x1300)
+Runestone 11 (x1300)
+Runestone 12 (x1300)
+
+Level
+132
+You got:
+Yarn (x1300)
+Crab Claw (x1300)
+Glass Orb (x1300)
+
+Level
+131
+You got:
+Wine (x1300)
+Apple Cider (x1300)
+Arnold Palmer (x1300)
+
+Level
+130
+You got:
+Dragon Heart (x1)
+Fishing Net (x1000)
+Silver (x300,000,000)
+
+Level
+129
+You got:
+Cyclops Spider (x1200)
+Frog (x1200)
+Water Lily (x1200)
+
+Level
+128
+You got:
+Lantern (x1200)
+Garnet Ring (x1200)
+Hourglass (x1200)
+
+Level
+127
+You got:
+Small Chest 01 (x1200)
+Medium Chest 01 (x1200)
+Large Chest 01 (x1200)
+
+Level
+126
+You got:
+Lava Sphere (x1200)
+Inferno Sphere (x1200)
+Sturdy Bow (x1200)
+
+Level
+125
+You got:
+Large Clam Shell (x1200)
+Ruby Coral (x1200)
+Serpent Eel (x1200)
+
+Level
+124
+You got:
+Cotton (x1200)
+Beet (x1200)
+Sunflower (x1200)
+
+Level
+123
+You got:
+Runestone 07 (x1200)
+Runestone 08 (x1200)
+Runestone 09 (x1200)
+
+Level
+122
+You got:
+Grab Bag 01 (x1200)
+Grab Bag 02 (x1200)
+Grab Bag 03 (x1200)
+
+Level
+121
+You got:
+Orange Juice (x1200)
+Fishing Net (x1200)
+Ancient Coin (x1200)
+
+Level
+120
+You got:
+Ashes of Pentagorn (x1)
+Lemonade (x1000)
+Silver (x200,000,000)
+
+Level
+119
+You got:
+Bacon (x1100)
+Steak (x1100)
+Steak Kabob (x1100)
+
+Level
+118
+You got:
+Small Spring (x1100)
+Small Screw (x1100)
+Small Gear (x1100)
+
+Level
+117
+You got:
+Treasure Key (x1100)
+Square Key (x1100)
+Small Key (x1100)
+
+Level
+116
+You got:
+Amethyst Necklace (x1100)
+Jade Charm (x1100)
+Mystic Ring (x1100)
+
+Level
+115
+You got:
+Blue Sea Bass (x1100)
+Bone Fish (x1100)
+Fluorifish (x1100)
+
+Level
+114
+You got:
+Tomato (x1100)
+Cabbage (x1100)
+Watermelon (x1100)
+
+Level
+113
+You got:
+Runestone 04 (x1100)
+Runestone 05 (x1100)
+Runestone 06 (x1100)
+
+Level
+112
+You got:
+Honey (x1100)
+Pine Tree (x1100)
+Carbon Sphere (x1100)
+
+Level
+111
+You got:
+Apple (x1100)
+Grapes (x1100)
+Tea Leaves (x1100)
+
+Level
+110
+You got:
+Growth Medallion II (x1)
+Orange Juice (x1000)
+Silver (x100,000,000)
+
+Level
+109
+You got:
+Grasshopper (x1000)
+Orange Gecko (x1000)
+Dragonfly (x1000)
+
+Level
+108
+You got:
+Fancy Guitar (x1000)
+Chum (x1000)
+Salt (x1000)
+
+Level
+107
+You got:
+Beet (x1000)
+Sunflower (x1000)
+Cotton (x1000)
+
+Level
+106
+You got:
+Jade (x1000)
+Garnet (x1000)
+Emerald (x1000)
+
+Level
+105
+You got:
+Blue Tiger Fish (x1000)
+Flarefin (x1000)
+Plumbfish (x1000)
+
+Level
+104
+You got:
+Fishing Net (x1000)
+Cotton (x1000)
+Gold Peppers (x1000)
+
+Level
+103
+You got:
+Runestone 01 (x1000)
+Runestone 02 (x1000)
+Runestone 03 (x1000)
+
+Level
+102
+You got:
+Apple Cider (x1000)
+Ancient Coin (x1000)
+Silver (x10,000,000)
+
+Level
+101
+You got:
+Apple (x1000)
+Orange Juice (x1000)
+Lemonade (x1000)
+
+Level
+100
+You got:
+Strange Gem (x1)
+Orange Juice (x1000)
+Gold (x1,000)
+
+Level
+99
+You got:
+Ancient Coin (x190)
+Arnold Palmer (x190)
+Yarn (x190)
+
+Level
+98
+You got:
+Large Net (x190)
+Square Key (x190)
+Large Chest 02 (x190)
+
+Level
+97
+You got:
+Diamond (x190)
+Hourglass (x190)
+Sturdy Bow (x190)
+
+Level
+96
+You got:
+Carbon Sphere (x190)
+Inferno Sphere (x190)
+Lava Sphere (x190)
+
+Level
+95
+You got:
+Barracuda (x190)
+Ruby Coral (x190)
+Swordfish (x190)
+
+Level
+94
+You got:
+Gold Eggplant (x190)
+Gold Cucumber (x190)
+Gold Peas (x190)
+
+Level
+93
+You got:
+Runestone 08 (x190)
+Runestone 09 (x190)
+Runestone 10 (x190)
+
+Level
+92
+You got:
+Small Screw (x190)
+Small Gear (x190)
+Small Spring (x190)
+
+Level
+91
+You got:
+Grapes (x190)
+Orange (x190)
+Lemon (x190)
+
+Level
+90
+You got:
+Headdress of Luna (x1)
+Arnold Palmer (x180)
+Silver (x90,000,000)
+
+Level
+89
+You got:
+Grab Bag 07 (x180)
+Grab Bag 06 (x180)
+Grab Bag 05 (x180)
+
+Level
+88
+You got:
+Caterpillar (x180)
+Feed (x180)
+Flour (x180)
+
+Level
+87
+You got:
+Candy Cane (x180)
+Candy Corn (x180)
+Candy Roll (x180)
+
+Level
+86
+You got:
+Ancient Coin (x180)
+Bird Egg (x180)
+Blue Gel (x180)
+
+Level
+85
+You got:
+Chum (x180)
+Giant Squid (x180)
+Octopus (x180)
+
+Level
+84
+You got:
+Beet (x180)
+Cotton (x180)
+Broccoli (x180)
+
+Level
+83
+You got:
+Runestone 05 (x180)
+Runestone 06 (x180)
+Runestone 07 (x180)
+
+Level
+82
+You got:
+Amethyst Necklace (x180)
+Pearl Necklace (x180)
+Mystic Ring (x180)
+
+Level
+81
+You got:
+Grape Juice (x180)
+Iced Tea (x180)
+Apple Cider (x180)
+
+Level
+80
+You got:
+Friendship Bracelet (x1)
+Orange Juice (x170)
+Silver (x80,000,000)
+
+Level
+79
+You got:
+Gold Feather (x170)
+Gold Leaf (x170)
+Grab Bag 01 (x170)
+
+Level
+78
+You got:
+Giant Centipede (x170)
+Horned Beetle (x170)
+Dragonfly (x170)
+
+Level
+77
+You got:
+Mystical Chest 01 (x170)
+Large Chest 01 (x170)
+Gift Basket 01 (x170)
+
+Level
+76
+You got:
+Magicite (x170)
+Magna Quartz (x170)
+Moonstone (x170)
+
+Level
+75
+You got:
+Goldfish (x170)
+Serpent Eel (x170)
+Catfish (x170)
+
+Level
+74
+You got:
+Steak (x170)
+Bacon (x170)
+Honey (x170)
+
+Level
+73
+You got:
+Runestone 02 (x170)
+Runestone 03 (x170)
+Runestone 04 (x170)
+
+Level
+72
+You got:
+Mushroom Paste (x170)
+Rope (x170)
+Carbon Sphere (x170)
+
+Level
+71
+You got:
+Orange Juice (x170)
+Large Net (x170)
+Apple Cider (x170)
+
+Level
+70
+You got:
+Trigon Knot (x1)
+Iced Tea (x160)
+Silver (x70,000,000)
+
+Level
+69
+You got:
+Large Clam Shell (x160)
+Red Starfish (x160)
+Spiral Shell (x160)
+
+Level
+68
+You got:
+Fishing Net (x160)
+Treasure Key (x160)
+Bottle Rocket (x160)
+
+Level
+67
+You got:
+Fancy Box (x160)
+Fancy Pipe (x160)
+Fancy Guitar (x160)
+
+Level
+66
+You got:
+Emerald Ring (x160)
+Garnet Ring (x160)
+Jade Charm (x160)
+
+Level
+65
+You got:
+Gold Coral (x160)
+Gold Drum (x160)
+Gold Sea Bass (x160)
+
+Level
+64
+You got:
+Pine Tree (x160)
+Jack-o-lantern (x160)
+Cabbage (x160)
+
+Level
+63
+You got:
+Runestone 19 (x160)
+Runestone 20 (x160)
+Runestone 01 (x160)
+
+Level
+62
+You got:
+Steel Wire (x160)
+Steel (x160)
+Glass Orb (x160)
+
+Level
+61
+You got:
+Apple (x160)
+Orange Juice (x160)
+Lemonade (x160)
+
+Level
+60
+You got:
+Growth Medallion I (x1)
+Beet (x150)
+Silver (x60,000,000)
+
+Level
+59
+You got:
+Large Net (x150)
+Apple Cider (x150)
+Arnold Palmer (x150)
+
+Level
+58
+You got:
+Grab Bag 07 (x150)
+Green Shield (x150)
+Herbs (x150)
+
+Level
+57
+You got:
+Fancy Guitar (x150)
+Feed (x150)
+Flour (x150)
+
+Level
+56
+You got:
+Ruby (x150)
+Emerald (x150)
+Jade (x150)
+
+Level
+55
+You got:
+Barracuda (x150)
+Plumbfish (x150)
+Octopus (x150)
+
+Level
+54
+You got:
+Gold Leaf (x150)
+Gold Feather (x150)
+Gold Peas (x150)
+
+Level
+53
+You got:
+Runestone 16 (x150)
+Runestone 17 (x150)
+Runestone 18 (x150)
+
+Level
+52
+You got:
+Fancy Drum (x150)
+Oak (x150)
+Unpolished Jade (x150)
+
+Level
+51
+You got:
+Ancient Coin (x150)
+Orange Juice (x150)
+Gold (x150)
+
+Level
+50
+You got:
+Runecube (x1)
+Arnold Palmer (x140)
+Silver (x50,000,000)
+
+Level
+49
+You got:
+Goldfish (x140)
+Spiked Shell (x140)
+Skull Coin (x140)
+
+Level
+48
+You got:
+Lava Sphere (x140)
+Inferno Sphere (x140)
+Large Clam Shell (x140)
+
+Level
+47
+You got:
+Goldray (x140)
+Goldgill (x140)
+Gold Crab (x140)
+
+Level
+46
+You got:
+Diamond (x140)
+Green Cloak (x140)
+Broccoli (x140)
+
+Level
+45
+You got:
+Small Chest 02 (x140)
+Medium Chest 02 (x140)
+Large Chest 02 (x140)
+
+Level
+44
+You got:
+Grab Bag 04 (x140)
+Grab Bag 05 (x140)
+Grab Bag 06 (x140)
+
+Level
+43
+You got:
+Runestone 13 (x140)
+Runestone 14 (x140)
+Runestone 15 (x140)
+
+Level
+42
+You got:
+Slimestone (x140)
+Sea Dragon (x140)
+Ruby Scorpion (x140)
+
+Level
+41
+You got:
+Apple (x140)
+Orange (x140)
+Lemon (x140)
+
+Level
+40
+You got:
+Stones of Gallodor (x1)
+Iced Tea (x130)
+Silver (x40,000,000)
+Level
+39
+You got:
+Cheese (x130)
+Gouda (x130)
+Grapes (x130)
+
+Level
+38
+You got:
+Steel (x130)
+Steel Wire (x130)
+Glass Bottle (x130)
+
+Level
+37
+You got:
+Corn (x130)
+Potato (x130)
+Wheat (x130)
+
+Level
+36
+You got:
+Pearl Necklace (x130)
+Shimmer Ring (x130)
+Lemon Quartz Ring (x130)
+
+Level
+35
+You got:
+Flarefin (x130)
+Redgill (x130)
+Flamejack (x130)
+
+Level
+34
+You got:
+Gold Carrot (x130)
+Gold Cucumber (x130)
+Gold Eggplant (x130)
+
+Level
+33
+You got:
+Runestone 10 (x130)
+Runestone 11 (x130)
+Runestone 12 (x130)
+
+Level
+32
+You got:
+Yarn (x130)
+Crab Claw (x130)
+Glass Orb (x130)
+
+Level
+31
+You got:
+Wine (x130)
+Apple Cider (x130)
+Arnold Palmer (x130)
+
+Level
+30
+You got:
+Odthorin's Charm (x1)
+Fishing Net (x120)
+Silver (x30,000,000)
+
+Level
+29
+You got:
+Cyclops Spider (x120)
+Frog (x120)
+Water Lily (x120)
+
+Level
+28
+You got:
+Lantern (x120)
+Garnet Ring (x120)
+Hourglass (x120)
+
+Level
+27
+You got:
+Small Chest 01 (x120)
+Medium Chest 01 (x120)
+Large Chest 01 (x120)
+
+Level
+26
+You got:
+Lava Sphere (x120)
+Inferno Sphere (x120)
+Sturdy Bow (x120)
+
+Level
+25
+You got:
+Large Clam Shell (x120)
+Ruby Coral (x120)
+Serpent Eel (x120)
+
+Level
+24
+You got:
+Cotton (x120)
+Beet (x120)
+Sunflower (x120)
+
+Level
+23
+You got:
+Runestone 07 (x120)
+Runestone 08 (x120)
+Runestone 09 (x120)
+
+Level
+22
+You got:
+Grab Bag 01 (x120)
+Grab Bag 02 (x120)
+Grab Bag 03 (x120)
+
+Level
+21
+You got:
+Orange Juice (x120)
+Fishing Net (x120)
+Ancient Coin (x120)
+
+Level
+20
+You got:
+Bahltruvian Scales (x1)
+Lemonade (x110)
+Silver (x20,000,000)
+Level
+19
+You got:
+Bacon (x110)
+Steak (x110)
+Steak Kabob (x110)
+
+Level
+18
+You got:
+Small Spring (x110)
+Small Screw (x110)
+Small Gear (x110)
+
+Level
+17
+You got:
+Treasure Key (x110)
+Square Key (x110)
+Small Key (x110)
+
+Level
+16
+You got:
+Amethyst Necklace (x110)
+Jade Charm (x110)
+Mystic Ring (x110)
+
+Level
+15
+You got:
+Blue Sea Bass (x110)
+Bone Fish (x110)
+Fluorifish (x110)
+
+Level
+14
+You got:
+Tomato (x110)
+Cabbage (x110)
+Watermelon (x110)
+
+Level
+13
+You got:
+Runestone 04 (x110)
+Runestone 05 (x110)
+Runestone 06 (x110)
+
+Level
+12
+You got:
+Honey (x110)
+Pine Tree (x110)
+Carbon Sphere (x110)
+
+Level
+11
+You got:
+Apple (x110)
+Grapes (x110)
+Tea Leaves (x110)
+
+Level
+10
+You got:
+Diary of O'Dynn (x1)
+Orange Juice (x100)
+Silver (x10,000,000)
+
+Level
+9
+You got:
+Grasshopper (x100)
+Orange Gecko (x100)
+Dragonfly (x100)
+
+Level
+8
+You got:
+Fancy Guitar (x100)
+Chum (x100)
+Salt (x100)
+
+Level
+7
+You got:
+Beet (x100)
+Sunflower (x100)
+Cotton (x100)
+
+Level
+6
+You got:
+Jade (x100)
+Garnet (x100)
+Emerald (x100)
+
+Level
+5
+You got:
+Blue Tiger Fish (x100)
+Flarefin (x100)
+Plumbfish (x100)
+
+Level
+4
+You got:
+Fishing Net (x100)
+Cotton (x100)
+Gold Peppers (x100)
+
+Level
+3
+You got:
+Runestone 01 (x100)
+Runestone 02 (x100)
+Runestone 03 (x100)
+
+Level
+2
+You got:
+Apple Cider (x100)
+Ancient Coin (x100)
+Silver (x1,000,000)
+
+Level
+1
+You got:
+Apple (x100)
+Orange Juice (x100)
+Gold (x100)

@@ -84,6 +84,7 @@ INSTALLED_APPS = [
     "borgen",
     "community_center",
     "pbgs",
+    "tower",
 ]
 
 MIDDLEWARE = [

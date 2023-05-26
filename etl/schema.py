@@ -13,6 +13,7 @@ from exchange_center.graphql import Trade
 from borgen.graphql import BorgenItem
 from community_center.graphql import CommunityCenter
 from pbgs.graphql import ProfileBackground
+from tower.graphql import TowerReward
 
 
 @gql.type
@@ -30,6 +31,7 @@ class Query:
     borgen_items: list[BorgenItem] = gql.django.field()
     community_centers: list[CommunityCenter] = gql.django.field()
     profile_backgrounds: list[ProfileBackground] = gql.django.field()
+    tower_rewards: list[TowerReward] = gql.django.field()
 
 
 schema = gql.Schema(
