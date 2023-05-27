@@ -19,6 +19,7 @@ class CommunityCenter:
     date: auto
     input_item: Item
     input_quantity: auto
-    output_item: Item
+    output_gold: auto
+    output_item: Item | None
     output_quantity: auto
     progress: auto
