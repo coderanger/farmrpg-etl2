@@ -1,0 +1,506 @@
+[
+    {
+        "model": "items.manualproduction",
+        "pk": 0,
+        "fields": {
+            "item": "35",
+            "line_one": "Sawmill",
+            "line_two": "Building",
+            "image": "/img/items/sawmill_sm.png",
+            "value": "Hourly",
+            "sort": 60,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 1,
+        "fields": {
+            "item": "21",
+            "line_one": "Sawmill",
+            "line_two": "Building",
+            "image": "/img/items/sawmill_sm.png",
+            "value": "Hourly",
+            "sort": 60,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 2,
+        "fields": {
+            "item": "40",
+            "line_one": "Quarry",
+            "line_two": "Building",
+            "image": "/img/items/quarry_sm.png",
+            "value": "10 minutes",
+            "sort": 10,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 3,
+        "fields": {
+            "item": "202",
+            "line_one": "Quarry",
+            "line_two": "Building",
+            "image": "/img/items/quarry_sm.png",
+            "value": "10 minutes",
+            "sort": 10,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 4,
+        "fields": {
+            "item": "54",
+            "line_one": "Quarry",
+            "line_two": "Building",
+            "image": "/img/items/quarry_sm.png",
+            "value": "Rarely",
+            "sort": 1000,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 5,
+        "fields": {
+            "item": "263",
+            "line_one": "Quarry",
+            "line_two": "Building",
+            "image": "/img/items/quarry_sm.png",
+            "value": "Rarely",
+            "sort": 1000,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 6,
+        "fields": {
+            "item": "93",
+            "line_one": "Quarry",
+            "line_two": "Building",
+            "image": "/img/items/quarry_sm.png",
+            "value": "Rarely",
+            "sort": 1000,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 7,
+        "fields": {
+            "item": "142",
+            "line_one": "Quarry",
+            "line_two": "Building",
+            "image": "/img/items/quarry_sm.png",
+            "value": "Rarely",
+            "sort": 1000,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 8,
+        "fields": {
+            "item": "77",
+            "line_one": "Quarry",
+            "line_two": "Building",
+            "image": "/img/items/quarry_sm.png",
+            "value": "Rarely",
+            "sort": 1000,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 9,
+        "fields": {
+            "item": "41",
+            "line_one": "Quarry",
+            "line_two": "Building",
+            "image": "/img/items/quarry_sm.png",
+            "value": "Rarely",
+            "sort": 1000,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 10,
+        "fields": {
+            "item": "80",
+            "line_one": "Quarry",
+            "line_two": "Building",
+            "image": "/img/items/quarry_sm.png",
+            "value": "Rarely",
+            "sort": 1000,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 11,
+        "fields": {
+            "item": "102",
+            "line_one": "Quarry",
+            "line_two": "Building",
+            "image": "/img/items/quarry_sm.png",
+            "value": "Rarely",
+            "sort": 1000,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 12,
+        "fields": {
+            "item": "175",
+            "line_one": "Quarry",
+            "line_two": "Building",
+            "image": "/img/items/quarry_sm.png",
+            "value": "Rarely",
+            "sort": 1000,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 13,
+        "fields": {
+            "item": "338",
+            "line_one": "Quarry",
+            "line_two": "Building",
+            "image": "/img/items/quarry_sm.png",
+            "value": "Rarely",
+            "sort": 1000,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 14,
+        "fields": {
+            "item": "103",
+            "line_one": "Quarry",
+            "line_two": "Building",
+            "image": "/img/items/quarry_sm.png",
+            "value": "Rarely",
+            "sort": 1000,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 15,
+        "fields": {
+            "item": "128",
+            "line_one": "Hay Field",
+            "line_two": "Building",
+            "image": "/img/items/hay.png",
+            "value": "10 Minutes",
+            "sort": 10,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 16,
+        "fields": {
+            "item": "22",
+            "line_one": "Ironworks",
+            "line_two": "Building",
+            "image": "/img/items/ironworks_sm.png",
+            "value": "3 Minutes",
+            "sort": 3,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 17,
+        "fields": {
+            "item": "38",
+            "line_one": "Ironworks",
+            "line_two": "Building",
+            "image": "/img/items/ironworks_sm.png",
+            "value": "3 Minutes",
+            "sort": 3,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 18,
+        "fields": {
+            "item": "339",
+            "line_one": "Ironworks",
+            "line_two": "Building",
+            "image": "/img/items/ironworks_sm.png",
+            "value": "Rarely",
+            "sort": 1000,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 19,
+        "fields": {
+            "item": "251",
+            "line_one": "Ironworks",
+            "line_two": "Building",
+            "image": "/img/items/ironworks_sm.png",
+            "value": "Rarely",
+            "sort": 1000,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 20,
+        "fields": {
+            "item": "44",
+            "line_one": "Orchard",
+            "line_two": "Building",
+            "image": "/img/items/orchard_sm.png",
+            "value": "Daily",
+            "sort": 3600,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 21,
+        "fields": {
+            "item": "61",
+            "line_one": "Orchard",
+            "line_two": "Building",
+            "image": "/img/items/orchard_sm.png",
+            "value": "Daily",
+            "sort": 3600,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 22,
+        "fields": {
+            "item": "62",
+            "line_one": "Orchard",
+            "line_two": "Building",
+            "image": "/img/items/orchard_sm.png",
+            "value": "Daily",
+            "sort": 3600,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 23,
+        "fields": {
+            "item": "120",
+            "line_one": "Vineyard",
+            "line_two": "Building",
+            "image": "/img/items/vineyard_sm.png",
+            "value": "Daily",
+            "sort": 3600,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 24,
+        "fields": {
+            "item": "26",
+            "line_one": "Chicken Coop",
+            "line_two": "Building",
+            "image": "/img/items/coop_sm.png",
+            "value": "Daily",
+            "sort": 3600,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 25,
+        "fields": {
+            "item": "42",
+            "line_one": "Chicken Coop",
+            "line_two": "Building",
+            "image": "/img/items/coop_sm.png",
+            "value": "Daily",
+            "sort": 3600,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 26,
+        "fields": {
+            "item": "137",
+            "line_one": "Cow Pasture",
+            "line_two": "Building",
+            "image": "/img/items/pasture_sm.png",
+            "value": "Daily",
+            "sort": 3600,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 27,
+        "fields": {
+            "item": "110",
+            "line_one": "Cow Pasture",
+            "line_two": "Building",
+            "image": "/img/items/pasture_sm.png",
+            "value": "Daily",
+            "sort": 3600,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 28,
+        "fields": {
+            "item": "85",
+            "line_one": "Cow Pasture",
+            "line_two": "Building",
+            "image": "/img/items/pasture_sm.png",
+            "value": "Daily",
+            "sort": 3600,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 29,
+        "fields": {
+            "item": "170",
+            "line_one": "Raptor Pen",
+            "line_two": "Building",
+            "image": "/img/items/pen_sm.png",
+            "value": "Daily",
+            "sort": 3600,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 30,
+        "fields": {
+            "item": "197",
+            "line_one": "Raptor Pen",
+            "line_two": "Building",
+            "image": "/img/items/pen_sm.png",
+            "value": "Daily",
+            "sort": 3600,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 31,
+        "fields": {
+            "item": "137",
+            "line_one": "Steak Market",
+            "line_two": "Building",
+            "image": "/img/items/steakmarket.png",
+            "value": "Any Time",
+            "sort": 1,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 32,
+        "fields": {
+            "item": "197",
+            "line_one": "Steak Market",
+            "line_two": "Building",
+            "image": "/img/items/steakmarket.png",
+            "value": "Any Time",
+            "sort": 1,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 33,
+        "fields": {
+            "item": "525",
+            "line_one": "Wheel of Borgen",
+            "line_two": "Building",
+            "image": "/img/items/spinner.png?2",
+            "value": "Rarely",
+            "sort": 1,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 34,
+        "fields": {
+            "item": "534",
+            "line_one": "FarmRPG",
+            "line_two": "Building",
+            "image": "/img/emblems/def.png",
+            "value": "1 Year After Joining",
+            "sort": 1,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    },
+    {
+        "model": "items.manualproduction",
+        "pk": 35,
+        "fields": {
+            "item": "441",
+            "line_one": "Soap Shop",
+            "line_two": "Building",
+            "image": "/img/items/soap_r.png",
+            "value": "2000 Soap",
+            "sort": 1,
+            "created_at": "2023-05-27T19:18:34.131630+00:00",
+            "modified_at": "2023-05-27T19:18:34.131630+00:00"
+        }
+    }
+]
