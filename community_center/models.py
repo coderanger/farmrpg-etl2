@@ -29,6 +29,7 @@ class CommunityCenter(models.Model):
         return str(self.date)
 
     class Meta:
+        ordering = ["-date"]
         constraints = [
             models.CheckConstraint(
                 check=models.Q(
