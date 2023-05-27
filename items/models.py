@@ -125,3 +125,58 @@ class ManualProduction(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
+
+
+@pghistory.track(pghistory.Snapshot(), exclude=["modified_at"])
+class SkillLevelReward(models.Model):
+    SKILL_FARMING = "farming"
+    SKILL_FISHING = "fishing"
+    SKILL_CRAFTING = "crafting"
+    SKILL_EXPLORING = "exploring"
+    SKILL_COOKING = "cooking"
+    SKILL_CHOICES = [
+        (SKILL_FARMING, "Farming"),
+        (SKILL_FISHING, "Fishing"),
+        (SKILL_CRAFTING, "Crafting"),
+        (SKILL_EXPLORING, "Exploring"),
+        (SKILL_COOKING, "Cooking"),
+    ]
+
+    skill = models.CharField(max_length=32, choices=SKILL_CHOICES, db_index=True)
+    level = models.IntegerField(db_index=True)
+    order = models.IntegerField(db_index=True)
+    silver = models.BigIntegerField(null=True, blank=True)
+    gold = models.IntegerField(null=True, blank=True)
+    item = models.ForeignKey(
+        Item,
+        on_delete=models.CASCADE,
+        related_name="skill_level_rewards",
+        null=True,
+        blank=True,
+        db_index=True,
+    )
+    item_quantity = models.IntegerField(null=True, blank=True)
+
+    class Meta:
+        ordering = ["level", "order"]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["skill", "level", "order"],
+                name="skill_level_reward_level_order",
+            ),
+            models.CheckConstraint(
+                check=models.Q(
+                    silver__isnull=False, gold=None, item=None, item_quantity=None
+                )
+                | models.Q(
+                    silver=None, gold__isnull=False, item=None, item_quantity=None
+                )
+                | models.Q(
+                    silver=None,
+                    gold=None,
+                    item__isnull=False,
+                    item_quantity__isnull=False,
+                ),
+                name="skill_level_reward_only_one_type",
+            ),
+        ]

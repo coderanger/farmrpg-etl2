@@ -86,6 +86,7 @@ class Item:
         Annotated["ProfileBackground", gql.lazy("pbgs.graphql")]
     ]
     tower_rewards: list[Annotated["TowerReward", gql.lazy("tower.graphql")]]
+    skill_level_rewards: list["SkillLevelReward"]
 
 
 @gql.django.type(models.RecipeItem)
@@ -118,3 +119,20 @@ class ManualProduction:
     image: auto
     value: auto
     sort: auto
+
+
+@gql.django.filters.filter(models.SkillLevelReward)
+class SkillLevelRewardFilter:
+    skill: auto
+    level: auto
+
+
+@gql.django.type(models.SkillLevelReward, filters=SkillLevelRewardFilter)
+class SkillLevelReward:
+    skill: auto
+    level: auto
+    order: auto
+    silver: auto
+    gold: auto
+    item: Item | None
+    item_quantity: auto

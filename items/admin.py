@@ -3,7 +3,14 @@ from django.http.request import HttpRequest
 from django.utils.html import format_html
 
 
-from .models import Item, LocksmithItem, ManualProduction, RecipeItem, WishingWellItem
+from .models import (
+    Item,
+    LocksmithItem,
+    ManualProduction,
+    RecipeItem,
+    SkillLevelReward,
+    WishingWellItem,
+)
 
 
 class LocksmithItemInline(admin.TabularInline):
@@ -141,3 +148,20 @@ class ItemAdmin(admin.ModelAdmin):
         self, request: HttpRequest, obj: Item | None = None
     ) -> bool:
         return False
+
+
+@admin.register(SkillLevelReward)
+class SkillLevelRewardAdmin(admin.ModelAdmin):
+    list_display = ["skill", "level", "order", "admin_reward"]
+    list_filter = ["skill"]
+    search_fields = ["skill", "level"]
+    raw_id_fields = ["item"]
+
+    @admin.display(description="Reward")
+    def admin_reward(self, obj: SkillLevelReward) -> str:
+        if obj.silver is not None:
+            return f"Silver (x{obj.silver})"
+        elif obj.gold is not None:
+            return f"Gold (x{obj.gold})"
+        else:
+            return f"{obj.item.name} (x{obj.item_quantity})"

@@ -2,7 +2,7 @@ from strawberry_django_plus import gql
 from strawberry_django_plus.optimizer import DjangoOptimizerExtension
 
 from chat.graphql import Emblem
-from items.graphql import Item
+from items.graphql import Item, SkillLevelReward
 from locations.graphql import Location
 from npcs.graphql import NPC
 from pets.graphql import Pet
@@ -32,6 +32,7 @@ class Query:
     community_centers: list[CommunityCenter] = gql.django.field()
     profile_backgrounds: list[ProfileBackground] = gql.django.field()
     tower_rewards: list[TowerReward] = gql.django.field()
+    skill_level_rewards: list[SkillLevelReward] = gql.django.field()
 
 
 schema = gql.Schema(

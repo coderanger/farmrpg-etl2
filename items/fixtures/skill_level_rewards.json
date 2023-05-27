@@ -1,0 +1,1506 @@
+[
+    {
+        "model": "items.skilllevelreward",
+        "pk": 0,
+        "fields": {
+            "skill": "farming",
+            "level": 10,
+            "order": 1,
+            "item": "31",
+            "item_quantity": 12
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 1,
+        "fields": {
+            "skill": "farming",
+            "level": 10,
+            "order": 2,
+            "item": "238",
+            "item_quantity": 10
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 2,
+        "fields": {
+            "skill": "farming",
+            "level": 10,
+            "order": 3,
+            "silver": 1500
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 3,
+        "fields": {
+            "skill": "farming",
+            "level": 20,
+            "order": 1,
+            "item": "50",
+            "item_quantity": 16
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 4,
+        "fields": {
+            "skill": "farming",
+            "level": 20,
+            "order": 2,
+            "item": "15",
+            "item_quantity": 16
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 5,
+        "fields": {
+            "skill": "farming",
+            "level": 20,
+            "order": 3,
+            "silver": 7500
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 6,
+        "fields": {
+            "skill": "farming",
+            "level": 30,
+            "order": 1,
+            "item": "67",
+            "item_quantity": 20
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 7,
+        "fields": {
+            "skill": "farming",
+            "level": 30,
+            "order": 2,
+            "item": "112",
+            "item_quantity": 3
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 8,
+        "fields": {
+            "skill": "farming",
+            "level": 30,
+            "order": 3,
+            "silver": 12500
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 9,
+        "fields": {
+            "skill": "farming",
+            "level": 40,
+            "order": 1,
+            "item": "69",
+            "item_quantity": 20
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 10,
+        "fields": {
+            "skill": "farming",
+            "level": 40,
+            "order": 2,
+            "item": "26",
+            "item_quantity": 25
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 11,
+        "fields": {
+            "skill": "farming",
+            "level": 40,
+            "order": 3,
+            "silver": 50000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 12,
+        "fields": {
+            "skill": "farming",
+            "level": 50,
+            "order": 1,
+            "item": "71",
+            "item_quantity": 20
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 13,
+        "fields": {
+            "skill": "farming",
+            "level": 50,
+            "order": 2,
+            "item": "409",
+            "item_quantity": 20
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 14,
+        "fields": {
+            "skill": "farming",
+            "level": 50,
+            "order": 3,
+            "silver": 150000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 15,
+        "fields": {
+            "skill": "farming",
+            "level": 60,
+            "order": 1,
+            "item": "161",
+            "item_quantity": 24
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 16,
+        "fields": {
+            "skill": "farming",
+            "level": 60,
+            "order": 2,
+            "item": "159",
+            "item_quantity": 24
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 17,
+        "fields": {
+            "skill": "farming",
+            "level": 60,
+            "order": 3,
+            "silver": 300000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 18,
+        "fields": {
+            "skill": "farming",
+            "level": 70,
+            "order": 1,
+            "item": "254",
+            "item_quantity": 32
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 19,
+        "fields": {
+            "skill": "farming",
+            "level": 70,
+            "order": 2,
+            "item": "186",
+            "item_quantity": 25
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 20,
+        "fields": {
+            "skill": "farming",
+            "level": 70,
+            "order": 3,
+            "silver": 7500000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 21,
+        "fields": {
+            "skill": "farming",
+            "level": 80,
+            "order": 1,
+            "item": "373",
+            "item_quantity": 36
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 22,
+        "fields": {
+            "skill": "farming",
+            "level": 80,
+            "order": 2,
+            "item": "112",
+            "item_quantity": 3
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 23,
+        "fields": {
+            "skill": "farming",
+            "level": 80,
+            "order": 3,
+            "silver": 20000000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 24,
+        "fields": {
+            "skill": "farming",
+            "level": 90,
+            "order": 1,
+            "item": "450",
+            "item_quantity": 40
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 25,
+        "fields": {
+            "skill": "farming",
+            "level": 90,
+            "order": 2,
+            "item": "352",
+            "item_quantity": 40
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 26,
+        "fields": {
+            "skill": "farming",
+            "level": 90,
+            "order": 3,
+            "silver": 50000000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 27,
+        "fields": {
+            "skill": "farming",
+            "level": 99,
+            "order": 1,
+            "item": "589",
+            "item_quantity": 99
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 28,
+        "fields": {
+            "skill": "farming",
+            "level": 99,
+            "order": 2,
+            "item": "588",
+            "item_quantity": 99
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 29,
+        "fields": {
+            "skill": "farming",
+            "level": 99,
+            "order": 3,
+            "silver": 99999999
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 30,
+        "fields": {
+            "skill": "fishing",
+            "level": 10,
+            "order": 1,
+            "item": "18",
+            "item_quantity": 50
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 31,
+        "fields": {
+            "skill": "fishing",
+            "level": 10,
+            "order": 2,
+            "item": "185",
+            "item_quantity": 3
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 32,
+        "fields": {
+            "skill": "fishing",
+            "level": 10,
+            "order": 3,
+            "silver": 1500
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 33,
+        "fields": {
+            "skill": "fishing",
+            "level": 20,
+            "order": 1,
+            "item": "191",
+            "item_quantity": 50
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 34,
+        "fields": {
+            "skill": "fishing",
+            "level": 20,
+            "order": 2,
+            "item": "194",
+            "item_quantity": 10
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 35,
+        "fields": {
+            "skill": "fishing",
+            "level": 20,
+            "order": 3,
+            "silver": 7500
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 36,
+        "fields": {
+            "skill": "fishing",
+            "level": 30,
+            "order": 1,
+            "item": "277",
+            "item_quantity": 50
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 37,
+        "fields": {
+            "skill": "fishing",
+            "level": 30,
+            "order": 2,
+            "item": "194",
+            "item_quantity": 20
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 38,
+        "fields": {
+            "skill": "fishing",
+            "level": 30,
+            "order": 3,
+            "silver": 12500
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 39,
+        "fields": {
+            "skill": "fishing",
+            "level": 40,
+            "order": 1,
+            "item": "498",
+            "item_quantity": 50
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 40,
+        "fields": {
+            "skill": "fishing",
+            "level": 40,
+            "order": 2,
+            "item": "194",
+            "item_quantity": 50
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 41,
+        "fields": {
+            "skill": "fishing",
+            "level": 40,
+            "order": 3,
+            "silver": 50000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 42,
+        "fields": {
+            "skill": "fishing",
+            "level": 50,
+            "order": 1,
+            "item": "194",
+            "item_quantity": 50
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 43,
+        "fields": {
+            "skill": "fishing",
+            "level": 50,
+            "order": 2,
+            "item": "498",
+            "item_quantity": 100
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 44,
+        "fields": {
+            "skill": "fishing",
+            "level": 50,
+            "order": 3,
+            "silver": 150000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 45,
+        "fields": {
+            "skill": "fishing",
+            "level": 60,
+            "order": 1,
+            "item": "194",
+            "item_quantity": 100
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 46,
+        "fields": {
+            "skill": "fishing",
+            "level": 60,
+            "order": 2,
+            "item": "390",
+            "item_quantity": 25
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 47,
+        "fields": {
+            "skill": "fishing",
+            "level": 60,
+            "order": 3,
+            "silver": 300000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 48,
+        "fields": {
+            "skill": "fishing",
+            "level": 70,
+            "order": 1,
+            "item": "500",
+            "item_quantity": 10
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 49,
+        "fields": {
+            "skill": "fishing",
+            "level": 70,
+            "order": 2,
+            "item": "306",
+            "item_quantity": 25
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 50,
+        "fields": {
+            "skill": "fishing",
+            "level": 70,
+            "order": 3,
+            "silver": 7500000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 51,
+        "fields": {
+            "skill": "fishing",
+            "level": 80,
+            "order": 1,
+            "item": "473",
+            "item_quantity": 5
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 52,
+        "fields": {
+            "skill": "fishing",
+            "level": 80,
+            "order": 2,
+            "item": "500",
+            "item_quantity": 10
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 53,
+        "fields": {
+            "skill": "fishing",
+            "level": 80,
+            "order": 3,
+            "silver": 20000000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 54,
+        "fields": {
+            "skill": "fishing",
+            "level": 90,
+            "order": 1,
+            "item": "500",
+            "item_quantity": 25
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 55,
+        "fields": {
+            "skill": "fishing",
+            "level": 90,
+            "order": 2,
+            "item": "577",
+            "item_quantity": 25
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 56,
+        "fields": {
+            "skill": "fishing",
+            "level": 90,
+            "order": 3,
+            "silver": 50000000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 57,
+        "fields": {
+            "skill": "fishing",
+            "level": 99,
+            "order": 1,
+            "item": "500",
+            "item_quantity": 99
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 58,
+        "fields": {
+            "skill": "fishing",
+            "level": 99,
+            "order": 2,
+            "item": "366",
+            "item_quantity": 25
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 59,
+        "fields": {
+            "skill": "fishing",
+            "level": 99,
+            "order": 3,
+            "silver": 99999999
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 60,
+        "fields": {
+            "skill": "crafting",
+            "level": 10,
+            "order": 1,
+            "item": "21",
+            "item_quantity": 50
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 61,
+        "fields": {
+            "skill": "crafting",
+            "level": 10,
+            "order": 2,
+            "item": "22",
+            "item_quantity": 50
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 62,
+        "fields": {
+            "skill": "crafting",
+            "level": 10,
+            "order": 3,
+            "silver": 1500
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 63,
+        "fields": {
+            "skill": "crafting",
+            "level": 20,
+            "order": 1,
+            "item": "36",
+            "item_quantity": 25
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 64,
+        "fields": {
+            "skill": "crafting",
+            "level": 20,
+            "order": 2,
+            "item": "22",
+            "item_quantity": 100
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 65,
+        "fields": {
+            "skill": "crafting",
+            "level": 20,
+            "order": 3,
+            "silver": 7500
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 66,
+        "fields": {
+            "skill": "crafting",
+            "level": 30,
+            "order": 1,
+            "item": "203",
+            "item_quantity": 25
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 67,
+        "fields": {
+            "skill": "crafting",
+            "level": 30,
+            "order": 2,
+            "item": "36",
+            "item_quantity": 75
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 68,
+        "fields": {
+            "skill": "crafting",
+            "level": 30,
+            "order": 3,
+            "silver": 12500
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 69,
+        "fields": {
+            "skill": "crafting",
+            "level": 40,
+            "order": 1,
+            "item": "78",
+            "item_quantity": 50
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 70,
+        "fields": {
+            "skill": "crafting",
+            "level": 40,
+            "order": 2,
+            "item": "95",
+            "item_quantity": 50
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 71,
+        "fields": {
+            "skill": "crafting",
+            "level": 40,
+            "order": 3,
+            "silver": 50000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 72,
+        "fields": {
+            "skill": "crafting",
+            "level": 50,
+            "order": 1,
+            "item": "75",
+            "item_quantity": 100
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 73,
+        "fields": {
+            "skill": "crafting",
+            "level": 50,
+            "order": 2,
+            "item": "193",
+            "item_quantity": 100
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 74,
+        "fields": {
+            "skill": "crafting",
+            "level": 50,
+            "order": 3,
+            "silver": 150000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 75,
+        "fields": {
+            "skill": "crafting",
+            "level": 60,
+            "order": 1,
+            "item": "110",
+            "item_quantity": 75
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 76,
+        "fields": {
+            "skill": "crafting",
+            "level": 60,
+            "order": 2,
+            "item": "117",
+            "item_quantity": 75
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 77,
+        "fields": {
+            "skill": "crafting",
+            "level": 60,
+            "order": 3,
+            "silver": 300000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 78,
+        "fields": {
+            "skill": "crafting",
+            "level": 70,
+            "order": 1,
+            "item": "144",
+            "item_quantity": 80
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 79,
+        "fields": {
+            "skill": "crafting",
+            "level": 70,
+            "order": 2,
+            "item": "163",
+            "item_quantity": 125
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 80,
+        "fields": {
+            "skill": "crafting",
+            "level": 70,
+            "order": 3,
+            "silver": 7500000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 81,
+        "fields": {
+            "skill": "crafting",
+            "level": 80,
+            "order": 1,
+            "item": "303",
+            "item_quantity": 50
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 82,
+        "fields": {
+            "skill": "crafting",
+            "level": 80,
+            "order": 2,
+            "item": "392",
+            "item_quantity": 35
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 83,
+        "fields": {
+            "skill": "crafting",
+            "level": 80,
+            "order": 3,
+            "silver": 20000000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 84,
+        "fields": {
+            "skill": "crafting",
+            "level": 90,
+            "order": 1,
+            "item": "427",
+            "item_quantity": 60
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 85,
+        "fields": {
+            "skill": "crafting",
+            "level": 90,
+            "order": 2,
+            "item": "145",
+            "item_quantity": 150
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 86,
+        "fields": {
+            "skill": "crafting",
+            "level": 90,
+            "order": 3,
+            "silver": 50000000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 87,
+        "fields": {
+            "skill": "crafting",
+            "level": 99,
+            "order": 1,
+            "item": "75",
+            "item_quantity": 999
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 88,
+        "fields": {
+            "skill": "crafting",
+            "level": 99,
+            "order": 2,
+            "item": "303",
+            "item_quantity": 999
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 89,
+        "fields": {
+            "skill": "crafting",
+            "level": 99,
+            "order": 3,
+            "silver": 99999999
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 90,
+        "fields": {
+            "skill": "exploring",
+            "level": 10,
+            "order": 1,
+            "item": "44",
+            "item_quantity": 5
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 91,
+        "fields": {
+            "skill": "exploring",
+            "level": 10,
+            "order": 2,
+            "item": "86",
+            "item_quantity": 3
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 92,
+        "fields": {
+            "skill": "exploring",
+            "level": 10,
+            "order": 3,
+            "silver": 1500
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 93,
+        "fields": {
+            "skill": "exploring",
+            "level": 20,
+            "order": 1,
+            "item": "84",
+            "item_quantity": 10
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 94,
+        "fields": {
+            "skill": "exploring",
+            "level": 20,
+            "order": 2,
+            "item": "499",
+            "item_quantity": 5
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 95,
+        "fields": {
+            "skill": "exploring",
+            "level": 20,
+            "order": 3,
+            "silver": 7500
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 96,
+        "fields": {
+            "skill": "exploring",
+            "level": 30,
+            "order": 1,
+            "item": "86",
+            "item_quantity": 25
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 97,
+        "fields": {
+            "skill": "exploring",
+            "level": 30,
+            "order": 2,
+            "item": "170",
+            "item_quantity": 50
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 98,
+        "fields": {
+            "skill": "exploring",
+            "level": 30,
+            "order": 3,
+            "silver": 12500
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 99,
+        "fields": {
+            "skill": "exploring",
+            "level": 40,
+            "order": 1,
+            "item": "305",
+            "item_quantity": 10
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 100,
+        "fields": {
+            "skill": "exploring",
+            "level": 40,
+            "order": 2,
+            "item": "123",
+            "item_quantity": 150
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 101,
+        "fields": {
+            "skill": "exploring",
+            "level": 40,
+            "order": 3,
+            "silver": 50000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 102,
+        "fields": {
+            "skill": "exploring",
+            "level": 50,
+            "order": 1,
+            "item": "281",
+            "item_quantity": 10
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 103,
+        "fields": {
+            "skill": "exploring",
+            "level": 50,
+            "order": 2,
+            "item": "84",
+            "item_quantity": 50
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 104,
+        "fields": {
+            "skill": "exploring",
+            "level": 50,
+            "order": 3,
+            "silver": 150000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 105,
+        "fields": {
+            "skill": "exploring",
+            "level": 60,
+            "order": 1,
+            "item": "491",
+            "item_quantity": 10
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 106,
+        "fields": {
+            "skill": "exploring",
+            "level": 60,
+            "order": 2,
+            "item": "44",
+            "item_quantity": 100
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 107,
+        "fields": {
+            "skill": "exploring",
+            "level": 60,
+            "order": 3,
+            "silver": 300000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 108,
+        "fields": {
+            "skill": "exploring",
+            "level": 70,
+            "order": 1,
+            "item": "379",
+            "item_quantity": 10
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 109,
+        "fields": {
+            "skill": "exploring",
+            "level": 70,
+            "order": 2,
+            "item": "349",
+            "item_quantity": 10
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 110,
+        "fields": {
+            "skill": "exploring",
+            "level": 70,
+            "order": 3,
+            "silver": 7500000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 111,
+        "fields": {
+            "skill": "exploring",
+            "level": 80,
+            "order": 1,
+            "item": "508",
+            "item_quantity": 10
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 112,
+        "fields": {
+            "skill": "exploring",
+            "level": 80,
+            "order": 2,
+            "item": "338",
+            "item_quantity": 10
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 113,
+        "fields": {
+            "skill": "exploring",
+            "level": 80,
+            "order": 3,
+            "silver": 20000000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 114,
+        "fields": {
+            "skill": "exploring",
+            "level": 90,
+            "order": 1,
+            "item": "587",
+            "item_quantity": 10
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 115,
+        "fields": {
+            "skill": "exploring",
+            "level": 90,
+            "order": 2,
+            "item": "347",
+            "item_quantity": 5
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 116,
+        "fields": {
+            "skill": "exploring",
+            "level": 90,
+            "order": 3,
+            "silver": 50000000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 117,
+        "fields": {
+            "skill": "exploring",
+            "level": 99,
+            "order": 1,
+            "item": "508",
+            "item_quantity": 99
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 118,
+        "fields": {
+            "skill": "exploring",
+            "level": 99,
+            "order": 2,
+            "item": "379",
+            "item_quantity": 99
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 119,
+        "fields": {
+            "skill": "exploring",
+            "level": 99,
+            "order": 3,
+            "silver": 99999999
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 120,
+        "fields": {
+            "skill": "cooking",
+            "level": 10,
+            "order": 1,
+            "item": "637",
+            "item_quantity": 3
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 121,
+        "fields": {
+            "skill": "cooking",
+            "level": 10,
+            "order": 2,
+            "item": "103",
+            "item_quantity": 25
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 122,
+        "fields": {
+            "skill": "cooking",
+            "level": 10,
+            "order": 3,
+            "silver": 1500000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 123,
+        "fields": {
+            "skill": "cooking",
+            "level": 20,
+            "order": 1,
+            "item": "33",
+            "item_quantity": 150
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 124,
+        "fields": {
+            "skill": "cooking",
+            "level": 20,
+            "order": 2,
+            "item": "113",
+            "item_quantity": 25
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 125,
+        "fields": {
+            "skill": "cooking",
+            "level": 20,
+            "order": 3,
+            "silver": 7500000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 126,
+        "fields": {
+            "skill": "cooking",
+            "level": 30,
+            "order": 1,
+            "item": "43",
+            "item_quantity": 500
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 127,
+        "fields": {
+            "skill": "cooking",
+            "level": 30,
+            "order": 2,
+            "item": "634",
+            "item_quantity": 10
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 128,
+        "fields": {
+            "skill": "cooking",
+            "level": 30,
+            "order": 3,
+            "silver": 12500000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 129,
+        "fields": {
+            "skill": "cooking",
+            "level": 40,
+            "order": 1,
+            "item": "660",
+            "item_quantity": 100
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 130,
+        "fields": {
+            "skill": "cooking",
+            "level": 40,
+            "order": 2,
+            "item": "653",
+            "item_quantity": 25
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 131,
+        "fields": {
+            "skill": "cooking",
+            "level": 40,
+            "order": 3,
+            "silver": 50000000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 132,
+        "fields": {
+            "skill": "cooking",
+            "level": 50,
+            "order": 1,
+            "item": "250",
+            "item_quantity": 50
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 133,
+        "fields": {
+            "skill": "cooking",
+            "level": 50,
+            "order": 2,
+            "item": "305",
+            "item_quantity": 100
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 134,
+        "fields": {
+            "skill": "cooking",
+            "level": 50,
+            "order": 3,
+            "silver": 150000000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 135,
+        "fields": {
+            "skill": "cooking",
+            "level": 60,
+            "order": 1,
+            "item": "699",
+            "item_quantity": 3
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 136,
+        "fields": {
+            "skill": "cooking",
+            "level": 60,
+            "order": 2,
+            "item": "657",
+            "item_quantity": 3
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 137,
+        "fields": {
+            "skill": "cooking",
+            "level": 60,
+            "order": 3,
+            "silver": 300000000
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 138,
+        "fields": {
+            "skill": "cooking",
+            "level": 70,
+            "order": 1,
+            "item": "253",
+            "item_quantity": 1
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 139,
+        "fields": {
+            "skill": "cooking",
+            "level": 70,
+            "order": 2,
+            "item": "508",
+            "item_quantity": 500
+        }
+    },
+    {
+        "model": "items.skilllevelreward",
+        "pk": 140,
+        "fields": {
+            "skill": "cooking",
+            "level": 70,
+            "order": 3,
+            "silver": 1000000000
+        }
+    }
+]
