@@ -16,6 +16,7 @@ class BorgenItem(models.Model):
     modified_at = models.DateTimeField(auto_now=True)
 
     class Meta:
+        ordering = ["-date", "item"]
         constraints = [
             models.UniqueConstraint(fields=["date", "item"], name="date_item")
         ]

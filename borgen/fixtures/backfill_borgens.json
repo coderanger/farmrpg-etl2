@@ -1,0 +1,2939 @@
+[
+    {
+        "model": "borgen.borgenitem",
+        "pk": 8,
+        "fields": {
+            "date": "2022-04-13",
+            "item": "44",
+            "price": 1,
+            "created_at": "2022-04-14T04:13:28.692000+00:00",
+            "modified_at": "2022-04-14T04:13:28.692000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 9,
+        "fields": {
+            "date": "2022-04-13",
+            "item": "117",
+            "price": 10,
+            "created_at": "2022-04-14T04:13:28.692000+00:00",
+            "modified_at": "2022-04-14T04:13:28.692000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 10,
+        "fields": {
+            "date": "2022-04-13",
+            "item": "250",
+            "price": 25,
+            "created_at": "2022-04-14T04:13:28.692000+00:00",
+            "modified_at": "2022-04-14T04:13:28.692000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 11,
+        "fields": {
+            "date": "2022-04-13",
+            "item": "465",
+            "price": 30,
+            "created_at": "2022-04-14T04:13:28.692000+00:00",
+            "modified_at": "2022-04-14T04:13:28.692000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 12,
+        "fields": {
+            "date": "2022-04-13",
+            "item": "339",
+            "price": 65,
+            "created_at": "2022-04-14T04:13:28.692000+00:00",
+            "modified_at": "2022-04-14T04:13:28.692000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 13,
+        "fields": {
+            "date": "2022-04-13",
+            "item": "335",
+            "price": 80,
+            "created_at": "2022-04-14T04:13:28.692000+00:00",
+            "modified_at": "2022-04-14T04:13:28.692000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 14,
+        "fields": {
+            "date": "2022-04-13",
+            "item": "384",
+            "price": 100,
+            "created_at": "2022-04-14T04:13:28.692000+00:00",
+            "modified_at": "2022-04-14T04:13:28.692000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 15,
+        "fields": {
+            "date": "2022-04-20",
+            "item": "185",
+            "price": 3,
+            "created_at": "2022-04-20T05:28:50.899000+00:00",
+            "modified_at": "2022-04-20T05:28:50.899000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 16,
+        "fields": {
+            "date": "2022-04-20",
+            "item": "194",
+            "price": 3,
+            "created_at": "2022-04-20T05:28:50.899000+00:00",
+            "modified_at": "2022-04-20T05:28:50.899000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 17,
+        "fields": {
+            "date": "2022-04-20",
+            "item": "75",
+            "price": 6,
+            "created_at": "2022-04-20T05:28:50.899000+00:00",
+            "modified_at": "2022-04-20T05:28:50.899000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 18,
+        "fields": {
+            "date": "2022-04-20",
+            "item": "390",
+            "price": 15,
+            "created_at": "2022-04-20T05:28:50.899000+00:00",
+            "modified_at": "2022-04-20T05:28:50.899000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 19,
+        "fields": {
+            "date": "2022-04-20",
+            "item": "250",
+            "price": 25,
+            "created_at": "2022-04-20T05:28:50.899000+00:00",
+            "modified_at": "2022-04-20T05:28:50.899000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 20,
+        "fields": {
+            "date": "2022-04-20",
+            "item": "339",
+            "price": 65,
+            "created_at": "2022-04-20T05:28:50.899000+00:00",
+            "modified_at": "2022-04-20T05:28:50.899000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 21,
+        "fields": {
+            "date": "2022-04-20",
+            "item": "530",
+            "price": 250,
+            "created_at": "2022-04-20T05:28:50.899000+00:00",
+            "modified_at": "2022-04-20T05:28:50.899000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 22,
+        "fields": {
+            "date": "2022-04-27",
+            "item": "78",
+            "price": 1,
+            "created_at": "2022-04-27T05:01:06.236000+00:00",
+            "modified_at": "2022-04-27T05:01:06.236000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 23,
+        "fields": {
+            "date": "2022-04-27",
+            "item": "84",
+            "price": 5,
+            "created_at": "2022-04-27T05:01:06.236000+00:00",
+            "modified_at": "2022-04-27T05:01:06.236000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 24,
+        "fields": {
+            "date": "2022-04-27",
+            "item": "412",
+            "price": 100,
+            "created_at": "2022-04-27T05:01:06.236000+00:00",
+            "modified_at": "2022-04-27T05:01:06.236000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 25,
+        "fields": {
+            "date": "2022-04-27",
+            "item": "459",
+            "price": 250,
+            "created_at": "2022-04-27T05:01:06.236000+00:00",
+            "modified_at": "2022-04-27T05:01:06.236000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 26,
+        "fields": {
+            "date": "2022-04-27",
+            "item": "523",
+            "price": 500,
+            "created_at": "2022-04-27T05:01:06.236000+00:00",
+            "modified_at": "2022-04-27T05:01:06.236000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 27,
+        "fields": {
+            "date": "2022-05-04",
+            "item": "44",
+            "price": 1,
+            "created_at": "2022-05-04T05:27:41.265000+00:00",
+            "modified_at": "2022-05-04T05:27:41.265000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 28,
+        "fields": {
+            "date": "2022-05-04",
+            "item": "120",
+            "price": 5,
+            "created_at": "2022-05-04T05:27:41.265000+00:00",
+            "modified_at": "2022-05-04T05:27:41.265000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 29,
+        "fields": {
+            "date": "2022-05-04",
+            "item": "250",
+            "price": 25,
+            "created_at": "2022-05-04T05:27:41.265000+00:00",
+            "modified_at": "2022-05-04T05:27:41.265000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 30,
+        "fields": {
+            "date": "2022-05-04",
+            "item": "331",
+            "price": 50,
+            "created_at": "2022-05-04T05:27:41.265000+00:00",
+            "modified_at": "2022-05-04T05:27:41.265000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 31,
+        "fields": {
+            "date": "2022-05-04",
+            "item": "281",
+            "price": 75,
+            "created_at": "2022-05-04T05:27:41.265000+00:00",
+            "modified_at": "2022-05-04T05:27:41.265000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 32,
+        "fields": {
+            "date": "2022-05-04",
+            "item": "475",
+            "price": 100,
+            "created_at": "2022-05-04T05:27:41.265000+00:00",
+            "modified_at": "2022-05-04T05:27:41.265000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 33,
+        "fields": {
+            "date": "2022-05-04",
+            "item": "478",
+            "price": 300,
+            "created_at": "2022-05-04T05:27:41.265000+00:00",
+            "modified_at": "2022-05-04T05:27:41.265000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 34,
+        "fields": {
+            "date": "2022-05-11",
+            "item": "194",
+            "price": 3,
+            "created_at": "2022-05-11T06:55:16.472000+00:00",
+            "modified_at": "2022-05-11T06:55:16.472000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 35,
+        "fields": {
+            "date": "2022-05-11",
+            "item": "84",
+            "price": 5,
+            "created_at": "2022-05-11T06:55:16.472000+00:00",
+            "modified_at": "2022-05-11T06:55:16.472000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 36,
+        "fields": {
+            "date": "2022-05-11",
+            "item": "75",
+            "price": 6,
+            "created_at": "2022-05-11T06:55:16.472000+00:00",
+            "modified_at": "2022-05-11T06:55:16.472000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 37,
+        "fields": {
+            "date": "2022-05-11",
+            "item": "172",
+            "price": 25,
+            "created_at": "2022-05-11T06:55:16.472000+00:00",
+            "modified_at": "2022-05-11T06:55:16.472000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 38,
+        "fields": {
+            "date": "2022-05-11",
+            "item": "339",
+            "price": 55,
+            "created_at": "2022-05-11T06:55:16.472000+00:00",
+            "modified_at": "2022-05-11T06:55:16.472000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 39,
+        "fields": {
+            "date": "2022-05-11",
+            "item": "230",
+            "price": 200,
+            "created_at": "2022-05-11T06:55:16.472000+00:00",
+            "modified_at": "2022-05-11T06:55:16.472000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 40,
+        "fields": {
+            "date": "2022-05-18",
+            "item": "86",
+            "price": 5,
+            "created_at": "2022-05-18T05:04:16.557000+00:00",
+            "modified_at": "2022-05-18T05:04:16.557000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 41,
+        "fields": {
+            "date": "2022-05-18",
+            "item": "465",
+            "price": 30,
+            "created_at": "2022-05-18T05:04:16.557000+00:00",
+            "modified_at": "2022-05-18T05:04:16.557000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 42,
+        "fields": {
+            "date": "2022-05-18",
+            "item": "379",
+            "price": 50,
+            "created_at": "2022-05-18T05:04:16.557000+00:00",
+            "modified_at": "2022-05-18T05:04:16.557000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 43,
+        "fields": {
+            "date": "2022-05-18",
+            "item": "305",
+            "price": 75,
+            "created_at": "2022-05-18T05:04:16.557000+00:00",
+            "modified_at": "2022-05-18T05:04:16.557000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 44,
+        "fields": {
+            "date": "2022-05-18",
+            "item": "335",
+            "price": 80,
+            "created_at": "2022-05-18T05:04:16.557000+00:00",
+            "modified_at": "2022-05-18T05:04:16.557000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 45,
+        "fields": {
+            "date": "2022-05-18",
+            "item": "156",
+            "price": 100,
+            "created_at": "2022-05-18T05:04:16.557000+00:00",
+            "modified_at": "2022-05-18T05:04:16.557000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 46,
+        "fields": {
+            "date": "2022-05-25",
+            "item": "194",
+            "price": 3,
+            "created_at": "2022-05-25T18:20:48.962000+00:00",
+            "modified_at": "2022-05-25T18:20:48.962000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 47,
+        "fields": {
+            "date": "2022-05-25",
+            "item": "120",
+            "price": 4,
+            "created_at": "2022-05-25T18:20:48.962000+00:00",
+            "modified_at": "2022-05-25T18:20:48.962000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 48,
+        "fields": {
+            "date": "2022-05-25",
+            "item": "392",
+            "price": 5,
+            "created_at": "2022-05-25T18:20:48.962000+00:00",
+            "modified_at": "2022-05-25T18:20:48.962000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 49,
+        "fields": {
+            "date": "2022-05-25",
+            "item": "256",
+            "price": 50,
+            "created_at": "2022-05-25T18:20:48.962000+00:00",
+            "modified_at": "2022-05-25T18:20:48.962000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 50,
+        "fields": {
+            "date": "2022-05-25",
+            "item": "281",
+            "price": 75,
+            "created_at": "2022-05-25T18:20:48.962000+00:00",
+            "modified_at": "2022-05-25T18:20:48.962000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 51,
+        "fields": {
+            "date": "2022-05-25",
+            "item": "153",
+            "price": 100,
+            "created_at": "2022-05-25T18:20:48.962000+00:00",
+            "modified_at": "2022-05-25T18:20:48.962000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 52,
+        "fields": {
+            "date": "2022-06-01",
+            "item": "78",
+            "price": 1,
+            "created_at": "2022-06-01T05:04:32.265000+00:00",
+            "modified_at": "2022-06-01T05:04:32.265000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 53,
+        "fields": {
+            "date": "2022-06-01",
+            "item": "185",
+            "price": 3,
+            "created_at": "2022-06-01T05:04:32.265000+00:00",
+            "modified_at": "2022-06-01T05:04:32.265000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 54,
+        "fields": {
+            "date": "2022-06-01",
+            "item": "84",
+            "price": 5,
+            "created_at": "2022-06-01T05:04:32.265000+00:00",
+            "modified_at": "2022-06-01T05:04:32.265000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 55,
+        "fields": {
+            "date": "2022-06-01",
+            "item": "337",
+            "price": 25,
+            "created_at": "2022-06-01T05:04:32.265000+00:00",
+            "modified_at": "2022-06-01T05:04:32.265000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 56,
+        "fields": {
+            "date": "2022-06-01",
+            "item": "537",
+            "price": 50,
+            "created_at": "2022-06-01T05:04:32.265000+00:00",
+            "modified_at": "2022-06-01T05:04:32.265000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 57,
+        "fields": {
+            "date": "2022-06-01",
+            "item": "268",
+            "price": 100,
+            "created_at": "2022-06-01T05:04:32.265000+00:00",
+            "modified_at": "2022-06-01T05:04:32.265000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 58,
+        "fields": {
+            "date": "2022-06-01",
+            "item": "228",
+            "price": 200,
+            "created_at": "2022-06-01T05:04:32.265000+00:00",
+            "modified_at": "2022-06-01T05:04:32.265000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 59,
+        "fields": {
+            "date": "2022-06-15",
+            "item": "84",
+            "price": 5,
+            "created_at": "2022-06-15T21:14:26.569000+00:00",
+            "modified_at": "2022-06-15T21:14:26.569000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 60,
+        "fields": {
+            "date": "2022-06-15",
+            "item": "107",
+            "price": 8,
+            "created_at": "2022-06-15T21:14:26.569000+00:00",
+            "modified_at": "2022-06-15T21:14:26.569000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 61,
+        "fields": {
+            "date": "2022-06-15",
+            "item": "251",
+            "price": 10,
+            "created_at": "2022-06-15T21:14:26.569000+00:00",
+            "modified_at": "2022-06-15T21:14:26.569000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 62,
+        "fields": {
+            "date": "2022-06-15",
+            "item": "160",
+            "price": 20,
+            "created_at": "2022-06-15T21:14:26.569000+00:00",
+            "modified_at": "2022-06-15T21:14:26.569000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 63,
+        "fields": {
+            "date": "2022-06-15",
+            "item": "349",
+            "price": 50,
+            "created_at": "2022-06-15T21:14:26.569000+00:00",
+            "modified_at": "2022-06-15T21:14:26.569000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 64,
+        "fields": {
+            "date": "2022-06-15",
+            "item": "475",
+            "price": 100,
+            "created_at": "2022-06-15T21:14:26.569000+00:00",
+            "modified_at": "2022-06-15T21:14:26.569000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 65,
+        "fields": {
+            "date": "2022-06-15",
+            "item": "225",
+            "price": 200,
+            "created_at": "2022-06-15T21:14:26.569000+00:00",
+            "modified_at": "2022-06-15T21:14:26.569000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 66,
+        "fields": {
+            "date": "2022-06-29",
+            "item": "164",
+            "price": 1,
+            "created_at": "2022-06-29T19:21:31.712000+00:00",
+            "modified_at": "2022-06-29T19:21:31.712000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 67,
+        "fields": {
+            "date": "2022-06-29",
+            "item": "65",
+            "price": 3,
+            "created_at": "2022-06-29T19:21:31.712000+00:00",
+            "modified_at": "2022-06-29T19:21:31.712000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 68,
+        "fields": {
+            "date": "2022-06-29",
+            "item": "84",
+            "price": 5,
+            "created_at": "2022-06-29T19:21:31.712000+00:00",
+            "modified_at": "2022-06-29T19:21:31.712000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 69,
+        "fields": {
+            "date": "2022-06-29",
+            "item": "242",
+            "price": 7,
+            "created_at": "2022-06-29T19:21:31.712000+00:00",
+            "modified_at": "2022-06-29T19:21:31.712000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 70,
+        "fields": {
+            "date": "2022-06-29",
+            "item": "172",
+            "price": 25,
+            "created_at": "2022-06-29T19:21:31.712000+00:00",
+            "modified_at": "2022-06-29T19:21:31.712000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 71,
+        "fields": {
+            "date": "2022-06-29",
+            "item": "250",
+            "price": 25,
+            "created_at": "2022-06-29T19:21:31.712000+00:00",
+            "modified_at": "2022-06-29T19:21:31.712000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 72,
+        "fields": {
+            "date": "2022-06-29",
+            "item": "305",
+            "price": 50,
+            "created_at": "2022-06-29T19:21:31.712000+00:00",
+            "modified_at": "2022-06-29T19:21:31.712000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 73,
+        "fields": {
+            "date": "2022-06-29",
+            "item": "121",
+            "price": 250,
+            "created_at": "2022-06-29T19:21:31.712000+00:00",
+            "modified_at": "2022-06-29T19:21:31.712000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 74,
+        "fields": {
+            "date": "2022-06-29",
+            "item": "298",
+            "price": 1000,
+            "created_at": "2022-06-29T19:21:31.712000+00:00",
+            "modified_at": "2022-06-29T19:21:31.712000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 75,
+        "fields": {
+            "date": "2022-07-06",
+            "item": "304",
+            "price": 1,
+            "created_at": "2022-07-06T07:04:22.007000+00:00",
+            "modified_at": "2022-07-06T07:04:22.007000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 76,
+        "fields": {
+            "date": "2022-07-06",
+            "item": "179",
+            "price": 3,
+            "created_at": "2022-07-06T07:04:22.007000+00:00",
+            "modified_at": "2022-07-06T07:04:22.007000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 77,
+        "fields": {
+            "date": "2022-07-06",
+            "item": "392",
+            "price": 5,
+            "created_at": "2022-07-06T07:04:22.007000+00:00",
+            "modified_at": "2022-07-06T07:04:22.007000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 78,
+        "fields": {
+            "date": "2022-07-06",
+            "item": "144",
+            "price": 8,
+            "created_at": "2022-07-06T07:04:22.007000+00:00",
+            "modified_at": "2022-07-06T07:04:22.007000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 79,
+        "fields": {
+            "date": "2022-07-06",
+            "item": "251",
+            "price": 10,
+            "created_at": "2022-07-06T07:04:22.007000+00:00",
+            "modified_at": "2022-07-06T07:04:22.007000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 80,
+        "fields": {
+            "date": "2022-07-06",
+            "item": "342",
+            "price": 25,
+            "created_at": "2022-07-06T07:04:22.007000+00:00",
+            "modified_at": "2022-07-06T07:04:22.007000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 81,
+        "fields": {
+            "date": "2022-07-06",
+            "item": "177",
+            "price": 50,
+            "created_at": "2022-07-06T07:04:22.007000+00:00",
+            "modified_at": "2022-07-06T07:04:22.007000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 82,
+        "fields": {
+            "date": "2022-07-06",
+            "item": "475",
+            "price": 100,
+            "created_at": "2022-07-06T07:04:22.007000+00:00",
+            "modified_at": "2022-07-06T07:04:22.007000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 83,
+        "fields": {
+            "date": "2022-07-13",
+            "item": "78",
+            "price": 1,
+            "created_at": "2022-07-13T20:19:21.369000+00:00",
+            "modified_at": "2022-07-13T20:19:21.369000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 84,
+        "fields": {
+            "date": "2022-07-20",
+            "item": "164",
+            "price": 1,
+            "created_at": "2022-07-20T05:23:00.666000+00:00",
+            "modified_at": "2022-07-20T05:23:00.666000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 85,
+        "fields": {
+            "date": "2022-08-03",
+            "item": "387",
+            "price": 3,
+            "created_at": "2022-08-03T17:27:41.319000+00:00",
+            "modified_at": "2022-08-03T17:27:41.319000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 86,
+        "fields": {
+            "date": "2022-08-03",
+            "item": "250",
+            "price": 25,
+            "created_at": "2022-08-03T17:27:41.319000+00:00",
+            "modified_at": "2022-08-03T17:27:41.319000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 87,
+        "fields": {
+            "date": "2022-08-03",
+            "item": "379",
+            "price": 40,
+            "created_at": "2022-08-03T17:27:41.319000+00:00",
+            "modified_at": "2022-08-03T17:27:41.319000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 88,
+        "fields": {
+            "date": "2022-08-03",
+            "item": "305",
+            "price": 50,
+            "created_at": "2022-08-03T17:27:41.319000+00:00",
+            "modified_at": "2022-08-03T17:27:41.319000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 89,
+        "fields": {
+            "date": "2022-08-03",
+            "item": "156",
+            "price": 100,
+            "created_at": "2022-08-03T17:27:41.319000+00:00",
+            "modified_at": "2022-08-03T17:27:41.319000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 90,
+        "fields": {
+            "date": "2022-08-03",
+            "item": "475",
+            "price": 100,
+            "created_at": "2022-08-03T17:27:41.319000+00:00",
+            "modified_at": "2022-08-03T17:27:41.319000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 91,
+        "fields": {
+            "date": "2022-08-03",
+            "item": "121",
+            "price": 250,
+            "created_at": "2022-08-03T17:27:41.319000+00:00",
+            "modified_at": "2022-08-03T17:27:41.319000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 92,
+        "fields": {
+            "date": "2022-08-10",
+            "item": "108",
+            "price": 3,
+            "created_at": "2022-08-10T20:38:03.220000+00:00",
+            "modified_at": "2022-08-10T20:38:03.220000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 93,
+        "fields": {
+            "date": "2022-08-10",
+            "item": "178",
+            "price": 4,
+            "created_at": "2022-08-10T20:38:03.220000+00:00",
+            "modified_at": "2022-08-10T20:38:03.220000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 94,
+        "fields": {
+            "date": "2022-08-17",
+            "item": "86",
+            "price": 5,
+            "created_at": "2022-08-18T02:07:19.058000+00:00",
+            "modified_at": "2022-08-18T02:07:19.058000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 95,
+        "fields": {
+            "date": "2022-08-17",
+            "item": "303",
+            "price": 8,
+            "created_at": "2022-08-18T02:07:19.058000+00:00",
+            "modified_at": "2022-08-18T02:07:19.058000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 96,
+        "fields": {
+            "date": "2022-08-17",
+            "item": "176",
+            "price": 25,
+            "created_at": "2022-08-18T02:07:19.058000+00:00",
+            "modified_at": "2022-08-18T02:07:19.058000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 97,
+        "fields": {
+            "date": "2022-08-17",
+            "item": "379",
+            "price": 40,
+            "created_at": "2022-08-18T02:07:19.058000+00:00",
+            "modified_at": "2022-08-18T02:07:19.058000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 98,
+        "fields": {
+            "date": "2022-08-24",
+            "item": "86",
+            "price": 5,
+            "created_at": "2022-08-24T05:14:57.340000+00:00",
+            "modified_at": "2022-08-24T05:14:57.340000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 99,
+        "fields": {
+            "date": "2022-08-24",
+            "item": "392",
+            "price": 7,
+            "created_at": "2022-08-24T05:14:57.340000+00:00",
+            "modified_at": "2022-08-24T05:14:57.340000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 100,
+        "fields": {
+            "date": "2022-08-24",
+            "item": "107",
+            "price": 8,
+            "created_at": "2022-08-24T05:14:57.340000+00:00",
+            "modified_at": "2022-08-24T05:14:57.340000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 101,
+        "fields": {
+            "date": "2022-08-24",
+            "item": "339",
+            "price": 45,
+            "created_at": "2022-08-24T05:14:57.340000+00:00",
+            "modified_at": "2022-08-24T05:14:57.340000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 102,
+        "fields": {
+            "date": "2022-08-24",
+            "item": "349",
+            "price": 50,
+            "created_at": "2022-08-24T05:14:57.340000+00:00",
+            "modified_at": "2022-08-24T05:14:57.340000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 103,
+        "fields": {
+            "date": "2022-08-24",
+            "item": "384",
+            "price": 100,
+            "created_at": "2022-08-24T05:14:57.340000+00:00",
+            "modified_at": "2022-08-24T05:14:57.340000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 104,
+        "fields": {
+            "date": "2022-08-24",
+            "item": "175",
+            "price": 400,
+            "created_at": "2022-08-24T05:14:57.340000+00:00",
+            "modified_at": "2022-08-24T05:14:57.340000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 105,
+        "fields": {
+            "date": "2022-08-31",
+            "item": "194",
+            "price": 3,
+            "created_at": "2022-09-01T00:22:06.278000+00:00",
+            "modified_at": "2022-09-01T00:22:06.278000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 106,
+        "fields": {
+            "date": "2022-08-31",
+            "item": "263",
+            "price": 10,
+            "created_at": "2022-09-01T00:22:06.278000+00:00",
+            "modified_at": "2022-09-01T00:22:06.278000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 107,
+        "fields": {
+            "date": "2022-08-31",
+            "item": "623",
+            "price": 15,
+            "created_at": "2022-09-01T00:22:06.278000+00:00",
+            "modified_at": "2022-09-01T00:22:06.278000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 108,
+        "fields": {
+            "date": "2022-08-31",
+            "item": "616",
+            "price": 25,
+            "created_at": "2022-09-01T00:22:06.278000+00:00",
+            "modified_at": "2022-09-01T00:22:06.278000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 109,
+        "fields": {
+            "date": "2022-08-31",
+            "item": "175",
+            "price": 400,
+            "created_at": "2022-09-01T00:22:06.278000+00:00",
+            "modified_at": "2022-09-01T00:22:06.278000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 110,
+        "fields": {
+            "date": "2022-09-21",
+            "item": "120",
+            "price": 4,
+            "created_at": "2022-09-21T07:14:44.146000+00:00",
+            "modified_at": "2022-09-21T07:14:44.146000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 111,
+        "fields": {
+            "date": "2022-09-21",
+            "item": "242",
+            "price": 7,
+            "created_at": "2022-09-21T07:14:44.146000+00:00",
+            "modified_at": "2022-09-21T07:14:44.146000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 112,
+        "fields": {
+            "date": "2022-09-21",
+            "item": "162",
+            "price": 30,
+            "created_at": "2022-09-21T07:14:44.146000+00:00",
+            "modified_at": "2022-09-21T07:14:44.146000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 113,
+        "fields": {
+            "date": "2022-09-21",
+            "item": "349",
+            "price": 50,
+            "created_at": "2022-09-21T07:14:44.146000+00:00",
+            "modified_at": "2022-09-21T07:14:44.146000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 114,
+        "fields": {
+            "date": "2022-09-21",
+            "item": "270",
+            "price": 75,
+            "created_at": "2022-09-21T07:14:44.146000+00:00",
+            "modified_at": "2022-09-21T07:14:44.146000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 115,
+        "fields": {
+            "date": "2022-09-21",
+            "item": "268",
+            "price": 100,
+            "created_at": "2022-09-21T07:14:44.146000+00:00",
+            "modified_at": "2022-09-21T07:14:44.146000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 116,
+        "fields": {
+            "date": "2022-09-28",
+            "item": "141",
+            "price": 30,
+            "created_at": "2022-09-28T21:13:16.133000+00:00",
+            "modified_at": "2022-09-28T21:13:16.133000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 117,
+        "fields": {
+            "date": "2022-09-28",
+            "item": "161",
+            "price": 30,
+            "created_at": "2022-09-28T21:13:16.133000+00:00",
+            "modified_at": "2022-09-28T21:13:16.133000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 118,
+        "fields": {
+            "date": "2022-09-28",
+            "item": "379",
+            "price": 30,
+            "created_at": "2022-09-28T21:13:16.133000+00:00",
+            "modified_at": "2022-09-28T21:13:16.133000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 119,
+        "fields": {
+            "date": "2022-09-28",
+            "item": "452",
+            "price": 30,
+            "created_at": "2022-09-28T21:13:16.133000+00:00",
+            "modified_at": "2022-09-28T21:13:16.133000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 120,
+        "fields": {
+            "date": "2022-09-28",
+            "item": "505",
+            "price": 30,
+            "created_at": "2022-09-28T21:13:16.133000+00:00",
+            "modified_at": "2022-09-28T21:13:16.133000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 121,
+        "fields": {
+            "date": "2022-09-28",
+            "item": "536",
+            "price": 30,
+            "created_at": "2022-09-28T21:13:16.133000+00:00",
+            "modified_at": "2022-09-28T21:13:16.133000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 122,
+        "fields": {
+            "date": "2022-10-05",
+            "item": "75",
+            "price": 5,
+            "created_at": "2022-10-05T06:06:19.009000+00:00",
+            "modified_at": "2022-10-05T06:06:19.009000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 123,
+        "fields": {
+            "date": "2022-10-05",
+            "item": "285",
+            "price": 5,
+            "created_at": "2022-10-05T06:06:19.009000+00:00",
+            "modified_at": "2022-10-05T06:06:19.009000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 124,
+        "fields": {
+            "date": "2022-10-05",
+            "item": "117",
+            "price": 10,
+            "created_at": "2022-10-05T06:06:19.009000+00:00",
+            "modified_at": "2022-10-05T06:06:19.009000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 125,
+        "fields": {
+            "date": "2022-10-05",
+            "item": "251",
+            "price": 10,
+            "created_at": "2022-10-05T06:06:19.009000+00:00",
+            "modified_at": "2022-10-05T06:06:19.009000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 126,
+        "fields": {
+            "date": "2022-10-19",
+            "item": "164",
+            "price": 1,
+            "created_at": "2022-10-19T17:37:01.803000+00:00",
+            "modified_at": "2022-10-19T17:37:01.803000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 127,
+        "fields": {
+            "date": "2022-10-19",
+            "item": "170",
+            "price": 1,
+            "created_at": "2022-10-19T17:37:01.803000+00:00",
+            "modified_at": "2022-10-19T17:37:01.803000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 128,
+        "fields": {
+            "date": "2022-10-26",
+            "item": "358",
+            "price": 3,
+            "created_at": "2022-10-26T15:25:26.614000+00:00",
+            "modified_at": "2022-10-26T15:25:26.614000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 129,
+        "fields": {
+            "date": "2022-10-26",
+            "item": "359",
+            "price": 3,
+            "created_at": "2022-10-26T15:25:26.614000+00:00",
+            "modified_at": "2022-10-26T15:25:26.614000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 130,
+        "fields": {
+            "date": "2022-10-26",
+            "item": "370",
+            "price": 3,
+            "created_at": "2022-10-26T15:25:26.614000+00:00",
+            "modified_at": "2022-10-26T15:25:26.614000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 131,
+        "fields": {
+            "date": "2022-10-26",
+            "item": "75",
+            "price": 5,
+            "created_at": "2022-10-26T15:25:26.614000+00:00",
+            "modified_at": "2022-10-26T15:25:26.614000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 132,
+        "fields": {
+            "date": "2022-10-26",
+            "item": "84",
+            "price": 6,
+            "created_at": "2022-10-26T15:25:26.614000+00:00",
+            "modified_at": "2022-10-26T15:25:26.614000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 133,
+        "fields": {
+            "date": "2022-10-26",
+            "item": "641",
+            "price": 8,
+            "created_at": "2022-10-26T15:25:26.614000+00:00",
+            "modified_at": "2022-10-26T15:25:26.614000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 134,
+        "fields": {
+            "date": "2022-10-28",
+            "item": "358",
+            "price": 3,
+            "created_at": "2022-10-28T17:07:29.777000+00:00",
+            "modified_at": "2022-10-28T17:07:29.777000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 135,
+        "fields": {
+            "date": "2022-10-28",
+            "item": "359",
+            "price": 3,
+            "created_at": "2022-10-28T17:07:29.777000+00:00",
+            "modified_at": "2022-10-28T17:07:29.777000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 136,
+        "fields": {
+            "date": "2022-10-28",
+            "item": "370",
+            "price": 3,
+            "created_at": "2022-10-28T17:07:29.777000+00:00",
+            "modified_at": "2022-10-28T17:07:29.777000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 137,
+        "fields": {
+            "date": "2022-10-28",
+            "item": "355",
+            "price": 20,
+            "created_at": "2022-10-28T17:07:29.777000+00:00",
+            "modified_at": "2022-10-28T17:07:29.777000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 138,
+        "fields": {
+            "date": "2022-10-28",
+            "item": "667",
+            "price": 25,
+            "created_at": "2022-10-28T17:07:29.777000+00:00",
+            "modified_at": "2022-10-28T17:07:29.777000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 139,
+        "fields": {
+            "date": "2022-10-28",
+            "item": "338",
+            "price": 30,
+            "created_at": "2022-10-28T17:07:29.777000+00:00",
+            "modified_at": "2022-10-28T17:07:29.777000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 140,
+        "fields": {
+            "date": "2022-10-28",
+            "item": "361",
+            "price": 40,
+            "created_at": "2022-10-28T17:07:29.777000+00:00",
+            "modified_at": "2022-10-28T17:07:29.777000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 141,
+        "fields": {
+            "date": "2022-10-28",
+            "item": "382",
+            "price": 50,
+            "created_at": "2022-10-28T17:07:29.777000+00:00",
+            "modified_at": "2022-10-28T17:07:29.777000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 142,
+        "fields": {
+            "date": "2022-10-28",
+            "item": "479",
+            "price": 100,
+            "created_at": "2022-10-28T17:07:29.777000+00:00",
+            "modified_at": "2022-10-28T17:07:29.777000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 143,
+        "fields": {
+            "date": "2022-10-28",
+            "item": "259",
+            "price": 250,
+            "created_at": "2022-10-28T17:07:29.777000+00:00",
+            "modified_at": "2022-10-28T17:07:29.777000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 144,
+        "fields": {
+            "date": "2022-10-28",
+            "item": "389",
+            "price": 250,
+            "created_at": "2022-10-28T17:07:29.777000+00:00",
+            "modified_at": "2022-10-28T17:07:29.777000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 145,
+        "fields": {
+            "date": "2022-10-29",
+            "item": "358",
+            "price": 3,
+            "created_at": "2022-10-30T04:00:06.687000+00:00",
+            "modified_at": "2022-10-30T04:00:06.687000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 146,
+        "fields": {
+            "date": "2022-10-29",
+            "item": "359",
+            "price": 3,
+            "created_at": "2022-10-30T04:00:06.687000+00:00",
+            "modified_at": "2022-10-30T04:00:06.687000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 147,
+        "fields": {
+            "date": "2022-10-29",
+            "item": "370",
+            "price": 3,
+            "created_at": "2022-10-30T04:00:06.687000+00:00",
+            "modified_at": "2022-10-30T04:00:06.687000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 148,
+        "fields": {
+            "date": "2022-10-29",
+            "item": "355",
+            "price": 20,
+            "created_at": "2022-10-30T04:00:06.687000+00:00",
+            "modified_at": "2022-10-30T04:00:06.687000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 149,
+        "fields": {
+            "date": "2022-10-29",
+            "item": "667",
+            "price": 25,
+            "created_at": "2022-10-30T04:00:06.687000+00:00",
+            "modified_at": "2022-10-30T04:00:06.687000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 150,
+        "fields": {
+            "date": "2022-10-29",
+            "item": "338",
+            "price": 30,
+            "created_at": "2022-10-30T04:00:06.687000+00:00",
+            "modified_at": "2022-10-30T04:00:06.687000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 151,
+        "fields": {
+            "date": "2022-10-29",
+            "item": "361",
+            "price": 40,
+            "created_at": "2022-10-30T04:00:06.687000+00:00",
+            "modified_at": "2022-10-30T04:00:06.687000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 152,
+        "fields": {
+            "date": "2022-10-29",
+            "item": "382",
+            "price": 50,
+            "created_at": "2022-10-30T04:00:06.687000+00:00",
+            "modified_at": "2022-10-30T04:00:06.687000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 153,
+        "fields": {
+            "date": "2022-10-29",
+            "item": "479",
+            "price": 100,
+            "created_at": "2022-10-30T04:00:06.687000+00:00",
+            "modified_at": "2022-10-30T04:00:06.687000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 154,
+        "fields": {
+            "date": "2022-10-29",
+            "item": "259",
+            "price": 250,
+            "created_at": "2022-10-30T04:00:06.687000+00:00",
+            "modified_at": "2022-10-30T04:00:06.687000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 155,
+        "fields": {
+            "date": "2022-10-29",
+            "item": "389",
+            "price": 250,
+            "created_at": "2022-10-30T04:00:06.687000+00:00",
+            "modified_at": "2022-10-30T04:00:06.687000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 156,
+        "fields": {
+            "date": "2022-10-29",
+            "item": "367",
+            "price": 1000,
+            "created_at": "2022-10-30T04:00:06.687000+00:00",
+            "modified_at": "2022-10-30T04:00:06.687000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 157,
+        "fields": {
+            "date": "2022-11-02",
+            "item": "358",
+            "price": 3,
+            "created_at": "2022-11-02T08:03:42.813000+00:00",
+            "modified_at": "2022-11-02T08:03:42.813000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 158,
+        "fields": {
+            "date": "2022-11-02",
+            "item": "359",
+            "price": 3,
+            "created_at": "2022-11-02T08:03:42.813000+00:00",
+            "modified_at": "2022-11-02T08:03:42.813000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 159,
+        "fields": {
+            "date": "2022-11-02",
+            "item": "370",
+            "price": 3,
+            "created_at": "2022-11-02T08:03:42.813000+00:00",
+            "modified_at": "2022-11-02T08:03:42.813000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 160,
+        "fields": {
+            "date": "2022-11-02",
+            "item": "355",
+            "price": 20,
+            "created_at": "2022-11-02T08:03:42.813000+00:00",
+            "modified_at": "2022-11-02T08:03:42.813000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 161,
+        "fields": {
+            "date": "2022-11-02",
+            "item": "667",
+            "price": 25,
+            "created_at": "2022-11-02T08:03:42.813000+00:00",
+            "modified_at": "2022-11-02T08:03:42.813000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 162,
+        "fields": {
+            "date": "2022-11-02",
+            "item": "338",
+            "price": 30,
+            "created_at": "2022-11-02T08:03:42.813000+00:00",
+            "modified_at": "2022-11-02T08:03:42.813000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 163,
+        "fields": {
+            "date": "2022-11-02",
+            "item": "361",
+            "price": 40,
+            "created_at": "2022-11-02T08:03:42.813000+00:00",
+            "modified_at": "2022-11-02T08:03:42.813000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 164,
+        "fields": {
+            "date": "2022-11-02",
+            "item": "382",
+            "price": 50,
+            "created_at": "2022-11-02T08:03:42.813000+00:00",
+            "modified_at": "2022-11-02T08:03:42.813000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 165,
+        "fields": {
+            "date": "2022-11-02",
+            "item": "479",
+            "price": 100,
+            "created_at": "2022-11-02T08:03:42.813000+00:00",
+            "modified_at": "2022-11-02T08:03:42.813000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 166,
+        "fields": {
+            "date": "2022-11-02",
+            "item": "259",
+            "price": 250,
+            "created_at": "2022-11-02T08:03:42.813000+00:00",
+            "modified_at": "2022-11-02T08:03:42.813000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 167,
+        "fields": {
+            "date": "2022-11-02",
+            "item": "389",
+            "price": 250,
+            "created_at": "2022-11-02T08:03:42.813000+00:00",
+            "modified_at": "2022-11-02T08:03:42.813000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 168,
+        "fields": {
+            "date": "2022-11-02",
+            "item": "367",
+            "price": 1000,
+            "created_at": "2022-11-02T08:03:42.813000+00:00",
+            "modified_at": "2022-11-02T08:03:42.813000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 169,
+        "fields": {
+            "date": "2022-11-09",
+            "item": "44",
+            "price": 1,
+            "created_at": "2022-11-09T21:32:26.335000+00:00",
+            "modified_at": "2022-11-09T21:32:26.335000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 170,
+        "fields": {
+            "date": "2022-11-09",
+            "item": "170",
+            "price": 1,
+            "created_at": "2022-11-09T21:32:26.335000+00:00",
+            "modified_at": "2022-11-09T21:32:26.335000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 171,
+        "fields": {
+            "date": "2022-11-09",
+            "item": "75",
+            "price": 5,
+            "created_at": "2022-11-09T21:32:26.335000+00:00",
+            "modified_at": "2022-11-09T21:32:26.335000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 172,
+        "fields": {
+            "date": "2022-11-09",
+            "item": "144",
+            "price": 8,
+            "created_at": "2022-11-09T21:32:26.335000+00:00",
+            "modified_at": "2022-11-09T21:32:26.335000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 173,
+        "fields": {
+            "date": "2022-11-09",
+            "item": "390",
+            "price": 15,
+            "created_at": "2022-11-09T21:32:26.335000+00:00",
+            "modified_at": "2022-11-09T21:32:26.335000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 174,
+        "fields": {
+            "date": "2022-11-09",
+            "item": "161",
+            "price": 30,
+            "created_at": "2022-11-09T21:32:26.335000+00:00",
+            "modified_at": "2022-11-09T21:32:26.335000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 175,
+        "fields": {
+            "date": "2022-11-09",
+            "item": "382",
+            "price": 50,
+            "created_at": "2022-11-09T21:32:26.335000+00:00",
+            "modified_at": "2022-11-09T21:32:26.335000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 176,
+        "fields": {
+            "date": "2022-11-16",
+            "item": "46",
+            "price": 2,
+            "created_at": "2022-11-16T07:31:42.726000+00:00",
+            "modified_at": "2022-11-16T07:31:42.726000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 177,
+        "fields": {
+            "date": "2022-11-16",
+            "item": "194",
+            "price": 3,
+            "created_at": "2022-11-16T07:31:42.726000+00:00",
+            "modified_at": "2022-11-16T07:31:42.726000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 178,
+        "fields": {
+            "date": "2022-11-16",
+            "item": "285",
+            "price": 5,
+            "created_at": "2022-11-16T07:31:42.726000+00:00",
+            "modified_at": "2022-11-16T07:31:42.726000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 179,
+        "fields": {
+            "date": "2022-11-16",
+            "item": "250",
+            "price": 25,
+            "created_at": "2022-11-16T07:31:42.726000+00:00",
+            "modified_at": "2022-11-16T07:31:42.726000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 180,
+        "fields": {
+            "date": "2022-11-16",
+            "item": "342",
+            "price": 25,
+            "created_at": "2022-11-16T07:31:42.726000+00:00",
+            "modified_at": "2022-11-16T07:31:42.726000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 181,
+        "fields": {
+            "date": "2022-11-16",
+            "item": "379",
+            "price": 30,
+            "created_at": "2022-11-16T07:31:42.726000+00:00",
+            "modified_at": "2022-11-16T07:31:42.726000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 182,
+        "fields": {
+            "date": "2022-11-16",
+            "item": "155",
+            "price": 100,
+            "created_at": "2022-11-16T07:31:42.726000+00:00",
+            "modified_at": "2022-11-16T07:31:42.726000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 183,
+        "fields": {
+            "date": "2022-11-30",
+            "item": "304",
+            "price": 1,
+            "created_at": "2022-11-30T13:31:03.217000+00:00",
+            "modified_at": "2022-11-30T13:31:03.217000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 184,
+        "fields": {
+            "date": "2022-12-07",
+            "item": "75",
+            "price": 5,
+            "created_at": "2022-12-07T07:27:30.759000+00:00",
+            "modified_at": "2022-12-07T07:27:30.759000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 185,
+        "fields": {
+            "date": "2022-12-07",
+            "item": "409",
+            "price": 5,
+            "created_at": "2022-12-07T07:27:30.759000+00:00",
+            "modified_at": "2022-12-07T07:27:30.759000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 186,
+        "fields": {
+            "date": "2022-12-07",
+            "item": "392",
+            "price": 7,
+            "created_at": "2022-12-07T07:27:30.759000+00:00",
+            "modified_at": "2022-12-07T07:27:30.759000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 187,
+        "fields": {
+            "date": "2022-12-07",
+            "item": "425",
+            "price": 10,
+            "created_at": "2022-12-07T07:27:30.759000+00:00",
+            "modified_at": "2022-12-07T07:27:30.759000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 188,
+        "fields": {
+            "date": "2022-12-07",
+            "item": "412",
+            "price": 25,
+            "created_at": "2022-12-07T07:27:30.759000+00:00",
+            "modified_at": "2022-12-07T07:27:30.759000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 189,
+        "fields": {
+            "date": "2022-12-07",
+            "item": "420",
+            "price": 250,
+            "created_at": "2022-12-07T07:27:30.759000+00:00",
+            "modified_at": "2022-12-07T07:27:30.759000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 190,
+        "fields": {
+            "date": "2022-12-07",
+            "item": "447",
+            "price": 300,
+            "created_at": "2022-12-07T07:27:30.759000+00:00",
+            "modified_at": "2022-12-07T07:27:30.759000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 191,
+        "fields": {
+            "date": "2022-12-14",
+            "item": "78",
+            "price": 1,
+            "created_at": "2022-12-15T03:51:02.349000+00:00",
+            "modified_at": "2022-12-15T03:51:02.349000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 192,
+        "fields": {
+            "date": "2022-12-21",
+            "item": "44",
+            "price": 1,
+            "created_at": "2022-12-22T03:42:08.811000+00:00",
+            "modified_at": "2022-12-22T03:42:08.811000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 193,
+        "fields": {
+            "date": "2022-12-28",
+            "item": "62",
+            "price": 4,
+            "created_at": "2022-12-28T06:32:34.265000+00:00",
+            "modified_at": "2022-12-28T06:32:34.265000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 194,
+        "fields": {
+            "date": "2023-01-04",
+            "item": "164",
+            "price": 1,
+            "created_at": "2023-01-05T02:31:31.380000+00:00",
+            "modified_at": "2023-01-05T02:31:31.380000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 195,
+        "fields": {
+            "date": "2023-01-04",
+            "item": "170",
+            "price": 1,
+            "created_at": "2023-01-05T02:31:31.380000+00:00",
+            "modified_at": "2023-01-05T02:31:31.380000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 196,
+        "fields": {
+            "date": "2023-01-04",
+            "item": "263",
+            "price": 10,
+            "created_at": "2023-01-05T02:31:31.380000+00:00",
+            "modified_at": "2023-01-05T02:31:31.380000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 197,
+        "fields": {
+            "date": "2023-01-04",
+            "item": "390",
+            "price": 15,
+            "created_at": "2023-01-05T02:31:31.380000+00:00",
+            "modified_at": "2023-01-05T02:31:31.380000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 198,
+        "fields": {
+            "date": "2023-01-04",
+            "item": "250",
+            "price": 25,
+            "created_at": "2023-01-05T02:31:31.380000+00:00",
+            "modified_at": "2023-01-05T02:31:31.380000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 199,
+        "fields": {
+            "date": "2023-01-04",
+            "item": "473",
+            "price": 50,
+            "created_at": "2023-01-05T02:31:31.380000+00:00",
+            "modified_at": "2023-01-05T02:31:31.380000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 200,
+        "fields": {
+            "date": "2023-01-04",
+            "item": "630",
+            "price": 175,
+            "created_at": "2023-01-05T02:31:31.380000+00:00",
+            "modified_at": "2023-01-05T02:31:31.380000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 201,
+        "fields": {
+            "date": "2023-01-11",
+            "item": "185",
+            "price": 3,
+            "created_at": "2023-01-11T23:59:18.378000+00:00",
+            "modified_at": "2023-01-11T23:59:18.378000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 202,
+        "fields": {
+            "date": "2023-01-11",
+            "item": "120",
+            "price": 4,
+            "created_at": "2023-01-11T23:59:18.378000+00:00",
+            "modified_at": "2023-01-11T23:59:18.378000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 203,
+        "fields": {
+            "date": "2023-01-11",
+            "item": "75",
+            "price": 5,
+            "created_at": "2023-01-11T23:59:18.378000+00:00",
+            "modified_at": "2023-01-11T23:59:18.378000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 204,
+        "fields": {
+            "date": "2023-01-11",
+            "item": "338",
+            "price": 30,
+            "created_at": "2023-01-11T23:59:18.378000+00:00",
+            "modified_at": "2023-01-11T23:59:18.378000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 205,
+        "fields": {
+            "date": "2023-01-11",
+            "item": "177",
+            "price": 50,
+            "created_at": "2023-01-11T23:59:18.378000+00:00",
+            "modified_at": "2023-01-11T23:59:18.378000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 206,
+        "fields": {
+            "date": "2023-01-11",
+            "item": "305",
+            "price": 50,
+            "created_at": "2023-01-11T23:59:18.378000+00:00",
+            "modified_at": "2023-01-11T23:59:18.378000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 207,
+        "fields": {
+            "date": "2023-01-11",
+            "item": "153",
+            "price": 100,
+            "created_at": "2023-01-11T23:59:18.378000+00:00",
+            "modified_at": "2023-01-11T23:59:18.378000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 208,
+        "fields": {
+            "date": "2023-01-18",
+            "item": "43",
+            "price": 1,
+            "created_at": "2023-01-19T00:29:38.149000+00:00",
+            "modified_at": "2023-01-19T00:29:38.149000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 209,
+        "fields": {
+            "date": "2023-01-18",
+            "item": "185",
+            "price": 3,
+            "created_at": "2023-01-19T00:29:38.149000+00:00",
+            "modified_at": "2023-01-19T00:29:38.149000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 210,
+        "fields": {
+            "date": "2023-01-25",
+            "item": "304",
+            "price": 1,
+            "created_at": "2023-01-25T07:08:03.866000+00:00",
+            "modified_at": "2023-01-25T07:08:03.866000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 211,
+        "fields": {
+            "date": "2023-01-25",
+            "item": "285",
+            "price": 5,
+            "created_at": "2023-01-25T07:08:03.866000+00:00",
+            "modified_at": "2023-01-25T07:08:03.866000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 212,
+        "fields": {
+            "date": "2023-01-25",
+            "item": "144",
+            "price": 8,
+            "created_at": "2023-01-25T07:08:03.866000+00:00",
+            "modified_at": "2023-01-25T07:08:03.866000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 213,
+        "fields": {
+            "date": "2023-01-25",
+            "item": "379",
+            "price": 25,
+            "created_at": "2023-01-25T07:08:03.866000+00:00",
+            "modified_at": "2023-01-25T07:08:03.866000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 214,
+        "fields": {
+            "date": "2023-01-25",
+            "item": "281",
+            "price": 75,
+            "created_at": "2023-01-25T07:08:03.866000+00:00",
+            "modified_at": "2023-01-25T07:08:03.866000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 215,
+        "fields": {
+            "date": "2023-01-25",
+            "item": "475",
+            "price": 100,
+            "created_at": "2023-01-25T07:08:03.866000+00:00",
+            "modified_at": "2023-01-25T07:08:03.866000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 216,
+        "fields": {
+            "date": "2023-01-25",
+            "item": "375",
+            "price": 250,
+            "created_at": "2023-01-25T07:08:03.866000+00:00",
+            "modified_at": "2023-01-25T07:08:03.866000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 217,
+        "fields": {
+            "date": "2023-02-08",
+            "item": "86",
+            "price": 5,
+            "created_at": "2023-02-08T20:36:31.596000+00:00",
+            "modified_at": "2023-02-08T20:36:31.596000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 218,
+        "fields": {
+            "date": "2023-02-08",
+            "item": "303",
+            "price": 8,
+            "created_at": "2023-02-08T20:36:31.596000+00:00",
+            "modified_at": "2023-02-08T20:36:31.596000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 219,
+        "fields": {
+            "date": "2023-02-08",
+            "item": "264",
+            "price": 10,
+            "created_at": "2023-02-08T20:36:31.596000+00:00",
+            "modified_at": "2023-02-08T20:36:31.596000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 220,
+        "fields": {
+            "date": "2023-02-08",
+            "item": "536",
+            "price": 30,
+            "created_at": "2023-02-08T20:36:31.596000+00:00",
+            "modified_at": "2023-02-08T20:36:31.596000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 221,
+        "fields": {
+            "date": "2023-02-08",
+            "item": "207",
+            "price": 50,
+            "created_at": "2023-02-08T20:36:31.596000+00:00",
+            "modified_at": "2023-02-08T20:36:31.596000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 222,
+        "fields": {
+            "date": "2023-02-08",
+            "item": "256",
+            "price": 50,
+            "created_at": "2023-02-08T20:36:31.596000+00:00",
+            "modified_at": "2023-02-08T20:36:31.596000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 223,
+        "fields": {
+            "date": "2023-02-08",
+            "item": "254",
+            "price": 100,
+            "created_at": "2023-02-08T20:36:31.596000+00:00",
+            "modified_at": "2023-02-08T20:36:31.596000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 224,
+        "fields": {
+            "date": "2023-02-15",
+            "item": "43",
+            "price": 1,
+            "created_at": "2023-02-15T17:59:27.376000+00:00",
+            "modified_at": "2023-02-15T17:59:27.376000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 225,
+        "fields": {
+            "date": "2023-02-15",
+            "item": "194",
+            "price": 3,
+            "created_at": "2023-02-15T17:59:27.376000+00:00",
+            "modified_at": "2023-02-15T17:59:27.376000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 226,
+        "fields": {
+            "date": "2023-02-15",
+            "item": "120",
+            "price": 4,
+            "created_at": "2023-02-15T17:59:27.376000+00:00",
+            "modified_at": "2023-02-15T17:59:27.376000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 227,
+        "fields": {
+            "date": "2023-02-15",
+            "item": "110",
+            "price": 5,
+            "created_at": "2023-02-15T17:59:27.376000+00:00",
+            "modified_at": "2023-02-15T17:59:27.376000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 228,
+        "fields": {
+            "date": "2023-02-15",
+            "item": "488",
+            "price": 25,
+            "created_at": "2023-02-15T17:59:27.376000+00:00",
+            "modified_at": "2023-02-15T17:59:27.376000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 229,
+        "fields": {
+            "date": "2023-02-22",
+            "item": "46",
+            "price": 2,
+            "created_at": "2023-02-22T19:54:32.807000+00:00",
+            "modified_at": "2023-02-22T19:54:32.807000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 230,
+        "fields": {
+            "date": "2023-02-22",
+            "item": "84",
+            "price": 6,
+            "created_at": "2023-02-22T19:54:32.807000+00:00",
+            "modified_at": "2023-02-22T19:54:32.807000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 231,
+        "fields": {
+            "date": "2023-02-22",
+            "item": "144",
+            "price": 8,
+            "created_at": "2023-02-22T19:54:32.807000+00:00",
+            "modified_at": "2023-02-22T19:54:32.807000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 232,
+        "fields": {
+            "date": "2023-03-01",
+            "item": "75",
+            "price": 5,
+            "created_at": "2023-03-02T03:41:49.044000+00:00",
+            "modified_at": "2023-03-02T03:41:49.044000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 233,
+        "fields": {
+            "date": "2023-03-01",
+            "item": "117",
+            "price": 10,
+            "created_at": "2023-03-02T03:41:49.044000+00:00",
+            "modified_at": "2023-03-02T03:41:49.044000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 234,
+        "fields": {
+            "date": "2023-03-01",
+            "item": "263",
+            "price": 10,
+            "created_at": "2023-03-02T03:41:49.044000+00:00",
+            "modified_at": "2023-03-02T03:41:49.044000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 235,
+        "fields": {
+            "date": "2023-03-01",
+            "item": "390",
+            "price": 15,
+            "created_at": "2023-03-02T03:41:49.044000+00:00",
+            "modified_at": "2023-03-02T03:41:49.044000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 236,
+        "fields": {
+            "date": "2023-03-01",
+            "item": "379",
+            "price": 25,
+            "created_at": "2023-03-02T03:41:49.044000+00:00",
+            "modified_at": "2023-03-02T03:41:49.044000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 237,
+        "fields": {
+            "date": "2023-03-01",
+            "item": "230",
+            "price": 200,
+            "created_at": "2023-03-02T03:41:49.044000+00:00",
+            "modified_at": "2023-03-02T03:41:49.044000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 238,
+        "fields": {
+            "date": "2023-03-01",
+            "item": "375",
+            "price": 250,
+            "created_at": "2023-03-02T03:41:49.044000+00:00",
+            "modified_at": "2023-03-02T03:41:49.044000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 239,
+        "fields": {
+            "date": "2023-03-15",
+            "item": "43",
+            "price": 1,
+            "created_at": "2023-03-15T21:12:20.799000+00:00",
+            "modified_at": "2023-03-15T21:12:20.799000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 240,
+        "fields": {
+            "date": "2023-03-22",
+            "item": "499",
+            "price": 5,
+            "created_at": "2023-03-22T20:47:58.147000+00:00",
+            "modified_at": "2023-03-22T20:47:58.147000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 241,
+        "fields": {
+            "date": "2023-03-22",
+            "item": "203",
+            "price": 9,
+            "created_at": "2023-03-22T20:47:58.147000+00:00",
+            "modified_at": "2023-03-22T20:47:58.147000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 242,
+        "fields": {
+            "date": "2023-03-22",
+            "item": "67",
+            "price": 25,
+            "created_at": "2023-03-22T20:47:58.147000+00:00",
+            "modified_at": "2023-03-22T20:47:58.147000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 243,
+        "fields": {
+            "date": "2023-03-22",
+            "item": "382",
+            "price": 40,
+            "created_at": "2023-03-22T20:47:58.147000+00:00",
+            "modified_at": "2023-03-22T20:47:58.147000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 244,
+        "fields": {
+            "date": "2023-03-22",
+            "item": "263",
+            "price": 50,
+            "created_at": "2023-03-22T20:47:58.147000+00:00",
+            "modified_at": "2023-03-22T20:47:58.147000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 245,
+        "fields": {
+            "date": "2023-03-22",
+            "item": "188",
+            "price": 150,
+            "created_at": "2023-03-22T20:47:58.147000+00:00",
+            "modified_at": "2023-03-22T20:47:58.147000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 246,
+        "fields": {
+            "date": "2023-03-22",
+            "item": "230",
+            "price": 200,
+            "created_at": "2023-03-22T20:47:58.147000+00:00",
+            "modified_at": "2023-03-22T20:47:58.147000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 247,
+        "fields": {
+            "date": "2023-03-29",
+            "item": "170",
+            "price": 1,
+            "created_at": "2023-03-29T05:17:10.878000+00:00",
+            "modified_at": "2023-03-29T05:17:10.878000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 248,
+        "fields": {
+            "date": "2023-03-29",
+            "item": "62",
+            "price": 4,
+            "created_at": "2023-03-29T05:17:10.878000+00:00",
+            "modified_at": "2023-03-29T05:17:10.878000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 249,
+        "fields": {
+            "date": "2023-04-05",
+            "item": "78",
+            "price": 1,
+            "created_at": "2023-04-05T17:44:14.613000+00:00",
+            "modified_at": "2023-04-05T17:44:14.613000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 250,
+        "fields": {
+            "date": "2023-04-05",
+            "item": "84",
+            "price": 6,
+            "created_at": "2023-04-05T17:44:14.613000+00:00",
+            "modified_at": "2023-04-05T17:44:14.613000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 251,
+        "fields": {
+            "date": "2023-04-05",
+            "item": "176",
+            "price": 25,
+            "created_at": "2023-04-05T17:44:14.613000+00:00",
+            "modified_at": "2023-04-05T17:44:14.613000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 252,
+        "fields": {
+            "date": "2023-04-05",
+            "item": "177",
+            "price": 50,
+            "created_at": "2023-04-05T17:44:14.613000+00:00",
+            "modified_at": "2023-04-05T17:44:14.613000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 253,
+        "fields": {
+            "date": "2023-04-05",
+            "item": "281",
+            "price": 75,
+            "created_at": "2023-04-05T17:44:14.613000+00:00",
+            "modified_at": "2023-04-05T17:44:14.613000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 254,
+        "fields": {
+            "date": "2023-04-05",
+            "item": "121",
+            "price": 250,
+            "created_at": "2023-04-05T17:44:14.613000+00:00",
+            "modified_at": "2023-04-05T17:44:14.613000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 255,
+        "fields": {
+            "date": "2023-04-19",
+            "item": "44",
+            "price": 1,
+            "created_at": "2023-04-19T23:15:38.132000+00:00",
+            "modified_at": "2023-04-19T23:15:38.132000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 256,
+        "fields": {
+            "date": "2023-04-19",
+            "item": "110",
+            "price": 5,
+            "created_at": "2023-04-19T23:15:38.132000+00:00",
+            "modified_at": "2023-04-19T23:15:38.132000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 257,
+        "fields": {
+            "date": "2023-04-19",
+            "item": "203",
+            "price": 9,
+            "created_at": "2023-04-19T23:15:38.132000+00:00",
+            "modified_at": "2023-04-19T23:15:38.132000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 258,
+        "fields": {
+            "date": "2023-04-19",
+            "item": "427",
+            "price": 15,
+            "created_at": "2023-04-19T23:15:38.132000+00:00",
+            "modified_at": "2023-04-19T23:15:38.132000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 259,
+        "fields": {
+            "date": "2023-04-19",
+            "item": "250",
+            "price": 25,
+            "created_at": "2023-04-19T23:15:38.132000+00:00",
+            "modified_at": "2023-04-19T23:15:38.132000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 260,
+        "fields": {
+            "date": "2023-05-03",
+            "item": "43",
+            "price": 1,
+            "created_at": "2023-05-04T00:03:26.958000+00:00",
+            "modified_at": "2023-05-04T00:03:26.958000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 261,
+        "fields": {
+            "date": "2023-05-03",
+            "item": "53",
+            "price": 3,
+            "created_at": "2023-05-04T00:03:26.958000+00:00",
+            "modified_at": "2023-05-04T00:03:26.958000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 262,
+        "fields": {
+            "date": "2023-05-03",
+            "item": "242",
+            "price": 7,
+            "created_at": "2023-05-04T00:03:26.958000+00:00",
+            "modified_at": "2023-05-04T00:03:26.958000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 263,
+        "fields": {
+            "date": "2023-05-03",
+            "item": "352",
+            "price": 50,
+            "created_at": "2023-05-04T00:03:26.958000+00:00",
+            "modified_at": "2023-05-04T00:03:26.958000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 264,
+        "fields": {
+            "date": "2023-05-03",
+            "item": "475",
+            "price": 100,
+            "created_at": "2023-05-04T00:03:26.958000+00:00",
+            "modified_at": "2023-05-04T00:03:26.958000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 265,
+        "fields": {
+            "date": "2023-05-10",
+            "item": "111",
+            "price": 1,
+            "created_at": "2023-05-10T05:31:20.890000+00:00",
+            "modified_at": "2023-05-10T05:31:20.890000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 266,
+        "fields": {
+            "date": "2023-05-10",
+            "item": "320",
+            "price": 5,
+            "created_at": "2023-05-10T05:31:20.890000+00:00",
+            "modified_at": "2023-05-10T05:31:20.890000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 267,
+        "fields": {
+            "date": "2023-05-10",
+            "item": "379",
+            "price": 25,
+            "created_at": "2023-05-10T05:31:20.890000+00:00",
+            "modified_at": "2023-05-10T05:31:20.890000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 268,
+        "fields": {
+            "date": "2023-05-10",
+            "item": "141",
+            "price": 30,
+            "created_at": "2023-05-10T05:31:20.890000+00:00",
+            "modified_at": "2023-05-10T05:31:20.890000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 269,
+        "fields": {
+            "date": "2023-05-17",
+            "item": "92",
+            "price": 2,
+            "created_at": "2023-05-17T17:36:45.474000+00:00",
+            "modified_at": "2023-05-17T17:36:45.474000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 270,
+        "fields": {
+            "date": "2023-05-17",
+            "item": "110",
+            "price": 5,
+            "created_at": "2023-05-17T17:36:45.474000+00:00",
+            "modified_at": "2023-05-17T17:36:45.474000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 271,
+        "fields": {
+            "date": "2023-05-17",
+            "item": "171",
+            "price": 7,
+            "created_at": "2023-05-17T17:36:45.474000+00:00",
+            "modified_at": "2023-05-17T17:36:45.474000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 272,
+        "fields": {
+            "date": "2023-05-17",
+            "item": "144",
+            "price": 8,
+            "created_at": "2023-05-17T17:36:45.474000+00:00",
+            "modified_at": "2023-05-17T17:36:45.474000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 273,
+        "fields": {
+            "date": "2023-05-17",
+            "item": "85",
+            "price": 15,
+            "created_at": "2023-05-17T17:36:45.474000+00:00",
+            "modified_at": "2023-05-17T17:36:45.474000+00:00"
+        }
+    },
+    {
+        "model": "borgen.borgenitem",
+        "pk": 274,
+        "fields": {
+            "date": "2023-05-17",
+            "item": "349",
+            "price": 50,
+            "created_at": "2023-05-17T17:36:45.474000+00:00",
+            "modified_at": "2023-05-17T17:36:45.474000+00:00"
+        }
+    }
+]
