@@ -230,16 +230,25 @@ async def update_drop_rates_for(drops_for: Location | Item, force: bool = False)
             flags=variant_flags,
             seconds=sim_tim,
         )
+        silver_per_hit = xp_per_hit = 0
         for item_id, item_drops in drops.items():
             base_drop_rate = 1
             if location is not None and location.base_drop_rate is not None:
                 base_drop_rate = location.base_drop_rate
             rate = (total_drops / base_drop_rate) / item_drops
+            item_silver, item_xp = await Item.objects.values_list(
+                "sell_price", "xp"
+            ).aget(id=item_id)
+            silver_per_hit += item_silver / rate
+            xp_per_hit += item_xp / rate
             await DropRatesItem.objects.aupdate_or_create(
                 drop_rates=rates, item_id=item_id, defaults={"rate": rate}
             )
         await DropRates.objects.filter(pk=rates.pk).aupdate(
-            hash=new_hash, compute_time=sim_tim
+            hash=new_hash,
+            compute_time=sim_tim,
+            silver_per_hit=silver_per_hit,
+            xp_per_hit=xp_per_hit,
         )
         await DropRatesItem.objects.filter(drop_rates=rates).exclude(
             item_id__in=variant_items

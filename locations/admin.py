@@ -106,6 +106,8 @@ class DropRatesAdmin(admin.ModelAdmin):
         "runecube",
         "hash",
         "compute_time",
+        "silver_per_hit",
+        "xp_per_hit",
     ]
     inlines = [DropRatesItemInline]
 

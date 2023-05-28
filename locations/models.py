@@ -63,6 +63,9 @@ class DropRates(models.Model):
     hash = models.BigIntegerField(null=True, blank=True)
     compute_time = models.FloatField(null=True, blank=True)
 
+    silver_per_hit = models.FloatField(null=True, blank=True)
+    xp_per_hit = models.FloatField(null=True, blank=True)
+
     class Meta:
         verbose_name_plural = "drop rates"
         ordering = ["location", "seed", "runecube", "pk"]

@@ -39,6 +39,8 @@ class DropRates:
     iron_depot: auto
     manual_fishing: auto
     runecube: auto
+    silver_per_hit: auto
+    xp_per_hit: auto
 
     items: list["DropRatesItem"]
 
