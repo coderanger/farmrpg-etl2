@@ -39,7 +39,7 @@ class Quest:
     required_npc_level: auto
     required_items: list["QuestItemRequired"]
 
-    reward_silver: auto
+    reward_silver: float
     reward_gold: auto
     reward_items: list["QuestItemReward"]
 
