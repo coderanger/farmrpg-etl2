@@ -28,7 +28,7 @@ class Quest:
     main_quest: auto
     description: auto
 
-    required_silver: auto
+    required_silver: float
     required_farming_level: auto
     required_fishing_level: auto
     required_crafting_level: auto
