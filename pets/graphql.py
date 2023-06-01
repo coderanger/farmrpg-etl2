@@ -9,6 +9,7 @@ from . import models
 @gql.django.filters.filter(models.Pet)
 class PetFilter:
     id: auto
+    name: auto
 
 
 @gql.django.type(models.Pet, filters=PetFilter)
