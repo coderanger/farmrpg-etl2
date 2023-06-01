@@ -16,11 +16,12 @@ from utils.parsers import (
 UPDATES_SEL = CSSSelector("div.recentUpdates")
 DATE_SEL = CSSSelector("div.card-header a")
 CONTENT_SEL = CSSSelector("div.card-content-inner")
+STRONG_SEL = CSSSelector("strong")
 ID_RE = re.compile(r"\?id=(\d+)")
 GAME_PAGE_RE = re.compile(r"^[a-zA-Z0-9_-]+\.php(\?.*)?(#.*)?$")
 NEWLINES_RE = re.compile("\n{2,}")
-FORCEPATH_RE = re.compile(r"<strong>\w+path</strong>")
-TENFOO_RE = re.compile(r"<strong>\w+foo</strong>")
+FORCEPATH_RE = re.compile(r"^\w+path$")
+TENFOO_RE = re.compile(r"^\w+foo$")
 
 
 @attrs.define
@@ -32,7 +33,7 @@ class ParsedUpdate:
     text_content: str
 
 
-def parse_updates(page: bytes) -> Iterable[dict[str, Any]]:
+def parse_updates(page: bytes) -> Iterable[ParsedUpdate]:
     root = parse_page_fragment(page)
     for elm in UPDATES_SEL(root):
         date_elm = sel_first_or_die(DATE_SEL(elm), "Unable to parse date from update")
@@ -45,11 +46,14 @@ def parse_updates(page: bytes) -> Iterable[dict[str, Any]]:
             raise ValueError("Unable to parse ID")
         update_id = int(id_md[1])
         date = dateutil.parser.parse("".join(date_elm.itertext())).date()
+        # Fix the change-every-time-they-render macros
+        for strong_elm in STRONG_SEL(elm):
+            if FORCEPATH_RE.match(strong_elm.text):
+                strong_elm.text = "Forcepath"
+            elif TENFOO_RE.match(strong_elm.text):
+                strong_elm.text = "Tenfoo"
         inner_content = "".join(tostring(e, encoding="unicode") for e in content_elm)
         content = f"{content_elm.text}{inner_content}"
-        # Fix the change-every-time-they-render macros
-        content = FORCEPATH_RE.sub("<strong>Forcepath</strong>", content)
-        content = TENFOO_RE.sub("<strong>Tenfoo</strong>", content)
         item_names = set()
 
         # Generate a version of the content that has no relative links.
@@ -96,7 +100,7 @@ def parse_updates(page: bytes) -> Iterable[dict[str, Any]]:
         for item_name in item_names:
             escaped_name = re.escape(item_name)
             text_content = re.sub(
-                f"({escaped_name}|\({escaped_name}\)) ({escaped_name}|\({escaped_name}\))",
+                f"({escaped_name}|\\({escaped_name}\\)) ({escaped_name}|\\({escaped_name}\\))",
                 item_name,
                 text_content,
             )

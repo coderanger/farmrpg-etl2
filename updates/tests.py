@@ -13,6 +13,11 @@ def about() -> bytes:
     return FIXTURES_ROOT.joinpath("about.html").open("rb").read()
 
 
+@pytest.fixture
+def about2() -> bytes:
+    return FIXTURES_ROOT.joinpath("about2.html").open("rb").read()
+
+
 def test_parse_updates(about: bytes):
     updates = list(parse_updates(about))
     assert len(updates) == 437
@@ -138,4 +143,74 @@ SMALL UPDATES:
 HIDE HELP REQUESTS IN ALPHA
 - IN ALPHA: You can hide Help Requests now, just go into one you want to hide and scroll to the bottom to hide it
 - IN ALPHA: It will then show in a 'Requests Hidden' view that is at the bottom of the Help Needed section"""  # noqa: E501
+    )
+
+
+def test_parse_updates2(about2: bytes):
+    updates = list(parse_updates(about2))
+    assert (
+        updates[0].content
+        == """
+JUNE STARTER PACK AVAILABLE:<br>
+- This month, the starter pack contains Holger\'s Lunch Box<br>
+- The Lunch Box has a number of meals, including a new item -&gt; Lemon Cream Pie<br>
+- Lemon Cream Pie allows you to use 5x Arnold Palmers per tap and is pretty handy<br>
+- Also, look for the quest \'Sweet Days of Summer\' for an extra bonus!<br>
+- You can get the Starter Pack here -&gt; <a href="gold.php" class="close-panel" style="color: crimson;font-weight:bold;text-decoration:underline">Gold</a><br>
+<br>
+MEDIUM UPDATES:<br>
+- The <a href="soap.php" class="close-panel" style="color: crimson;font-weight:bold;text-decoration:underline">Soap Shop</a> has been updated with new items<br>
+- There are new June Raptor types available in RFC<br>
+- In your Raptor Pen, check out RaptorDex. This is a great new way to track all of your Raptor types at a glance. You can see which you have unlocked and tap to filter your Raptor Pen by each type.<br>
+- There are a couple rare items moving around the Explore locations this month. Keep an eye out!<br>
+- There are a few perks on sale a the <a href="supply.php" class="close-panel" style="color: crimson;font-weight:bold;text-decoration:underline">Farm Supply</a><br>
+<br>
+DEVELOPMENT BREAK<br>
+- A lot of content dropped in May and with that firestream is going to take a 2-week break from development.<br>
+- In his absence, <strong>Forcepath</strong> will be working hard to drop nightmarish quests while <strong>Tenfoo</strong> occasionally helps. Keep an eye out for new help requests, passwords or quizzes!<br>
+"""  # noqa: E501
+    )
+
+    assert (
+        updates[0].clean_content
+        == """
+JUNE STARTER PACK AVAILABLE:<br>
+- This month, the starter pack contains Holger's Lunch Box<br>
+- The Lunch Box has a number of meals, including a new item -&gt; Lemon Cream Pie<br>
+- Lemon Cream Pie allows you to use 5x Arnold Palmers per tap and is pretty handy<br>
+- Also, look for the quest 'Sweet Days of Summer' for an extra bonus!<br>
+- You can get the Starter Pack here -&gt; <a href="https://farmrpg.com/index.php#!/gold.php" style="color: crimson;font-weight:bold;text-decoration:underline">Gold</a><br>
+<br>
+MEDIUM UPDATES:<br>
+- The <a href="https://farmrpg.com/index.php#!/soap.php" style="color: crimson;font-weight:bold;text-decoration:underline">Soap Shop</a> has been updated with new items<br>
+- There are new June Raptor types available in RFC<br>
+- In your Raptor Pen, check out RaptorDex. This is a great new way to track all of your Raptor types at a glance. You can see which you have unlocked and tap to filter your Raptor Pen by each type.<br>
+- There are a couple rare items moving around the Explore locations this month. Keep an eye out!<br>
+- There are a few perks on sale a the <a href="https://farmrpg.com/index.php#!/supply.php" style="color: crimson;font-weight:bold;text-decoration:underline">Farm Supply</a><br>
+<br>
+DEVELOPMENT BREAK<br>
+- A lot of content dropped in May and with that firestream is going to take a 2-week break from development.<br>
+- In his absence, <strong>Forcepath</strong> will be working hard to drop nightmarish quests while <strong>Tenfoo</strong> occasionally helps. Keep an eye out for new help requests, passwords or quizzes!<br>
+"""  # noqa: E501
+    )
+
+    assert (
+        updates[0].text_content
+        == """JUNE STARTER PACK AVAILABLE:
+- This month, the starter pack contains Holger's Lunch Box
+- The Lunch Box has a number of meals, including a new item -> Lemon Cream Pie
+- Lemon Cream Pie allows you to use 5x Arnold Palmers per tap and is pretty handy
+- Also, look for the quest 'Sweet Days of Summer' for an extra bonus!
+- You can get the Starter Pack here -> Gold
+
+MEDIUM UPDATES:
+- The Soap Shop has been updated with new items
+- There are new June Raptor types available in RFC
+- In your Raptor Pen, check out RaptorDex. This is a great new way to track all of your Raptor types at a glance. You can see which you have unlocked and tap to filter your Raptor Pen by each type.
+- There are a couple rare items moving around the Explore locations this month. Keep an eye out!
+- There are a few perks on sale a the Farm Supply
+
+DEVELOPMENT BREAK
+- A lot of content dropped in May and with that firestream is going to take a 2-week break from development.
+- In his absence, Forcepath will be working hard to drop nightmarish quests while Tenfoo occasionally helps. Keep an eye out for new help requests, passwords or quizzes!"""  # noqa: E501
     )
