@@ -1,3 +1,4 @@
+import urllib.parse
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -59,6 +60,7 @@ class QuestAPISerializer(serializers.ModelSerializer):
         if data["author"] == "":
             data["author"] = None
         data["pred"] = None if data["pred_id"] == 0 else data["pred_id"]
-        if not data.get("npc_img"):
-            data["npc_img"] = "missing.png"
+        data["npc_img"] = urllib.parse.urljoin(
+            "/img/items/", data.get("npc_img", "missing.png")
+        )
         return super().to_internal_value(data)
