@@ -46,8 +46,7 @@ class Quest:
     questlines: list["QuestlineStep"]
 
     completed_count: auto
-
-    created_at: auto
+    is_hidden: auto
 
 
 @gql.django.type(models.QuestItemRequired)

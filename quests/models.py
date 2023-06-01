@@ -1,7 +1,12 @@
+import datetime
+
 import pghistory
 from django.db import models
 
 from items.models import Item
+
+# The interval at which quests become visible even with no completion.
+QUEST_REVEAL_THRESHOLD = datetime.timedelta(days=5)
 
 
 @pghistory.track(pghistory.Snapshot(), exclude=["modified_at", "completed_count"])
@@ -43,6 +48,13 @@ class Quest(models.Model):
 
     def __str__(self) -> str:
         return self.title
+
+    @property
+    def is_hidden(self) -> bool:
+        return (
+            self.completed_count == 0
+            and (datetime.datetime.now() - self.created_at) < QUEST_REVEAL_THRESHOLD
+        )
 
 
 @pghistory.track(pghistory.Snapshot())
