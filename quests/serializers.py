@@ -61,6 +61,6 @@ class QuestAPISerializer(serializers.ModelSerializer):
             data["author"] = None
         data["pred"] = None if data["pred_id"] == 0 else data["pred_id"]
         data["npc_img"] = urllib.parse.urljoin(
-            "/img/items/", data.get("npc_img", "missing.png")
+            "/img/items/", data.get("npc_img") or "missing.png"
         )
         return super().to_internal_value(data)
