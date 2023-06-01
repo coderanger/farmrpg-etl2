@@ -19,6 +19,8 @@ CONTENT_SEL = CSSSelector("div.card-content-inner")
 ID_RE = re.compile(r"\?id=(\d+)")
 GAME_PAGE_RE = re.compile(r"^[a-zA-Z0-9_-]+\.php(\?.*)?(#.*)?$")
 NEWLINES_RE = re.compile("\n{2,}")
+FORCEPATH_RE = re.compile(r"<strong>\w+path</strong>")
+TENFOO_RE = re.compile(r"<strong>\w+foo</strong>")
 
 
 @attrs.define
@@ -45,6 +47,9 @@ def parse_updates(page: bytes) -> Iterable[dict[str, Any]]:
         date = dateutil.parser.parse("".join(date_elm.itertext())).date()
         inner_content = "".join(tostring(e, encoding="unicode") for e in content_elm)
         content = f"{content_elm.text}{inner_content}"
+        # Fix the change-every-time-they-render macros
+        content = FORCEPATH_RE.sub("<strong>Forcepath</strong>", content)
+        content = TENFOO_RE.sub("<strong>Tenfoo</strong>", content)
         item_names = set()
 
         # Generate a version of the content that has no relative links.
