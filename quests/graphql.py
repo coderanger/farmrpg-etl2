@@ -47,6 +47,8 @@ class Quest:
 
     completed_count: auto
 
+    created_at: auto
+
 
 @gql.django.type(models.QuestItemRequired)
 class QuestItemRequired:
