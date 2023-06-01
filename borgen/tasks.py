@@ -15,7 +15,7 @@ log = structlog.stdlib.get_logger(mod=__name__)
 
 async def scrape_all_from_html():
     today = datetime.datetime.now(tz=SERVER_TIME).date()
-    if today.weekday != 2:
+    if today.weekday() != 2:
         # Only run it on Wednesdays.
         return
 
