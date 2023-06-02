@@ -32,7 +32,7 @@ async def scrape_all_from_html():
     for data in parse_manage_npc(resp.content):
         log.debug("Updating NPC", id=data.get("id"), name=data.get("name"))
         npc, _ = await NPC.objects.aupdate_or_create(
-            id=data["id"], defaults={"name": data["name"], "image": data["image"]}
+            id=data["id"], defaults={"name": data["name"], "image": "/" + data["image"]}
         )
         await _update_items(npc, "loves", data["loves"])
         await _update_items(npc, "likes", data["likes"])

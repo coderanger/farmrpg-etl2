@@ -38,7 +38,7 @@ class NPCAdmin(admin.ModelAdmin):
 
     @admin.display(description="image")
     def admin_inline_image(self, npc: NPC):
-        return format_html('<img src="https://farmrpg.com/{}" />', npc.image)
+        return format_html('<img src="https://farmrpg.com{}" />', npc.image)
 
     def has_add_permission(self, request: HttpRequest) -> bool:
         return False
