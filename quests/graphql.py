@@ -67,6 +67,7 @@ class QuestItemReward:
 
 @gql.django.filters.filter(models.Questline)
 class QuestlineFilter:
+    id: int
     title: auto
 
 
