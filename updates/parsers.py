@@ -22,6 +22,7 @@ GAME_PAGE_RE = re.compile(r"^[a-zA-Z0-9_-]+\.php(\?.*)?(#.*)?$")
 NEWLINES_RE = re.compile("\n{2,}")
 FORCEPATH_RE = re.compile(r"^\w+path$")
 TENFOO_RE = re.compile(r"^\w+foo$")
+FIRESTREAM_RE = re.compile(r"^\w+stream$")
 
 
 @attrs.define
@@ -52,6 +53,8 @@ def parse_updates(page: bytes) -> Iterable[ParsedUpdate]:
                 strong_elm.text = "Forcepath"
             elif TENFOO_RE.match(strong_elm.text):
                 strong_elm.text = "Tenfoo"
+            elif FIRESTREAM_RE.match(strong_elm.text):
+                strong_elm.text = "Firestream"
         inner_content = "".join(tostring(e, encoding="unicode") for e in content_elm)
         content = f"{content_elm.text}{inner_content}"
         item_names = set()
