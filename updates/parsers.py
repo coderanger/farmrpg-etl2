@@ -1,7 +1,7 @@
 import datetime
 import re
 import urllib.parse
-from typing import Any, Iterable
+from typing import Iterable
 
 import attrs
 import dateutil.parser
