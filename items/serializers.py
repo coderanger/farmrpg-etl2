@@ -39,4 +39,6 @@ class ItemAPISerializer(serializers.ModelSerializer):
         data["cooking_recipe_item"] = (
             None if data["cooking_recipe_id"] == 0 else data["cooking_recipe_id"]
         )
+        # Until this is exposed in the API.
+        data["manual_fishing_only"] = data["name"] in Item.MANUAL_FISHING_ONLY
         return super().to_internal_value(data)

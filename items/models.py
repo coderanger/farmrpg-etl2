@@ -41,6 +41,23 @@ class Item(models.Model):
         blank=True,
     )
 
+    MANUAL_FISHING_ONLY = {
+        "Gold Catfish",
+        "Gold Coral",
+        "Gold Drum",
+        "Gold Flier",
+        "Gold Jelly",
+        "Gold Sea Bass",
+        "Gold Sea Crest",
+        "Gold Trout",
+        "Goldfin",
+        "Goldgill",
+        "Goldjack",
+        "Goldray",
+    }
+
+    manual_fishing_only = models.BooleanField(default=False)
+
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
 

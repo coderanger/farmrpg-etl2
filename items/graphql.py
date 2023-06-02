@@ -46,6 +46,7 @@ class Item:
     min_mailable_level: auto
     locksmith_grab_bag: bool
     locksmith_gold: auto
+    manual_fishing_only: auto
     required_for_quests: list[
         Annotated["QuestItemRequired", gql.lazy("quests.graphql")]
     ]
