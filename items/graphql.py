@@ -25,7 +25,13 @@ class ItemFilter:
     name: auto
 
 
-@gql.django.type(models.Item, filters=ItemFilter)
+@gql.django.ordering.order(models.Item)
+class ItemOrder:
+    id: auto
+    name: auto
+
+
+@gql.django.type(models.Item, filters=ItemFilter, order=ItemOrder)
 class Item:
     id: int
     name: auto
