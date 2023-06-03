@@ -1,5 +1,6 @@
 from strawberry_django_plus import gql
 from strawberry_django_plus.gql import auto
+from django.db.models import QuerySet
 
 from . import models
 
@@ -10,6 +11,12 @@ class EmblemFilter:
     type: auto
     name: auto
     keywords: auto
+    non_staff: bool | None
+
+    def filter_non_staff(self, queryset: QuerySet[models.Emblem]) -> bool:
+        if self.non_staff:
+            return queryset.exclude(type="staff")
+        return queryset
 
 
 @gql.django.type(models.Emblem, filters=EmblemFilter)
