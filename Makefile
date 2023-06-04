@@ -1,5 +1,5 @@
 develop:
-	python -m uvicorn --reload etl.asgi:application
+	python -m uvicorn --reload etl.asgi:application --port 8001
 
 sdevelop:
 	env SYNC_DEVELOP=1 python manage.py runserver
