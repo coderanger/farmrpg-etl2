@@ -1,12 +1,20 @@
 from strawberry_django_plus import gql
 from strawberry_django_plus.gql import auto
 
-from items.graphql import Item
+from items.graphql import Item, ItemOrder
 
 from . import models
 
 
-@gql.django.type(models.Trade)
+@gql.django.ordering.order(models.Trade)
+class TradeOrder:
+    first_seen: auto
+    last_seen: auto
+    input_item: ItemOrder
+    output_item: ItemOrder
+
+
+@gql.django.type(models.Trade, order=TradeOrder)
 class Trade:
     input_item: Item
     input_quantity: auto
