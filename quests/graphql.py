@@ -14,7 +14,14 @@ class QuestFilter:
     title: auto
 
 
-@gql.django.type(models.Quest, filters=QuestFilter)
+@gql.django.ordering.order(models.Quest)
+class QuestOrder:
+    id: auto
+    title: auto
+    created_at: auto
+
+
+@gql.django.type(models.Quest, filters=QuestFilter, order=QuestOrder, pagination=True)
 class Quest:
     id: int
     npc: auto

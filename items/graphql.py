@@ -29,9 +29,10 @@ class ItemFilter:
 class ItemOrder:
     id: auto
     name: auto
+    created_at: auto
 
 
-@gql.django.type(models.Item, filters=ItemFilter, order=ItemOrder)
+@gql.django.type(models.Item, filters=ItemFilter, order=ItemOrder, pagination=True)
 class Item:
     id: int
     name: auto
@@ -134,7 +135,17 @@ class SkillLevelRewardFilter:
     level: auto
 
 
-@gql.django.type(models.SkillLevelReward, filters=SkillLevelRewardFilter)
+@gql.django.ordering.order(models.SkillLevelReward)
+class SkillLevelRewardOrder:
+    id: auto
+    skill: auto
+    level: auto
+    order: auto
+
+
+@gql.django.type(
+    models.SkillLevelReward, filters=SkillLevelRewardFilter, order=SkillLevelRewardOrder
+)
 class SkillLevelReward:
     skill: auto
     level: auto
