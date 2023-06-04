@@ -165,5 +165,7 @@ class SkillLevelRewardAdmin(admin.ModelAdmin):
             return f"Silver (x{obj.silver})"
         elif obj.gold is not None:
             return f"Gold (x{obj.gold})"
+        elif obj.ak is not None:
+            return f"AK (x{obj.ak})"
         else:
             return f"{obj.item.name} (x{obj.item_quantity})"

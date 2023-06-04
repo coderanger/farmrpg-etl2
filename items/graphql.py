@@ -131,6 +131,7 @@ class ManualProduction:
 
 @gql.django.filters.filter(models.SkillLevelReward)
 class SkillLevelRewardFilter:
+    id: int
     skill: auto
     level: auto
 
@@ -147,10 +148,12 @@ class SkillLevelRewardOrder:
     models.SkillLevelReward, filters=SkillLevelRewardFilter, order=SkillLevelRewardOrder
 )
 class SkillLevelReward:
+    id: int
     skill: auto
     level: auto
     order: auto
     silver: auto
     gold: auto
+    ak: auto
     item: Item | None
     item_quantity: auto

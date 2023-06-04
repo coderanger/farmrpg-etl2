@@ -164,6 +164,7 @@ class SkillLevelReward(models.Model):
     order = models.IntegerField(db_index=True)
     silver = models.BigIntegerField(null=True, blank=True)
     gold = models.IntegerField(null=True, blank=True)
+    ak = models.IntegerField(null=True, blank=True)
     item = models.ForeignKey(
         Item,
         on_delete=models.CASCADE,
@@ -183,14 +184,30 @@ class SkillLevelReward(models.Model):
             ),
             models.CheckConstraint(
                 check=models.Q(
-                    silver__isnull=False, gold=None, item=None, item_quantity=None
+                    silver__isnull=False,
+                    gold=None,
+                    ak=None,
+                    item=None,
+                    item_quantity=None,
                 )
                 | models.Q(
-                    silver=None, gold__isnull=False, item=None, item_quantity=None
+                    silver=None,
+                    gold__isnull=False,
+                    ak=None,
+                    item=None,
+                    item_quantity=None,
                 )
                 | models.Q(
                     silver=None,
                     gold=None,
+                    ak__isnull=False,
+                    item=None,
+                    item_quantity=None,
+                )
+                | models.Q(
+                    silver=None,
+                    gold=None,
+                    ak=None,
                     item__isnull=False,
                     item_quantity__isnull=False,
                 ),
