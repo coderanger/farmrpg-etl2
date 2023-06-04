@@ -14,6 +14,7 @@ from borgen.graphql import BorgenItem
 from community_center.graphql import CommunityCenter
 from pbgs.graphql import ProfileBackground
 from tower.graphql import TowerReward
+from passwords.graphql import PasswordGroup, Password
 
 
 @gql.type
@@ -33,6 +34,8 @@ class Query:
     profile_backgrounds: list[ProfileBackground] = gql.django.field()
     tower_rewards: list[TowerReward] = gql.django.field()
     skill_level_rewards: list[SkillLevelReward] = gql.django.field()
+    password_groups: list[PasswordGroup] = gql.django.field()
+    password: list[Password] = gql.django.field()
 
 
 schema = gql.Schema(
