@@ -69,7 +69,7 @@ class Item:
     wishing_well_input_items: list["WishingWellItem"]
     wishing_well_output_items: list["WishingWellItem"]
     recipe_items: list["RecipeItem"]
-    recipe_ingredient_tiems: list["RecipeItem"]
+    recipe_ingredient_items: list["RecipeItem"]
     locksmith_items: list["LocksmithItem"]
     locksmith_output_items: list["LocksmithItem"]
     locksmith_key: Optional["Item"]
