@@ -35,7 +35,7 @@ class Query:
     tower_rewards: list[TowerReward] = gql.django.field()
     skill_level_rewards: list[SkillLevelReward] = gql.django.field()
     password_groups: list[PasswordGroup] = gql.django.field()
-    password: list[Password] = gql.django.field()
+    passwords: list[Password] = gql.django.field()
 
 
 schema = gql.Schema(
