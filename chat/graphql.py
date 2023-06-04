@@ -13,7 +13,7 @@ class EmblemFilter:
     keywords: auto
     non_staff: bool | None
 
-    def filter_non_staff(self, queryset: QuerySet[models.Emblem]) -> bool:
+    def filter_non_staff(self, queryset: QuerySet[models.Emblem]) -> QuerySet[models.Emblem]:
         if self.non_staff:
             return queryset.exclude(type="staff")
         return queryset
