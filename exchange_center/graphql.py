@@ -16,6 +16,7 @@ class TradeOrder:
 
 @gql.django.type(models.Trade, order=TradeOrder)
 class Trade:
+    id: int
     input_item: Item
     input_quantity: auto
     output_item: Item
