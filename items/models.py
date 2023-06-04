@@ -33,7 +33,9 @@ class Item(models.Model):
         blank=True,
     )
 
-    cooking_recipe_item = models.OneToOneField(
+    # This should be a OneToOneField but that triggers a bug in Strawberry.
+    # https://github.com/blb-ventures/strawberry-django-plus/issues/222
+    cooking_recipe_item = models.ForeignKey(
         "Item",
         on_delete=models.SET_NULL,
         related_name="cooking_recipe_cookable",
