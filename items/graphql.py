@@ -43,6 +43,7 @@ class Item:
     can_sell: auto
     can_mail: auto
     can_craft: auto
+    can_cook: auto
     can_master: auto
     description: auto
     buy_price: auto

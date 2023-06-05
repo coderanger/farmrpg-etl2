@@ -8,6 +8,7 @@ class ItemAPISerializer(serializers.ModelSerializer):
     img = serializers.CharField(source="image")
     mailable = serializers.BooleanField(source="can_mail")
     craftable = serializers.BooleanField(source="can_craft")
+    cookable = serializers.BooleanField(source="can_cook")
     masterable = serializers.BooleanField(source="can_master")
 
     class Meta:
@@ -22,6 +23,7 @@ class ItemAPISerializer(serializers.ModelSerializer):
             "can_sell",
             "mailable",
             "craftable",
+            "cookable",
             "masterable",
             "description",
             "buy_price",

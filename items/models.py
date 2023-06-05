@@ -12,6 +12,7 @@ class Item(models.Model):
     can_sell = models.BooleanField()
     can_mail = models.BooleanField()
     can_craft = models.BooleanField()
+    can_cook = models.BooleanField()
     can_master = models.BooleanField()
     description = models.TextField(blank=True)
     buy_price = models.IntegerField()
