@@ -14,6 +14,7 @@ class ItemFactory(factory.django.DjangoModelFactory):
     can_sell = False
     can_mail = False
     can_craft = False
+    can_cook = False
     can_master = False
     buy_price = 0
     sell_price = 0
