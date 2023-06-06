@@ -12,7 +12,13 @@ class PetFilter:
     name: auto
 
 
-@gql.django.type(models.Pet, filters=PetFilter)
+@gql.django.ordering.order(models.Pet)
+class PetOrder:
+    id: auto
+    name: auto
+
+
+@gql.django.type(models.Pet, filters=PetFilter, order=PetOrder)
 class Pet:
     id: int = gql.field(resolver=lambda self: self.game_id)
     name: auto
@@ -27,7 +33,13 @@ class Pet:
     pet_items: list["PetItem"]
 
 
-@gql.django.type(models.PetItem)
+@gql.django.ordering.order(models.PetItem)
+class PetItemOrder:
+    level: auto
+    pet: PetOrder
+
+
+@gql.django.type(models.PetItem, order=PetItemOrder)
 class PetItem:
     id: int
     pet: Pet
