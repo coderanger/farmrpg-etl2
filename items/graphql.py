@@ -76,7 +76,7 @@ class Item:
     locksmith_key: Optional["Item"]
     locksmith_key_items: list["Item"]
     cooking_recipe_item: Optional["Item"]
-    cooking_recipe_cookable: list["Item"]
+    cooking_recipe_cookable: Optional["Item"]
     manual_productions: list["ManualProduction"]
     exchange_center_inputs: list[
         Annotated["Trade", gql.lazy("exchange_center.graphql")]
