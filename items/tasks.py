@@ -57,25 +57,29 @@ async def scrape_from_html(item_id: int):
         id__in=seen_recipe_ids
     ).adelete()
 
-    seen_locksmith_id = []
-    for parsed_locksmith in parsed.locksmith:
-        if parsed_locksmith.gold:
-            await Item.objects.filter(id=item_id).aupdate(
-                locksmith_gold=parsed_locksmith.quantity
-            )
-        else:
-            locksmith, _ = await LocksmithItem.objects.aupdate_or_create(
-                item_id=item_id,
-                output_item_id=parsed_locksmith.id,
-                defaults={
-                    "quantity_min": parsed_locksmith.quantity,
-                    "quantity_max": parsed_locksmith.quantity,
-                },
-            )
-            seen_locksmith_id.append(locksmith.id)
-    await LocksmithItem.objects.filter(item_id=item_id).exclude(
-        id__in=seen_locksmith_id
-    ).adelete()
+    grab_bag = await Item.objects.values_list("locksmith_grab_bag", flat=True).aget(
+        id=item_id
+    )
+    if grab_bag:
+        seen_locksmith_id = []
+        for parsed_locksmith in parsed.locksmith:
+            if parsed_locksmith.gold:
+                await Item.objects.filter(id=item_id).aupdate(
+                    locksmith_gold=parsed_locksmith.quantity
+                )
+            else:
+                locksmith, _ = await LocksmithItem.objects.aupdate_or_create(
+                    item_id=item_id,
+                    output_item_id=parsed_locksmith.id,
+                    defaults={
+                        "quantity_min": parsed_locksmith.quantity,
+                        "quantity_max": parsed_locksmith.quantity,
+                    },
+                )
+                seen_locksmith_id.append(locksmith.id)
+        await LocksmithItem.objects.filter(item_id=item_id).exclude(
+            id__in=seen_locksmith_id
+        ).adelete()
 
 
 async def scrape_all():
