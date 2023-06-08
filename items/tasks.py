@@ -57,10 +57,8 @@ async def scrape_from_html(item_id: int):
         id__in=seen_recipe_ids
     ).adelete()
 
-    grab_bag = await Item.objects.values_list("locksmith_grab_bag", flat=True).aget(
-        id=item_id
-    )
-    if grab_bag:
+    item = await Item.objects.only("locksmith_grab_bag").filter(id=item_id).afirst()
+    if item is not None and item.locksmith_grab_bag:
         seen_locksmith_id = []
         for parsed_locksmith in parsed.locksmith:
             if parsed_locksmith.gold:
