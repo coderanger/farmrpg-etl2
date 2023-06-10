@@ -13,7 +13,17 @@ class LocationFilter:
     name: auto
 
 
-@gql.django.type(models.Location, filters=LocationFilter)
+@gql.django.ordering.order(models.Location)
+class LocationOrder:
+    # It's annoying to have to call it game_id but there's no provisions for
+    # custom ordering so I can't make a lie-alias like in the main type. Oh well.
+    id: auto
+    game_id: auto
+    type: auto
+    name: auto
+
+
+@gql.django.type(models.Location, filters=LocationFilter, order=LocationOrder)
 class Location:
     id: int = gql.field(resolver=lambda self: self.game_id)
     type: auto
