@@ -16,6 +16,7 @@ class Item(models.Model):
     can_master = models.BooleanField()
     description = models.TextField(blank=True)
     buy_price = models.IntegerField()
+    flea_market_price = models.IntegerField(null=True, blank=True)
     sell_price = models.IntegerField()
     crafting_level = models.IntegerField()
     cooking_level = models.IntegerField(null=True, blank=True)

@@ -27,6 +27,11 @@ def cornucopia() -> bytes:
     return FIXTURES_ROOT.joinpath("item_cornucopia.html").open("rb").read()
 
 
+@pytest.fixture
+def gb02() -> bytes:
+    return FIXTURES_ROOT.joinpath("item_grab_bag_02.html").open("rb").read()
+
+
 def test_parse_recipe(scissors: bytes):
     item = parse_item(scissors)
     assert item.recipe == [
@@ -55,6 +60,11 @@ def test_parse_locksmith_gold(cornucopia: bytes):
     item = parse_item(cornucopia)
     assert item.recipe == []
     assert item.locksmith[0] == ParsedIngredient(id=0, gold=True, quantity=25)
+
+
+def test_parse_fleamarket(gb02: bytes):
+    item = parse_item(gb02)
+    assert item.flea_market_price == 4
 
 
 @pytest.mark.django_db

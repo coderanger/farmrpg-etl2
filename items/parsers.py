@@ -12,10 +12,12 @@ from utils.parsers import (
 )
 
 ITEM_SEL = CSSSelector("a.item-link")
-TITLE_SEL = CSSSelector("div.item-title strong")
+TITLE_SEL = CSSSelector("div.item-title")
+TITLE_STRONG_SEL = CSSSelector("div.item-title strong")
 AFTER_SEL = CSSSelector("div.item-after")
 ITEM_LINK_RE = re.compile(r"^item\.php\?id=(\d+)$")
 AFTER_RE = re.compile(r"(\d+)x")
+FLEA_MARKET_RE = re.compile(r"([0-9,]+) Gold")
 
 
 @attrs.define
@@ -29,14 +31,15 @@ class ParsedIngredient:
 class ParsedItem:
     recipe: list[ParsedIngredient]
     locksmith: list[ParsedIngredient]
+    flea_market_price: int | None
 
 
-def _parse_item_section(elm: _Element | None) -> Iterable[ParsedIngredient]:
+def _parse_recipe(elm: _Element | None) -> Iterable[ParsedIngredient]:
     if elm is None:
         return
 
     for item_elm in ITEM_SEL(elm.getnext()):
-        title_elm = sel_first_or_die(TITLE_SEL(item_elm), "Unable to find title")
+        title_elm = sel_first_or_die(TITLE_STRONG_SEL(item_elm), "Unable to find title")
         after_elm = sel_first_or_die(AFTER_SEL(item_elm), "Unable to find item-after")
 
         if title_elm.text.strip() == "Gold":
@@ -62,12 +65,26 @@ def _parse_item_section(elm: _Element | None) -> Iterable[ParsedIngredient]:
 
 def parse_item(content: bytes) -> ParsedItem:
     root = parse_page_fragment(content)
-    crafting_recipe = list(_parse_item_section(parse_section(root, "Crafting Recipe")))
-    cooking_recipe = list(_parse_item_section(parse_section(root, "Cooking Recipe")))
+    crafting_recipe = list(_parse_recipe(parse_section(root, "Crafting Recipe")))
+    cooking_recipe = list(_parse_recipe(parse_section(root, "Cooking Recipe")))
     assert not (
         crafting_recipe and cooking_recipe
     ), "Both crafting and cooking recipes set"
+
+    flea_market_price = None
+    details = parse_section(root, "Item Details")
+    assert details is not None
+    for elm in TITLE_SEL(details):
+        if elm.text.strip() == "Flea Market":
+            after_elm = sel_first_or_die(
+                AFTER_SEL(elm.getparent()), "Unable to find item-after"
+            )
+            after_md = FLEA_MARKET_RE.search(after_elm.text)
+            assert after_md is not None
+            flea_market_price = int(after_md[1].replace(",", ""))
+
     return ParsedItem(
         recipe=crafting_recipe or cooking_recipe,
-        locksmith=list(_parse_item_section(parse_section(root, "Item Contents"))),
+        locksmith=list(_parse_recipe(parse_section(root, "Item Contents"))),
+        flea_market_price=flea_market_price,
     )

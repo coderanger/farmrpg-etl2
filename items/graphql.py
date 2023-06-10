@@ -50,6 +50,7 @@ class Item:
     can_master: auto
     description: auto
     buy_price: auto
+    flea_market_price: auto
     sell_price: auto
     crafting_level: auto
     cooking_level: auto

@@ -45,6 +45,10 @@ async def scrape_from_html(item_id: int):
     resp.raise_for_status()
     parsed = parse_item(resp.content)
 
+    await Item.objects.filter(id=item_id).aupdate(
+        flea_market_price=parsed.flea_market_price
+    )
+
     seen_recipe_ids = []
     for parsed_recipe in parsed.recipe:
         recipe, _ = await RecipeItem.objects.aupdate_or_create(
@@ -89,11 +93,11 @@ async def scrape_all():
         try:
             await scrape_from_api(cur_id)
             missing = 0  # It worked so reset the count.
+            await scrape_from_html(cur_id)
         except ItemNotFound:
             missing += 1
             if missing >= MAX_ITEM_ID_GAP:
                 break
-        await scrape_from_html(cur_id)
         cur_id += 1
 
 
