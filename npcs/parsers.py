@@ -2,7 +2,12 @@ from typing import Any, Iterable
 
 from lxml.html import html5parser
 
-from utils.parsers import CSSSelector, sel_first_or_die, de_namespace
+from utils.parsers import (
+    CSSSelector,
+    sel_first_or_die,
+    de_namespace,
+    parse_page_fragment,
+)
 
 TR_SEL = CSSSelector("tr:not(tr:first-of-type)")
 TD_ID_SEL = CSSSelector("td:nth-of-type(1)")
@@ -11,6 +16,7 @@ TD_IMAGE_SEL = CSSSelector("td:nth-of-type(3) img")
 TD_LIKES_SEL = CSSSelector("td:nth-of-type(10)")
 TD_LOVES_SEL = CSSSelector("td:nth-of-type(11)")
 TD_HATES_SEL = CSSSelector("td:nth-of-type(12)")
+A_MAILBOX_SEL = CSSSelector("a[href^='mailbox.php?id=']")
 
 
 def parse_manage_npc(page: bytes) -> Iterable[dict[str, Any]]:
@@ -45,3 +51,9 @@ def parse_manage_npc(page: bytes) -> Iterable[dict[str, Any]]:
                 val.strip() for val in (hates_elm.text or "").split(",") if val.strip()
             ],
         }
+
+
+def parse_npclevels(page: bytes) -> Iterable[int]:
+    root = parse_page_fragment(page)
+    for elm in A_MAILBOX_SEL(root):
+        yield int(elm.get("href")[15:])

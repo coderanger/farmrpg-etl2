@@ -4,7 +4,7 @@ from items.models import Item
 from utils.http import client
 
 from .models import NPC, NPCItem
-from .parsers import parse_manage_npc
+from .parsers import parse_manage_npc, parse_npclevels
 
 log = structlog.stdlib.get_logger(mod=__name__)
 
@@ -27,12 +27,21 @@ async def _update_items(npc: NPC, relationship: str, item_names: list[str]):
 
 
 async def scrape_all_from_html():
+    resp = await client.get("/npclevels.php")
+    resp.raise_for_status()
+    available_ids = set(parse_npclevels(resp.content))
+
     resp = await client.get("/manage_npc.php")
     resp.raise_for_status()
     for data in parse_manage_npc(resp.content):
         log.debug("Updating NPC", id=data.get("id"), name=data.get("name"))
         npc, _ = await NPC.objects.aupdate_or_create(
-            id=data["id"], defaults={"name": data["name"], "image": "/" + data["image"]}
+            id=data["id"],
+            defaults={
+                "name": data["name"],
+                "image": "/" + data["image"],
+                "is_available": data["id"] in available_ids,
+            },
         )
         await _update_items(npc, "loves", data["loves"])
         await _update_items(npc, "likes", data["likes"])

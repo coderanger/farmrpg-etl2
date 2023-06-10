@@ -11,6 +11,7 @@ class NPCFilter:
     id: auto
     name: auto
     short_name: auto
+    is_available: auto
 
 
 @gql.django.ordering.order(models.NPC)
@@ -26,6 +27,7 @@ class NPC:
     name: auto
     image: auto
     short_name: auto
+    is_available: auto
 
     npc_items: list["NPCItem"]
     npc_rewards: list["NPCReward"]

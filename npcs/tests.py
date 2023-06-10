@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from .parsers import parse_manage_npc
+from .parsers import parse_manage_npc, parse_npclevels
 
 FIXTURES_ROOT = Path(__file__).joinpath("../fixtures").resolve()
 
@@ -10,6 +10,11 @@ FIXTURES_ROOT = Path(__file__).joinpath("../fixtures").resolve()
 @pytest.fixture
 def npc_page() -> bytes:
     return FIXTURES_ROOT.joinpath("npc.html").open("rb").read()
+
+
+@pytest.fixture
+def npclevels() -> bytes:
+    return FIXTURES_ROOT.joinpath("npclevels.html").open("rb").read()
 
 
 def test_parse_location(npc_page: bytes):
@@ -467,4 +472,29 @@ def test_parse_location(npc_page: bytes):
             "loves": [],
             "hates": [],
         },
+    ]
+
+
+def test_parse_npclevels(npclevels: bytes):
+    ids = list(parse_npclevels(npclevels))
+    assert ids == [
+        22438,
+        22439,
+        22440,
+        22441,
+        22442,
+        22443,
+        22444,
+        22445,
+        22446,
+        22447,
+        53900,
+        59421,
+        70604,
+        46158,
+        71760,
+        71761,
+        71805,
+        84518,
+        178572,
     ]

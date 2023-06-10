@@ -30,11 +30,11 @@ class NPCRewardInline(admin.TabularInline):
 
 @admin.register(NPC)
 class NPCAdmin(admin.ModelAdmin):
-    list_display = ["name", "admin_inline_image"]
+    list_display = ["name", "admin_inline_image", "is_available"]
     search_fields = ["id", "name"]
     inlines = [NPCItemInline, NPCRewardInline]
-    fields = ["name", "short_name", "image"]
-    readonly_fields = ["name", "image"]
+    fields = ["name", "short_name", "image", "is_available"]
+    readonly_fields = ["name", "image", "is_available"]
 
     @admin.display(description="image")
     def admin_inline_image(self, npc: NPC):
