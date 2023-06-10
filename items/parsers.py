@@ -32,6 +32,7 @@ class ParsedItem:
     recipe: list[ParsedIngredient]
     locksmith: list[ParsedIngredient]
     flea_market_price: int | None
+    from_event: bool
 
 
 def _parse_recipe(elm: _Element | None) -> Iterable[ParsedIngredient]:
@@ -72,19 +73,28 @@ def parse_item(content: bytes) -> ParsedItem:
     ), "Both crafting and cooking recipes set"
 
     flea_market_price = None
+    from_event = False
     details = parse_section(root, "Item Details")
     assert details is not None
     for elm in TITLE_SEL(details):
-        if elm.text.strip() == "Flea Market":
+        name = elm.text.strip()
+        if name == "Flea Market":
             after_elm = sel_first_or_die(
                 AFTER_SEL(elm.getparent()), "Unable to find item-after"
             )
             after_md = FLEA_MARKET_RE.search(after_elm.text)
             assert after_md is not None
             flea_market_price = int(after_md[1].replace(",", ""))
+        elif name == "Event Item":
+            after_elm = sel_first_or_die(
+                AFTER_SEL(elm.getparent()), "Unable to find item-after"
+            )
+            if "Yes" in after_elm.text:
+                from_event = True
 
     return ParsedItem(
         recipe=crafting_recipe or cooking_recipe,
         locksmith=list(_parse_recipe(parse_section(root, "Item Contents"))),
         flea_market_price=flea_market_price,
+        from_event=from_event,
     )

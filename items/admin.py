@@ -107,6 +107,7 @@ class ItemAdmin(admin.ModelAdmin):
         "locksmith_gold",
         "cooking_recipe_item",
         "manual_fishing_only",
+        "from_event",
     ]
     readonly_fields = [
         "name",
@@ -132,6 +133,7 @@ class ItemAdmin(admin.ModelAdmin):
         "locksmith_gold",
         "cooking_recipe_item",
         "manual_fishing_only",
+        "from_event",
     ]
     raw_id_fields = [
         "locksmith_key",

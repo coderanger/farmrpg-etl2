@@ -60,6 +60,7 @@ class Item:
     locksmith_grab_bag: bool
     locksmith_gold: auto
     manual_fishing_only: auto
+    from_event: auto
     required_for_quests: list[
         Annotated["QuestItemRequired", gql.lazy("quests.graphql")]
     ]

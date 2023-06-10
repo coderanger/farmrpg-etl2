@@ -46,7 +46,8 @@ async def scrape_from_html(item_id: int):
     parsed = parse_item(resp.content)
 
     await Item.objects.filter(id=item_id).aupdate(
-        flea_market_price=parsed.flea_market_price
+        flea_market_price=parsed.flea_market_price,
+        from_event=parsed.from_event,
     )
 
     seen_recipe_ids = []

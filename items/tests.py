@@ -32,6 +32,11 @@ def gb02() -> bytes:
     return FIXTURES_ROOT.joinpath("item_grab_bag_02.html").open("rb").read()
 
 
+@pytest.fixture
+def snowball() -> bytes:
+    return FIXTURES_ROOT.joinpath("item_snowball.html").open("rb").read()
+
+
 def test_parse_recipe(scissors: bytes):
     item = parse_item(scissors)
     assert item.recipe == [
@@ -42,6 +47,8 @@ def test_parse_recipe(scissors: bytes):
         ParsedIngredient(id=35, quantity=2),
     ]
     assert item.locksmith == []
+    assert item.flea_market_price is None
+    assert item.from_event is False
 
 
 def test_parse_locksmith(mc02: bytes):
@@ -65,6 +72,11 @@ def test_parse_locksmith_gold(cornucopia: bytes):
 def test_parse_fleamarket(gb02: bytes):
     item = parse_item(gb02)
     assert item.flea_market_price == 4
+
+
+def test_parse_event(snowball: bytes):
+    item = parse_item(snowball)
+    assert item.from_event is True
 
 
 @pytest.mark.django_db

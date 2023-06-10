@@ -24,6 +24,7 @@ class Item(models.Model):
     min_mailable_level = models.IntegerField()
     reg_weight = models.IntegerField()
     runecube_weight = models.IntegerField()
+    from_event = models.BooleanField(default=False)
 
     locksmith_grab_bag = models.BooleanField(null=True, default=False)
     locksmith_gold = models.IntegerField(null=True, blank=True)
