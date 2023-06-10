@@ -8,11 +8,23 @@ from . import models
 
 @gql.django.filters.filter(models.ProfileBackground)
 class ProfileBackgroundFilter:
+    id: auto
     game_id: auto
     name: auto
 
 
-@gql.django.type(models.ProfileBackground, filters=ProfileBackgroundFilter)
+@gql.django.ordering.order(models.ProfileBackground)
+class ProfileBackgroundOrder:
+    id: auto
+    game_id: auto
+    name: auto
+
+
+@gql.django.type(
+    models.ProfileBackground,
+    filters=ProfileBackgroundFilter,
+    order=ProfileBackgroundOrder,
+)
 class ProfileBackground:
     id: auto
     game_id: auto
