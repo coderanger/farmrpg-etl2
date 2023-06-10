@@ -22,7 +22,8 @@ class PasswordItemInline(admin.TabularInline):
 
 @admin.register(Password)
 class PasswordAdmin(admin.ModelAdmin):
-    list_display = ["password", "has_all_clues"]
+    list_display = ["password", "group", "has_all_clues"]
+    list_editable = ["group"]
     readonly_fields = [
         "password",
         "reward_silver",
