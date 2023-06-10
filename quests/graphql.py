@@ -78,7 +78,13 @@ class QuestlineFilter:
     title: auto
 
 
-@gql.django.type(models.Questline, filters=QuestlineFilter)
+@gql.django.ordering.order(models.Questline)
+class QuestlineOrder:
+    id: auto
+    title: auto
+
+
+@gql.django.type(models.Questline, filters=QuestlineFilter, order=QuestlineOrder)
 class Questline:
     id: int
     title: auto
