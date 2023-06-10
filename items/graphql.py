@@ -3,6 +3,9 @@ from typing import TYPE_CHECKING, Annotated, Optional
 from strawberry_django_plus import gql
 from strawberry_django_plus.gql import auto
 
+from community_center.graphql_extra import CommunityCenterOrder
+from pets.graphql_extra import PetItemOrder
+
 from . import models
 
 if TYPE_CHECKING:
@@ -59,7 +62,9 @@ class Item:
         Annotated["QuestItemRequired", gql.lazy("quests.graphql")]
     ]
     reward_for_quests: list[Annotated["QuestItemReward", gql.lazy("quests.graphql")]]
-    pet_items: list[Annotated["PetItem", gql.lazy("pets.graphql")]]
+    pet_items: list[Annotated["PetItem", gql.lazy("pets.graphql")]] = gql.django.field(
+        order=PetItemOrder
+    )
     location_items: list[Annotated["LocationItem", gql.lazy("locations.graphql")]]
     drop_rates: list[Annotated["DropRates", gql.lazy("locations.graphql")]]
     drop_rates_items: list[Annotated["DropRatesItem", gql.lazy("locations.graphql")]]
@@ -87,10 +92,10 @@ class Item:
     borgen_items: list[Annotated["BorgenItem", gql.lazy("borgen.graphql")]]
     community_center_inputs: list[
         Annotated["CommunityCenter", gql.lazy("community_center.graphql")]
-    ]
+    ] = gql.django.field(order=CommunityCenterOrder, pagination=True)
     community_center_outputs: list[
         Annotated["CommunityCenter", gql.lazy("community_center.graphql")]
-    ]
+    ] = gql.django.field(order=CommunityCenterOrder, pagination=True)
     profile_background_cost_items: list[
         Annotated["ProfileBackground", gql.lazy("pbgs.graphql")]
     ]

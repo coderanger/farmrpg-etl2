@@ -4,16 +4,11 @@ from strawberry_django_plus.gql import auto
 from items.graphql import Item
 
 from . import models
+from .graphql_extra import PetItemOrder, PetOrder
 
 
 @gql.django.filters.filter(models.Pet)
 class PetFilter:
-    id: auto
-    name: auto
-
-
-@gql.django.ordering.order(models.Pet)
-class PetOrder:
     id: auto
     name: auto
 
@@ -31,12 +26,6 @@ class Pet:
     required_exploring_level: auto
 
     pet_items: list["PetItem"]
-
-
-@gql.django.ordering.order(models.PetItem)
-class PetItemOrder:
-    level: auto
-    pet: PetOrder
 
 
 @gql.django.type(models.PetItem, order=PetItemOrder)
