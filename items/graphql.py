@@ -5,6 +5,7 @@ from strawberry_django_plus.gql import auto
 
 from community_center.graphql_extra import CommunityCenterOrder
 from pets.graphql_extra import PetItemOrder
+from tower.graphql_extra import TowerRewardOrder
 
 from . import models
 
@@ -100,7 +101,9 @@ class Item:
     profile_background_cost_items: list[
         Annotated["ProfileBackground", gql.lazy("pbgs.graphql")]
     ]
-    tower_rewards: list[Annotated["TowerReward", gql.lazy("tower.graphql")]]
+    tower_rewards: list[
+        Annotated["TowerReward", gql.lazy("tower.graphql")]
+    ] = gql.django.field(order=TowerRewardOrder)
     skill_level_rewards: list["SkillLevelReward"]
 
 

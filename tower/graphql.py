@@ -4,6 +4,7 @@ from strawberry_django_plus.gql import auto
 from items.graphql import Item
 
 from . import models
+from .graphql_extra import TowerRewardOrder
 
 
 @gql.django.filters.filter(models.TowerReward)
@@ -12,7 +13,7 @@ class TowerRewardFilter:
     order: auto
 
 
-@gql.django.type(models.TowerReward, filters=TowerRewardFilter)
+@gql.django.type(models.TowerReward, filters=TowerRewardFilter, order=TowerRewardOrder)
 class TowerReward:
     level: auto
     order: auto
