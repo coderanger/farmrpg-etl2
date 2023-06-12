@@ -34,6 +34,7 @@ class Quest:
     end_date: auto
     main_quest: auto
     description: auto
+    clean_description: auto
 
     required_silver: float
     required_farming_level: auto

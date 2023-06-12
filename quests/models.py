@@ -27,6 +27,7 @@ class Quest(models.Model):
     end_date = models.DateTimeField(null=True, blank=True)
     main_quest = models.BooleanField()
     description = models.TextField()
+    clean_description = models.TextField()
 
     required_silver = models.BigIntegerField()
     required_farming_level = models.IntegerField()

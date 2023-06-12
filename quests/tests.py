@@ -15,6 +15,7 @@ from .models import (
     QuestItemRewardEvent,
 )
 from .tasks import scrape_all_from_api
+from .html_sanitizer import sanitize_quest_description
 
 
 @pytest.fixture
@@ -392,3 +393,11 @@ def test_quest_scrape_pred_backwards(respx_mock, item1, item2):
     quest2 = Quest.objects.get(id=522)
     assert quest2.pred_id == 533
     assert quest2.pred.title == "99 Bottles XLVIII"
+
+
+def test_sanitize_quest_description_489778():
+    description = 'Buddy has been so happy since you repaired his peg leg. A few days have passed, and he knocks on your door. <br><br>"Hi best friend! Best friends give each other things, right? I have some things I want to give you! Do you have any things for me?"\r\n<br><br><marquee direction="down" width="400" height="100" behavior="alternate"><marquee behavior="alternate"><font size = "5"><font color="mediumseagreen">:D BEST FRIENDS FOREVER :D</font color></font size></marquee></marquee><br><br><br><br>'  # noqa: E501
+    assert (
+        sanitize_quest_description(description)
+        == 'Buddy has been so happy since you repaired his peg leg. A few days have passed, and he knocks on your door. <br><br>"Hi best friend! Best friends give each other things, right? I have some things I want to give you! Do you have any things for me?"\r\n<br><br><font size="5">:D BEST FRIENDS FOREVER :D</font>'  # noqa: E501
+    )

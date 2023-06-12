@@ -4,6 +4,7 @@ from zoneinfo import ZoneInfo
 
 from rest_framework import serializers
 
+from .html_sanitizer import sanitize_quest_description
 from .models import Quest
 
 SERVER_TIME = ZoneInfo("America/Chicago")
@@ -40,6 +41,7 @@ class QuestAPISerializer(serializers.ModelSerializer):
             "end_date",
             "main_quest",
             "description",
+            "clean_description",
             "required_silver",
             "required_farming_level",
             "required_fishing_level",
@@ -63,4 +65,5 @@ class QuestAPISerializer(serializers.ModelSerializer):
         data["npc_img"] = urllib.parse.urljoin(
             "/img/items/", data.get("npc_img") or "missing.png"
         )
+        data["clean_description"] = sanitize_quest_description(data["description"])
         return super().to_internal_value(data)
