@@ -28,6 +28,7 @@ def _sanitize_style(style: str) -> str:
 
 
 def sanitize_quest_description(description: str) -> str:
+    description = description.replace("{mycabbages}", "")
     root = html.fragment_fromstring(description, create_parent=True)
     CLEANER(root)
     for elm in root.iterdescendants():
