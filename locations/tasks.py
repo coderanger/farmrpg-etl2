@@ -54,6 +54,7 @@ MANUAL_FISHING_ONLY = {
     "Goldgill",
     "Goldjack",
     "Goldray",
+    "Gold Boot",
 }
 
 
