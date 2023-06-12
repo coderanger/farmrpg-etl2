@@ -72,7 +72,7 @@ async def update_questlines():
 
 async def update_items(quest_id: int, model: type, items: str):
     all_items = {}
-    for chunk in items.split(","):
+    for i, chunk in enumerate(items.split(",")):
         chunk = chunk.strip()
         if not chunk:
             continue
@@ -82,7 +82,9 @@ async def update_items(quest_id: int, model: type, items: str):
         item_id = int(raw_item_id)
         quantity = int(raw_quantity)
         await model.objects.aupdate_or_create(
-            quest_id=quest_id, item_id=item_id, defaults={"quantity": quantity}
+            quest_id=quest_id,
+            item_id=item_id,
+            defaults={"quantity": quantity, "order": i},
         )
         all_items[item_id] = quantity
     await model.objects.filter(quest_id=quest_id).exclude(

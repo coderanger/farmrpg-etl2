@@ -67,6 +67,7 @@ class QuestItemRequired(models.Model):
         Item, on_delete=models.CASCADE, related_name="required_for_quests"
     )
     quantity = models.IntegerField()
+    order = models.IntegerField()
 
 
 @pghistory.track(pghistory.Snapshot())
@@ -78,6 +79,7 @@ class QuestItemReward(models.Model):
         Item, on_delete=models.CASCADE, related_name="reward_for_quests"
     )
     quantity = models.IntegerField()
+    order = models.IntegerField()
 
 
 class Questline(models.Model):

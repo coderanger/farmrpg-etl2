@@ -10,11 +10,15 @@ from .models import Quest, QuestItemRequired, QuestItemReward, Questline, Questl
 class QuestItemRequiredInline(admin.TabularInline):
     model = QuestItemRequired
     extra = 0
+    order_by = ["order"]
+    fields = ["item", "quantity"]
 
 
 class QuestItemRewardInline(admin.TabularInline):
     model = QuestItemReward
     extra = 0
+    order_by = ["order"]
+    fields = ["item", "quantity"]
 
 
 @admin.register(Quest)
