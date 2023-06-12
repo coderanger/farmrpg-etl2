@@ -59,6 +59,7 @@ class Item(models.Model):
         "Goldgill",
         "Goldjack",
         "Goldray",
+        "Gold Boot",
     }
 
     manual_fishing_only = models.BooleanField(default=False)
