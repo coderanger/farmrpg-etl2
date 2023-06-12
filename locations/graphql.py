@@ -26,6 +26,7 @@ class LocationOrder:
 @gql.django.type(models.Location, filters=LocationFilter, order=LocationOrder)
 class Location:
     id: int = gql.field(resolver=lambda self: self.game_id)
+    game_id: auto
     type: auto
     name: auto
     image: auto
