@@ -35,6 +35,7 @@ class ItemAPISerializer(serializers.ModelSerializer):
             "reg_weight",
             "runecube_weight",
             "cooking_recipe_item",
+            "manual_fishing_only",
         ]
 
     def to_internal_value(self, data):
