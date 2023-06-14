@@ -10,6 +10,7 @@ class ItemAPISerializer(serializers.ModelSerializer):
     craftable = serializers.BooleanField(source="can_craft")
     cookable = serializers.BooleanField(source="can_cook")
     masterable = serializers.BooleanField(source="can_master")
+    manfish_only = serializers.BooleanField(source="manual_fishing_only")
 
     class Meta:
         model = Item
@@ -35,13 +36,11 @@ class ItemAPISerializer(serializers.ModelSerializer):
             "reg_weight",
             "runecube_weight",
             "cooking_recipe_item",
-            "manual_fishing_only",
+            "manfish_only",
         ]
 
     def to_internal_value(self, data):
         data["cooking_recipe_item"] = (
             None if data["cooking_recipe_id"] == 0 else data["cooking_recipe_id"]
         )
-        # Until this is exposed in the API.
-        data["manual_fishing_only"] = data["name"] in Item.MANUAL_FISHING_ONLY
         return super().to_internal_value(data)

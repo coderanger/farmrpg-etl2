@@ -41,22 +41,6 @@ SEEDS = {
     "Rice Seeds": ["Rice"],
 }
 
-MANUAL_FISHING_ONLY = {
-    "Gold Catfish",
-    "Gold Coral",
-    "Gold Drum",
-    "Gold Flier",
-    "Gold Jelly",
-    "Gold Sea Bass",
-    "Gold Sea Crest",
-    "Gold Trout",
-    "Goldfin",
-    "Goldgill",
-    "Goldjack",
-    "Goldray",
-    "Gold Boot",
-}
-
 
 async def scrape_from_html(loc_type: str, loc_id: int):
     log.debug("Scraping location from HTML", type=loc_type, id=loc_id)
@@ -171,7 +155,7 @@ async def update_drop_rates_for(drops_for: Location | Item, force: bool = False)
                 {
                     it.item.id: it.item.reg_weight
                     async for it in location.location_items.all()
-                    if it.item.name not in MANUAL_FISHING_ONLY
+                    if not it.item.manual_fishing_only
                 },
             ),
             # Manual fishing.
@@ -188,7 +172,7 @@ async def update_drop_rates_for(drops_for: Location | Item, force: bool = False)
                 {
                     it.item.id: it.item.runecube_weight
                     async for it in location.location_items.all()
-                    if it.item.name not in MANUAL_FISHING_ONLY
+                    if not it.item.manual_fishing_only
                 },
             ),
             # Runecube + manual fishing.
