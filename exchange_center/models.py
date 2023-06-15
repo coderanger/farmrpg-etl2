@@ -1,4 +1,5 @@
 from django.db import models
+import pghistory
 
 from items.models import Item
 
@@ -46,3 +47,22 @@ class TradeHistory(models.Model):
         constraints = [
             models.UniqueConstraint(fields=["trade", "seen_at"], name="trade_seen_at")
         ]
+
+
+@pghistory.track(pghistory.Snapshot(), exclude=["modified_at"])
+class CardsTrade(models.Model):
+    spades_quantity = models.IntegerField(null=True, blank=True)
+    hearts_quantity = models.IntegerField(null=True, blank=True)
+    diamonds_quantity = models.IntegerField(null=True, blank=True)
+    clubs_quantity = models.IntegerField(null=True, blank=True)
+    joker_quantity = models.IntegerField(null=True, blank=True)
+
+    output_item = models.ForeignKey(
+        Item, on_delete=models.CASCADE, related_name="cards_trades"
+    )
+    output_quantity = models.IntegerField()
+
+    is_disabled = models.BooleanField(default=False)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    modified_at = models.DateTimeField(auto_now=True)

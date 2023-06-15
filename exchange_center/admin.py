@@ -2,7 +2,7 @@ from django.contrib import admin
 
 from utils.admin import ReadOnlyAdmin
 
-from .models import Trade, TradeHistory
+from .models import Trade, TradeHistory, CardsTrade
 
 
 class TradeHistoryInline(admin.TabularInline):
@@ -21,3 +21,18 @@ class TradeAdmin(ReadOnlyAdmin):
         "last_seen",
     ]
     inlines = [TradeHistoryInline]
+
+
+@admin.register(CardsTrade)
+class CardsTradeAdmin(ReadOnlyAdmin):
+    list_display = [
+        "id",
+        "spades_quantity",
+        "hearts_quantity",
+        "diamonds_quantity",
+        "clubs_quantity",
+        "joker_quantity",
+        "output_item",
+        "output_quantity",
+        "is_disabled",
+    ]

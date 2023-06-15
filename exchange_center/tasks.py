@@ -2,10 +2,11 @@ import datetime
 from zoneinfo import ZoneInfo
 import structlog
 
+from items.models import Item
 from utils.http import client
 
-from .models import Trade, TradeHistory
-from .parsers import parse_exchange_center
+from .models import Trade, TradeHistory, CardsTrade
+from .parsers import parse_cards, parse_exchange_center
 
 SERVER_TIME = ZoneInfo("America/Chicago")
 
@@ -13,7 +14,7 @@ SERVER_TIME = ZoneInfo("America/Chicago")
 log = structlog.stdlib.get_logger(mod=__name__)
 
 
-async def scrape_all_from_html():
+async def scrape_trades_from_html():
     resp = await client.get("/exchange.php")
     resp.raise_for_status()
     # Compute the time for EC purposes.
@@ -33,3 +34,32 @@ async def scrape_all_from_html():
         if trade.last_seen != now:
             await Trade.objects.filter(id=trade.id).aupdate(last_seen=now)
         await TradeHistory.objects.aget_or_create(trade=trade, seen_at=now)
+
+
+async def scrape_cards_from_html():
+    resp = await client.get("/manage_hoc.php")
+    resp.raise_for_status()
+    seen_ids = []
+    for parsed in parse_cards(resp.content):
+        # Find the output item ID.
+        log.debug("Updating cards trade", id=parsed.id, output_item=parsed.output_item)
+        output_item_id = await Item.objects.values_list("id", flat=True).aget(
+            name=parsed.output_item
+        )
+        trade, _ = await CardsTrade.objects.aupdate_or_create(
+            id=parsed.id,
+            defaults={
+                "spades_quantity": parsed.spades_quantity,
+                "hearts_quantity": parsed.hearts_quantity,
+                "diamonds_quantity": parsed.diamonds_quantity,
+                "clubs_quantity": parsed.clubs_quantity,
+                "joker_quantity": parsed.joker_quantity,
+                "output_item_id": output_item_id,
+                "output_quantity": parsed.output_quantity,
+                "is_disabled": False,
+            },
+        )
+        seen_ids.append(trade.pk)
+    await CardsTrade.objects.filter(is_disabled=False).exclude(pk__in=seen_ids).aupdate(
+        is_disabled=True
+    )

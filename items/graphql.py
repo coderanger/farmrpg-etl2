@@ -4,10 +4,12 @@ from strawberry_django_plus import gql
 from strawberry_django_plus.gql import auto
 
 from community_center.graphql_extra import CommunityCenterOrder
+from exchange_center.graphql_extra import CardsTradeFilter, CardsTradeOrder
 from pets.graphql_extra import PetItemOrder
 from tower.graphql_extra import TowerRewardOrder
 
 from . import models
+from .graphql_extra import ItemFilter, ItemOrder
 
 if TYPE_CHECKING:
     from locations.graphql import DropRates, DropRatesItem, LocationItem
@@ -16,24 +18,11 @@ if TYPE_CHECKING:
     from pets.graphql import PetItem
     from quests.graphql import QuestItemRequired, QuestItemReward
     from quizzes.graphql import QuizReward
-    from exchange_center.graphql import Trade
+    from exchange_center.graphql import Trade, CardsTrade
     from borgen.graphql import BorgenItem
     from community_center.graphql import CommunityCenter
     from pbgs.graphql import ProfileBackground
     from tower.graphql import TowerReward
-
-
-@gql.django.filters.filter(models.Item)
-class ItemFilter:
-    id: auto
-    name: auto
-
-
-@gql.django.ordering.order(models.Item)
-class ItemOrder:
-    id: auto
-    name: auto
-    created_at: auto
 
 
 @gql.django.type(models.Item, filters=ItemFilter, order=ItemOrder, pagination=True)
@@ -92,6 +81,9 @@ class Item:
     exchange_center_outputs: list[
         Annotated["Trade", gql.lazy("exchange_center.graphql")]
     ]
+    cards_trades: list[
+        Annotated["CardsTrade", gql.lazy("exchange_center.graphql")]
+    ] = gql.django.field(filters=CardsTradeFilter, order=CardsTradeOrder)
     borgen_items: list[Annotated["BorgenItem", gql.lazy("borgen.graphql")]]
     community_center_inputs: list[
         Annotated["CommunityCenter", gql.lazy("community_center.graphql")]

@@ -9,7 +9,7 @@ from pets.graphql import Pet
 from quests.graphql import Quest, Questline
 from quizzes.graphql import Quiz
 from updates.graphql import Update
-from exchange_center.graphql import Trade
+from exchange_center.graphql import Trade, CardsTrade
 from borgen.graphql import BorgenItem
 from community_center.graphql import CommunityCenter
 from pbgs.graphql import ProfileBackground
@@ -29,6 +29,7 @@ class Query:
     npcs: list[NPC] = gql.django.field()
     updates: list[Update] = gql.django.field()
     trades: list[Trade] = gql.django.field()
+    cards_trades: list[CardsTrade] = gql.django.field()
     borgen_items: list[BorgenItem] = gql.django.field()
     community_centers: list[CommunityCenter] = gql.django.field()
     profile_backgrounds: list[ProfileBackground] = gql.django.field()
