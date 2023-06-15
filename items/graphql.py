@@ -128,6 +128,7 @@ class ManualProduction:
     line_one: auto
     line_two: auto
     image: auto
+    href: auto
     value: auto
     sort: auto
 

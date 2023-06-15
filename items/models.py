@@ -127,6 +127,7 @@ class ManualProduction(models.Model):
     line_one = models.CharField(max_length=255)
     line_two = models.CharField(max_length=255)
     image = models.CharField(max_length=255)
+    href = models.CharField(max_length=255, null=True, blank=True)
     value = models.CharField(max_length=255)
     sort = models.IntegerField(default=1)
 
