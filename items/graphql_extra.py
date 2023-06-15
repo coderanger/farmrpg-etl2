@@ -8,6 +8,7 @@ from . import models
 class ItemFilter:
     id: auto
     name: auto
+    can_mail: auto
 
 
 @gql.django.ordering.order(models.Item)
