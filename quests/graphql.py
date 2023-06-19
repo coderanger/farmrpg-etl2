@@ -39,7 +39,7 @@ class Quest:
     required_exploring_level: auto
     required_cooking_level: auto
     required_tower_level: auto
-    required_npc: NPC
+    required_npc: Optional[NPC]
     required_npc_level: auto
     required_items: list["QuestItemRequired"]
 
