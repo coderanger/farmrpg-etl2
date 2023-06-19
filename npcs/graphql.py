@@ -1,4 +1,4 @@
-from typing import TYPE_CHECKING, Annotated, Optional
+from typing import TYPE_CHECKING, Annotated
 
 from strawberry_django_plus import gql
 from strawberry_django_plus.gql import auto
