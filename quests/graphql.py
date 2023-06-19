@@ -4,6 +4,7 @@ from strawberry_django_plus import gql
 from strawberry_django_plus.gql import auto
 
 from items.graphql import Item, ItemOrder
+from npcs.graphql import NPC
 
 from . import models
 
@@ -43,7 +44,7 @@ class Quest:
     required_exploring_level: auto
     required_cooking_level: auto
     required_tower_level: auto
-    required_npc_id: auto
+    required_npc: NPC
     required_npc_level: auto
     required_items: list["QuestItemRequired"]
 

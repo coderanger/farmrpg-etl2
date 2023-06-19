@@ -4,6 +4,7 @@ import pghistory
 from django.db import models
 
 from items.models import Item
+from npcs.models import NPC
 
 # The interval at which quests become visible even with no completion.
 QUEST_REVEAL_THRESHOLD = datetime.timedelta(days=5)
@@ -36,7 +37,9 @@ class Quest(models.Model):
     required_exploring_level = models.IntegerField()
     required_cooking_level = models.IntegerField()
     required_tower_level = models.IntegerField()
-    required_npc_id = models.IntegerField()
+    required_npc = models.ForeignKey(
+        NPC, on_delete=models.SET_NULL, related_name="quests", null=True, blank=True
+    )
     required_npc_level = models.IntegerField()
 
     reward_silver = models.BigIntegerField()

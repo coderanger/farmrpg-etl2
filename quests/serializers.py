@@ -49,7 +49,7 @@ class QuestAPISerializer(serializers.ModelSerializer):
             "required_exploring_level",
             "required_cooking_level",
             "required_tower_level",
-            "required_npc_id",
+            "required_npc",
             "required_npc_level",
             "reward_silver",
             "reward_gold",
@@ -66,4 +66,7 @@ class QuestAPISerializer(serializers.ModelSerializer):
             "/img/items/", data.get("npc_img") or "missing.png"
         )
         data["clean_description"] = sanitize_quest_description(data["description"])
+        data["required_npc"] = (
+            None if data["required_npc_id"] == 0 else data["required_npc_id"]
+        )
         return super().to_internal_value(data)

@@ -1,9 +1,14 @@
+from typing import TYPE_CHECKING, Annotated, Optional
+
 from strawberry_django_plus import gql
 from strawberry_django_plus.gql import auto
 
 from items.graphql import Item, ItemFilter, ItemOrder
 
 from . import models
+
+if TYPE_CHECKING:
+    from quests.graphql import Quest
 
 
 @gql.django.filters.filter(models.NPC)
@@ -31,6 +36,8 @@ class NPC:
 
     npc_items: list["NPCItem"]
     npc_rewards: list["NPCReward"]
+
+    quests: list[Annotated["Quest", gql.lazy("quests.graphql")]]
 
 
 @gql.django.filters.filter(models.NPCItem)
