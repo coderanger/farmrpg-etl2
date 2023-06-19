@@ -6,6 +6,7 @@ from asgiref.sync import async_to_sync
 
 from items.factories import ItemFactory
 
+from .html_sanitizer import sanitize_quest_description
 from .models import (
     Quest,
     QuestEvent,
@@ -15,7 +16,6 @@ from .models import (
     QuestItemRewardEvent,
 )
 from .tasks import scrape_all_from_api
-from .html_sanitizer import sanitize_quest_description
 
 
 @pytest.fixture
@@ -169,6 +169,7 @@ def test_quest_scrape_update(respx_mock, item1, item2):
     )
     async_to_sync(scrape_all_from_api)()
     assert Quest.objects.count() == 1
+    assert Quest.objects.get().title == "Blooming Thaw Already IV"
     assert QuestEvent.objects.count() == 1
     assert QuestItemRequired.objects.count() == 1
     assert QuestItemRequiredEvent.objects.count() == 1
@@ -209,6 +210,7 @@ def test_quest_scrape_update(respx_mock, item1, item2):
     )
     async_to_sync(scrape_all_from_api)()
     assert Quest.objects.count() == 1
+    assert Quest.objects.get().title == "Blooming Thaw Already IV Updated"
     assert QuestEvent.objects.count() == 2
     assert QuestItemRequired.objects.count() == 1
     assert QuestItemRequiredEvent.objects.count() == 2
