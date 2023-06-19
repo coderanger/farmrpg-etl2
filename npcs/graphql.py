@@ -4,6 +4,7 @@ from strawberry_django_plus import gql
 from strawberry_django_plus.gql import auto
 
 from items.graphql import Item, ItemFilter, ItemOrder
+from quests.graphql_extra import QuestFilter, QuestOrder
 
 from . import models
 
@@ -37,7 +38,9 @@ class NPC:
     npc_items: list["NPCItem"]
     npc_rewards: list["NPCReward"]
 
-    quests: list[Annotated["Quest", gql.lazy("quests.graphql")]]
+    quests: list[Annotated["Quest", gql.lazy("quests.graphql")]] = gql.django.field(
+        filters=QuestFilter, order=QuestOrder
+    )
 
 
 @gql.django.filters.filter(models.NPCItem)
