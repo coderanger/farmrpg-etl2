@@ -81,6 +81,7 @@ async def update_items(quest_id: int, model: type, items: str):
         raw_item_id, raw_quantity = chunk.split("|")
         item_id = int(raw_item_id)
         quantity = int(raw_quantity)
+        assert item_id not in all_items, f"Duplicate quest items: {quest_id=} {item_id=}"
         await model.objects.aupdate_or_create(
             quest_id=quest_id,
             item_id=item_id,
