@@ -1,14 +1,16 @@
 import collections
 import os
+
 import httpx
+import sentry_sdk
 import structlog
 from asgiref.sync import sync_to_async
 
 from utils.http import client
 
-from .models import Item, WishingWellItem, RecipeItem, LocksmithItem
-from .serializers import ItemAPISerializer
+from .models import Item, LocksmithItem, RecipeItem, WishingWellItem
 from .parsers import parse_item
+from .serializers import ItemAPISerializer
 
 log = structlog.stdlib.get_logger(mod="items.tasks")
 
@@ -99,6 +101,10 @@ async def scrape_all():
             missing += 1
             if missing >= MAX_ITEM_ID_GAP:
                 break
+        except Exception as exc:
+            # Keep going for future items.
+            sentry_sdk.capture_exception(exc)
+            log.exception("Error scraping item")
         cur_id += 1
 
 
