@@ -2,6 +2,7 @@ import datetime
 
 import pghistory
 from django.db import models
+from django.utils import timezone
 
 from items.models import Item
 from npcs.models import NPC
@@ -57,7 +58,7 @@ class Quest(models.Model):
     def is_hidden(self) -> bool:
         return (
             self.completed_count == 0
-            and (datetime.datetime.now() - self.created_at) < QUEST_REVEAL_THRESHOLD
+            and (timezone.now() - self.created_at) < QUEST_REVEAL_THRESHOLD
         )
 
 
