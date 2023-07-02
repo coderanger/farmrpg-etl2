@@ -24,7 +24,7 @@ SEEDS = {
     "Radish Seeds": ["Radish", "Runestone 07"],
     "Onion Seeds": ["Onion"],
     "Hops Seeds": ["Hops", "Runestone 16"],
-    "Potato Seeds": ["Potato", "Gold Potato"],
+    "Potato Seeds": ["Potato", "Gold Potato", "Hot Potato"],
     "Tomato Seeds": ["Tomato", "Winged Amulet"],
     "Leek Seeds": ["Leek", "Runestone 10"],
     "Watermelon Seeds": ["Watermelon", "Piece of Heart"],
