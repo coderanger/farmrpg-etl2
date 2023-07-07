@@ -1,3 +1,4 @@
+import re
 import urllib.parse
 from datetime import datetime
 from zoneinfo import ZoneInfo
@@ -8,6 +9,7 @@ from .html_sanitizer import sanitize_quest_description
 from .models import Quest
 
 SERVER_TIME = ZoneInfo("America/Chicago")
+BE_RE = re.compile(r"<br\s*/>")
 
 
 def parse_date(value: str, hour: int = 0, minute: int = 0, second: int = 0) -> datetime:
@@ -41,6 +43,7 @@ class QuestAPISerializer(serializers.ModelSerializer):
             "end_date",
             "main_quest",
             "description",
+            "clean_title",
             "clean_description",
             "required_silver",
             "required_farming_level",
@@ -65,6 +68,7 @@ class QuestAPISerializer(serializers.ModelSerializer):
         data["npc_img"] = urllib.parse.urljoin(
             "/img/items/", data.get("npc_img") or "missing.png"
         )
+        data["clean_title"] = BE_RE.sub(" ", data["title"])
         data["clean_description"] = sanitize_quest_description(data["description"])
         data["required_npc"] = (
             None if data["required_npc_id"] == 0 else data["required_npc_id"]

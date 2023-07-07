@@ -29,6 +29,7 @@ class Quest(models.Model):
     end_date = models.DateTimeField(null=True, blank=True)
     main_quest = models.BooleanField()
     description = models.TextField()
+    clean_title = models.CharField(max_length=255)
     clean_description = models.TextField()
 
     required_silver = models.BigIntegerField()
