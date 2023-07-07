@@ -10,12 +10,14 @@ from . import models
 class QuestFilter:
     id: auto
     title: auto
+    clean_title: auto
 
 
 @gql.django.ordering.order(models.Quest)
 class QuestOrder:
     id: auto
     title: auto
+    clean_title: auto
     created_at: auto
 
 
