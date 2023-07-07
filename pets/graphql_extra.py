@@ -1,17 +1,16 @@
-from strawberry_django_plus import gql
-from strawberry_django_plus.gql import auto
-
+import strawberry
+from strawberry import auto
 
 from . import models
 
 
-@gql.django.ordering.order(models.Pet)
+@strawberry.django.order(models.Pet)
 class PetOrder:
     id: auto
     name: auto
 
 
-@gql.django.ordering.order(models.PetItem)
+@strawberry.django.order(models.PetItem)
 class PetItemOrder:
     level: auto
     pet: PetOrder

@@ -1,26 +1,26 @@
-from strawberry_django_plus import gql
-from strawberry_django_plus.gql import auto
+import strawberry
+from strawberry import auto
 
 from items.graphql import Item
 
 from . import models
 
 
-@gql.django.filters.filter(models.ProfileBackground)
+@strawberry.django.filter(models.ProfileBackground)
 class ProfileBackgroundFilter:
     id: auto
     game_id: auto
     name: auto
 
 
-@gql.django.ordering.order(models.ProfileBackground)
+@strawberry.django.order(models.ProfileBackground)
 class ProfileBackgroundOrder:
     id: auto
     game_id: auto
     name: auto
 
 
-@gql.django.type(
+@strawberry.django.type(
     models.ProfileBackground,
     filters=ProfileBackgroundFilter,
     order=ProfileBackgroundOrder,

@@ -1,12 +1,12 @@
-from strawberry_django_plus import gql
-from strawberry_django_plus.gql import auto
+import strawberry
+from strawberry import auto
 
 from items.graphql_extra import ItemOrder
 
 from . import models
 
 
-@gql.django.ordering.order(models.Trade)
+@strawberry.django.order(models.Trade)
 class TradeOrder:
     first_seen: auto
     last_seen: auto
@@ -14,12 +14,12 @@ class TradeOrder:
     output_item: ItemOrder
 
 
-@gql.django.filters.filter(models.CardsTrade)
+@strawberry.django.filter(models.CardsTrade)
 class CardsTradeFilter:
     id: int
     is_disabled: auto
 
 
-@gql.django.ordering.order(models.CardsTrade)
+@strawberry.django.order(models.CardsTrade)
 class CardsTradeOrder:
     id: auto

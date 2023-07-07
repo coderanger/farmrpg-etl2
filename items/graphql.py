@@ -1,7 +1,7 @@
 from typing import TYPE_CHECKING, Annotated, Optional
 
-from strawberry_django_plus import gql
-from strawberry_django_plus.gql import auto
+import strawberry
+from strawberry import auto
 
 from community_center.graphql_extra import CommunityCenterOrder
 from exchange_center.graphql_extra import CardsTradeFilter, CardsTradeOrder
@@ -12,20 +12,22 @@ from . import models
 from .graphql_extra import ItemFilter, ItemOrder
 
 if TYPE_CHECKING:
+    from borgen.graphql import BorgenItem
+    from community_center.graphql import CommunityCenter
+    from exchange_center.graphql import CardsTrade, Trade
     from locations.graphql import DropRates, DropRatesItem, LocationItem
     from npcs.graphql import NPCItem, NPCReward
     from passwords.graphql import PasswordItem
+    from pbgs.graphql import ProfileBackground
     from pets.graphql import PetItem
     from quests.graphql import QuestItemRequired, QuestItemReward
     from quizzes.graphql import QuizReward
-    from exchange_center.graphql import Trade, CardsTrade
-    from borgen.graphql import BorgenItem
-    from community_center.graphql import CommunityCenter
-    from pbgs.graphql import ProfileBackground
     from tower.graphql import TowerReward
 
 
-@gql.django.type(models.Item, filters=ItemFilter, order=ItemOrder, pagination=True)
+@strawberry.django.type(
+    models.Item, filters=ItemFilter, order=ItemOrder, pagination=True
+)
 class Item:
     id: int
     name: auto
@@ -51,19 +53,27 @@ class Item:
     manual_fishing_only: auto
     from_event: auto
     required_for_quests: list[
-        Annotated["QuestItemRequired", gql.lazy("quests.graphql")]
+        Annotated["QuestItemRequired", strawberry.lazy("quests.graphql")]
     ]
-    reward_for_quests: list[Annotated["QuestItemReward", gql.lazy("quests.graphql")]]
-    pet_items: list[Annotated["PetItem", gql.lazy("pets.graphql")]] = gql.django.field(
-        order=PetItemOrder
-    )
-    location_items: list[Annotated["LocationItem", gql.lazy("locations.graphql")]]
-    drop_rates: list[Annotated["DropRates", gql.lazy("locations.graphql")]]
-    drop_rates_items: list[Annotated["DropRatesItem", gql.lazy("locations.graphql")]]
-    quiz_rewards: list[Annotated["QuizReward", gql.lazy("quizzes.graphql")]]
-    npc_items: list[Annotated["NPCItem", gql.lazy("npcs.graphql")]]
-    npc_rewards: list[Annotated["NPCReward", gql.lazy("npcs.graphql")]]
-    password_items: list[Annotated["PasswordItem", gql.lazy("passwords.graphql")]]
+    reward_for_quests: list[
+        Annotated["QuestItemReward", strawberry.lazy("quests.graphql")]
+    ]
+    pet_items: list[
+        Annotated["PetItem", strawberry.lazy("pets.graphql")]
+    ] = strawberry.django.field(order=PetItemOrder)
+    location_items: list[
+        Annotated["LocationItem", strawberry.lazy("locations.graphql")]
+    ]
+    drop_rates: list[Annotated["DropRates", strawberry.lazy("locations.graphql")]]
+    drop_rates_items: list[
+        Annotated["DropRatesItem", strawberry.lazy("locations.graphql")]
+    ]
+    quiz_rewards: list[Annotated["QuizReward", strawberry.lazy("quizzes.graphql")]]
+    npc_items: list[Annotated["NPCItem", strawberry.lazy("npcs.graphql")]]
+    npc_rewards: list[Annotated["NPCReward", strawberry.lazy("npcs.graphql")]]
+    password_items: list[
+        Annotated["PasswordItem", strawberry.lazy("passwords.graphql")]
+    ]
     wishing_well_input_items: list["WishingWellItem"]
     wishing_well_output_items: list["WishingWellItem"]
     recipe_items: list["RecipeItem"]
@@ -76,38 +86,38 @@ class Item:
     cooking_recipe_cookable: Optional["Item"]
     manual_productions: list["ManualProduction"]
     exchange_center_inputs: list[
-        Annotated["Trade", gql.lazy("exchange_center.graphql")]
+        Annotated["Trade", strawberry.lazy("exchange_center.graphql")]
     ]
     exchange_center_outputs: list[
-        Annotated["Trade", gql.lazy("exchange_center.graphql")]
+        Annotated["Trade", strawberry.lazy("exchange_center.graphql")]
     ]
     cards_trades: list[
-        Annotated["CardsTrade", gql.lazy("exchange_center.graphql")]
-    ] = gql.django.field(filters=CardsTradeFilter, order=CardsTradeOrder)
-    borgen_items: list[Annotated["BorgenItem", gql.lazy("borgen.graphql")]]
+        Annotated["CardsTrade", strawberry.lazy("exchange_center.graphql")]
+    ] = strawberry.django.field(filters=CardsTradeFilter, order=CardsTradeOrder)
+    borgen_items: list[Annotated["BorgenItem", strawberry.lazy("borgen.graphql")]]
     community_center_inputs: list[
-        Annotated["CommunityCenter", gql.lazy("community_center.graphql")]
-    ] = gql.django.field(order=CommunityCenterOrder, pagination=True)
+        Annotated["CommunityCenter", strawberry.lazy("community_center.graphql")]
+    ] = strawberry.django.field(order=CommunityCenterOrder, pagination=True)
     community_center_outputs: list[
-        Annotated["CommunityCenter", gql.lazy("community_center.graphql")]
-    ] = gql.django.field(order=CommunityCenterOrder, pagination=True)
+        Annotated["CommunityCenter", strawberry.lazy("community_center.graphql")]
+    ] = strawberry.django.field(order=CommunityCenterOrder, pagination=True)
     profile_background_cost_items: list[
-        Annotated["ProfileBackground", gql.lazy("pbgs.graphql")]
+        Annotated["ProfileBackground", strawberry.lazy("pbgs.graphql")]
     ]
     tower_rewards: list[
-        Annotated["TowerReward", gql.lazy("tower.graphql")]
-    ] = gql.django.field(order=TowerRewardOrder)
+        Annotated["TowerReward", strawberry.lazy("tower.graphql")]
+    ] = strawberry.django.field(order=TowerRewardOrder)
     skill_level_rewards: list["SkillLevelReward"]
 
 
-@gql.django.type(models.RecipeItem)
+@strawberry.django.type(models.RecipeItem)
 class RecipeItem:
     item: Item
     ingredient_item: Item
     quantity: auto
 
 
-@gql.django.type(models.LocksmithItem)
+@strawberry.django.type(models.LocksmithItem)
 class LocksmithItem:
     item: Item
     output_item: Item
@@ -115,14 +125,14 @@ class LocksmithItem:
     quantity_max: auto
 
 
-@gql.django.type(models.WishingWellItem)
+@strawberry.django.type(models.WishingWellItem)
 class WishingWellItem:
     input_item: Item
     chance: auto
     output_item: Item
 
 
-@gql.django.type(models.ManualProduction)
+@strawberry.django.type(models.ManualProduction)
 class ManualProduction:
     item: Item
     line_one: auto
@@ -133,14 +143,14 @@ class ManualProduction:
     sort: auto
 
 
-@gql.django.filters.filter(models.SkillLevelReward)
+@strawberry.django.filters.filter(models.SkillLevelReward)
 class SkillLevelRewardFilter:
     id: int
     skill: auto
     level: auto
 
 
-@gql.django.ordering.order(models.SkillLevelReward)
+@strawberry.django.ordering.order(models.SkillLevelReward)
 class SkillLevelRewardOrder:
     id: auto
     skill: auto
@@ -148,7 +158,7 @@ class SkillLevelRewardOrder:
     order: auto
 
 
-@gql.django.type(
+@strawberry.django.type(
     models.SkillLevelReward, filters=SkillLevelRewardFilter, order=SkillLevelRewardOrder
 )
 class SkillLevelReward:

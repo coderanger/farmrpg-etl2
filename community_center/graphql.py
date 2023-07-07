@@ -1,5 +1,5 @@
-from strawberry_django_plus import gql
-from strawberry_django_plus.gql import auto
+import strawberry
+from strawberry import auto
 
 from items.graphql import Item
 
@@ -7,14 +7,19 @@ from . import models
 from .graphql_extra import CommunityCenterOrder
 
 
-@gql.django.filters.filter(models.CommunityCenter)
+@strawberry.django.filter(models.CommunityCenter)
 class CommunityCenterFilter:
     date: auto
     input_item: auto
     output_item: auto
 
 
-@gql.django.type(models.CommunityCenter, filters=CommunityCenterFilter, order=CommunityCenterOrder, pagination=True)
+@strawberry.django.type(
+    models.CommunityCenter,
+    filters=CommunityCenterFilter,
+    order=CommunityCenterOrder,
+    pagination=True,
+)
 class CommunityCenter:
     id: int
     date: auto

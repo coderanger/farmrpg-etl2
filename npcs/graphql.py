@@ -1,7 +1,7 @@
 from typing import TYPE_CHECKING, Annotated
 
-from strawberry_django_plus import gql
-from strawberry_django_plus.gql import auto
+import strawberry
+from strawberry import auto
 
 from items.graphql import Item, ItemFilter, ItemOrder
 from quests.graphql_extra import QuestFilter, QuestOrder
@@ -12,7 +12,7 @@ if TYPE_CHECKING:
     from quests.graphql import Quest
 
 
-@gql.django.filters.filter(models.NPC)
+@strawberry.django.filter(models.NPC)
 class NPCFilter:
     id: auto
     name: auto
@@ -20,14 +20,14 @@ class NPCFilter:
     is_available: auto
 
 
-@gql.django.ordering.order(models.NPC)
+@strawberry.django.order(models.NPC)
 class NPCOrder:
     id: auto
     name: auto
     short_name: auto
 
 
-@gql.django.type(models.NPC, filters=NPCFilter, order=NPCOrder)
+@strawberry.django.type(models.NPC, filters=NPCFilter, order=NPCOrder)
 class NPC:
     id: int
     name: auto
@@ -38,39 +38,39 @@ class NPC:
     npc_items: list["NPCItem"]
     npc_rewards: list["NPCReward"]
 
-    quests: list[Annotated["Quest", gql.lazy("quests.graphql")]] = gql.django.field(
-        filters=QuestFilter, order=QuestOrder
-    )
+    quests: list[
+        Annotated["Quest", strawberry.lazy("quests.graphql")]
+    ] = strawberry.django.field(filters=QuestFilter, order=QuestOrder)
 
 
-@gql.django.filters.filter(models.NPCItem)
+@strawberry.django.filter(models.NPCItem)
 class NPCItemFilter:
     npc: NPCFilter
     item: ItemFilter
     relationship: auto
 
 
-@gql.django.ordering.order(models.NPCItem)
+@strawberry.django.order(models.NPCItem)
 class NPCItemOrder:
     npc: NPCOrder
     item: ItemOrder
     relationship: auto
 
 
-@gql.django.type(models.NPCItem, filters=NPCItemFilter, order=NPCItemOrder)
+@strawberry.django.type(models.NPCItem, filters=NPCItemFilter, order=NPCItemOrder)
 class NPCItem:
     npc: NPC
     item: Item
     relationship: auto
 
 
-@gql.django.filters.filter(models.NPCReward)
+@strawberry.django.filter(models.NPCReward)
 class NPCRewardFilter:
     npc: NPCFilter
     item: ItemFilter
 
 
-@gql.django.ordering.order(models.NPCReward)
+@strawberry.django.order(models.NPCReward)
 class NPCRewardOrder:
     npc: NPCOrder
     item: ItemOrder
@@ -78,7 +78,7 @@ class NPCRewardOrder:
     order: auto
 
 
-@gql.django.type(models.NPCReward, filters=NPCRewardFilter, order=NPCRewardOrder)
+@strawberry.django.type(models.NPCReward, filters=NPCRewardFilter, order=NPCRewardOrder)
 class NPCReward:
     npc: NPC
     level: auto

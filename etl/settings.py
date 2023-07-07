@@ -66,7 +66,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "strawberry_django",
-    "strawberry_django_plus",
     "rest_framework",
     "pghistory",
     "pgtrigger",
@@ -101,7 +100,7 @@ MIDDLEWARE = [
 if os.environ.get("SYNC_DEVELOP"):
     INSTALLED_APPS.append("debug_toolbar")
     MIDDLEWARE.insert(
-        0, "strawberry_django_plus.middlewares.debug_toolbar.DebugToolbarMiddleware"
+        0, "strawberry_django.middlewares.debug_toolbar.DebugToolbarMiddleware"
     )
 
 ROOT_URLCONF = "etl.urls"

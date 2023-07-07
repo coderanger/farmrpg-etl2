@@ -1,19 +1,19 @@
-from strawberry_django_plus import gql
-from strawberry_django_plus.gql import auto
+import strawberry
+from strawberry import auto
 
 from items.graphql import ItemOrder
 
 from . import models
 
 
-@gql.django.filters.filter(models.Quest)
+@strawberry.django.filter(models.Quest)
 class QuestFilter:
     id: auto
     title: auto
     clean_title: auto
 
 
-@gql.django.ordering.order(models.Quest)
+@strawberry.django.order(models.Quest)
 class QuestOrder:
     id: auto
     title: auto
@@ -21,7 +21,7 @@ class QuestOrder:
     created_at: auto
 
 
-@gql.django.ordering.order(models.QuestItemRequired)
+@strawberry.django.order(models.QuestItemRequired)
 class QuestItemRequiredOrder:
     id: auto
     quest: QuestOrder
@@ -30,7 +30,7 @@ class QuestItemRequiredOrder:
     order: auto
 
 
-@gql.django.ordering.order(models.QuestItemReward)
+@strawberry.django.order(models.QuestItemReward)
 class QuestItemRewardOrder:
     id: auto
     quest: QuestOrder
@@ -39,13 +39,13 @@ class QuestItemRewardOrder:
     order: auto
 
 
-@gql.django.filters.filter(models.Questline)
+@strawberry.django.filter(models.Questline)
 class QuestlineFilter:
     id: int
     title: auto
 
 
-@gql.django.ordering.order(models.Questline)
+@strawberry.django.order(models.Questline)
 class QuestlineOrder:
     id: auto
     title: auto

@@ -1,7 +1,7 @@
 from typing import Optional
 
-from strawberry_django_plus import gql
-from strawberry_django_plus.gql import auto
+import strawberry
+from strawberry import auto
 
 from items.graphql import Item
 from npcs.graphql import NPC
@@ -17,7 +17,9 @@ from .graphql_extra import (
 )
 
 
-@gql.django.type(models.Quest, filters=QuestFilter, order=QuestOrder, pagination=True)
+@strawberry.django.type(
+    models.Quest, filters=QuestFilter, order=QuestOrder, pagination=True
+)
 class Quest:
     id: int
     npc: auto
@@ -54,7 +56,7 @@ class Quest:
     is_hidden: bool
 
 
-@gql.django.type(models.QuestItemRequired, order=QuestItemRequiredOrder)
+@strawberry.django.type(models.QuestItemRequired, order=QuestItemRequiredOrder)
 class QuestItemRequired:
     id: int
     quest: Quest
@@ -63,7 +65,7 @@ class QuestItemRequired:
     order: auto
 
 
-@gql.django.type(models.QuestItemReward, order=QuestItemRewardOrder)
+@strawberry.django.type(models.QuestItemReward, order=QuestItemRewardOrder)
 class QuestItemReward:
     id: int
     quest: Quest
@@ -72,7 +74,7 @@ class QuestItemReward:
     order: auto
 
 
-@gql.django.type(models.Questline, filters=QuestlineFilter, order=QuestlineOrder)
+@strawberry.django.type(models.Questline, filters=QuestlineFilter, order=QuestlineOrder)
 class Questline:
     id: int
     title: auto
@@ -81,7 +83,7 @@ class Questline:
     steps: list["QuestlineStep"]
 
 
-@gql.django.type(models.QuestlineStep)
+@strawberry.django.type(models.QuestlineStep)
 class QuestlineStep:
     questline: Questline
     order: auto

@@ -1,24 +1,24 @@
-from strawberry_django_plus import gql
-from strawberry_django_plus.gql import auto
+import strawberry
 from django.db.models import QuerySet
+from strawberry import auto
 
 from items.graphql import Item
 
 from . import models
 
 
-@gql.django.filters.filter(models.PasswordGroup)
+@strawberry.django.filter(models.PasswordGroup)
 class PasswordGroupFilter:
     name: auto
 
 
-@gql.django.type(models.PasswordGroup, filters=PasswordGroupFilter)
+@strawberry.django.type(models.PasswordGroup, filters=PasswordGroupFilter)
 class PasswordGroup:
     name: auto
     passwords: list["Password"]
 
 
-@gql.django.filters.filter(models.Password)
+@strawberry.django.filter(models.Password)
 class PasswordFilter:
     id: int
     password: auto
@@ -32,7 +32,7 @@ class PasswordFilter:
         return queryset
 
 
-@gql.django.type(models.Password, filters=PasswordFilter)
+@strawberry.django.type(models.Password, filters=PasswordFilter)
 class Password:
     id: int
     group: PasswordGroup
@@ -46,7 +46,7 @@ class Password:
     reward_items: list["PasswordItem"]
 
 
-@gql.django.type(models.PasswordItem)
+@strawberry.django.type(models.PasswordItem)
 class PasswordItem:
     password: Password
     item: Item

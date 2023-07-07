@@ -1,13 +1,13 @@
-from strawberry_django_plus import gql
-from strawberry_django_plus.gql import auto
+import strawberry
+from strawberry import auto
 
 from items.graphql import Item
 
 from . import models
-from .graphql_extra import TradeOrder, CardsTradeFilter, CardsTradeOrder
+from .graphql_extra import CardsTradeFilter, CardsTradeOrder, TradeOrder
 
 
-@gql.django.type(models.Trade, order=TradeOrder)
+@strawberry.django.type(models.Trade, order=TradeOrder)
 class Trade:
     id: int
     input_item: Item
@@ -19,7 +19,9 @@ class Trade:
     last_seen: auto
 
 
-@gql.django.type(models.CardsTrade, filters=CardsTradeFilter, order=CardsTradeOrder)
+@strawberry.django.type(
+    models.CardsTrade, filters=CardsTradeFilter, order=CardsTradeOrder
+)
 class CardsTrade:
     id: int
     spades_quantity: auto
