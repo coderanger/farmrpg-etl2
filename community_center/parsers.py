@@ -12,7 +12,6 @@ from utils.parsers import (
     sel_first_or_die,
 )
 
-
 COL_SEL = CSSSelector("div.col-50")
 LINK_SEL = CSSSelector("a")
 PROGRESS_SEL = CSSSelector("div.row ~ strong")
@@ -56,7 +55,7 @@ def parse_community_center(
     reward_link = sel_first_or_die(LINK_SEL(reward_col), "Unable to find reward link")
     reward_link_md = ID_RE.search(reward_link.get("href"))
     assert reward_link_md is not None
-    reward_quantity_md = QUANTITY_RE.search(reward_link.getnext().tail)
+    reward_quantity_md = QUANTITY_RE.search(reward_link.getnext().getnext().text)
     assert reward_quantity_md is not None
 
     progress_elm = sel_first_or_die(PROGRESS_SEL(today_elm), "Unable to find progress")
