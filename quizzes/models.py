@@ -1,7 +1,13 @@
+import datetime
+
 import pghistory
 from django.db import models
+from django.utils import timezone
 
 from items.models import Item
+
+# The interval at which quiz answers become visible.
+ANSWER_REVEAL_THRESHOLD = datetime.timedelta(days=1)
 
 
 @pghistory.track(pghistory.Snapshot(), exclude=["modified_at"])
@@ -67,3 +73,7 @@ class QuizAnswer(models.Model):
 
     def __str__(self) -> str:
         return f"{self.quiz.name} - {self.display_order}"
+
+    @property
+    def is_hidden(self) -> bool:
+        return (timezone.now() - self.created_at) < ANSWER_REVEAL_THRESHOLD

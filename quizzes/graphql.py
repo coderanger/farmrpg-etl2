@@ -40,3 +40,4 @@ class QuizAnswer:
     answer3: auto
     answer4: auto
     correct: auto
+    is_hidden: bool
