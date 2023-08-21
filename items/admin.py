@@ -1,7 +1,8 @@
+from typing import Optional
+
 from django.contrib import admin
 from django.http.request import HttpRequest
 from django.utils.html import format_html
-
 
 from .models import (
     Item,
@@ -16,26 +17,16 @@ from .models import (
 class LocksmithItemInline(admin.TabularInline):
     model = LocksmithItem
     fk_name = "item"
+    extra = 0
+    readonly_fields = ("output_item", "quantity_min", "quantity_max")
 
     def has_add_permission(self, request: HttpRequest, obj: Item | None = None) -> bool:
-        return obj.locksmith_grab_bag
+        return False
 
     def has_delete_permission(
         self, request: HttpRequest, obj: Item | None = None
     ) -> bool:
-        return obj.locksmith_grab_bag
-
-    def get_readonly_fields(
-        self, request: HttpRequest, obj: Item | None = None
-    ) -> list[str]:
-        return (
-            []
-            if obj.locksmith_grab_bag
-            else ["output_item", "quantity_min", "quantity_max"]
-        )
-
-    def get_extra(self, request: HttpRequest, obj: Item | None = None) -> int:
-        return 1 if obj.locksmith_grab_bag else 0
+        return False
 
 
 class RecipeItemInline(admin.TabularInline):
@@ -92,9 +83,12 @@ class ItemAdmin(admin.ModelAdmin):
         "can_craft",
         "can_cook",
         "can_master",
+        "can_locksmith",
+        "can_flea_market",
         "description",
         "buy_price",
         "flea_market_price",
+        "flea_market_rotate",
         "sell_price",
         "crafting_level",
         "cooking_level",
@@ -109,35 +103,7 @@ class ItemAdmin(admin.ModelAdmin):
         "manual_fishing_only",
         "from_event",
     ]
-    readonly_fields = [
-        "name",
-        "image",
-        "type",
-        "xp",
-        "can_buy",
-        "can_sell",
-        "can_mail",
-        "can_craft",
-        "can_cook",
-        "can_master",
-        "description",
-        "buy_price",
-        "flea_market_price",
-        "sell_price",
-        "crafting_level",
-        "cooking_level",
-        "base_yield_minutes",
-        "min_mailable_level",
-        "reg_weight",
-        "runecube_weight",
-        "locksmith_gold",
-        "cooking_recipe_item",
-        "manual_fishing_only",
-        "from_event",
-    ]
-    raw_id_fields = [
-        "locksmith_key",
-    ]
+    readonly_fields = fields
     inlines = [
         LocksmithItemInline,
         RecipeItemInline,

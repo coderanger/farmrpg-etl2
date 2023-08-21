@@ -85,6 +85,7 @@ INSTALLED_APPS = [
     "community_center",
     "pbgs",
     "tower",
+    "cron",
 ]
 
 MIDDLEWARE = [

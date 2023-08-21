@@ -1,4 +1,5 @@
 import factory
+
 from items.models import Item
 
 
@@ -16,6 +17,8 @@ class ItemFactory(factory.django.DjangoModelFactory):
     can_craft = False
     can_cook = False
     can_master = False
+    can_locksmith = False
+    can_flea_market = False
     buy_price = 0
     sell_price = 0
     crafting_level = 0
@@ -23,3 +26,4 @@ class ItemFactory(factory.django.DjangoModelFactory):
     min_mailable_level = 0
     reg_weight = 1
     runecube_weight = 1
+    flea_market_rotate = False

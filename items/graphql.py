@@ -12,16 +12,16 @@ from . import models
 from .graphql_extra import ItemFilter, ItemOrder
 
 if TYPE_CHECKING:
+    from borgen.graphql import BorgenItem
+    from community_center.graphql import CommunityCenter
+    from exchange_center.graphql import CardsTrade, Trade
     from locations.graphql import DropRates, DropRatesItem, LocationItem
     from npcs.graphql import NPCItem, NPCReward
     from passwords.graphql import PasswordItem
+    from pbgs.graphql import ProfileBackground
     from pets.graphql import PetItem
     from quests.graphql import QuestItemRequired, QuestItemReward
     from quizzes.graphql import QuizReward
-    from exchange_center.graphql import Trade, CardsTrade
-    from borgen.graphql import BorgenItem
-    from community_center.graphql import CommunityCenter
-    from pbgs.graphql import ProfileBackground
     from tower.graphql import TowerReward
 
 
@@ -38,9 +38,12 @@ class Item:
     can_craft: auto
     can_cook: auto
     can_master: auto
+    can_locksmith: auto
+    can_flea_market: auto
     description: auto
     buy_price: auto
     flea_market_price: auto
+    flea_market_rotate: auto
     sell_price: auto
     crafting_level: auto
     cooking_level: auto

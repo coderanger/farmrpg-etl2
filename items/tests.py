@@ -1,13 +1,13 @@
 from pathlib import Path
 
-import pytest
 import httpx
+import pytest
 from asgiref.sync import async_to_sync
 
-from .parsers import parse_item, ParsedIngredient
-from .models import Item
-from .tasks import scrape_from_api
 from .factories import ItemFactory
+from .models import Item
+from .parsers import ParsedIngredient, parse_item
+from .tasks import scrape_from_api
 
 FIXTURES_ROOT = Path(__file__).joinpath("../fixtures").resolve()
 
@@ -105,6 +105,14 @@ def test_scrape_from_api_grape_pie(respx_mock):
             "base_yield_minutes": 720,
             "min_mailable_level": 0,
             "manfish_only": 0,
+            "loot_key_id": 0,
+            "loot_rand": 0,
+            "loot_gold": 0,
+            "loot": 0,
+            "event": 0,
+            "fm_buy": 0,
+            "fm_price": 0,
+            "fm_rotate": 0,
         }
     ]
     respx_mock.get("https://farmrpg.com/api/item/726").mock(

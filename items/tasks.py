@@ -6,6 +6,7 @@ import sentry_sdk
 import structlog
 from asgiref.sync import sync_to_async
 
+from cron.decorators import cron
 from utils.http import client
 
 from .models import Item, LocksmithItem, RecipeItem, WishingWellItem
@@ -38,7 +39,7 @@ async def scrape_from_api(item_id: int):
         raise ItemNotFound
     item = await Item.objects.filter(id=data[0]["id"]).afirst()
     ser = ItemAPISerializer(instance=item, data=data[0])
-    await sync_to_async(lambda: ser.is_valid(raise_exception=True))()
+    await sync_to_async(ser.is_valid)(raise_exception=True)
     await sync_to_async(ser.save)()
 
 
@@ -88,6 +89,52 @@ async def scrape_from_html(item_id: int):
         ).adelete()
 
 
+async def scrape_recipes():
+    log.info("Scraping recipes")
+    resp = await client.get("/api/recipes")
+    resp.raise_for_status()
+    data = resp.json()
+    seen_recipe_item_ids = []
+    seen_locksmith_item_ids = []
+    for row in data:
+        item = await Item.objects.filter(id=row["item_id"]).afirst()
+        if item is None:
+            msg = f"Got item ID {row['item_id']} from recipe that does not exist"
+            log.error(msg)
+            sentry_sdk.capture_message(msg)
+            continue
+        if not item.can_craft ^ item.can_cook ^ item.can_locksmith:
+            msg = f"Item {item.id} has bad recipe can_* flags"
+            log.error(msg)
+            sentry_sdk.capture_message(msg)
+            continue
+        if item.can_craft or item.can_cook:
+            # Simple case, this is a recipe.
+            recipe_item, _ = await RecipeItem.objects.aupdate_or_create(
+                item=item,
+                ingredient_item_id=row["req_id"],
+                defaults={"quantity": row["req_amt"]},
+            )
+            seen_recipe_item_ids.append(recipe_item.id)
+        elif item.can_locksmith:
+            # Slightly more complex, this is an openable.
+            quantity_min = quantity_max = row["req_amt"]
+            if item.locksmith_grab_bag:
+                if row["req_amt"] <= 10:
+                    quantity_min = 1
+                else:
+                    quantity_min = 10
+            locksmith_item, _ = await LocksmithItem.objects.aupdate_or_create(
+                item=item,
+                output_item_id=row["req_id"],
+                defaults={"quantity_min": quantity_min, "quantity_max": quantity_max},
+            )
+            seen_locksmith_item_ids.append(locksmith_item.id)
+    await RecipeItem.objects.exclude(id__in=seen_recipe_item_ids).adelete()
+    await LocksmithItem.objects.exclude(id__in=seen_locksmith_item_ids).adelete()
+
+
+@cron("H/30 * * * * H", name="scrape_items")
 async def scrape_all():
     cur_id = 10  # Start at 10 because 1-9 are unused.
     missing = 0
@@ -96,7 +143,7 @@ async def scrape_all():
         try:
             await scrape_from_api(cur_id)
             missing = 0  # It worked so reset the count.
-            await scrape_from_html(cur_id)
+            # await scrape_from_html(cur_id)
         except ItemNotFound:
             missing += 1
             if missing >= MAX_ITEM_ID_GAP:
@@ -106,8 +153,10 @@ async def scrape_all():
             sentry_sdk.capture_exception(exc)
             log.exception("Error scraping item")
         cur_id += 1
+    await scrape_recipes()
 
 
+@cron("@hourly", name="scrape_wishing_well")
 async def scrape_wishing_well_from_sheets():
     # Download and format the Wishing Well data from the spreadsheet.
     resp = await WISHING_WELL_CLIENT.get(
