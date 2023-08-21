@@ -9,7 +9,14 @@ from asgiref.sync import sync_to_async
 from cron.decorators import cron
 from utils.http import client
 
-from .models import Item, LocksmithItem, RecipeItem, WishingWellItem
+from .models import (
+    Item,
+    LocksmithItem,
+    RecipeItem,
+    TempleReward,
+    TempleRewardItem,
+    WishingWellItem,
+)
 from .parsers import parse_item
 from .serializers import ItemAPISerializer
 
@@ -41,52 +48,6 @@ async def scrape_from_api(item_id: int):
     ser = ItemAPISerializer(instance=item, data=data[0])
     await sync_to_async(ser.is_valid)(raise_exception=True)
     await sync_to_async(ser.save)()
-
-
-async def scrape_from_html(item_id: int):
-    resp = await client.get("/item.php", params={"id": item_id})
-    resp.raise_for_status()
-    parsed = parse_item(resp.content)
-
-    await Item.objects.filter(id=item_id).aupdate(
-        flea_market_price=parsed.flea_market_price,
-        from_event=parsed.from_event,
-    )
-
-    seen_recipe_ids = []
-    for parsed_recipe in parsed.recipe:
-        recipe, _ = await RecipeItem.objects.aupdate_or_create(
-            item_id=item_id,
-            ingredient_item_id=parsed_recipe.id,
-            defaults={"quantity": parsed_recipe.quantity},
-        )
-        seen_recipe_ids.append(recipe.id)
-    await RecipeItem.objects.filter(item_id=item_id).exclude(
-        id__in=seen_recipe_ids
-    ).adelete()
-
-    item = await Item.objects.only("locksmith_grab_bag").filter(id=item_id).afirst()
-    assert item is not None
-    if not item.locksmith_grab_bag:
-        seen_locksmith_id = []
-        for parsed_locksmith in parsed.locksmith:
-            if parsed_locksmith.gold:
-                await Item.objects.filter(id=item_id).aupdate(
-                    locksmith_gold=parsed_locksmith.quantity
-                )
-            else:
-                locksmith, _ = await LocksmithItem.objects.aupdate_or_create(
-                    item_id=item_id,
-                    output_item_id=parsed_locksmith.id,
-                    defaults={
-                        "quantity_min": parsed_locksmith.quantity,
-                        "quantity_max": parsed_locksmith.quantity,
-                    },
-                )
-                seen_locksmith_id.append(locksmith.id)
-        await LocksmithItem.objects.filter(item_id=item_id).exclude(
-            id__in=seen_locksmith_id
-        ).adelete()
 
 
 async def scrape_recipes():
@@ -192,3 +153,45 @@ async def scrape_wishing_well_from_sheets():
             )
             seen_ids.append(ww.id)
     await WishingWellItem.objects.exclude(id__in=seen_ids).adelete()
+
+
+@cron("@hourly")
+async def scrape_temple():
+    resp = await client.get("/api/temple")
+    resp.raise_for_status()
+    data = resp.json()
+    # Find the item IDs for the input items.
+    input_items = {
+        name: await Item.objects.values_list("id", flat=True).aget(name=name)
+        for name in set(row["item_given"] for row in data)
+    }
+
+    seen_tr_ids = []
+    seen_tri_ids = []
+    for row in data:
+        input_item = input_items.get(row["item_given"])
+        tr, _ = await TempleReward.objects.aupdate_or_create(
+            input_item_id=input_item,
+            input_quantity=row["given_amt"],
+            defaults={
+                "silver": None if row["reward_silver"] == 0 else row["reward_silver"],
+                "gold": None if row["reward_gold"] == 0 else row["reward_gold"],
+                "min_level_required": row["min_level_required"],
+            },
+        )
+        seen_tr_ids.append(tr.id)
+        for order in (1, 2, 3):
+            item_id = row[f"reward_item{order}"]
+            if item_id == 0:
+                continue
+            tri, _ = await TempleRewardItem.objects.aupdate_or_create(
+                temple_reward=tr,
+                order=order,
+                defaults={
+                    "item_id": item_id,
+                    "quantity": row[f"reward_item{order}_amt"],
+                },
+            )
+            seen_tri_ids.append(tri.id)
+    await TempleReward.objects.exclude(id__in=seen_tr_ids).adelete()
+    await TempleRewardItem.objects.exclude(id__in=seen_tri_ids).adelete()

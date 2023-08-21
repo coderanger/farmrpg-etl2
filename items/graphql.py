@@ -101,6 +101,8 @@ class Item:
         Annotated["TowerReward", gql.lazy("tower.graphql")]
     ] = gql.django.field(order=TowerRewardOrder)
     skill_level_rewards: list["SkillLevelReward"]
+    temple_rewards: list["TempleReward"]
+    temple_reward_items: list["TempleRewardItem"]
 
 
 @gql.django.type(models.RecipeItem)
@@ -164,3 +166,23 @@ class SkillLevelReward:
     ak: auto
     item: Item | None
     item_quantity: auto
+
+
+@gql.django.type(models.TempleReward)
+class TempleReward:
+    id: int
+    input_item: Item
+    input_quantity: auto
+    silver: auto
+    gold: auto
+    min_level_required: auto
+    items: list["TempleRewardItem"]
+
+
+@gql.django.type(models.TempleRewardItem)
+class TempleRewardItem:
+    id: int
+    temple_reward: TempleReward
+    order: auto
+    item: Item
+    quantity: auto

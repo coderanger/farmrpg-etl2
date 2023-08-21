@@ -1,8 +1,9 @@
-from typing import Optional
-
 from django.contrib import admin
+from django.db.models import Prefetch, QuerySet
 from django.http.request import HttpRequest
 from django.utils.html import format_html
+
+from utils.admin import ReadOnlyAdmin
 
 from .models import (
     Item,
@@ -10,6 +11,8 @@ from .models import (
     ManualProduction,
     RecipeItem,
     SkillLevelReward,
+    TempleReward,
+    TempleRewardItem,
     WishingWellItem,
 )
 
@@ -141,3 +144,37 @@ class SkillLevelRewardAdmin(admin.ModelAdmin):
             return f"AK (x{obj.ak})"
         else:
             return f"{obj.item.name} (x{obj.item_quantity})"
+
+
+class TempleRewardItemInline(admin.TabularInline):
+    model = TempleRewardItem
+    readonly_fields = ["order", "item", "quantity"]
+    extra = 0
+
+
+@admin.register(TempleReward)
+class TempleRewardAdmin(ReadOnlyAdmin):
+    list_display = ["input_item", "input_quantity", "admin_reward"]
+    search_fields = ["input_item__name", "input_item__id"]
+    inlines = [TempleRewardItemInline]
+
+    def get_queryset(self, request: HttpRequest) -> QuerySet[TempleReward]:
+        qs = super().get_queryset(request)
+        if request.resolver_match.view_name.endswith("changelist"):
+            return qs.prefetch_related(
+                Prefetch(
+                    "items", queryset=TempleRewardItem.objects.select_related("item")
+                )
+            )
+        return qs
+
+    @admin.display(description="Reward")
+    def admin_reward(self, obj: TempleReward) -> str:
+        buf = []
+        if obj.silver is not None:
+            buf.append(f"Silver (x{obj.silver})")
+        if obj.gold is not None:
+            buf.append(f"Gold (x{obj.gold})")
+        for tri in obj.items.all():
+            buf.append(f"{tri.item.name} (x{tri.quantity})")
+        return " ".join(buf)

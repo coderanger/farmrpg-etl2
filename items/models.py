@@ -208,3 +208,50 @@ class SkillLevelReward(models.Model):
                 name="skill_level_reward_only_one_type",
             ),
         ]
+
+
+@pghistory.track(pghistory.Snapshot(), exclude=["modified_at"])
+class TempleReward(models.Model):
+    input_item = models.ForeignKey(
+        Item, on_delete=models.CASCADE, related_name="temple_rewards"
+    )
+    input_quantity = models.IntegerField()
+    silver = models.BigIntegerField(null=True, blank=True)
+    gold = models.IntegerField(null=True, blank=True)
+    min_level_required = models.IntegerField()
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    modified_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["input_item", "input_quantity"]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["input_item", "input_quantity"],
+                name="input_item_input_quantity",
+            ),
+        ]
+
+
+@pghistory.track(pghistory.Snapshot(), exclude=["modified_at"])
+class TempleRewardItem(models.Model):
+    temple_reward = models.ForeignKey(
+        TempleReward, on_delete=models.CASCADE, related_name="items"
+    )
+    order = models.IntegerField()
+    item = models.ForeignKey(
+        Item, on_delete=models.CASCADE, related_name="temple_reward_items"
+    )
+    quantity = models.IntegerField()
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    modified_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["temple_reward", "order"]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["temple_reward", "order"],
+                name="temple_reward_order",
+            ),
+        ]
