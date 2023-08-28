@@ -17,7 +17,6 @@ from .models import (
     TempleRewardItem,
     WishingWellItem,
 )
-from .parsers import parse_item
 from .serializers import ItemAPISerializer
 
 log = structlog.stdlib.get_logger(mod="items.tasks")
