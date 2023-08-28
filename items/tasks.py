@@ -63,7 +63,12 @@ async def scrape_recipes():
             log.error(msg)
             sentry_sdk.capture_message(msg)
             continue
-        if not item.can_craft ^ item.can_cook ^ item.can_locksmith:
+        if item.from_event and not (
+            item.can_craft or item.can_cook or item.can_locksmith
+        ):
+            # Old event receipe, probably, just ignore it.
+            continue
+        if not (item.can_craft ^ item.can_cook ^ item.can_locksmith):
             msg = f"Item {item.id} has bad recipe can_* flags"
             log.error(msg)
             sentry_sdk.capture_message(msg)
