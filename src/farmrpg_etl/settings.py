@@ -86,7 +86,7 @@ INSTALLED_APPS = [
     "farmrpg_etl.pbgs",
     "farmrpg_etl.tower",
     "farmrpg_etl.cron",
-    "farmrpg_etl.trades",
+    # "farmrpg_etl.trades",
 ]
 
 MIDDLEWARE = [
