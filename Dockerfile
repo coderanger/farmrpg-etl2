@@ -15,6 +15,7 @@ RUN /root/.local/bin/poetry install --without=dev && \
     .venv/bin/python manage.py collectstatic
 
 FROM python:3.11
+ENV PATH "/src/.venv/bin:${PATH}"
 # COPY doesn't bring over the xattrs for this so it can't be in the build image.
 RUN apt-get update && \
     apt-get install -y --no-install-recommends libcap2-bin && \
