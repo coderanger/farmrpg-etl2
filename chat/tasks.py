@@ -3,6 +3,7 @@ import time
 from datetime import datetime
 from typing import Any
 from zoneinfo import ZoneInfo
+import httpx
 
 import structlog
 from asgiref.sync import sync_to_async
@@ -11,7 +12,7 @@ from google.auth.exceptions import DefaultCredentialsError
 from google.cloud import firestore
 
 from users.models import User
-from utils.http import client
+from utils.http import client as prod_client, alpha_client
 from utils.tasks import AsyncPool
 
 from .models import Emblem, Message
@@ -48,13 +49,17 @@ async def _get_id_for_user(username: str) -> int | None:
     )
 
 
-async def scrape_chat(room: str):
+async def scrape_chat(
+    room: str,
+    client: httpx.AsyncClient = prod_client,
+    game_room: str | None = None,
+):
     log.debug("Starting chat scrape", room=room)
     resp = await client.get(
         "worker.php",
         params={
             "go": "getchat",
-            "room": room,
+            "room": game_room or room,
             "cachebuster": str(time.time()),
         },
     )
@@ -101,7 +106,7 @@ async def scrape_chat(room: str):
 
 async def scrape_flags(room: str):
     log.debug("Starting flags scrape", room=room)
-    resp = await client.get(
+    resp = await prod_client.get(
         "worker.php",
         params={
             "type": "chat",
@@ -121,7 +126,7 @@ async def scrape_flags(room: str):
             db_data["room"] = room
             msg = await Message.objects.filter(id=db_data["id"]).afirst()
             ser = MessageSerializer(instance=msg, data=db_data)
-            await sync_to_async(lambda: ser.is_valid(raise_exception=True))()
+            await sync_to_async(ser.is_valid)(raise_exception=True)
             await sync_to_async(ser.save)()
 
             # Push the message to Firestore.
@@ -142,6 +147,10 @@ async def scrape_all_chat():
     pool = AsyncPool()
     for room in ROOMS:
         pool.add(scrape_chat(room), name=f"scrape-chat-{room}")
+    pool.add(
+        scrape_chat("alpha", client=alpha_client, game_room="global"),
+        name="scrape-chat-alpha",
+    )
     await pool.wait()
 
 
@@ -154,7 +163,7 @@ async def scrape_all_flags():
 
 async def scrape_all_emblems():
     log.debug("Scraping emblems from HTML")
-    resp = await client.get("/settings.php")
+    resp = await prod_client.get("/settings.php")
     resp.raise_for_status()
     for em_data in parse_emblems(resp.content):
         emb = await Emblem.objects.filter(id=em_data["id"]).afirst()
