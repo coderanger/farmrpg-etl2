@@ -4,7 +4,9 @@ version = "0.1.0"
 description = ""
 authors = ["Noah Kantrowitz <noah@coderanger.net>"]
 readme = "README.md"
-packages = []
+packages = [
+    { include = "farmrpg_etl", from = "src" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -49,5 +51,5 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = "etl.settings"
+DJANGO_SETTINGS_MODULE = "farmrpg_etl.settings"
 python_files = "tests.py test_*.py *_tests.py"

@@ -1,5 +1,5 @@
 develop:
-	python -m uvicorn --reload etl.asgi:application --port 8001
+	python -m uvicorn --reload farmrpg_etl.asgi:application --port 8001
 
 sdevelop:
 	env SYNC_DEVELOP=1 python manage.py runserver
