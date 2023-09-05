@@ -3,6 +3,7 @@ import re
 import time
 from datetime import datetime
 from typing import Any
+from urllib.parse import urljoin
 from zoneinfo import ZoneInfo
 import httpx
 
@@ -28,8 +29,8 @@ log = structlog.stdlib.get_logger(mod="chat.tasks")
 ROOMS = ["help", "global", "spoilers", "trade", "giveaways", "trivia", "staff"]
 
 MATTERBRIDGE_GATEWAYS = {
-    "staff": "staff_game",
-    # "alpha": "alpha_game",
+    "staff": "staff2",
+    "alpha": "alpha2",
 }
 MATTERBRIDGE_CLIENT = (
     httpx.AsyncClient(base_url=settings.MATTERBRIDGE_API)
@@ -46,12 +47,46 @@ LAST_FLAGS: dict[str, dict[int, int]] = {}
 UTC = ZoneInfo("UTC")
 
 MENTION_RE = re.compile(r"@([^:\s]+(?:[^:]{0,29}?[^:\s](?=:))?)")
+LINK_RE = re.compile(r'<a[^>]+href="([^"]+)"[^>]*>([^<]*)</a>')
+I_RE = re.compile(r'<i[^>]*>([^<]*)</i>')
 
 try:
     db = firestore.AsyncClient(project="farmrpg-mod")
     rooms_col = db.collection("rooms")
 except DefaultCredentialsError:
     db = rooms_col = None
+
+
+def _replace_link(md: re.Match) -> str:
+    href: str = md.group(1)
+    text: str = md.group(2)
+    # Make sure URLs resolve fully.
+    if not (
+        href.startswith("https://")
+        or href.startswith("http://")
+        or href.startswith("/")
+    ):
+        href = f"https://farmrpg.com/index.php#!/{href}"
+    elif href.startswith("/"):
+        href = urljoin("https://farmrpg.com/", href)
+    return f"[{text}]({href})"
+
+
+async def _matterbridge_send(room: str, msg_data: dict[str, Any]):
+    # Fix up links.
+    content = I_RE.sub("*\\1*", msg_data["content"])
+    content = LINK_RE.sub(_replace_link, content)
+    resp = await MATTERBRIDGE_CLIENT.post(
+        "/api/message",
+        json={
+            "text": content,
+            "username": msg_data["username"],
+            "gateway": MATTERBRIDGE_GATEWAYS[room],
+            "avatar": f"https://farmrpg.com/img/emblems/{msg_data['emblem']}",
+        },
+    )
+    log.debug("Matterbridge send", room=room, id=msg_data["id"], resp=resp.status_code)
+    resp.raise_for_status()
 
 
 @alru_cache(maxsize=100)
@@ -121,17 +156,7 @@ async def scrape_chat(
             and msg_data["ts"] > STARTUP_TIME
         ):
             # Don't wait for this to finish.
-            asyncio.create_task(
-                MATTERBRIDGE_CLIENT.post(
-                    "/api/message",
-                    json={
-                        "text": msg_data["content"],
-                        "username": msg_data["username"],
-                        "gateway": MATTERBRIDGE_GATEWAYS[room],
-                        "avatar": f"https://farmrpg.com/img/emblems/{msg_data['emblem']}",
-                    },
-                )
-            )
+            asyncio.create_task(_matterbridge_send(room, msg_data))
 
     LAST_MESSAGES[room] = {msg["id"]: msg for msg in msgs}
     log.debug("Finished chat scrape", room=room)

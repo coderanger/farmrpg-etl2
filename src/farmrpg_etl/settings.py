@@ -106,7 +106,7 @@ if os.environ.get("SYNC_DEVELOP"):
         0, "strawberry_django_plus.middlewares.debug_toolbar.DebugToolbarMiddleware"
     )
 
-ROOT_URLCONF = "etl.urls"
+ROOT_URLCONF = "farmrpg_etl.urls"
 
 TEMPLATES = [
     {
