@@ -5,8 +5,9 @@ from datetime import datetime
 from typing import Any
 from urllib.parse import urljoin
 from zoneinfo import ZoneInfo
-import httpx
+import html
 
+import httpx
 import structlog
 from asgiref.sync import sync_to_async
 from async_lru import alru_cache
@@ -48,7 +49,7 @@ UTC = ZoneInfo("UTC")
 
 MENTION_RE = re.compile(r"@([^:\s]+(?:[^:]{0,29}?[^:\s](?=:))?)")
 LINK_RE = re.compile(r'<a[^>]+href="([^"]+)"[^>]*>([^<]*)</a>')
-I_RE = re.compile(r'<i[^>]*>([^<]*)</i>')
+I_RE = re.compile(r"<i[^>]*>([^<]*)</i>")
 
 try:
     db = firestore.AsyncClient(project="farmrpg-mod")
@@ -76,6 +77,7 @@ async def _matterbridge_send(room: str, msg_data: dict[str, Any]):
     # Fix up links.
     content = I_RE.sub("*\\1*", msg_data["content"])
     content = LINK_RE.sub(_replace_link, content)
+    content = html.unescape(content)
     resp = await MATTERBRIDGE_CLIENT.post(
         "/api/message",
         json={
