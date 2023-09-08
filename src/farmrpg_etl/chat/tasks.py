@@ -1,25 +1,26 @@
 import asyncio
+import html
 import re
 import time
 from datetime import datetime
 from typing import Any
 from urllib.parse import urljoin
 from zoneinfo import ZoneInfo
-import html
 
 import httpx
+import sentry_sdk
 import structlog
 from asgiref.sync import sync_to_async
 from async_lru import alru_cache
-from google.auth.exceptions import DefaultCredentialsError
-from google.cloud import firestore
 from django.conf import settings
 from django.utils import timezone
+from google.auth.exceptions import DefaultCredentialsError
+from google.cloud import firestore
 
 from ..users.models import User
-from ..utils.http import client as prod_client, alpha_client
+from ..utils.http import alpha_client
+from ..utils.http import client as prod_client
 from ..utils.tasks import AsyncPool
-
 from .models import Emblem, Message
 from .parsers import parse_chat, parse_emblems, parse_flags
 from .serailizers import EmblemSerializer, MessageSerializer
@@ -74,21 +75,27 @@ def _replace_link(md: re.Match) -> str:
 
 
 async def _matterbridge_send(room: str, msg_data: dict[str, Any]):
-    # Fix up links.
-    content = I_RE.sub("*\\1*", msg_data["content"])
-    content = LINK_RE.sub(_replace_link, content)
-    content = html.unescape(content)
-    resp = await MATTERBRIDGE_CLIENT.post(
-        "/api/message",
-        json={
-            "text": content,
-            "username": msg_data["username"],
-            "gateway": MATTERBRIDGE_GATEWAYS[room],
-            "avatar": f"https://farmrpg.com/img/emblems/{msg_data['emblem']}",
-        },
-    )
-    log.debug("Matterbridge send", room=room, id=msg_data["id"], resp=resp.status_code)
-    resp.raise_for_status()
+    try:
+        # Fix up links.
+        content = I_RE.sub("*\\1*", msg_data["content"])
+        content = LINK_RE.sub(_replace_link, content)
+        content = html.unescape(content)
+        resp = await MATTERBRIDGE_CLIENT.post(
+            "/api/message",
+            json={
+                "text": content,
+                "username": msg_data["username"],
+                "gateway": MATTERBRIDGE_GATEWAYS[room],
+                "avatar": f"https://farmrpg.com/img/emblems/{msg_data['emblem']}",
+            },
+        )
+        log.debug(
+            "Matterbridge send", room=room, id=msg_data["id"], resp=resp.status_code
+        )
+        resp.raise_for_status()
+    except Exception as exc:
+        sentry_sdk.capture_exception(exc)
+        raise
 
 
 @alru_cache(maxsize=100)
