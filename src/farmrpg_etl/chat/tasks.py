@@ -75,27 +75,21 @@ def _replace_link(md: re.Match) -> str:
 
 
 async def _matterbridge_send(room: str, msg_data: dict[str, Any]):
-    try:
-        # Fix up links.
-        content = I_RE.sub("*\\1*", msg_data["content"])
-        content = LINK_RE.sub(_replace_link, content)
-        content = html.unescape(content)
-        resp = await MATTERBRIDGE_CLIENT.post(
-            "/api/message",
-            json={
-                "text": content,
-                "username": msg_data["username"],
-                "gateway": MATTERBRIDGE_GATEWAYS[room],
-                "avatar": f"https://farmrpg.com/img/emblems/{msg_data['emblem']}",
-            },
-        )
-        log.debug(
-            "Matterbridge send", room=room, id=msg_data["id"], resp=resp.status_code
-        )
-        resp.raise_for_status()
-    except Exception as exc:
-        sentry_sdk.capture_exception(exc)
-        raise
+    # Fix up links.
+    content = I_RE.sub("*\\1*", msg_data["content"])
+    content = LINK_RE.sub(_replace_link, content)
+    content = html.unescape(content)
+    resp = await MATTERBRIDGE_CLIENT.post(
+        "/api/message",
+        json={
+            "text": content,
+            "username": msg_data["username"],
+            "gateway": MATTERBRIDGE_GATEWAYS[room],
+            "avatar": f"https://farmrpg.com/img/emblems/{msg_data['emblem']}",
+        },
+    )
+    log.debug("Matterbridge send", room=room, id=msg_data["id"], resp=resp.status_code)
+    resp.raise_for_status()
 
 
 @alru_cache(maxsize=100)

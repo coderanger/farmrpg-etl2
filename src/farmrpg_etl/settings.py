@@ -16,6 +16,7 @@ from pathlib import Path
 import dj_database_url
 import sentry_sdk
 from django.core.exceptions import DisallowedHost
+from sentry_sdk.integrations.asyncio import AsyncioIntegration
 from sentry_sdk.integrations.django import DjangoIntegration
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,6 +27,7 @@ if "SENTRY_DSN" in os.environ:
         dsn=os.environ["SENTRY_DSN"],
         integrations=[
             DjangoIntegration(),
+            AsyncioIntegration(),
         ],
         # Set traces_sample_rate to 1.0 to capture 100%
         # of transactions for performance monitoring.
