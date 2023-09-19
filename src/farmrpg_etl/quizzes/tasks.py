@@ -58,7 +58,7 @@ async def scrape_answers_from_api():
                 "answer2": _sanitize_text(row["answer2"]),
                 "answer3": _sanitize_text(row["answer3"]),
                 "answer4": _sanitize_text(row["answer4"]),
-                "correct": _sanitize_text(row["correct"]),
+                "correct": row["correct"],
             },
         )
         seen_orders[row["quiz_id"]].append(row["display_order"])
