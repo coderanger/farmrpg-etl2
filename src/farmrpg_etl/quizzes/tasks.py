@@ -4,7 +4,6 @@ import structlog
 
 from ..items.models import Item
 from ..utils.http import client
-
 from .models import Quiz, QuizAnswer, QuizReward
 
 log = structlog.stdlib.get_logger(mod=__name__)
@@ -36,6 +35,12 @@ async def scrape_quizzes_from_api():
         )
 
 
+def _sanitize_text(val: str | None) -> str | None:
+    if val is None:
+        return None
+    return val.replace("<br/>", "")
+
+
 async def scrape_answers_from_api():
     resp = await client.get("/api/answers/")
     resp.raise_for_status()
@@ -48,12 +53,12 @@ async def scrape_answers_from_api():
             quiz_id=row["quiz_id"],
             display_order=row["display_order"],
             defaults={
-                "question": row["question"],
-                "answer1": row["answer1"],
-                "answer2": row["answer2"],
-                "answer3": row["answer3"],
-                "answer4": row["answer4"],
-                "correct": row["correct"],
+                "question": _sanitize_text(row["question"]),
+                "answer1": _sanitize_text(row["answer1"]),
+                "answer2": _sanitize_text(row["answer2"]),
+                "answer3": _sanitize_text(row["answer3"]),
+                "answer4": _sanitize_text(row["answer4"]),
+                "correct": _sanitize_text(row["correct"]),
             },
         )
         seen_orders[row["quiz_id"]].append(row["display_order"])
