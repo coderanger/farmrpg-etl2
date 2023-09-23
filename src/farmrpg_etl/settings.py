@@ -20,7 +20,7 @@ from sentry_sdk.integrations.asyncio import AsyncioIntegration
 from sentry_sdk.integrations.django import DjangoIntegration
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 if "SENTRY_DSN" in os.environ:
     sentry_sdk.init(
@@ -89,6 +89,7 @@ INSTALLED_APPS = [
     "farmrpg_etl.tower",
     "farmrpg_etl.cron",
     # "farmrpg_etl.trades",
+    "farmrpg_etl.ssh_tunnel",
 ]
 
 MIDDLEWARE = [
@@ -137,8 +138,14 @@ DATABASES = {
         conn_max_age=600,
         conn_health_checks=True,
     ),
+    "game_prod": dj_database_url.config(
+        env="DATABASE_URL_GAME_PROD",
+        conn_max_age=600,
+        conn_health_checks=True,
+    ),
 }
 
+DATABASE_ROUTERS = ["farmrpg_etl.database_routers.GameRouter"]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

@@ -10,6 +10,8 @@ from croniter import croniter
 from django.utils import timezone
 from django.utils.module_loading import autodiscover_modules
 
+from ..ssh_tunnel.tunnel import tunnel_is_ready
+from ..utils.tasks import is_async_server
 from . import decorators
 from .decorators import CronRegistration
 from .models import Cron
@@ -35,7 +37,9 @@ async def _process_one_cron(cron: CronRegistration) -> None:
         sentry_sdk.capture_exception(exc)
         model.previous_error = traceback.format_exc()
     else:
-        log.debug("Finished cron", name=cron.name, value=value)
+        if not isinstance(value, dict):
+            value = {"value": value}
+        log.debug("Finished cron", name=cron.name, **value)
         model.previous_error = None
     now = timezone.now()
     model.previous_finished_at = now
@@ -58,6 +62,11 @@ async def process_cron() -> None:
 
     while True:
         now = timezone.now()
+
+        # Wait until the tunnels are up.
+        if not tunnel_is_ready():
+            await asyncio.sleep(1)
+            continue
 
         # Don't run any background tasks during maintenance, most will just fail.
         if MAINTENANCE_START <= now.astimezone(SERVER_TIME).time() <= MAINTENANCE_END:
@@ -90,9 +99,7 @@ async def process_cron() -> None:
 
 def start_cron() -> None:
     # Check if we're in an async context.
-    try:
-        asyncio.get_running_loop()
-    except RuntimeError:
+    if not is_async_server():
         return
 
     # Try to import a .tasks module from all installed apps.

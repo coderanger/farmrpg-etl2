@@ -7,6 +7,7 @@ import structlog
 from croniter import croniter
 from django.conf import settings
 
+from ..utils.tasks import is_server
 from .models import Cron
 
 log = structlog.stdlib.get_logger(mod=__name__)
@@ -48,10 +49,11 @@ def cron(cronspec: str, name: str | None = None) -> Callable[[Cronable], Cronabl
 
         # Check if we should register this cron.
         if any(fnmatch.fnmatch(reg.name, t) for t in settings.ENABLE_TASKS):
-            log.info("Registering cron", name=reg.name)
+            if is_server():
+                log.info("Registering cron", name=reg.name)
             assert reg.name not in _registry
             _registry[reg.name] = reg
-        else:
+        elif is_server():
             log.info("Not registering cron due to settings", name=reg.name)
 
         return fn

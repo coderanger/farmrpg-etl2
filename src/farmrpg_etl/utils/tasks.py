@@ -1,5 +1,7 @@
 import asyncio
 import fnmatch
+import os
+import sys
 from asyncio import Task
 from datetime import datetime, time
 from typing import Any, Callable, Coroutine
@@ -15,6 +17,18 @@ MAINTENANCE_START = time(23, 29)
 MAINTENANCE_END = time(23, 36)
 
 log = structlog.stdlib.get_logger(mod=__name__)
+
+
+def is_async_server():
+    return "uvicorn" in sys.modules
+
+
+def is_sync_server():
+    return "SYNC_DEVELOP" in os.environ
+
+
+def is_server():
+    return is_async_server() or is_sync_server()
 
 
 @attrs.define
@@ -33,9 +47,7 @@ def create_periodic_task(
     coro: Callable[[], Coroutine], interval: int | float, *, name: str | None = None
 ):
     # Check if we're in an async context.
-    try:
-        asyncio.get_running_loop()
-    except RuntimeError:
+    if not is_async_server():
         return
 
     if name is not None and not any(

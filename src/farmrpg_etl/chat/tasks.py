@@ -17,11 +17,12 @@ from django.utils import timezone
 from google.auth.exceptions import DefaultCredentialsError
 from google.cloud import firestore
 
+from ..cron.decorators import cron
 from ..users.models import User
 from ..utils.http import alpha_client
 from ..utils.http import client as prod_client
 from ..utils.tasks import AsyncPool
-from .models import Emblem, Message
+from .models import Emblem, GameEmblem, Message
 from .parsers import parse_chat, parse_emblems, parse_flags
 from .serailizers import EmblemSerializer, MessageSerializer
 
@@ -222,13 +223,25 @@ async def scrape_all_flags():
     await pool.wait()
 
 
-async def scrape_all_emblems():
-    log.debug("Scraping emblems from HTML")
-    resp = await prod_client.get("/settings.php")
-    resp.raise_for_status()
-    for em_data in parse_emblems(resp.content):
-        emb = await Emblem.objects.filter(id=em_data["id"]).afirst()
-        ser = EmblemSerializer(instance=emb, data=em_data)
-        await sync_to_async(lambda: ser.is_valid(raise_exception=True))()
-        await sync_to_async(ser.save)()
-    log.debug("Finished scraping emblems from HTML")
+@cron("@hourly")
+async def scrape_emblems():
+    count_total = 0
+    count_created = 0
+    async for emb in GameEmblem.objects.all().aiterator():
+        if emb.vendor_id == 1:
+            continue
+        _, created = await Emblem.objects.aupdate_or_create(
+            id=emb.id,
+            defaults={
+                "name": emb.name,
+                "image": emb.img,
+                "type": {999: Emblem.TYPE_PATREON, 1099: Emblem.TYPE_STAFF}.get(
+                    emb.vendor_id
+                ),
+                "keywords": emb.category,
+            },
+        )
+        count_total += 1
+        if created:
+            count_created += 1
+    return {"total": count_total, "created": count_created}
