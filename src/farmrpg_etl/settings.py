@@ -143,6 +143,11 @@ DATABASES = {
         conn_max_age=600,
         conn_health_checks=True,
     ),
+    "game_alpha": dj_database_url.config(
+        env="DATABASE_URL_GAME_ALPHA",
+        conn_max_age=600,
+        conn_health_checks=True,
+    ),
 }
 
 DATABASE_ROUTERS = ["farmrpg_etl.database_routers.GameRouter"]

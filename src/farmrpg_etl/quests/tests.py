@@ -5,7 +5,6 @@ import pytest
 from asgiref.sync import async_to_sync
 
 from ..items.factories import ItemFactory
-
 from .html_sanitizer import sanitize_quest_description
 from .models import (
     Quest,
