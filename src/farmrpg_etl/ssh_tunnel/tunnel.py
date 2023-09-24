@@ -23,6 +23,7 @@ async def _connect_one(server: Server):
     key = asyncssh.import_private_key(os.environ["SSH_KEY"])
     conn = await asyncssh.connect(
         hostname,
+        username="etl",
         port=int(port),
         client_keys=[key],
         keepalive_interval=1,
