@@ -33,6 +33,7 @@ NPCS = {
     "Captain Thomas",
     "frank",
     "Mariya",
+    "Geist",
 }
 
 
