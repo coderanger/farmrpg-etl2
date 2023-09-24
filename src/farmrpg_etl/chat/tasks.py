@@ -126,7 +126,7 @@ async def scrape_chat(
     for msg_data in reversed(msgs):
         last_msg = LAST_MESSAGES.get(room, {}).get(msg_data["id"])
         if last_msg is None or msg_data["deleted"] != last_msg["deleted"]:
-            log.debug("Got chat message", room=room, msg=msg_data["id"])
+            # log.debug("Got chat message", room=room, msg=msg_data["id"])
             if (
                 last_msg is not None
                 and last_msg["deleted"] is False

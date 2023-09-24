@@ -3,7 +3,6 @@ from asgiref.sync import sync_to_async
 
 from ..utils.http import client
 from ..utils.tasks import AsyncPool
-
 from .models import User
 from .parsers import parse_online, parse_profile
 from .serializers import UserSerializer
@@ -38,7 +37,7 @@ NPCS = {
 
 
 async def scrape_profile(username: str):
-    log.debug("Scraping user", username=username)
+    # log.debug("Scraping user", username=username)
     resp = await client.get("/profile.php", params={"user_name": username})
     resp.raise_for_status()
     data = parse_profile(username, resp.content)
