@@ -40,9 +40,11 @@ async def _process_one_cron(cron: CronRegistration) -> None:
         sentry_sdk.capture_exception(exc)
         model.previous_error = traceback.format_exc()
     else:
-        if not isinstance(value, dict):
+        if value is None:
+            value = {}
+        elif not isinstance(value, dict):
             value = {"value": value}
-        value['time'] = end - start
+        value["time"] = end - start
         log.debug("Finished cron", name=cron.name, **value)
         model.previous_error = None
     now = timezone.now()
