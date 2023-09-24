@@ -2,7 +2,6 @@ from strawberry_django_plus import gql
 from strawberry_django_plus.gql import auto
 
 from ..items.graphql import Item
-
 from . import models
 from .graphql_extra import PetItemOrder, PetOrder
 
@@ -19,11 +18,13 @@ class Pet:
     name: auto
     image: auto
     cost: float
+    order: auto
 
     required_farming_level: auto
     required_fishing_level: auto
     required_crafting_level: auto
     required_exploring_level: auto
+    required_cooking_level: auto
 
     pet_items: list["PetItem"]
 
@@ -34,3 +35,4 @@ class PetItem:
     pet: Pet
     item: Item
     level: auto
+    order: auto

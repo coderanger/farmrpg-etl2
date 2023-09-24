@@ -1,7 +1,6 @@
 from strawberry_django_plus import gql
 from strawberry_django_plus.gql import auto
 
-
 from . import models
 
 
@@ -9,9 +8,11 @@ from . import models
 class PetOrder:
     id: auto
     name: auto
+    order: auto
 
 
 @gql.django.ordering.order(models.PetItem)
 class PetItemOrder:
     level: auto
     pet: PetOrder
+    order: auto
