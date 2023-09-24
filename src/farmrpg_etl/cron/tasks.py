@@ -2,6 +2,7 @@ import asyncio
 import traceback
 from datetime import datetime, time
 from datetime import timezone as dtimezone
+from time import monotonic
 from zoneinfo import ZoneInfo
 
 import sentry_sdk
@@ -29,9 +30,11 @@ async def _process_one_cron(cron: CronRegistration) -> None:
     await model.asave(update_fields=["previous_started_at"])
     # Run the task.
     log.debug("Starting cron", name=cron.name)
+    start = monotonic()
     try:
         # TODO output capture
         value = await cron.fn()
+        end = monotonic()
     except Exception as exc:
         log.error("Error in cron", exc_info=True, name=cron.name)
         sentry_sdk.capture_exception(exc)
@@ -39,6 +42,7 @@ async def _process_one_cron(cron: CronRegistration) -> None:
     else:
         if not isinstance(value, dict):
             value = {"value": value}
+        value['time'] = end - start
         log.debug("Finished cron", name=cron.name, **value)
         model.previous_error = None
     now = timezone.now()
