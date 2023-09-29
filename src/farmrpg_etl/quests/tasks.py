@@ -4,11 +4,11 @@ import re
 import attrs
 import structlog
 from asgiref.sync import sync_to_async
+from django.utils import timezone
 from toposort import toposort_flatten
 
 from ..utils import roman
 from ..utils.http import client
-
 from .models import Quest, QuestItemRequired, QuestItemReward, Questline, QuestlineStep
 from .serializers import QuestAPISerializer
 
@@ -81,7 +81,9 @@ async def update_items(quest_id: int, model: type, items: str):
         raw_item_id, raw_quantity = chunk.split("|")
         item_id = int(raw_item_id)
         quantity = int(raw_quantity)
-        assert item_id not in all_items, f"Duplicate quest items: {quest_id=} {item_id=}"
+        assert (
+            item_id not in all_items
+        ), f"Duplicate quest items: {quest_id=} {item_id=}"
         await model.objects.aupdate_or_create(
             quest_id=quest_id,
             item_id=item_id,
@@ -106,6 +108,7 @@ async def scrape_all_from_api():
     }
 
     import_count = 0
+    now = timezone.now()
     for quest_id in toposort_flatten(topo_input, sort=False):
         log.debug("Updating quest from API", id=quest_id)
         row = by_id[quest_id]
@@ -114,7 +117,13 @@ async def scrape_all_from_api():
             reward_items = row.pop("reward_items")
             quest = await Quest.objects.filter(id=row["id"]).afirst()
             ser = QuestAPISerializer(instance=quest, data=row)
-            await sync_to_async(lambda: ser.is_valid(raise_exception=True))()
+            await sync_to_async(ser.is_valid)(raise_exception=True)
+            if (
+                ser.validated_data.get("start_date")
+                and ser.validated_data["start_date"] > now
+            ):
+                # Don't import quests that haven't started yet because it's hard to hide them.
+                continue
             await sync_to_async(ser.save)()
             await update_items(row["id"], QuestItemRequired, required_items)
             await update_items(row["id"], QuestItemReward, reward_items)
