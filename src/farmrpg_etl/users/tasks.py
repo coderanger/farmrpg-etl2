@@ -34,6 +34,7 @@ NPCS = {
     "frank",
     "Mariya",
     "Geist",
+    "Gary Bearson V",
 }
 
 

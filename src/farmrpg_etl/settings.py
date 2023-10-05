@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 import os
 from pathlib import Path
+from typing import TYPE_CHECKING
+from urllib.parse import urlparse
 
 import dj_database_url
 import sentry_sdk
@@ -19,10 +21,23 @@ from django.core.exceptions import DisallowedHost
 from sentry_sdk.integrations.asyncio import AsyncioIntegration
 from sentry_sdk.integrations.django import DjangoIntegration
 
+if TYPE_CHECKING:
+    from sentry_sdk._types import Event, Hint
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 if "SENTRY_DSN" in os.environ:
+
+    def filter_transactions(event: "Event", hint: "Hint") -> "Event" | None:
+        url_string: str = event["request"]["url"]
+        parsed_url = urlparse(url_string)
+
+        if parsed_url.path == "/graphql":
+            return None
+
+        return event
+
     sentry_sdk.init(
         dsn=os.environ["SENTRY_DSN"],
         integrations=[
@@ -32,11 +47,12 @@ if "SENTRY_DSN" in os.environ:
         # Set traces_sample_rate to 1.0 to capture 100%
         # of transactions for performance monitoring.
         # We recommend adjusting this value in production.
-        traces_sample_rate=1.0,
+        traces_sample_rate=0,
         # If you wish to associate users to errors (assuming you are using
         # django.contrib.auth) you may enable sending PII data.
         send_default_pii=True,
         ignore_errors=[DisallowedHost],
+        before_send_transaction=filter_transactions,
     )
 
 # Quick-start development settings - unsuitable for production
