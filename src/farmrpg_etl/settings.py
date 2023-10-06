@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 import os
 from pathlib import Path
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Optional
 from urllib.parse import urlparse
 
 import dj_database_url
@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 if "SENTRY_DSN" in os.environ:
 
-    def filter_transactions(event: "Event", hint: "Hint") -> "Event" | None:
+    def filter_transactions(event: "Event", hint: "Hint") -> Optional["Event"]:
         url_string: str = event["request"]["url"]
         parsed_url = urlparse(url_string)
 
