@@ -6,7 +6,6 @@ from zoneinfo import ZoneInfo
 from bs4 import BeautifulSoup, Tag
 
 from ..utils.parsers import CSSSelector, ParseError, parse_page_fragment
-
 from .models import Emblem
 
 UTC = ZoneInfo("UTC")
@@ -17,6 +16,7 @@ FLAGS_RE = re.compile(r"^(\d+) flags?$")
 FORCEPATH_RE = re.compile(r"<strong>\w+path</strong>")
 TENFOO_RE = re.compile(r"<strong>\w+foo</strong>")
 FIRESTREAM_RE = re.compile(r"<strong>\w+stream</strong>")
+CODERANGER_RE = re.compile(r"<strong>code\w+</strong>")
 AT_LINK_RE = re.compile(
     r'<a class="close-panel" href="profile.php\?user_name=[^">]+"'
     r' style="color:teal">(@[^">]+)</a>'
@@ -75,6 +75,7 @@ def parse_chat(content: bytes) -> Iterable[dict[str, Any]]:
         msg_content = FORCEPATH_RE.sub("<strong>Forcepath</strong>", msg_content)
         msg_content = TENFOO_RE.sub("<strong>Tenfoo</strong>", msg_content)
         msg_content = FIRESTREAM_RE.sub("<strong>Firestream</strong>", msg_content)
+        msg_content = CODERANGER_RE.sub("<strong>coderanger</strong>", msg_content)
         msg_content = AT_LINK_RE.sub(r"\1:", msg_content)
         yield {
             "id": int(message_id_match[1]),
