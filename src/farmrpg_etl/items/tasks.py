@@ -8,7 +8,6 @@ from asgiref.sync import sync_to_async
 
 from ..cron.decorators import cron
 from ..utils.http import client
-
 from .models import (
     Item,
     LocksmithItem,
@@ -24,7 +23,7 @@ log = structlog.stdlib.get_logger(mod="items.tasks")
 # All this fuss is because there are some unreleased items so there are gaps in
 # valid IDs. There hasn't (yet) been a gap bigger than 20 but this may need to be
 # increased over time.
-MAX_ITEM_ID_GAP = 20
+MAX_ITEM_ID_GAP = 50
 
 # ID of the wishing well spreadsheet.
 WISHING_WELL_SPREADSHEET_ID = "1hYP-_PkvKvIm0hz8nhLhqzzZhAYl0zY6aRDoi6oN5qQ"
