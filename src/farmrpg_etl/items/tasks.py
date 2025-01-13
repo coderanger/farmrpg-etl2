@@ -1,10 +1,12 @@
 import collections
 import os
+from typing import Iterable
 
 import httpx
 import sentry_sdk
 import structlog
 from asgiref.sync import sync_to_async
+from toposort import toposort_flatten
 
 from ..cron.decorators import cron
 from ..utils.http import client
@@ -36,31 +38,48 @@ class ItemNotFound(Exception):
     """A stubby exception used in the scrape tasks."""
 
 
-async def scrape_from_api(item_id: int):
-    resp = await client.get(f"/api/item/{item_id}")
-    resp.raise_for_status()
-    data = resp.json()
-    if not data:
-        raise ItemNotFound
-    item = await Item.objects.filter(id=data[0]["id"]).afirst()
-    ser = ItemAPISerializer(instance=item, data=data[0])
-    await sync_to_async(ser.is_valid)(raise_exception=True)
-    await sync_to_async(ser.save)()
+def _item_topo(item_data: dict) -> Iterable[int]:
+    key = []
+    if item_data["cooking_recipe"] != 0:
+        key.append(item_data["cooking_recipe"])
+    if item_data["loot_key_id"]:
+        key.append(item_data["loot_key_id"])
+    return key
 
 
-async def scrape_recipes():
-    log.info("Scraping recipes")
-    resp = await client.get("/api/recipes")
-    resp.raise_for_status()
-    data = resp.json()
+async def ingest_items(items_data: list[dict]):
+    by_id = {d["id"]: d for d in items_data}
+    topo_input = {d["id"]: _item_topo(d) for d in items_data}
+
+    for item_id in toposort_flatten(topo_input, sort=False):
+        item_data = by_id[item_id]
+        if int(item_data["active"]) != 1:
+            log.info(
+                "Not ingesting inactive item",
+                id=item_data.get("id"),
+                name=item_data.get("name"),
+            )
+            continue
+        log.info(
+            "Ingesting item",
+            id=item_data["id"],
+            name=item_data["name"],
+        )
+        item = await Item.objects.filter(id=item_data["id"]).afirst()
+        ser = ItemAPISerializer(instance=item, data=item_data)
+        await sync_to_async(ser.is_valid)(raise_exception=True)
+        await sync_to_async(ser.save)()
+
+
+async def ingest_recipes(recipes_data: list[dict]):
+    log.info("Ingesting recipes")
     seen_recipe_item_ids = []
     seen_locksmith_item_ids = []
-    for row in data:
+    for row in recipes_data:
         item = await Item.objects.filter(id=row["item_id"]).afirst()
         if item is None:
-            msg = f"Got item ID {row['item_id']} from recipe that does not exist"
+            msg = f"Got item ID {row['item_id']} from recipe that does not exist (probably is active=false)"
             log.error(msg)
-            sentry_sdk.capture_message(msg)
             continue
         if item.from_event and not (
             item.can_craft or item.can_cook or item.can_locksmith
@@ -98,26 +117,13 @@ async def scrape_recipes():
     await LocksmithItem.objects.exclude(id__in=seen_locksmith_item_ids).adelete()
 
 
-@cron("H/30 * * * * H", name="scrape_items")
-async def scrape_all():
-    cur_id = 10  # Start at 10 because 1-9 are unused.
-    missing = 0
-    while True:
-        log.debug("Scraping item", id=cur_id)
-        try:
-            await scrape_from_api(cur_id)
-            missing = 0  # It worked so reset the count.
-            # await scrape_from_html(cur_id)
-        except ItemNotFound:
-            missing += 1
-            if missing >= MAX_ITEM_ID_GAP:
-                break
-        except Exception as exc:
-            # Keep going for future items.
-            sentry_sdk.capture_exception(exc)
-            log.exception("Error scraping item")
-        cur_id += 1
-    await scrape_recipes()
+@cron("H/30 * * * * H")
+async def scrape_items():
+    resp = await client.get("/api.php", params={"method": "items"})
+    resp.raise_for_status()
+    data = resp.json()
+    await ingest_items(data["items"])
+    await ingest_recipes(data["recipes"])
 
 
 @cron("@hourly", name="scrape_wishing_well")

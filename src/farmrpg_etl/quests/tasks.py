@@ -7,6 +7,7 @@ from asgiref.sync import sync_to_async
 from django.utils import timezone
 from toposort import toposort_flatten
 
+from ..cron.decorators import cron
 from ..utils import roman
 from ..utils.http import client
 from .models import Quest, QuestItemRequired, QuestItemReward, Questline, QuestlineStep
@@ -25,7 +26,7 @@ class PartialQuestline:
     weight: int
 
 
-async def update_questlines():
+async def _update_questlines():
     log.debug("Updating questlines")
     quests = Quest.objects.only("id", "title", "npc_img")
     questlines = collections.defaultdict[str, list[PartialQuestline]](list)
@@ -65,12 +66,14 @@ async def update_questlines():
                 questline=ql, quest_id=pq.quest.id, defaults={"order": i}
             )
             seen_ids.append(step.id)
-        await QuestlineStep.objects.filter(questline=ql).exclude(
-            id__in=seen_ids
-        ).adelete()
+        await (
+            QuestlineStep.objects.filter(questline=ql)
+            .exclude(id__in=seen_ids)
+            .adelete()
+        )
 
 
-async def update_items(quest_id: int, model: type, items: str):
+async def _update_items(quest_id: int, model: type, items: str):
     all_items = {}
     for i, chunk in enumerate(items.split(",")):
         chunk = chunk.strip()
@@ -81,21 +84,24 @@ async def update_items(quest_id: int, model: type, items: str):
         raw_item_id, raw_quantity = chunk.split("|")
         item_id = int(raw_item_id)
         quantity = int(raw_quantity)
-        assert (
-            item_id not in all_items
-        ), f"Duplicate quest items: {quest_id=} {item_id=}"
+        assert item_id not in all_items, (
+            f"Duplicate quest items: {quest_id=} {item_id=}"
+        )
         await model.objects.aupdate_or_create(
             quest_id=quest_id,
             item_id=item_id,
             defaults={"quantity": quantity, "order": i},
         )
         all_items[item_id] = quantity
-    await model.objects.filter(quest_id=quest_id).exclude(
-        item_id__in=all_items.keys()
-    ).adelete()
+    await (
+        model.objects.filter(quest_id=quest_id)
+        .exclude(item_id__in=all_items.keys())
+        .adelete()
+    )
 
 
-async def scrape_all_from_api():
+@cron("@hourly")
+async def scrape_quests():
     resp = await client.get("/api/quests/")
     resp.raise_for_status()
     data = resp.json()
@@ -111,6 +117,10 @@ async def scrape_all_from_api():
     now = timezone.now()
     for quest_id in toposort_flatten(topo_input, sort=False):
         log.debug("Updating quest from API", id=quest_id)
+        if quest_id not in by_id:
+            # This happens when there's a dangling pred_id pointing at something inactive or invalid.
+            log.error("Unable to ingest, no data found", id=quest_id)
+            continue
         row = by_id[quest_id]
         try:
             required_items = row.pop("required_items")
@@ -125,11 +135,11 @@ async def scrape_all_from_api():
                 # Don't import quests that haven't started yet because it's hard to hide them.
                 continue
             await sync_to_async(ser.save)()
-            await update_items(row["id"], QuestItemRequired, required_items)
-            await update_items(row["id"], QuestItemReward, reward_items)
+            await _update_items(row["id"], QuestItemRequired, required_items)
+            await _update_items(row["id"], QuestItemReward, reward_items)
             import_count += 1
         except Exception:
             # Keep trying to rest in case this is just an eventual consistency glitch.
             log.exception("Error loading quest", id=row["id"])
-    await update_questlines()
+    await _update_questlines()
     return import_count
