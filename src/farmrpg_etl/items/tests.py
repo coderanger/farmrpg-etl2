@@ -114,6 +114,7 @@ def test_scrape_from_api_grape_pie(respx_mock):
                 "fm_buy": 0,
                 "fm_price": 0,
                 "fm_rotate": 0,
+                "active": 1,
             }
         ],
         "recipes": [],
