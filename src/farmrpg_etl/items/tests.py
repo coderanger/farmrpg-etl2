@@ -1,10 +1,10 @@
+import json
 from pathlib import Path
 
 import httpx
 import pytest
 from asgiref.sync import async_to_sync
 
-from .factories import ItemFactory
 from .models import Item
 from .parsers import ParsedIngredient, parse_item
 from .tasks import scrape_items
@@ -36,6 +36,10 @@ def gb02() -> bytes:
 def snowball() -> bytes:
     return FIXTURES_ROOT.joinpath("item_snowball.html").open("rb").read()
 
+
+@pytest.fixture
+def items() -> dict:
+    return json.load(FIXTURES_ROOT.joinpath("items").open("r"))
 
 def test_parse_recipe(scissors: bytes):
     item = parse_item(scissors)
@@ -80,49 +84,10 @@ def test_parse_event(snowball: bytes):
 
 
 @pytest.mark.django_db
-def test_scrape_from_api_grape_pie(respx_mock):
-    api_data = {
-        "items": [
-            {
-                "id": 726,
-                "xp": 6500,
-                "img": "/img/items/grapepie.png",
-                "name": "Concord Grape Pie",
-                "type": "item",
-                "can_buy": 0,
-                "can_sell": 1,
-                "cookable": 1,
-                "mailable": 0,
-                "buy_price": 0,
-                "craftable": 0,
-                "masterable": 1,
-                "reg_weight": 3000,
-                "sell_price": 25000000,
-                "description": "A super yummy pie full of grapes",
-                "cooking_level": 40,
-                "crafting_level": 1,
-                "runecube_weight": 3000,
-                "cooking_recipe": 727,
-                "base_yield_minutes": 720,
-                "min_mailable_level": 0,
-                "manfish_only": 0,
-                "loot_key_id": 0,
-                "loot_rand": 0,
-                "loot_gold": 0,
-                "loot": 0,
-                "event": 0,
-                "fm_buy": 0,
-                "fm_price": 0,
-                "fm_rotate": 0,
-                "active": 1,
-            }
-        ],
-        "recipes": [],
-    }
+def test_scrape_from_api_grape_pie(items: dict, respx_mock):
     respx_mock.get("https://farmrpg.com/api.php?method=items").mock(
-        return_value=httpx.Response(200, json=api_data)
+        return_value=httpx.Response(200, json=items)
     )
-    ItemFactory(id=727, name="Pie Recipe")
     async_to_sync(scrape_items)()
     item = Item.objects.get(id=726)
-    assert item.cooking_recipe_item.name == "Pie Recipe"
+    assert item.cooking_recipe_item.name == "Rosalie's Concord Grape Pie"
