@@ -22,9 +22,9 @@ from ..users.models import User
 from ..utils.http import alpha_client
 from ..utils.http import client as prod_client
 from ..utils.tasks import AsyncPool
-from .models import Emblem, GameEmblem, Message
-from .parsers import parse_chat, parse_emblems, parse_flags
-from .serailizers import EmblemSerializer, MessageSerializer
+from .models import Emblem, Message
+from .parsers import parse_chat, parse_flags
+from .serailizers import MessageSerializer
 
 log = structlog.stdlib.get_logger(mod="chat.tasks")
 
@@ -227,18 +227,21 @@ async def scrape_all_flags():
 async def scrape_emblems():
     count_total = 0
     count_created = 0
-    async for emb in GameEmblem.objects.all().aiterator():
-        if emb.vendor_id == 1:
+    resp = await prod_client.get("/api.php?method=emblems")
+    resp.raise_for_status()
+    data = resp.json()
+    for row in data:
+        if row["vendor_id"] == 1:
             continue
         _, created = await Emblem.objects.aupdate_or_create(
-            id=emb.id,
+            id=row["id"],
             defaults={
-                "name": emb.name,
-                "image": emb.img,
+                "name": row["name"],
+                "image": row["img"],
                 "type": {999: Emblem.TYPE_PATREON, 1099: Emblem.TYPE_STAFF}.get(
-                    emb.vendor_id
+                    row["vendor_id"]
                 ),
-                "keywords": emb.category,
+                "keywords": row["category"],
             },
         )
         count_total += 1

@@ -3,27 +3,6 @@ from django.db import models
 
 from ..items.models import Item
 
-
-class GamePet(models.Model):
-    name = models.CharField(max_length=250)
-    description = models.CharField(max_length=500)
-    img = models.CharField(max_length=250)
-    items = models.CharField(max_length=250)
-    items3 = models.CharField(max_length=250)
-    items6 = models.CharField(max_length=250)
-    price = models.BigIntegerField()
-    farming_level = models.IntegerField()
-    fishing_level = models.IntegerField()
-    crafting_level = models.IntegerField()
-    exploring_level = models.IntegerField()
-    cooking_level = models.IntegerField()
-    display_order = models.IntegerField()
-
-    class Meta:
-        managed = False
-        db_table = "pet"
-
-
 @pghistory.track(pghistory.Snapshot(), exclude=["modified_at"])
 class Pet(models.Model):
     game_id = models.IntegerField(unique=True)

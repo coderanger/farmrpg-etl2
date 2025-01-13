@@ -7,7 +7,7 @@ ENV POETRY_INSTALLER_MAX_WORKERS 8
 WORKDIR /src
 
 RUN curl -o /install-poetry.py https://install.python-poetry.org && \
-    python /install-poetry.py --preview && \
+    python /install-poetry.py && \
     python -m venv .venv
 
 COPY . /src/

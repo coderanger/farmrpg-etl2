@@ -11,7 +11,6 @@ from croniter import croniter
 from django.utils import timezone
 from django.utils.module_loading import autodiscover_modules
 
-from ..ssh_tunnel.tunnel import tunnel_is_ready
 from ..utils.tasks import is_async_server
 from . import decorators
 from .decorators import CronRegistration
@@ -68,11 +67,6 @@ async def process_cron() -> None:
 
     while True:
         now = timezone.now()
-
-        # Wait until the tunnels are up.
-        if not tunnel_is_ready():
-            await asyncio.sleep(1)
-            continue
 
         # Don't run any background tasks during maintenance, most will just fail.
         if MAINTENANCE_START <= now.astimezone(SERVER_TIME).time() <= MAINTENANCE_END:
