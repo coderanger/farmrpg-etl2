@@ -102,7 +102,7 @@ def test_scrape_from_api_grape_pie(respx_mock):
                 "cooking_level": 40,
                 "crafting_level": 1,
                 "runecube_weight": 3000,
-                "cooking_recipe_id": 727,
+                "cooking_recipe": 727,
                 "base_yield_minutes": 720,
                 "min_mailable_level": 0,
                 "manfish_only": 0,
