@@ -115,7 +115,8 @@ def test_scrape_from_api_grape_pie(respx_mock):
                 "fm_price": 0,
                 "fm_rotate": 0,
             }
-        ]
+        ],
+        "recipes": [],
     }
     respx_mock.get("https://farmrpg.com/api.php?method=items").mock(
         return_value=httpx.Response(200, json=api_data)
