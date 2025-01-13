@@ -14,7 +14,7 @@ from .models import (
     QuestItemReward,
     QuestItemRewardEvent,
 )
-from .tasks import scrape_all_from_api
+from .tasks import scrape_quests
 
 
 @pytest.fixture
@@ -61,7 +61,7 @@ def test_quest_scrape(respx_mock, item1, item2):
             ],
         )
     )
-    async_to_sync(scrape_all_from_api)()
+    async_to_sync(scrape_quests)()
     num_quests = Quest.objects.all().count()
     assert num_quests == 1
     quest = Quest.objects.get()
@@ -115,14 +115,14 @@ def test_quest_scrape_no_update(respx_mock, item1, item2):
             ],
         )
     )
-    async_to_sync(scrape_all_from_api)()
+    async_to_sync(scrape_quests)()
     assert Quest.objects.count() == 1
     assert QuestEvent.objects.count() == 1
     assert QuestItemRequired.objects.count() == 1
     assert QuestItemRequiredEvent.objects.count() == 1
     assert QuestItemReward.objects.count() == 1
     assert QuestItemRewardEvent.objects.count() == 1
-    async_to_sync(scrape_all_from_api)()
+    async_to_sync(scrape_quests)()
     assert Quest.objects.count() == 1
     assert QuestEvent.objects.count() == 1
     assert QuestItemRequired.objects.count() == 1
@@ -166,7 +166,7 @@ def test_quest_scrape_update(respx_mock, item1, item2):
             ],
         )
     )
-    async_to_sync(scrape_all_from_api)()
+    async_to_sync(scrape_quests)()
     assert Quest.objects.count() == 1
     assert Quest.objects.get().title == "Blooming Thaw Already IV"
     assert QuestEvent.objects.count() == 1
@@ -207,7 +207,7 @@ def test_quest_scrape_update(respx_mock, item1, item2):
             ],
         )
     )
-    async_to_sync(scrape_all_from_api)()
+    async_to_sync(scrape_quests)()
     assert Quest.objects.count() == 1
     assert Quest.objects.get().title == "Blooming Thaw Already IV Updated"
     assert QuestEvent.objects.count() == 2
@@ -252,7 +252,7 @@ def test_quest_scrape_no_dated(respx_mock, item1, item2):
             ],
         )
     )
-    async_to_sync(scrape_all_from_api)()
+    async_to_sync(scrape_quests)()
     quest = Quest.objects.get()
     assert quest.start_date is None
     assert quest.end_date is None
@@ -319,7 +319,7 @@ def test_quest_scrape_pred(respx_mock, item1, item2):
             ],
         )
     )
-    async_to_sync(scrape_all_from_api)()
+    async_to_sync(scrape_quests)()
     quest1 = Quest.objects.get(id=533)
     assert quest1.pred is None
     quest2 = Quest.objects.get(id=522)
@@ -388,7 +388,7 @@ def test_quest_scrape_pred_backwards(respx_mock, item1, item2):
             ],
         )
     )
-    async_to_sync(scrape_all_from_api)()
+    async_to_sync(scrape_quests)()
     quest1 = Quest.objects.get(id=533)
     assert quest1.pred is None
     quest2 = Quest.objects.get(id=522)
