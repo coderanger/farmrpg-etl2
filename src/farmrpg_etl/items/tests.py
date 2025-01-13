@@ -39,7 +39,7 @@ def snowball() -> bytes:
 
 @pytest.fixture
 def items() -> dict:
-    return json.load(FIXTURES_ROOT.joinpath("items").open("r"))
+    return json.load(FIXTURES_ROOT.joinpath("items.json").open("r"))
 
 def test_parse_recipe(scissors: bytes):
     item = parse_item(scissors)
