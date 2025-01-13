@@ -53,7 +53,7 @@ async def ingest_items(items_data: list[dict]):
 
     for item_id in toposort_flatten(topo_input, sort=False):
         item_data = by_id[item_id]
-        if int(item_data["active"]) != 1:
+        if int(item_data.get("active")) != 1:
             log.info(
                 "Not ingesting inactive item",
                 id=item_data.get("id"),
