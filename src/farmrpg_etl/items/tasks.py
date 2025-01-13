@@ -40,9 +40,9 @@ class ItemNotFound(Exception):
 
 def _item_topo(item_data: dict) -> Iterable[int]:
     key = []
-    if item_data["cooking_recipe"] != 0:
+    if item_data.get("cooking_recipe") != 0:
         key.append(item_data["cooking_recipe"])
-    if item_data["loot_key_id"]:
+    if item_data.get("loot_key_id") != 0:
         key.append(item_data["loot_key_id"])
     return key
 
