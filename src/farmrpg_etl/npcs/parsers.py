@@ -4,18 +4,19 @@ from lxml.html import html5parser
 
 from ..utils.parsers import (
     CSSSelector,
-    sel_first_or_die,
     de_namespace,
     parse_page_fragment,
+    sel_first_or_die,
 )
 
 TR_SEL = CSSSelector("tr:not(tr:first-of-type)")
 TD_ID_SEL = CSSSelector("td:nth-of-type(1)")
 TD_NAME_SEL = CSSSelector("td:nth-of-type(2)")
 TD_IMAGE_SEL = CSSSelector("td:nth-of-type(3) img")
-TD_LIKES_SEL = CSSSelector("td:nth-of-type(10)")
-TD_LOVES_SEL = CSSSelector("td:nth-of-type(11)")
-TD_HATES_SEL = CSSSelector("td:nth-of-type(12)")
+TD_CAN_SEND_SEL = CSSSelector("td:nth-of-type(10)")
+TD_LIKES_SEL = CSSSelector("td:nth-of-type(11)")
+TD_LOVES_SEL = CSSSelector("td:nth-of-type(12)")
+TD_HATES_SEL = CSSSelector("td:nth-of-type(13)")
 A_MAILBOX_SEL = CSSSelector("a[href^='mailbox.php?id=']")
 
 
@@ -26,6 +27,9 @@ def parse_manage_npc(page: bytes) -> Iterable[dict[str, Any]]:
         name_elm = sel_first_or_die(TD_NAME_SEL(row), "Unable to parse name from row")
         image_elm = sel_first_or_die(
             TD_IMAGE_SEL(row), "Unable to parse image from row"
+        )
+        can_send_elm = sel_first_or_die(
+            TD_CAN_SEND_SEL(row), "Unable to parse can_send from row"
         )
         likes_elm = sel_first_or_die(
             TD_LIKES_SEL(row), "Unable to parse likes from row"
@@ -41,6 +45,9 @@ def parse_manage_npc(page: bytes) -> Iterable[dict[str, Any]]:
             "id": int(id_elm.text.strip()),
             "name": name_elm.text.strip(),
             "image": image_elm.attrib["src"],
+            "can_send": [
+                val.strip() for val in (can_send_elm.text or "").split(",") if val.strip()
+            ],
             "likes": [
                 val.strip() for val in (likes_elm.text or "").split(",") if val.strip()
             ],

@@ -2,7 +2,6 @@ import structlog
 
 from ..items.models import Item
 from ..utils.http import client
-
 from .models import NPC, NPCItem
 from .parsers import parse_manage_npc, parse_npclevels
 
@@ -43,6 +42,7 @@ async def scrape_all_from_html():
                 "is_available": data["id"] in available_ids,
             },
         )
+        await _update_items(npc, "can_send", data["can_send"])
         await _update_items(npc, "loves", data["loves"])
         await _update_items(npc, "likes", data["likes"])
         await _update_items(npc, "hates", data["hates"])

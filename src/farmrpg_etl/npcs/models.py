@@ -24,10 +24,12 @@ class NPC(models.Model):
 
 @pghistory.track(pghistory.Snapshot(), exclude=["modified_at"])
 class NPCItem(models.Model):
+    RELATIONSHIP_CAN_SEND = "can_send"
     RELATIONSHIP_LOVES = "loves"
     RELATIONSHIP_LIKES = "likes"
     RELATIONSHIP_HATES = "hates"
     RELATIONSHIPS = [
+        (RELATIONSHIP_CAN_SEND, "Can Be Given "),
         (RELATIONSHIP_LOVES, "Loves"),
         (RELATIONSHIP_LIKES, "Likes"),
         (RELATIONSHIP_HATES, "Hates"),

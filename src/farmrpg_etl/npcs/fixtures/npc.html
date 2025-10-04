@@ -1,386 +1,485 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-	td {
-		padding: 2px;
-		font-family: arial;
+    td {
+        padding: 2px;
+        font-family: arial;
     font-size: 11px;
     border: 1px solid #eee;
-	}
+    }
   th {
-		padding: 2px;
-		font-family: arial;
+        padding: 2px;
+        font-family: arial;
     font-size: 11px;
-	}
-	body {
-		font-family: arial;
+    }
+    body {
+        font-family: arial;
     font-size: 11px;
-	}
+    }
 </style>
-<a href="redacted.php">redacted</a><br /><br />
-<a href="redacted.php">redacted</a><br /><br />
+
+<a href="manage_npc.php">NPC Management Home</a><br/><br/>
 <h2>Chat NPC</h2><form method="get">
-<input type='text' name='chat' style='width:300px'>
-NPC: <select name="npc_id">
-<option value="22438">Rosalie</option><option value="22439">Holger</option><option value="22440">Beatrix</option><option value="22441">Thomas</option><option value="22442">Cecil</option><option value="22443">George</option><option value="22444">Jill</option><option value="22445">Vincent</option><option value="22446">Lorn</option><option value="22447">Buddy</option><option value="53900">Borgen</option><option value="59421">Ric Ryph</option><option value="70604">Mummy</option><option value="46158">Star Meerif</option><option value="71760">Charles Horsington III</option><option value="71761">ROOMBA</option><option value="71805">Captain Thomas</option><option value="84518">frank</option><option value="89577">Santa</option><option value="125512">Leafy McLucky</option><option value="154722">Ragvin</option><option value="172470">FR4NK</option><option value="178572">Mariya</option><option value="188036">Ghorgen</option><option value="231545">Captain Logan</option><option value="267531">Baba Gec</option> </select>
-Channel: <select name="channel">
-<option>global</option>
-<option>giveaways</option>
-<option>spoilers</option>
-<option>help</option>
-<option>trade</option>
-</select>
-<input type="checkbox" name="chatitem" value="1"> Free Item
-<input type="submit" name="go" value="Chat">
-</form>
-<h2>All NPCs</h2><p>Any that show items can give out from the list shown. It will randomly pick from the list.</p><table><tr>
-<td>ID</td>
-<td>Name</td>
-<td>&nbsp;</td>
-<td>Zone</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>Gives in Chat</td>
-<td>Likes</td>
-<td>Loves</td>
-<td>Hates</td>
-</tr><tr>
-<td>22438</td>
-<td>Rosalie</td>
-<td><img src='img/items/a_098.png' style='width:40px'></td>
-<td>Small Spring</td>
-<td>99</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>Apple,Orange Juice,Lemonade,Iced Tea</td>
-<td>Carrot,Aquamarine,Apple,Purple Flower,Iced Tea,Caterpillar,Apple Cider,Fireworks</td>
-<td>Gold Carrot,Green Dye,Box of Chocolate 01,Valentines Card,Blue Dye,Red Dye,Purple Dye</td>
-<td>Worms,Fish Bones,Coal,Old Boot,Iron Cup,Carp,Grubs,Horned Beetle,Fire Ant,Spider</td>
-</tr><tr>
-<td>22439</td>
-<td>Holger</td>
-<td><img src='img/items/a_028.png' style='width:40px'></td>
-<td>Black Rock Canyon</td>
-<td>99</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>Potato,Bird Egg,Blue Sea Bass,Candy</td>
-<td>Largemouth Bass,Peas,Trout,Arrowhead,Bluegill,Carp,Horn,Cheese,Apple Cider,Peach,Mushroom Stew</td>
-<td>Potato,Marlin,Gold Trout,Mug of Beer</td>
-<td>Worms,Aquamarine,Milk,Valentines Card</td>
-</tr><tr>
-<td>22440</td>
-<td>Beatrix</td>
-<td><img src='img/items/a_011.png' style='width:40px'></td>
-<td>Mount Banon</td>
-<td>99</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>Coal,Explosive,Emberstone</td>
-<td>Hops,Coal,Bird Egg,Carbon Sphere,Hammer,Oak</td>
-<td>Black Powder,Explosive,Iced Tea,Fireworks</td>
-<td>Worms,Grubs,Horned Beetle,Fire Ant</td>
-</tr><tr>
-<td>22441</td>
-<td>Thomas</td>
-<td><img src='img/items/a_048.png' style='width:40px'></td>
-<td>Highland Hills</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>Crappie,Trout,Bluegill,Iced Tea,Gummy Worms</td>
-<td>Drum,Largemouth Bass,Carp,Iced Tea,Minnows,Gummy Worms,Mealworms</td>
-<td>Flier,Fishing Net,Gold Trout,Gold Catfish,Goldgill</td>
-<td>Worms,Eggs,Leek,Green Dye</td>
-</tr><tr>
-<td>22442</td>
-<td>Cecil</td>
-<td><img src='img/items/a_027.png' style='width:40px'></td>
-<td>Misty Forest</td>
-<td>80</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>Mushroom Stew,Onion Soup</td>
-<td>Aquamarine,Grapes,Ladder,Snail,Giant Centipede,Slimestone</td>
-<td>Leather,Old Boot,MIAB,Shiny Beetle,Horned Beetle,Grasshopper,Yarn</td>
-<td>Worms,Feathers,Mushroom,Milk</td>
-</tr><tr>
-<td>22443</td>
-<td>George</td>
-<td><img src='img/items/a_034.png' style='width:40px'></td>
-<td>Forest</td>
-<td>99</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td></td>
-<td>Hops,Glass Orb,Orange Juice,Arrowhead,Bird Egg,Mushroom Stew</td>
-<td>Hide,Carbon Sphere,Spider,Apple Cider,Mug of Beer</td>
-<td>Worms,Fish Bones,Bone,Cheese</td>
-</tr><tr>
-<td>22444</td>
-<td>Jill</td>
-<td><img src='img/items/a_024.png' style='width:40px'></td>
-<td>Cane Pole Ridge</td>
-<td>80</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>Corn</td>
-<td>Tomato,Milk,Old Boot,Grapes,Cheese,Scrap Metal</td>
-<td>Yellow Perch,Mushroom Paste,Leather,MIAB,Peach</td>
-<td>Worms,Hops,Stingray,Grubs,Spider,Snowball</td>
-</tr><tr>
-<td>22445</td>
-<td>Vincent</td>
-<td><img src='img/items/a_047.png' style='width:40px'></td>
-<td>Whispering Creek</td>
-<td>60</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td></td>
-<td>Wooden Box,Apple,Hops,Acorn,Leather Diary,Horn,Cheese,Shovel</td>
-<td>Mushroom Paste,Orange Juice,Lemonade,Axe,Apple Cider,5 Gold,Onion Soup</td>
-<td>Worms,Aquamarine,Purple Flower,Purple Parchment,Shrimp,Valentines Card</td>
-</tr><tr>
-<td>22446</td>
-<td>Lorn</td>
-<td><img src='img/items/a_088.png' style='width:40px'></td>
-<td>Ember Lagoon</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td></td>
-<td>Bucket,Peas,Purple Parchment,Green Parchment,Iron Cup,Iced Tea,3-leaf Clover,Apple Cider</td>
-<td>Small Prawn,Glass Orb,Milk,Shrimp,Gold Peas</td>
-<td>Worms,Crappie,Old Boot,Snail,Spider</td>
-</tr><tr>
-<td>22447</td>
-<td>Buddy</td>
-<td><img src='img/items/buddy.png' style='width:40px'></td>
-<td>Small Cave</td>
-<td>99</td>
-<td>22</td>
-<td>22</td>
-<td>22</td>
-<td>Hot Potato</td>
-<td>Bucket,Mushroom,Purple Flower,Bone,Gold Peppers,Gummy Worms,Snail,Giant Centipede,Spider</td>
-<td>Purple Flower,Pirate Flag,Pirate Bandana,Valentines Card</td>
-<td>Peppers,Drum,Worms,Crappie,Lemon,Lemonade,Grubs,Snowball</td>
-</tr><tr>
-<td>53900</td>
-<td>Borgen</td>
-<td><img src='img/items/borgen.png' style='width:40px'></td>
-<td></td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>Ancient Coin</td>
-<td>Glass Orb,Milk,Gold Carrot,Gold Peas,Gold Cucumber,Slimestone</td>
-<td>Wooden Box,Ancient Coin,Cheese,Skull Coin,Gold Catfish</td>
-<td>Worms,Purple Flower,Old Boot,Grubs,Green Dye,Valentines Card</td>
-</tr><tr>
-<td>59421</td>
-<td>Ric Ryph</td>
-<td><img src='img/items/npc_figure2.png' style='width:40px'></td>
-<td></td>
-<td>60</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>Paper Receipt,5 Gold</td>
-<td>Bucket,Green Parchment,Unpolished Shimmer Stone,Coal,Black Powder,Arrowhead,Old Boot,Carbon Sphere</td>
-<td>Mushroom Paste,Hammer,Shovel,5 Gold</td>
-<td>Worms,Aquamarine,Milk,Cheese,Ladder,Caterpillar,Valentines Card</td>
-</tr><tr>
-<td>70604</td>
-<td>Mummy</td>
-<td><img src='img/items/mummy_t_01.png' style='width:40px'></td>
-<td>Haunted House</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>Jack-o-lantern,Candy,Lollipop,Treat Bag 01</td>
-<td>Fish Bones,Hammer,Treat Bag 01,Treat Bag 02,Yarn</td>
-<td>Bone,Spider,Treat Bag 03,Valentines Card</td>
-<td>Drum,Worms,Coal,Cheese,Snowball,Box of Chocolate 01</td>
-</tr><tr>
-<td>46158</td>
-<td>Star Meerif</td>
-<td><img src='img/items/npc_figure.png' style='width:40px'></td>
-<td></td>
-<td>99</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>Feathers,Blue Feathers,Gold Feather</td>
-<td>Eggs,Feathers</td>
-<td>Blue Feathers,Gold Feather</td>
-<td>Worms,Lemon,Lemonade,Bone,Iron Cup,Cheese,Grubs</td>
-</tr><tr>
-<td>71760</td>
-<td>Charles Horsington III</td>
-<td><img src='img/items/npc_horse.png' style='width:40px'></td>
-<td></td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>Carrot,Gold Carrot</td>
-<td>Carrot,Twine,3-leaf Clover,Grasshopper</td>
-<td>Apple,Gold Carrot,Apple Cider,Box of Chocolate 01,Valentines Card,Peach</td>
-<td>Worms,Stone,Green Chromis,Blue Crab,Lemon,Lemonade,Bone,Cheese,Grubs,Snail,Spider</td>
-</tr><tr>
-<td>71761</td>
-<td>ROOMBA</td>
-<td><img src='img/items/robot_02.png' style='width:40px'></td>
-<td>Jundland Desert</td>
-<td>80</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td></td>
-<td>Glass Orb,Hammer,Scrap Wire</td>
-<td>Carbon Sphere,Scrap Metal</td>
-<td>Worms,Milk,Acorn,Arrowhead,Bird Egg,3-leaf Clover,Snowball</td>
-</tr><tr>
-<td>71805</td>
-<td>Captain Thomas</td>
-<td><img src='img/items/MustacheTom96.png' style='width:40px'></td>
-<td></td>
-<td>99</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td></td>
-<td>Blue Crab,Minnows</td>
-<td>Fishing Net,Gold Trout,Gold Catfish,Gold Drum,Large Net</td>
-<td>Worms,Radish,Spider</td>
-</tr><tr>
-<td>84518</td>
-<td>frank</td>
-<td><img src='img/items/npc_bunny1.png' style='width:40px'></td>
-<td></td>
-<td>75</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>Carrot,Carrot Seeds,Gold Carrot,Gold Carrot Seeds</td>
-<td>Bucket,Feathers,Blue Feathers,Caterpillar,Grasshopper,Blue Dye</td>
-<td>Carrot,Cabbage,Gold Carrot</td>
-<td>Worms,Eggs,Peas,Mushroom,Trout,Fire Ant</td>
-</tr><tr>
-<td>89577</td>
-<td>Santa</td>
-<td><img src='img/items/lornsanta.png' style='width:40px'></td>
-<td>Santa's Workshop</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>Coal</td>
-<td>Milk,Snowball</td>
-<td>Dasher,Dancer,Prancer,Vixen,Comet,Cupid,Donner,Blitzen</td>
-<td>Worms,Coal,Spider</td>
-</tr><tr>
-<td>125512</td>
-<td>Leafy McLucky</td>
-<td><img src='img/items/buddyl.png' style='width:40px'></td>
-<td></td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>28</td>
-<td>Green Diary,3-leaf Clover,4-leaf Clover,Green Dye,Green Shield,Horseshoe,Gummy Worms</td>
-<td>Green Parchment,3-leaf Clover,Green Dye</td>
-<td>4-leaf Clover,5 Gold</td>
-<td>Worms,Apple</td>
-</tr><tr>
-<td>154722</td>
-<td>Ragvin</td>
-<td><img src='img/items/ragvin.png?1' style='width:40px'></td>
-<td></td>
-<td>24</td>
-<td>24</td>
-<td>24</td>
-<td>24</td>
-<td></td>
-<td>Orange,Pirate Bandana</td>
-<td>Marlin,Ancient Coin</td>
-<td>Worms,Mushroom</td>
-</tr><tr>
-<td>172470</td>
-<td>FR4NK</td>
-<td><img src='img/items/robot_05.png' style='width:40px'></td>
-<td></td>
-<td>21</td>
-<td>21</td>
-<td>21</td>
-<td>21</td>
-<td></td>
-<td></td>
-<td></td>
-<td>Worms</td>
-</tr><tr>
-<td>178572</td>
-<td>Mariya</td>
-<td><img src='img/items/chef.png' style='width:40px'></td>
-<td></td>
-<td>20</td>
-<td>20</td>
-<td>20</td>
-<td>20</td>
-<td></td>
-<td>Eggplant,Eggs,Cucumber,Radish,Milk,Iced Tea,Peach</td>
-<td>Leather Diary,Mushroom Stew,Onion Soup,Cat’s Meow,Quandary Chowder,Sea Pincher Special,Shrimp-a-Plenty,Over The Moon</td>
-<td>Worms,Black Powder,Explosive,Spider</td>
-</tr><tr>
-<td>188036</td>
-<td>Ghorgen</td>
-<td><img src='img/items/ghorgen.png' style='width:40px'></td>
-<td></td>
-<td>19</td>
-<td>19</td>
-<td>19</td>
-<td>19</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr><tr>
-<td>231545</td>
-<td>Captain Logan</td>
-<td><img src='img/items/captainlogan.png' style='width:40px'></td>
-<td></td>
-<td>15</td>
-<td>15</td>
-<td>15</td>
-<td>15</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr><tr>
-<td>267531</td>
-<td>Baba Gec</td>
-<td><img src='img/items/merchant.png' style='width:40px'></td>
-<td></td>
-<td>6</td>
-<td>6</td>
-<td>6</td>
-<td>6</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr></table>
+      <input type='text' name='chat' style='width:300px'>
+      NPC: <select name="npc_id">
+        <option value="22438" >Rosalie</option><option value="22439" >Holger</option><option value="22440" >Beatrix</option><option value="22441" >Thomas</option><option value="22442" >Cecil</option><option value="22443" >George</option><option value="22444" >Jill</option><option value="22445" >Vincent</option><option value="22446" >Lorn</option><option value="22447" >Buddy</option><option value="53900" >Borgen</option><option value="59421" >Ric Ryph</option><option value="70604" >Mummy</option><option value="46158" >Star Meerif</option><option value="71760" >Charles Horsington III</option><option value="71761" >ROOMBA</option><option value="71805" >Captain Thomas</option><option value="84518" >frank</option><option value="89577" >Santa</option><option value="125512" >Leafy McLucky</option><option value="154722" >Ragvin</option><option value="172470" >FR4NK</option><option value="178572" >Mariya</option><option value="188036" >Ghorgen</option><option value="231545" >Captain Logan</option><option value="267531" >Baba Gec</option><option value="118065" >Geist</option><option value="38" >Gary Bearson V</option><option value="16" >Cid</option>      </select>
+      Channel: <select name="channel">
+                <option>global</option>
+        <option>giveaways</option>
+        <option>spoilers</option>
+        <option>help</option>
+        <option>trade</option>
+      </select>
+            <input type="checkbox" name="chatitem" value="1" > Free Item
+      <input type="submit" name="go" value="Chat">
+    </form>
+
+<h2>All NPCs</h2><p>Any that show items can give out from the list shown.  It will randomly pick from the list.</p><table><tr>
+    <td>ID</td>
+    <td>Name</td>
+    <td>&nbsp;</td>
+    <td>Zone</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>Gives in Chat</td>
+    <td>Can Be Given
+    <td>Likes</td>
+    <td>Loves</td>
+    <td>Hates</td>
+  </tr><tr>
+
+    <td>22438</td>
+    <td>Rosalie</td>
+    <td><img src='img/items/a_098.png' style='width:40px'></td>
+    <td>Small Spring</td>
+    <td>99</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>Apple,Orange Juice,Lemonade,Iced Tea</td>
+    <td></td>
+    <td>Carrot,Aquamarine,Apple,Purple Flower,Iced Tea,Caterpillar,Apple Cider,Fireworks</td>
+    <td>Gold Carrot,Green Dye,Box of Chocolate 01,Valentines Card,Blue Dye,Red Dye,Purple Dye</td>
+    <td>Worms,Fish Bones,Coal,Old Boot,Iron Cup,Carp,Grubs,Horned Beetle,Fire Ant,Spider</td>
+  </tr><tr>
+
+    <td>22439</td>
+    <td>Holger</td>
+    <td><img src='img/items/a_028.png' style='width:40px'></td>
+    <td>Black Rock Canyon</td>
+    <td>99</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>Potato,Bird Egg,Blue Sea Bass,Candy</td>
+    <td></td>
+    <td>Largemouth Bass,Peas,Trout,Arrowhead,Bluegill,Carp,Horn,Cheese,Apple Cider,Peach,Mushroom Stew</td>
+    <td>Potato,Marlin,Gold Trout,Mug of Beer,Wooden Table</td>
+    <td>Worms,Aquamarine,Milk,Valentines Card</td>
+  </tr><tr>
+
+    <td>22440</td>
+    <td>Beatrix</td>
+    <td><img src='img/items/a_011.png' style='width:40px'></td>
+    <td>Mount Banon</td>
+    <td>99</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>Coal,Explosive,Emberstone</td>
+    <td></td>
+    <td>Hops,Coal,Bird Egg,Carbon Sphere,Hammer,Oak</td>
+    <td>Black Powder,Explosive,Iced Tea,Fireworks</td>
+    <td>Worms,Grubs,Horned Beetle,Fire Ant</td>
+  </tr><tr>
+
+    <td>22441</td>
+    <td>Thomas</td>
+    <td><img src='img/items/a_048.png' style='width:40px'></td>
+    <td>Highland Hills</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>Crappie,Trout,Bluegill,Iced Tea,Gummy Worms</td>
+    <td></td>
+    <td>Drum,Largemouth Bass,Carp,Iced Tea,Minnows,Gummy Worms,Mealworms</td>
+    <td>Flier,Fishing Net,Gold Trout,Gold Catfish,Goldgill</td>
+    <td>Worms,Eggs,Leek,Green Dye</td>
+  </tr><tr>
+
+    <td>22442</td>
+    <td>Cecil</td>
+    <td><img src='img/items/a_027.png' style='width:40px'></td>
+    <td>Misty Forest</td>
+    <td>80</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>Mushroom Stew,Onion Soup</td>
+    <td></td>
+    <td>Aquamarine,Grapes,Ladder,Snail,Giant Centipede,Slimestone</td>
+    <td>Leather,Old Boot,MIAB,Shiny Beetle,Horned Beetle,Grasshopper,Yarn</td>
+    <td>Worms,Feathers,Mushroom,Milk</td>
+  </tr><tr>
+
+    <td>22443</td>
+    <td>George</td>
+    <td><img src='img/items/a_034.png' style='width:40px'></td>
+    <td>Forest</td>
+    <td>99</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td></td>
+    <td></td>
+    <td>Hops,Glass Orb,Orange Juice,Arrowhead,Bird Egg,Mushroom Stew</td>
+    <td>Hide,Carbon Sphere,Spider,Apple Cider,Mug of Beer</td>
+    <td>Worms,Fish Bones,Bone,Cheese</td>
+  </tr><tr>
+
+    <td>22444</td>
+    <td>Jill</td>
+    <td><img src='img/items/a_024.png' style='width:40px'></td>
+    <td>Cane Pole Ridge</td>
+    <td>80</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>Corn</td>
+    <td>Corn,Corn Husk Doll</td>
+    <td>Tomato,Milk,Old Boot,Grapes,Cheese,Scrap Metal</td>
+    <td>Yellow Perch,Corn,Mushroom Paste,Leather,MIAB,Peach,Corn Husk Doll</td>
+    <td>Worms,Hops,Stingray,Grubs,Spider,Snowball</td>
+  </tr><tr>
+
+    <td>22445</td>
+    <td>Vincent</td>
+    <td><img src='img/items/a_047.png' style='width:40px'></td>
+    <td>Whispering Creek</td>
+    <td>60</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td></td>
+    <td></td>
+    <td>Wooden Box,Apple,Hops,Acorn,Leather Diary,Horn,Cheese,Shovel</td>
+    <td>Mushroom Paste,Orange Juice,Lemonade,Axe,Apple Cider,5 Gold,Onion Soup</td>
+    <td>Worms,Aquamarine,Purple Flower,Purple Parchment,Shrimp,Valentines Card</td>
+  </tr><tr>
+
+    <td>22446</td>
+    <td>Lorn</td>
+    <td><img src='img/items/a_088.png' style='width:40px'></td>
+    <td>Ember Lagoon</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td></td>
+    <td></td>
+    <td>Bucket,Peas,Purple Parchment,Green Parchment,Iron Cup,Iced Tea,3-leaf Clover,Apple Cider</td>
+    <td>Small Prawn,Glass Orb,Milk,Shrimp,Gold Peas</td>
+    <td>Worms,Crappie,Old Boot,Snail,Spider</td>
+  </tr><tr>
+
+    <td>22447</td>
+    <td>Buddy</td>
+    <td><img src='img/items/buddy.png' style='width:40px'></td>
+    <td>Small Cave</td>
+    <td>99</td>
+    <td>34</td>
+    <td>34</td>
+    <td>34</td>
+    <td>Hot Potato</td>
+    <td>Buddystone</td>
+    <td>Bucket,Mushroom,Bone,Gold Peppers,Gummy Worms,Snail,Giant Centipede,Spider</td>
+    <td>Purple Flower,Pirate Flag,Pirate Bandana,Buddystone,Valentines Card</td>
+    <td>Peppers,Drum,Worms,Crappie,Lemon,Lemonade,Grubs,Snowball</td>
+  </tr><tr>
+
+    <td>53900</td>
+    <td>Borgen</td>
+    <td><img src='img/items/borgen.png' style='width:40px'></td>
+    <td></td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>Ancient Coin</td>
+    <td>Ancient Coin</td>
+    <td>Glass Orb,Milk,Gold Carrot,Gold Peas,Gold Cucumber,Slimestone</td>
+    <td>Wooden Box,Ancient Coin,Cheese,Skull Coin,Gold Catfish</td>
+    <td>Worms,Purple Flower,Old Boot,Grubs,Green Dye,Valentines Card</td>
+  </tr><tr>
+
+    <td>59421</td>
+    <td>Ric Ryph</td>
+    <td><img src='img/items/npc_figure2.png' style='width:40px'></td>
+    <td></td>
+    <td>60</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>Paper Receipt,5 Gold</td>
+    <td></td>
+    <td>Bucket,Green Parchment,Unpolished Shimmer Stone,Coal,Black Powder,Arrowhead,Old Boot,Carbon Sphere</td>
+    <td>Mushroom Paste,Hammer,Shovel,5 Gold</td>
+    <td>Worms,Aquamarine,Milk,Cheese,Ladder,Caterpillar,Valentines Card</td>
+  </tr><tr>
+
+    <td>70604</td>
+    <td>Mummy</td>
+    <td><img src='img/items/mummy_t_01.png' style='width:40px'></td>
+    <td>Haunted House</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>Jack-o-lantern,Candy,Lollipop,Treat Bag 01</td>
+    <td>Toilet Paper,Pumpkin Spiced Milk</td>
+    <td>Fish Bones,Hammer,Treat Bag 01,Treat Bag 02,Yarn</td>
+    <td>Bone,Spider,Treat Bag 03,Valentines Card,Toilet Paper,Pumpkin Spiced Milk</td>
+    <td>Drum,Worms,Coal,Cheese,Snowball,Box of Chocolate 01</td>
+  </tr><tr>
+
+    <td>46158</td>
+    <td>Star Meerif</td>
+    <td><img src='img/items/npc_figure.png' style='width:40px'></td>
+    <td></td>
+    <td>99</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>Feathers,Blue Feathers,Gold Feather</td>
+    <td></td>
+    <td>Eggs,Feathers</td>
+    <td>Blue Feathers,Gold Feather</td>
+    <td>Worms,Lemon,Lemonade,Bone,Iron Cup,Cheese,Grubs</td>
+  </tr><tr>
+
+    <td>71760</td>
+    <td>Charles Horsington III</td>
+    <td><img src='img/items/npc_horse.png' style='width:40px'></td>
+    <td></td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>Carrot,Gold Carrot</td>
+    <td></td>
+    <td>Carrot,Twine,3-leaf Clover,Grasshopper</td>
+    <td>Apple,Gold Carrot,Apple Cider,Box of Chocolate 01,Valentines Card,Peach</td>
+    <td>Worms,Stone,Green Chromis,Blue Crab,Lemon,Lemonade,Bone,Cheese,Grubs,Snail,Spider</td>
+  </tr><tr>
+
+    <td>71761</td>
+    <td>ROOMBA</td>
+    <td><img src='img/items/robot_02.png' style='width:40px'></td>
+    <td>Jundland Desert</td>
+    <td>80</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td></td>
+    <td></td>
+    <td>Glass Orb,Hammer,Scrap Wire</td>
+    <td>Carbon Sphere,Scrap Metal</td>
+    <td>Worms,Milk,Acorn,Arrowhead,Bird Egg,3-leaf Clover,Snowball</td>
+  </tr><tr>
+
+    <td>71805</td>
+    <td>Captain Thomas</td>
+    <td><img src='img/items/MustacheTom96.png' style='width:40px'></td>
+    <td></td>
+    <td>99</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td></td>
+    <td></td>
+    <td>Blue Crab,Minnows</td>
+    <td>Fishing Net,Gold Trout,Gold Catfish,Gold Drum,Large Net</td>
+    <td>Worms,Radish,Spider</td>
+  </tr><tr>
+
+    <td>84518</td>
+    <td>frank</td>
+    <td><img src='img/items/npc_bunny1.png' style='width:40px'></td>
+    <td></td>
+    <td>75</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>Carrot,Carrot Seeds,Gold Carrot,Gold Carrot Seeds</td>
+    <td></td>
+    <td>Bucket,Feathers,Blue Feathers,Caterpillar,Grasshopper,Blue Dye</td>
+    <td>Carrot,Cabbage,Gold Carrot</td>
+    <td>Worms,Eggs,Peas,Mushroom,Trout,Fire Ant</td>
+  </tr><tr>
+
+    <td>89577</td>
+    <td>Santa</td>
+    <td><img src='img/items/lornsanta.png' style='width:40px'></td>
+    <td>Santa's Workshop</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>Coal</td>
+    <td></td>
+    <td>Milk,Snowball</td>
+    <td>Dasher,Dancer,Prancer,Vixen,Comet,Cupid,Donner,Blitzen</td>
+    <td>Worms,Coal,Spider</td>
+  </tr><tr>
+
+    <td>125512</td>
+    <td>Leafy McLucky</td>
+    <td><img src='img/items/buddyl.png' style='width:40px'></td>
+    <td></td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>36</td>
+    <td>Green Diary,3-leaf Clover,4-leaf Clover,Green Dye,Green Shield,Horseshoe,Gummy Worms</td>
+    <td></td>
+    <td>Green Parchment,3-leaf Clover,Green Dye</td>
+    <td>4-leaf Clover,5 Gold</td>
+    <td>Worms,Apple</td>
+  </tr><tr>
+
+    <td>154722</td>
+    <td>Ragvin</td>
+    <td><img src='img/items/ragvin.png' style='width:40px'></td>
+    <td></td>
+    <td>35</td>
+    <td>35</td>
+    <td>35</td>
+    <td>35</td>
+    <td></td>
+    <td></td>
+    <td>Orange,Pirate Bandana</td>
+    <td>Marlin,Ancient Coin</td>
+    <td>Worms,Mushroom</td>
+  </tr><tr>
+
+    <td>172470</td>
+    <td>FR4NK</td>
+    <td><img src='img/items/robot_05.png' style='width:40px'></td>
+    <td></td>
+    <td>34</td>
+    <td>34</td>
+    <td>34</td>
+    <td>34</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Worms</td>
+  </tr><tr>
+
+    <td>178572</td>
+    <td>Mariya</td>
+    <td><img src='img/items/chef.png' style='width:40px'></td>
+    <td></td>
+    <td>34</td>
+    <td>34</td>
+    <td>34</td>
+    <td>34</td>
+    <td></td>
+    <td></td>
+    <td>Eggplant,Eggs,Cucumber,Radish,Milk,Iced Tea,Peach</td>
+    <td>Leather Diary,Mushroom Stew,Onion Soup,Cat's Meow,Quandary Chowder,Sea Pincher Special,Shrimp-a-Plenty,Over The Moon</td>
+    <td>Worms,Black Powder,Explosive,Spider</td>
+  </tr><tr>
+
+    <td>188036</td>
+    <td>Ghorgen</td>
+    <td><img src='img/items/ghorgen.png' style='width:40px'></td>
+    <td></td>
+    <td>33</td>
+    <td>33</td>
+    <td>33</td>
+    <td>33</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr><tr>
+
+    <td>231545</td>
+    <td>Captain Logan</td>
+    <td><img src='img/items/captainlogan.png' style='width:40px'></td>
+    <td></td>
+    <td>33</td>
+    <td>33</td>
+    <td>33</td>
+    <td>33</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr><tr>
+
+    <td>267531</td>
+    <td>Baba Gec</td>
+    <td><img src='img/items/merchant.png' style='width:40px'></td>
+    <td></td>
+    <td>32</td>
+    <td>32</td>
+    <td>32</td>
+    <td>32</td>
+    <td></td>
+    <td></td>
+    <td>Onion,Leek,Rope,Snail</td>
+    <td>Peach Juice,Cabbage Stew,Wooden Button</td>
+    <td>Worms,Stone,Horned Beetle</td>
+  </tr><tr>
+
+    <td>118065</td>
+    <td>Geist</td>
+    <td><img src='img/items/npc_beast.png' style='width:40px'></td>
+    <td></td>
+    <td>94</td>
+    <td>31</td>
+    <td>31</td>
+    <td>31</td>
+    <td></td>
+    <td></td>
+    <td>Yellow Perch,Green Chromis,Blue Crab,Stingray</td>
+    <td>Gold Catfish,Goldgill,Sea Pincher Special,Shrimp-a-Plenty</td>
+    <td>Worms,Black Powder,Explosive,Axe,Gummy Worms</td>
+  </tr><tr>
+
+    <td>38</td>
+    <td>Gary Bearson V</td>
+    <td><img src='img/items/bear_01.png' style='width:40px'></td>
+    <td>Gary's Crushroom</td>
+    <td>44</td>
+    <td>40</td>
+    <td>42</td>
+    <td>36</td>
+    <td></td>
+    <td></td>
+    <td>Feathers,Trout,Oak</td>
+    <td>Apple Cider,Yarn,Gold Trout,You Rock Card</td>
+    <td>Tomato,Worms,Bucket,Radish,Black Powder</td>
+  </tr><tr>
+
+    <td>16</td>
+    <td>Cid</td>
+    <td><img src='img/items/cid.png' style='width:40px'></td>
+    <td></td>
+    <td>50</td>
+    <td>24</td>
+    <td>24</td>
+    <td>24</td>
+    <td></td>
+    <td></td>
+    <td>Stone,Shimmer Stone,Black Powder,Blue Feathers</td>
+    <td>Explosive,Spider,Diamonds,Mushroom Stew,Bomb,Safety Goggles</td>
+    <td>Worms,Cheese</td>
+  </tr></table>
