@@ -8,6 +8,8 @@ from ..items.models import Item
 class NPC(models.Model):
     name = models.CharField(max_length=255, unique=True)
     image = models.CharField(max_length=255)
+    image_oct = models.CharField(max_length=255, null=True, blank=True)
+    image_dec = models.CharField(max_length=255, null=True, blank=True)
     short_name = models.CharField(max_length=255, null=True, blank=True)
     is_available = models.BooleanField(default=False)
 

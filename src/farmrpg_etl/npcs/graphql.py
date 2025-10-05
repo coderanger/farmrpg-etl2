@@ -32,6 +32,8 @@ class NPC:
     id: int
     name: auto
     image: auto
+    image_oct: auto
+    image_dec: auto
     short_name: auto
     is_available: auto
 
