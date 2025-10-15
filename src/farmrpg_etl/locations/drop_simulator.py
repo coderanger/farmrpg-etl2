@@ -11,7 +11,7 @@ def simulate_drops(
     weights = list(items.values())
     drops = {i: 0 for i in item_ids}
 
-    weights_type = np.int32 if max(weights) >= 65535 else np.int16
+    weights_type = np.int32 if max(weights) >= 32767 else np.int16
     weights_ary = np.repeat(np.array([weights], dtype=weights_type), batch_size, axis=0)
     rng = np.random.default_rng(seed=seed)
 
