@@ -7,6 +7,9 @@ def simulate_drops(
     batch_count: int = 100,
     seed: int | None = None,
 ) -> dict[int, int]:
+    if not items:
+        # If we have no items, we have no drops.
+        return {}, batch_size * batch_count
     item_ids = list(items.keys())
     weights = list(items.values())
     drops = {i: 0 for i in item_ids}
