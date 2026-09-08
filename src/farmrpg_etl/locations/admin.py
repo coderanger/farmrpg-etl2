@@ -16,6 +16,9 @@ class LocationItemInline(admin.TabularInline):
         "location",
         "item",
         "sometimes",
+        "frozen",
+        "mining_level",
+        "mining_deposit_quantity",
     ]
 
     def has_add_permission(self, request: HttpRequest, obj: DropRates) -> bool:
@@ -31,6 +34,7 @@ class DropRatesInline(admin.TabularInline):
         "iron_depot",
         "manual_fishing",
         "runecube",
+        "frozen",
     ]
 
     def has_add_permission(self, request: HttpRequest, obj: DropRates) -> bool:
@@ -59,12 +63,18 @@ class LocationAdmin(admin.ModelAdmin):
         "name",
         "image",
         "base_drop_rate",
+        "mining_pickaxe",
+        "mining_charm",
+        "mining_lantern",
     ]
     readonly_fields = [
         "game_id",
         "type",
         "name",
         "image",
+        "mining_pickaxe",
+        "mining_charm",
+        "mining_lantern",
     ]
 
     def has_add_permission(self, request: HttpRequest) -> bool:
@@ -97,6 +107,7 @@ class DropRatesAdmin(admin.ModelAdmin):
         "runecube",
         "iron_depot",
         "manual_fishing",
+        "frozen",
     ]
     readonly_fields = [
         "location",
@@ -104,6 +115,7 @@ class DropRatesAdmin(admin.ModelAdmin):
         "iron_depot",
         "manual_fishing",
         "runecube",
+        "frozen",
         "hash",
         "compute_time",
         "silver_per_hit",

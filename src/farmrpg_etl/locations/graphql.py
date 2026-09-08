@@ -2,7 +2,6 @@ from strawberry_django_plus import gql
 from strawberry_django_plus.gql import auto
 
 from ..items.graphql import Item
-
 from . import models
 
 
@@ -31,6 +30,9 @@ class Location:
     name: auto
     image: auto
     base_drop_rate: auto
+    mining_pickaxe: Item | None
+    mining_charm: Item | None
+    mining_lantern: Item | None
 
     location_items: list["LocationItem"]
     drop_rates: list["DropRates"]
@@ -41,6 +43,9 @@ class LocationItem:
     location: Location
     item: Item
     sometimes: auto
+    frozen: auto
+    mining_level: auto
+    mining_deposit_quantity: auto
 
 
 @gql.django.type(models.DropRates)
@@ -50,6 +55,7 @@ class DropRates:
     iron_depot: auto
     manual_fishing: auto
     runecube: auto
+    frozen: auto
     silver_per_hit: auto
     xp_per_hit: auto
 

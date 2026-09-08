@@ -15,7 +15,7 @@ if TYPE_CHECKING:
     from ..borgen.graphql import BorgenItem
     from ..community_center.graphql import CommunityCenter
     from ..exchange_center.graphql import CardsTrade, Trade
-    from ..locations.graphql import DropRates, DropRatesItem, LocationItem
+    from ..locations.graphql import DropRates, DropRatesItem, Location, LocationItem
     from ..npcs.graphql import NPCItem, NPCReward
     from ..passwords.graphql import PasswordItem
     from ..pbgs.graphql import ProfileBackground
@@ -61,6 +61,9 @@ class Item:
         order=PetItemOrder
     )
     location_items: list[Annotated["LocationItem", gql.lazy("farmrpg_etl.locations.graphql")]]
+    pickaxe_locations: list[Annotated["Location", gql.lazy("farmrpg_etl.locations.graphql")]]
+    charm_locations: list[Annotated["Location", gql.lazy("farmrpg_etl.locations.graphql")]]
+    lantern_locations: list[Annotated["Location", gql.lazy("farmrpg_etl.locations.graphql")]]
     drop_rates: list[Annotated["DropRates", gql.lazy("farmrpg_etl.locations.graphql")]]
     drop_rates_items: list[Annotated["DropRatesItem", gql.lazy("farmrpg_etl.locations.graphql")]]
     quiz_rewards: list[Annotated["QuizReward", gql.lazy("farmrpg_etl.quizzes.graphql")]]

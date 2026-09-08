@@ -1,4 +1,5 @@
 import pghistory
+from django.core.exceptions import ValidationError
 from django.db import models
 
 from ..items.models import Item
@@ -39,6 +40,7 @@ class NPCItem(models.Model):
     npc = models.ForeignKey(NPC, on_delete=models.CASCADE, related_name="npc_items")
     item = models.ForeignKey(Item, on_delete=models.CASCADE, related_name="npc_items")
     relationship = models.CharField(max_length=32, choices=RELATIONSHIPS)
+    special_xp = models.IntegerField(null=True, blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
@@ -49,6 +51,25 @@ class NPCItem(models.Model):
         constraints = [
             models.UniqueConstraint(fields=["npc", "item"], name="npc_item"),
         ]
+
+
+class NPCSpecialItemManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(special_xp__isnull=False)
+
+
+class NPCSpecialItem(NPCItem):
+    objects = NPCSpecialItemManager()
+
+    def clean(self):
+        if self.special_xp is None:
+            raise ValidationError("Special items must have a special XP")
+        return super().clean()
+
+    class Meta:
+        verbose_name = "NPC special item"
+        verbose_name_plural = "NPC special items"
+        proxy = True
 
 
 @pghistory.track(pghistory.Snapshot(), exclude=["modified_at"])

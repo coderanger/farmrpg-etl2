@@ -22,9 +22,11 @@ async def _update_items(npc: NPC, relationship: str, item_ids: str) -> None:
             defaults={"relationship": relationship},
         )
         seen_item_ids.append(item_id)
-    await NPCItem.objects.filter(npc=npc, relationship=relationship).exclude(
-        item_id__in=seen_item_ids
-    ).adelete()
+    await (
+        NPCItem.objects.filter(npc=npc, relationship=relationship, special_xp=None)
+        .exclude(item_id__in=seen_item_ids)
+        .adelete()
+    )
 
 
 async def _update_reward(

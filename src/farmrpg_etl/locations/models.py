@@ -8,9 +8,11 @@ from ..items.models import Item
 class Location(models.Model):
     TYPE_EXPLORE = "explore"
     TYPE_FISHING = "fishing"
+    TYPE_MINING = "mining"
     TYPES = (
         (TYPE_EXPLORE, "Exploring"),
         (TYPE_FISHING, "Fishing"),
+        (TYPE_MINING, "Mining"),
     )
 
     game_id = models.IntegerField(db_index=True)
@@ -18,6 +20,27 @@ class Location(models.Model):
     name = models.CharField(max_length=255)
     image = models.CharField(max_length=255)
     base_drop_rate = models.FloatField(null=True, blank=True)
+    mining_pickaxe = models.ForeignKey(
+        Item,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="pickaxe_locations",
+    )
+    mining_charm = models.ForeignKey(
+        Item,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="charm_locations",
+    )
+    mining_lantern = models.ForeignKey(
+        Item,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="lantern_locations",
+    )
 
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
@@ -40,6 +63,9 @@ class LocationItem(models.Model):
         Item, on_delete=models.CASCADE, related_name="location_items"
     )
     sometimes = models.BooleanField(default=False)
+    frozen = models.BooleanField(default=False)
+    mining_level = models.IntegerField(null=True, blank=True)
+    mining_deposit_quantity = models.IntegerField(null=True, blank=True)
 
 
 class DropRates(models.Model):
@@ -60,6 +86,8 @@ class DropRates(models.Model):
     iron_depot = models.BooleanField(null=True, blank=True)
     runecube = models.BooleanField(null=True, blank=True)
     manual_fishing = models.BooleanField(null=True, blank=True)
+    frozen = models.BooleanField(null=True, blank=True)
+    frozen_only = models.BooleanField(null=True, blank=True)
     hash = models.BigIntegerField(null=True, blank=True)
     compute_time = models.FloatField(null=True, blank=True)
 
