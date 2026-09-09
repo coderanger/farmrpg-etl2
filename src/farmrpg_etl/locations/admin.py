@@ -17,7 +17,7 @@ class LocationItemInline(admin.TabularInline):
         "item",
         "sometimes",
         "frozen",
-        "mining_level",
+        "mining_floor",
         "mining_deposit_quantity",
     ]
 

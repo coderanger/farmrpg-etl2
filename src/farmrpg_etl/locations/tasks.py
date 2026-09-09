@@ -53,7 +53,7 @@ async def _ingest_location_items(
     item_ids: str | None,
     sometimes: bool = False,
     frozen: bool = False,
-    mining_level: int | None = None,
+    mining_floor: int | None = None,
 ):
     if not item_ids:
         return
@@ -65,7 +65,7 @@ async def _ingest_location_items(
                 defaults={
                     "sometimes": sometimes,
                     "frozen": frozen,
-                    "mining_level": mining_level,
+                    "mining_floor": mining_floor,
                 },
             )
             output_ids.append(loc_item.pk)
@@ -163,31 +163,31 @@ async def scrape_locations():
                     loc,
                     item_ids,
                     ",".join(level_1),
-                    mining_level=1,
+                    mining_floor=1,
                 )
                 await _ingest_location_items(
                     loc,
                     item_ids,
                     ",".join(level_10),
-                    mining_level=10,
+                    mining_floor=10,
                 )
                 await _ingest_location_items(
                     loc,
                     item_ids,
                     ",".join(level_100),
-                    mining_level=100,
+                    mining_floor=100,
                 )
                 await _ingest_location_items(
                     loc,
                     item_ids,
                     ",".join(level_1000),
-                    mining_level=1000,
+                    mining_floor=1000,
                 )
                 await _ingest_location_items(
                     loc,
                     item_ids,
                     ",".join(level_10000),
-                    mining_level=10000,
+                    mining_floor=10000,
                 )
                 # Process the deposits data which are special.
                 for val in loc_data["possible_deposits"].split(","):
@@ -244,7 +244,7 @@ async def update_drop_rates_for(drops_for: Location | Item, force: bool = False)
     elif drops_for.type == Location.TYPE_EXPLORE:
         location = drops_for
         seed = None
-        variants = [
+        variants: list[tuple[dict, dict[int, int]]] = [
             # Normal, no perks.
             (
                 {"iron_depot": False, "runecube": False},
@@ -378,7 +378,54 @@ async def update_drop_rates_for(drops_for: Location | Item, force: bool = False)
         # TODO.
         location = drops_for
         seed = None
-        variants = []
+        variants = [
+            # Floor 1.
+            (
+                {"mining_floor": 1},
+                {
+                    it.item.id: it.item.reg_weight
+                    async for it in location.location_items.filter(mining_floor__lte=1)
+                },
+            ),
+            # Floor 10.
+            (
+                {"mining_floor": 10},
+                {
+                    it.item.id: it.item.reg_weight
+                    async for it in location.location_items.filter(mining_floor__lte=10)
+                },
+            ),
+            # Floor 100.
+            (
+                {"mining_floor": 100},
+                {
+                    it.item.id: it.item.reg_weight
+                    async for it in location.location_items.filter(
+                        mining_floor__lte=100
+                    )
+                },
+            ),
+            # Floor 1000.
+            (
+                {"mining_floor": 1000},
+                {
+                    it.item.id: it.item.reg_weight
+                    async for it in location.location_items.filter(
+                        mining_floor__lte=1000
+                    )
+                },
+            ),
+            # Floor 10000.
+            (
+                {"mining_floor": 10000},
+                {
+                    it.item.id: it.item.reg_weight
+                    async for it in location.location_items.filter(
+                        mining_floor__lte=10000
+                    )
+                },
+            ),
+        ]
     else:
         raise ValueError(f"Unknown drops_for {drops_for!r}")
 

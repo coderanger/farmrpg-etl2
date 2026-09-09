@@ -44,7 +44,7 @@ class LocationItem:
     item: Item
     sometimes: auto
     frozen: auto
-    mining_level: auto
+    mining_floor: auto
     mining_deposit_quantity: auto
 
 
@@ -56,6 +56,7 @@ class DropRates:
     manual_fishing: auto
     runecube: auto
     frozen: auto
+    mining_floor: auto
     silver_per_hit: auto
     xp_per_hit: auto
 

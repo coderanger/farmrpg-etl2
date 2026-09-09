@@ -64,7 +64,7 @@ class LocationItem(models.Model):
     )
     sometimes = models.BooleanField(default=False)
     frozen = models.BooleanField(default=False)
-    mining_level = models.IntegerField(null=True, blank=True)
+    mining_floor = models.IntegerField(null=True, blank=True)
     mining_deposit_quantity = models.IntegerField(null=True, blank=True)
 
 
@@ -88,6 +88,7 @@ class DropRates(models.Model):
     manual_fishing = models.BooleanField(null=True, blank=True)
     frozen = models.BooleanField(null=True, blank=True)
     frozen_only = models.BooleanField(null=True, blank=True)
+    mining_floor = models.IntegerField(null=True, blank=True)
     hash = models.BigIntegerField(null=True, blank=True)
     compute_time = models.FloatField(null=True, blank=True)
 
