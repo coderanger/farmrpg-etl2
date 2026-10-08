@@ -231,6 +231,9 @@ async def update_drop_rates_for_location(
 
 
 async def update_drop_rates_for(drops_for: Location | Item, force: bool = False):
+    base_drop_rate = 1.0
+    if location is not None and location.base_drop_rate is not None:
+        base_drop_rate = location.base_drop_rate
     if isinstance(drops_for, Item):
         location = None
         seed = drops_for
@@ -440,7 +443,7 @@ async def update_drop_rates_for(drops_for: Location | Item, force: bool = False)
             location=location, seed=seed, **variant_flags
         )
         seen_rates.append(rates.pk)
-        new_hash = hash(tuple(sorted(variant_items.items())))
+        new_hash = hash(tuple(sorted(variant_items.items())) + (base_drop_rate,))
         # Check the hash to see if an update is needed.
         if (not force) and new_hash == rates.hash:
             # All good!
@@ -471,9 +474,6 @@ async def update_drop_rates_for(drops_for: Location | Item, force: bool = False)
         )
         silver_per_hit = xp_per_hit = 0
         for item_id, item_drops in drops.items():
-            base_drop_rate = 1
-            if location is not None and location.base_drop_rate is not None:
-                base_drop_rate = location.base_drop_rate
             rate = (total_drops / base_drop_rate) / item_drops
             item_silver, item_xp = await Item.objects.values_list(
                 "sell_price", "xp"
