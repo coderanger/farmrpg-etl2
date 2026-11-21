@@ -61,7 +61,7 @@ class Item(models.Model):
 
     @property
     def is_hidden(self) -> bool:
-        return timezone.now() > self.date_added
+        return self.date_added is not None and timezone.now() > self.date_added
 
 
 @pghistory.track(pghistory.Snapshot(), exclude=["modified_at"])
