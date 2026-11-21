@@ -105,6 +105,7 @@ class ItemAdmin(admin.ModelAdmin):
         "cooking_recipe_item",
         "manual_fishing_only",
         "from_event",
+        "date_added",
     ]
     readonly_fields = fields
     inlines = [
