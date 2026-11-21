@@ -104,7 +104,7 @@ class DropRates(models.Model):
                 name="location_flags",
             ),
             models.CheckConstraint(
-                check=models.Q(location=None, seed__isnull=False)
+                condition=models.Q(location=None, seed__isnull=False)
                 | models.Q(location__isnull=False, seed=None),
                 name="location_or_seed",
             ),

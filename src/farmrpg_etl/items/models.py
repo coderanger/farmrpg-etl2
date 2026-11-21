@@ -183,7 +183,7 @@ class SkillLevelReward(models.Model):
                 name="skill_level_reward_level_order",
             ),
             models.CheckConstraint(
-                check=models.Q(
+                condition=models.Q(
                     silver__isnull=False,
                     gold=None,
                     ak=None,

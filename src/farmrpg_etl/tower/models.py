@@ -23,7 +23,7 @@ class TowerReward(models.Model):
         constraints = [
             models.UniqueConstraint(fields=["level", "order"], name="level_order"),
             models.CheckConstraint(
-                check=models.Q(
+                condition=models.Q(
                     silver__isnull=False, gold=None, item=None, item_quantity=None
                 )
                 | models.Q(

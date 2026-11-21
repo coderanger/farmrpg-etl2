@@ -98,7 +98,7 @@ class Migration(migrations.Migration):
         migrations.AddConstraint(
             model_name="communitycenter",
             constraint=models.CheckConstraint(
-                check=models.Q(
+                condition=models.Q(
                     models.Q(
                         ("output_gold__isnull", False),
                         ("output_item", None),

@@ -32,7 +32,7 @@ class CommunityCenter(models.Model):
         ordering = ["-date"]
         constraints = [
             models.CheckConstraint(
-                check=models.Q(
+                condition=models.Q(
                     output_gold__isnull=False,
                     output_item=None,
                     output_quantity=None,

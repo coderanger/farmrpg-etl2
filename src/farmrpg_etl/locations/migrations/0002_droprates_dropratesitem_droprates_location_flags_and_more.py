@@ -95,7 +95,7 @@ class Migration(migrations.Migration):
         migrations.AddConstraint(
             model_name="droprates",
             constraint=models.CheckConstraint(
-                check=models.Q(
+                condition=models.Q(
                     models.Q(("location", None), ("seed__isnull", False)),
                     models.Q(("location__isnull", False), ("seed", None)),
                     _connector="OR",

@@ -49,7 +49,7 @@ class Migration(migrations.Migration):
         migrations.AddConstraint(
             model_name="skilllevelreward",
             constraint=models.CheckConstraint(
-                check=models.Q(
+                condition=models.Q(
                     models.Q(
                         ("gold", None),
                         ("item", None),
