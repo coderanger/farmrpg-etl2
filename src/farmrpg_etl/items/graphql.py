@@ -53,6 +53,7 @@ class Item:
     locksmith_gold: auto
     manual_fishing_only: auto
     from_event: auto
+    date_added: auto
     required_for_quests: list[
         Annotated["QuestItemRequired", gql.lazy("farmrpg_etl.quests.graphql")]
     ]
@@ -106,6 +107,8 @@ class Item:
     skill_level_rewards: list["SkillLevelReward"]
     temple_rewards: list["TempleReward"]
     temple_reward_items: list["TempleRewardItem"]
+
+    is_hidden: bool
 
 
 @gql.django.type(models.RecipeItem)

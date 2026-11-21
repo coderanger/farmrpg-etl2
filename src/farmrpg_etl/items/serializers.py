@@ -1,3 +1,5 @@
+from zoneinfo import ZoneInfo
+
 from rest_framework import serializers
 
 from .models import Item
@@ -22,6 +24,12 @@ class ItemAPISerializer(serializers.ModelSerializer):
     fm_rotate = serializers.BooleanField(source="flea_market_rotate")
     weight = serializers.IntegerField(source="reg_weight")
     rc_weight = serializers.IntegerField(source="runecube_weight")
+    date_added = serializers.DateTimeField(
+        input_formats=["%Y-%m-%d"],
+        default_timezone=ZoneInfo("America/Chicago"),
+        required=False,
+        allow_null=True,
+    )
 
     class Meta:
         model = Item
@@ -56,6 +64,7 @@ class ItemAPISerializer(serializers.ModelSerializer):
             "fm_price",
             "fm_rotate",
             "locksmith_key",
+            "date_added",
         ]
 
     def to_internal_value(self, data):
@@ -65,4 +74,6 @@ class ItemAPISerializer(serializers.ModelSerializer):
         data["locksmith_key"] = (
             None if data["loot_key_id"] == 0 else data["loot_key_id"]
         )
+        if data["date_added"] == "0000-00-00":
+            data["date_added"] = None
         return super().to_internal_value(data)

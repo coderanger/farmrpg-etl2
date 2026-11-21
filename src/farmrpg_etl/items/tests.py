@@ -1,4 +1,5 @@
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 
 import httpx
@@ -40,6 +41,7 @@ def snowball() -> bytes:
 @pytest.fixture
 def items() -> dict:
     return json.load(FIXTURES_ROOT.joinpath("items.json").open("r"))
+
 
 def test_parse_recipe(scissors: bytes):
     item = parse_item(scissors)
@@ -91,3 +93,13 @@ def test_scrape_from_api_grape_pie(items: dict, respx_mock):
     async_to_sync(scrape_items)()
     item = Item.objects.get(id=726)
     assert item.cooking_recipe_item.name == "Rosalie's Concord Grape Pie"
+
+
+@pytest.mark.django_db
+def test_scrape_from_api_pair_of_boots(items: dict, respx_mock):
+    respx_mock.get("https://farmrpg.com/api.php?method=items").mock(
+        return_value=httpx.Response(200, json=items)
+    )
+    async_to_sync(scrape_items)()
+    item = Item.objects.get(id=713)
+    assert item.date_added == datetime(year=2023, month=1, day=25, hour=6, tzinfo=timezone.utc)

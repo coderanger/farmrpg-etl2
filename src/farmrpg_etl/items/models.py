@@ -1,5 +1,6 @@
 import pghistory
 from django.db import models
+from django.utils import timezone
 
 
 @pghistory.track(pghistory.Snapshot(), exclude=["modified_at"])
@@ -28,6 +29,7 @@ class Item(models.Model):
     reg_weight = models.IntegerField()
     runecube_weight = models.IntegerField()
     from_event = models.BooleanField(default=False)
+    date_added = models.DateTimeField(null=True, blank=True)
 
     locksmith_grab_bag = models.BooleanField(null=True, default=False)
     locksmith_gold = models.IntegerField(null=True, blank=True)
@@ -56,6 +58,10 @@ class Item(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
+    @property
+    def is_hidden(self) -> bool:
+        return timezone.now() > self.date_added
 
 
 @pghistory.track(pghistory.Snapshot(), exclude=["modified_at"])
