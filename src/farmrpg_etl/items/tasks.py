@@ -87,9 +87,9 @@ async def ingest_recipes(recipes_data: list[dict]):
             # Old event receipe, probably, just ignore it.
             continue
         if not (item.can_craft ^ item.can_cook ^ item.can_locksmith):
+            # This now happens somewhat often with seasonal craftables so just log it and move on.
             msg = f"Item {item.id} has bad recipe can_* flags"
             log.error(msg)
-            sentry_sdk.capture_message(msg)
             continue
         if item.can_craft or item.can_cook:
             # Simple case, this is a recipe.
