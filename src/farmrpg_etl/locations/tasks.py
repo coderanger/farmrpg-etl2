@@ -232,8 +232,6 @@ async def update_drop_rates_for_location(
 
 async def update_drop_rates_for(drops_for: Location | Item, force: bool = False):
     base_drop_rate = 1.0
-    if location is not None and location.base_drop_rate is not None:
-        base_drop_rate = location.base_drop_rate
     if isinstance(drops_for, Item):
         location = None
         seed = drops_for
@@ -246,6 +244,8 @@ async def update_drop_rates_for(drops_for: Location | Item, force: bool = False)
         ]
     elif drops_for.type == Location.TYPE_EXPLORE:
         location = drops_for
+        if location is not None and location.base_drop_rate is not None:
+            base_drop_rate = location.base_drop_rate
         seed = None
         variants: list[tuple[dict, dict[int, int]]] = [
             # Normal, no perks.
@@ -285,6 +285,8 @@ async def update_drop_rates_for(drops_for: Location | Item, force: bool = False)
         ]
     elif drops_for.type == Location.TYPE_FISHING:
         location = drops_for
+        if location is not None and location.base_drop_rate is not None:
+            base_drop_rate = location.base_drop_rate
         seed = None
         variants = [
             # UNFROZEN
@@ -380,6 +382,8 @@ async def update_drop_rates_for(drops_for: Location | Item, force: bool = False)
     elif drops_for.type == Location.TYPE_MINING:
         # TODO.
         location = drops_for
+        if location is not None and location.base_drop_rate is not None:
+            base_drop_rate = location.base_drop_rate
         seed = None
         variants = [
             # Floor 1.
